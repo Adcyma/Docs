@@ -1,0 +1,24 @@
+{
+  "id": "functionalities/CreateUsers",
+  "title": "Create Users",
+  "description": "",
+  "source": "@site/docs/functionalities/CreateUsers.md",
+  "sourceDirName": "functionalities",
+  "slug": "/functionalities/CreateUsers",
+  "permalink": "/docs/functionalities/CreateUsers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/functionalities/CreateUsers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Functionalities",
+    "permalink": "/docs/category/functionalities"
+  },
+  "next": {
+    "title": "Delete Users",
+    "permalink": "/docs/functionalities/DeleteUsers"
+  }
+}

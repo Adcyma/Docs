@@ -1,0 +1,24 @@
+{
+  "id": "Functionalities/identityprovider",
+  "title": "Identity Provider",
+  "description": "",
+  "source": "@site/docs/Functionalities/identityprovider.md",
+  "sourceDirName": "Functionalities",
+  "slug": "/Functionalities/identityprovider",
+  "permalink": "/docs/Functionalities/identityprovider",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Functionalities/identityprovider.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Functionalities",
+    "permalink": "/docs/category/functionalities"
+  },
+  "next": {
+    "title": "Managed Users",
+    "permalink": "/docs/Functionalities/managedusers"
+  }
+}

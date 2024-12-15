@@ -1,0 +1,24 @@
+{
+  "id": "Start",
+  "title": "Welcome",
+  "description": "Welcome to the start page! This is the content of your document.",
+  "source": "@site/docs/Start.md",
+  "sourceDirName": ".",
+  "slug": "/Start",
+  "permalink": "/docs/Start",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Start.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Welcome"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Administration",
+    "permalink": "/docs/category/administration"
+  }
+}

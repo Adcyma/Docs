@@ -1,0 +1,28 @@
+{
+  "id": "hosting",
+  "title": "How is it hosted?",
+  "description": "Info here",
+  "source": "@site/docs/hosting.md",
+  "sourceDirName": ".",
+  "slug": "/hosting",
+  "permalink": "/docs/hosting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/hosting.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "How is it hosted?"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/docs/authentication"
+  },
+  "next": {
+    "title": "How is our system secure?",
+    "permalink": "/docs/security"
+  }
+}

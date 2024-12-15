@@ -1,0 +1,24 @@
+{
+  "id": "Administration/ManagedUsers",
+  "title": "Managed Users",
+  "description": "",
+  "source": "@site/docs/Administration/ManagedUsers.md",
+  "sourceDirName": "Administration",
+  "slug": "/Administration/ManagedUsers",
+  "permalink": "/docs/Administration/ManagedUsers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Administration/ManagedUsers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Administration",
+    "permalink": "/docs/category/administration"
+  },
+  "next": {
+    "title": "Offices",
+    "permalink": "/docs/Administration/Offices"
+  }
+}

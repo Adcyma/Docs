@@ -1,0 +1,20 @@
+{
+  "id": "managedusers",
+  "title": "Managed Users",
+  "description": "",
+  "source": "@site/docs/managedusers.md",
+  "sourceDirName": ".",
+  "slug": "/managedusers",
+  "permalink": "/docs/managedusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/managedusers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Workflows",
+    "permalink": "/docs/Workflows"
+  }
+}

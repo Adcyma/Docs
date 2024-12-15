@@ -8,11 +8,91 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "intro",
+          "mainDocId": "start",
           "docs": [
+            {
+              "id": "administration/companysettings",
+              "path": "/docs/administration/companysettings",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/identityprovider",
+              "path": "/docs/administration/identityprovider",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/jobtitles",
+              "path": "/docs/administration/jobtitles",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/managedusers",
+              "path": "/docs/administration/managedusers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/offices",
+              "path": "/docs/administration/offices",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/preferences",
+              "path": "/docs/administration/preferences",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/systemusers",
+              "path": "/docs/administration/systemusers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "authentication",
+              "path": "/docs/authentication",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "functionalities/adduserstogroups",
+              "path": "/docs/functionalities/adduserstogroups",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "functionalities/createusers",
+              "path": "/docs/functionalities/createusers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "functionalities/deleteusers",
+              "path": "/docs/functionalities/deleteusers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "functionalities/inactivateusers",
+              "path": "/docs/functionalities/inactivateusers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "functionalities/updateusers",
+              "path": "/docs/functionalities/updateusers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hosting",
+              "path": "/docs/hosting",
+              "sidebar": "tutorialSidebar"
+            },
             {
               "id": "intro",
               "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "security",
+              "path": "/docs/security",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "start",
+              "path": "/docs/start",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -56,6 +136,21 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "workflows",
+              "path": "/docs/workflows",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/administration",
+              "path": "/docs/category/administration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/functionalities",
+              "path": "/docs/category/functionalities",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "/category/tutorial---basics",
               "path": "/docs/category/tutorial---basics",
               "sidebar": "tutorialSidebar"
@@ -70,8 +165,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/intro",
-                "label": "intro"
+                "path": "/docs/start",
+                "label": "start"
               }
             }
           }

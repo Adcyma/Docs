@@ -1,0 +1,24 @@
+{
+  "id": "Administration/Offices",
+  "title": "Offices",
+  "description": "",
+  "source": "@site/docs/Administration/Offices.md",
+  "sourceDirName": "Administration",
+  "slug": "/Administration/Offices",
+  "permalink": "/docs/Administration/Offices",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Administration/Offices.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Administration",
+    "permalink": "/docs/category/administration"
+  },
+  "next": {
+    "title": "Preferences",
+    "permalink": "/docs/Administration/Preferences"
+  }
+}
