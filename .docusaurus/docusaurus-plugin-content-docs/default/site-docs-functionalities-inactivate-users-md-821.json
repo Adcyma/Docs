@@ -1,0 +1,24 @@
+{
+  "id": "Functionalities/InactivateUsers",
+  "title": "Inactivate Users",
+  "description": "",
+  "source": "@site/docs/Functionalities/InactivateUsers.md",
+  "sourceDirName": "Functionalities",
+  "slug": "/Functionalities/InactivateUsers",
+  "permalink": "/docs/Functionalities/InactivateUsers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Functionalities/InactivateUsers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Delete Users",
+    "permalink": "/docs/Functionalities/DeleteUsers"
+  },
+  "next": {
+    "title": "Update Users",
+    "permalink": "/docs/Functionalities/UpdateUsers"
+  }
+}

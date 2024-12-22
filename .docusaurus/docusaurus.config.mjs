@@ -4,9 +4,9 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "My Site",
-  "tagline": "Dinosaurs are cool",
-  "favicon": "img/favicon.ico",
+  "title": "Adcyma",
+  "tagline": "Lightweight IAM",
+  "favicon": "img/faviconAdcyma.ico",
   "url": "https://your-docusaurus-site.example.com",
   "baseUrl": "/",
   "organizationName": "facebook",
@@ -55,19 +55,14 @@ export default {
       "title": "My Site",
       "logo": {
         "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "src": "img/AdcymaLogo__1_-removebg-preview.png"
       },
       "items": [
         {
           "type": "docSidebar",
           "sidebarId": "tutorialSidebar",
           "position": "left",
-          "label": "Tutorial"
-        },
-        {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
+          "label": "Documentation"
         },
         {
           "href": "https://github.com/facebook/docusaurus",
@@ -84,25 +79,25 @@ export default {
           "title": "Docs",
           "items": [
             {
-              "label": "Tutorial",
-              "to": "/docs/intro"
+              "label": "Documentation",
+              "to": "/docs/start"
             }
           ]
         },
         {
-          "title": "Community",
+          "title": "Links",
           "items": [
             {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
+              "label": "Adcyma.com",
+              "href": "https://adcyma.com"
             },
             {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
+              "label": "Adcyma Portal",
+              "href": "https://app.adcyma.com"
             },
             {
-              "label": "Twitter",
-              "href": "https://twitter.com/docusaurus"
+              "label": "LinkedIn",
+              "href": "https://www.linkedin.com/company/101592429"
             }
           ]
         },
@@ -111,7 +106,7 @@ export default {
           "items": [
             {
               "label": "Blog",
-              "to": "/blog"
+              "to": "https://adcyma.com/blog"
             },
             {
               "label": "GitHub",
@@ -120,7 +115,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2024 My Project, Inc. Built with Docusaurus."
+      "copyright": "Copyright © 2024 Adcyma AB"
     },
     "prism": {
       "theme": {

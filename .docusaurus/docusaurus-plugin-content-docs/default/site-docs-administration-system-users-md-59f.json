@@ -1,0 +1,24 @@
+{
+  "id": "Administration/SystemUsers",
+  "title": "System Users",
+  "description": "",
+  "source": "@site/docs/Administration/SystemUsers.md",
+  "sourceDirName": "Administration",
+  "slug": "/Administration/SystemUsers",
+  "permalink": "/docs/Administration/SystemUsers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Administration/SystemUsers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Administration",
+    "permalink": "/docs/category/administration"
+  },
+  "next": {
+    "title": "Company Settings",
+    "permalink": "/docs/Administration/companysettings"
+  }
+}

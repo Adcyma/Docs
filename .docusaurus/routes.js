@@ -38,76 +38,6 @@ export default [
     exact: true
   },
   {
-    path: '/blog',
-    component: ComponentCreator('/blog', 'b2f'),
-    exact: true
-  },
-  {
-    path: '/blog/archive',
-    component: ComponentCreator('/blog/archive', '182'),
-    exact: true
-  },
-  {
-    path: '/blog/authors',
-    component: ComponentCreator('/blog/authors', '0b7'),
-    exact: true
-  },
-  {
-    path: '/blog/authors/all-sebastien-lorber-articles',
-    component: ComponentCreator('/blog/authors/all-sebastien-lorber-articles', '4a1'),
-    exact: true
-  },
-  {
-    path: '/blog/authors/yangshun',
-    component: ComponentCreator('/blog/authors/yangshun', 'a68'),
-    exact: true
-  },
-  {
-    path: '/blog/first-blog-post',
-    component: ComponentCreator('/blog/first-blog-post', '89a'),
-    exact: true
-  },
-  {
-    path: '/blog/long-blog-post',
-    component: ComponentCreator('/blog/long-blog-post', '9ad'),
-    exact: true
-  },
-  {
-    path: '/blog/mdx-blog-post',
-    component: ComponentCreator('/blog/mdx-blog-post', 'e9f'),
-    exact: true
-  },
-  {
-    path: '/blog/tags',
-    component: ComponentCreator('/blog/tags', '287'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/docusaurus',
-    component: ComponentCreator('/blog/tags/docusaurus', '704'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/facebook',
-    component: ComponentCreator('/blog/tags/facebook', '858'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/hello',
-    component: ComponentCreator('/blog/tags/hello', '299'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/hola',
-    component: ComponentCreator('/blog/tags/hola', '00d'),
-    exact: true
-  },
-  {
-    path: '/blog/welcome',
-    component: ComponentCreator('/blog/welcome', 'd2b'),
-    exact: true
-  },
-  {
     path: '/dannesehar',
     component: ComponentCreator('/dannesehar', '798'),
     exact: true
@@ -119,16 +49,76 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '733'),
+    component: ComponentCreator('/docs', '409'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '7e6'),
+        component: ComponentCreator('/docs', '637'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'ba6'),
+            component: ComponentCreator('/docs', '2a5'),
             routes: [
+              {
+                path: '/docs/administration/companysettings',
+                component: ComponentCreator('/docs/administration/companysettings', '877'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/administration/identityprovider',
+                component: ComponentCreator('/docs/administration/identityprovider', '359'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/administration/jobtitles',
+                component: ComponentCreator('/docs/administration/jobtitles', 'bb6'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/administration/managedusers',
+                component: ComponentCreator('/docs/administration/managedusers', 'e0d'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/administration/offices',
+                component: ComponentCreator('/docs/administration/offices', 'dff'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/administration/preferences',
+                component: ComponentCreator('/docs/administration/preferences', 'cc2'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/administration/systemusers',
+                component: ComponentCreator('/docs/administration/systemusers', '297'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/authentication',
+                component: ComponentCreator('/docs/authentication', '938'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/category/administration',
+                component: ComponentCreator('/docs/category/administration', 'f43'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/category/functionalities',
+                component: ComponentCreator('/docs/category/functionalities', '11f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/docs/category/tutorial---basics',
                 component: ComponentCreator('/docs/category/tutorial---basics', '20e'),
@@ -142,8 +132,56 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/docs/functionalities/adduserstogroups',
+                component: ComponentCreator('/docs/functionalities/adduserstogroups', 'c86'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/functionalities/createusers',
+                component: ComponentCreator('/docs/functionalities/createusers', '863'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/functionalities/deleteusers',
+                component: ComponentCreator('/docs/functionalities/deleteusers', 'fe9'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/functionalities/inactivateusers',
+                component: ComponentCreator('/docs/functionalities/inactivateusers', '6bd'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/functionalities/updateusers',
+                component: ComponentCreator('/docs/functionalities/updateusers', 'abe'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/hosting',
+                component: ComponentCreator('/docs/hosting', '498'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/docs/intro',
                 component: ComponentCreator('/docs/intro', '61d'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/security',
+                component: ComponentCreator('/docs/security', '3ef'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/start',
+                component: ComponentCreator('/docs/start', '023'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -192,6 +230,12 @@ export default [
               {
                 path: '/docs/tutorial-extras/translate-your-site',
                 component: ComponentCreator('/docs/tutorial-extras/translate-your-site', 'f9a'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/workflows',
+                component: ComponentCreator('/docs/workflows', 'b54'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

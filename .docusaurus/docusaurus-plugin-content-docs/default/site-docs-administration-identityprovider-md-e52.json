@@ -1,0 +1,24 @@
+{
+  "id": "administration/identityprovider",
+  "title": "Identity Provider",
+  "description": "",
+  "source": "@site/docs/administration/identityprovider.md",
+  "sourceDirName": "administration",
+  "slug": "/administration/identityprovider",
+  "permalink": "/docs/administration/identityprovider",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/administration/identityprovider.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Company Settings",
+    "permalink": "/docs/administration/companysettings"
+  },
+  "next": {
+    "title": "Job Titles",
+    "permalink": "/docs/administration/jobtitles"
+  }
+}

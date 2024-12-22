@@ -1,0 +1,20 @@
+{
+  "id": "Test",
+  "title": "Test",
+  "description": "",
+  "source": "@site/docs/Test.md",
+  "sourceDirName": ".",
+  "slug": "/Test",
+  "permalink": "/docs/Test",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Test.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/docs/tutorial-extras/translate-your-site"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "Administration/CompanySettings",
+  "title": "Company Settings",
+  "description": "",
+  "source": "@site/docs/Administration/CompanySettings.md",
+  "sourceDirName": "Administration",
+  "slug": "/Administration/CompanySettings",
+  "permalink": "/docs/Administration/CompanySettings",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Administration/CompanySettings.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Administration",
+    "permalink": "/docs/category/administration"
+  },
+  "next": {
+    "title": "Identity Provider",
+    "permalink": "/docs/Administration/IdentityProvider"
+  }
+}

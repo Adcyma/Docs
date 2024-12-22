@@ -1,0 +1,24 @@
+{
+  "id": "Functionalities/CreateUsers",
+  "title": "Create Users",
+  "description": "",
+  "source": "@site/docs/Functionalities/CreateUsers.md",
+  "sourceDirName": "Functionalities",
+  "slug": "/Functionalities/CreateUsers",
+  "permalink": "/docs/Functionalities/CreateUsers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Functionalities/CreateUsers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Group Management",
+    "permalink": "/docs/Functionalities/AddUsersToGroups"
+  },
+  "next": {
+    "title": "Delete Users",
+    "permalink": "/docs/Functionalities/DeleteUsers"
+  }
+}

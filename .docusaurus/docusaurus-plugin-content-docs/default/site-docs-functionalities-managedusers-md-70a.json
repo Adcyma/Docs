@@ -1,0 +1,24 @@
+{
+  "id": "Functionalities/managedusers",
+  "title": "Inactivate Users",
+  "description": "",
+  "source": "@site/docs/Functionalities/managedusers.md",
+  "sourceDirName": "Functionalities",
+  "slug": "/Functionalities/managedusers",
+  "permalink": "/docs/Functionalities/managedusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Functionalities/managedusers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DeleteUsers",
+    "permalink": "/docs/Functionalities/DeleteUsers"
+  },
+  "next": {
+    "title": "Tutorial - Basics",
+    "permalink": "/docs/category/tutorial---basics"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "Administration/JobTitles",
+  "title": "Job Titles",
+  "description": "",
+  "source": "@site/docs/Administration/JobTitles.md",
+  "sourceDirName": "Administration",
+  "slug": "/Administration/JobTitles",
+  "permalink": "/docs/Administration/JobTitles",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Administration/JobTitles.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Administration",
+    "permalink": "/docs/category/administration"
+  },
+  "next": {
+    "title": "Managed Users",
+    "permalink": "/docs/Administration/ManagedUsers"
+  }
+}

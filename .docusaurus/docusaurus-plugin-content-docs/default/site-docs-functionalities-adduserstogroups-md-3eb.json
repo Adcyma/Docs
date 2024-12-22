@@ -1,0 +1,24 @@
+{
+  "id": "functionalities/adduserstogroups",
+  "title": "Group Management",
+  "description": "",
+  "source": "@site/docs/functionalities/adduserstogroups.md",
+  "sourceDirName": "functionalities",
+  "slug": "/functionalities/adduserstogroups",
+  "permalink": "/docs/functionalities/adduserstogroups",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/functionalities/adduserstogroups.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Functionalities",
+    "permalink": "/docs/category/functionalities"
+  },
+  "next": {
+    "title": "Create Users",
+    "permalink": "/docs/functionalities/createusers"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "Administration/managedusers",
+  "title": "Managed Users",
+  "description": "",
+  "source": "@site/docs/Administration/managedusers.md",
+  "sourceDirName": "Administration",
+  "slug": "/Administration/managedusers",
+  "permalink": "/docs/Administration/managedusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Administration/managedusers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Job Titles",
+    "permalink": "/docs/Administration/jobtitles"
+  },
+  "next": {
+    "title": "Offices",
+    "permalink": "/docs/Administration/offices"
+  }
+}
