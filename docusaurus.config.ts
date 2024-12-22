@@ -6,7 +6,7 @@ const config: Config = {
   title: 'Adcyma',
   tagline: 'Lightweight IAM',
   favicon: 'img/faviconAdcyma.ico',
-  url: 'https://docs.adcyma.com/',
+  url: 'https://adcyma.github.io',
   baseUrl: '/',  
   organizationName: 'adcyma',
   projectName: 'Docs',  
