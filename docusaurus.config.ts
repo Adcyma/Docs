@@ -72,15 +72,6 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Documentation',
-              to: '/docs/intro',  // Points to intro.md
-            },
-          ],
-        },
-        {
           title: 'Links',
           items: [
             {
