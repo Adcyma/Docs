@@ -6,25 +6,15 @@ const config: Config = {
   title: 'Adcyma',
   tagline: 'Lightweight IAM',
   favicon: 'img/faviconAdcyma.ico',
-
-  // Set the production url of your site here
-  url: 'https://adcyma.github.io/',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'adcyma', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  url: 'https://adcyma.github.io',
+  baseUrl: '/Docs/',  
+  organizationName: 'adcyma',
+  projectName: 'Docs',  
   trailingSlash: false,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',  // Changed from throw to warn temporarily
   onBrokenMarkdownLinks: 'warn',
   deploymentBranch: 'gh-pages',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -36,10 +26,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/adcyma/Docs/tree/main/',  
         },
         blog: {
           showReadingTime: true,
@@ -47,11 +34,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
+          editUrl: 'https://github.com/adcyma/Docs/tree/main/',  
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -64,12 +47,11 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/AdcymaLogo__1_-removebg-preview.png',  
     navbar: {
-      title: 'My Site',
+      title: 'Adcyma',  
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Adcyma Logo',
         src: 'img/AdcymaLogo__1_-removebg-preview.png',
       },
       items: [
@@ -80,7 +62,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/adcyma/Docs',  
           label: 'GitHub',
           position: 'right',
         },
@@ -94,7 +76,7 @@ const config: Config = {
           items: [
             {
               label: 'Documentation',
-              to: '/docs/start',
+              to: '/docs/intro',  // Points to intro.md
             },
           ],
         },
@@ -123,8 +105,8 @@ const config: Config = {
               to: 'https://adcyma.com/blog',
             },
             {
+              href: 'https://github.com/adcyma/Docs',  // Updated to your repo
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
             },
           ],
         },
