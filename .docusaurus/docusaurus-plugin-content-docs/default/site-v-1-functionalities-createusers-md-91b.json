@@ -1,0 +1,24 @@
+{
+  "id": "functionalities/createusers",
+  "title": "Create Users",
+  "description": "",
+  "source": "@site/v1/functionalities/createusers.md",
+  "sourceDirName": "functionalities",
+  "slug": "/functionalities/createusers",
+  "permalink": "/v1/functionalities/createusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/functionalities/createusers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Group Management",
+    "permalink": "/v1/functionalities/adduserstogroups"
+  },
+  "next": {
+    "title": "Delete Users",
+    "permalink": "/v1/functionalities/deleteusers"
+  }
+}

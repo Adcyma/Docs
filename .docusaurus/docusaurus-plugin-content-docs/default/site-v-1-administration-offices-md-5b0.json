@@ -1,0 +1,24 @@
+{
+  "id": "administration/offices",
+  "title": "Offices",
+  "description": "",
+  "source": "@site/v1/administration/offices.md",
+  "sourceDirName": "administration",
+  "slug": "/administration/offices",
+  "permalink": "/v1/administration/offices",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/offices.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Managed Users",
+    "permalink": "/v1/administration/managedusers"
+  },
+  "next": {
+    "title": "Preferences",
+    "permalink": "/v1/administration/preferences"
+  }
+}

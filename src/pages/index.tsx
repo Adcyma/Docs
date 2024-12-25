@@ -4,6 +4,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import { useEffect } from 'react';
+import { Redirect } from '@docusaurus/router';
 
 import styles from './index.module.css';
 
@@ -19,8 +21,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/v1/start">
+            Explore the Documentation 📚
           </Link>
         </div>
       </div>
@@ -30,6 +32,12 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
+
+  useEffect(() => {
+    // Automatically redirect to /v1/start when visiting the homepage
+    window.location.replace('/v1/start');
+  }, []);
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}

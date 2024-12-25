@@ -20,13 +20,26 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,  // Image quality (1 to 100)
+        max: 1920,    // Maximum width (px)
+        min: 720,     // Minimum width (px)
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/adcyma/Docs/tree/main/',  
+          editUrl: 'https://github.com/adcyma/docs/tree/main/',
+          path: 'v1',
+          routeBasePath: 'v1',
         },
         blog: {
           showReadingTime: true,
@@ -34,7 +47,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: 'https://github.com/adcyma/Docs/tree/main/',  
+          editUrl: 'https://github.com/adcyma/docs/tree/main/',  
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -53,6 +66,7 @@ const config: Config = {
       logo: {
         alt: 'Adcyma Logo',
         src: 'img/AdcymaLogo__1_-removebg-preview.png',
+        href: 'http://localhost:3000/v1/start',
       },
       items: [
         {
@@ -62,7 +76,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/adcyma/Docs',  
+          href: 'https://github.com/adcyma/docs',  
           label: 'GitHub',
           position: 'right',
         },
@@ -96,7 +110,7 @@ const config: Config = {
               to: 'https://adcyma.com/blog',
             },
             {
-              href: 'https://github.com/adcyma/Docs',  // Updated to your repo
+              href: 'https://github.com/adcyma/docs',  // Updated to your repo
               label: 'GitHub',
             },
           ],

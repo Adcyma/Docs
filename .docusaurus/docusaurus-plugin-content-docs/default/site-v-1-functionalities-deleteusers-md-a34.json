@@ -1,0 +1,24 @@
+{
+  "id": "functionalities/deleteusers",
+  "title": "Delete Users",
+  "description": "",
+  "source": "@site/v1/functionalities/deleteusers.md",
+  "sourceDirName": "functionalities",
+  "slug": "/functionalities/deleteusers",
+  "permalink": "/v1/functionalities/deleteusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/functionalities/deleteusers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Create Users",
+    "permalink": "/v1/functionalities/createusers"
+  },
+  "next": {
+    "title": "Inactivate Users",
+    "permalink": "/v1/functionalities/inactivateusers"
+  }
+}

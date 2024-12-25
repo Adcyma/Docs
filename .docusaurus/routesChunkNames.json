@@ -56,138 +56,98 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/docs-409": {
+  "/v1-347": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---docsaba-d7c"
+      "plugin": "plugin---v-1-aba-e71"
     }
   },
-  "/docs-637": {
+  "/v1-a9a": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---docs-005-788"
+    "__props": "__props---v-178-e-2f9"
   },
-  "/docs-2a5": {
+  "/v1-14a": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/docs/administration/companysettings-877": {
+  "/v1/administration/companysettings-077": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-administration-companysettingsdfb-bc2"
+    "content": "content---v-1-administration-companysettings-4-a-2-6e2"
   },
-  "/docs/administration/identityprovider-359": {
+  "/v1/administration/identityprovider-295": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-administration-identityprovidere-52-c84"
+    "content": "content---v-1-administration-identityprovider-123-b7d"
   },
-  "/docs/administration/jobtitles-bb6": {
+  "/v1/administration/jobtitles-222": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-administration-jobtitles-4-b-9-845"
+    "content": "content---v-1-administration-jobtitles-67-c-be8"
   },
-  "/docs/administration/managedusers-e0d": {
+  "/v1/administration/managedusers-cd4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-administration-managedusers-58-b-452"
+    "content": "content---v-1-administration-managedusers-380-574"
   },
-  "/docs/administration/offices-dff": {
+  "/v1/administration/offices-45b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-administration-officesc-5-e-9ed"
+    "content": "content---v-1-administration-offices-5-b-0-390"
   },
-  "/docs/administration/preferences-cc2": {
+  "/v1/administration/preferences-1a4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-administration-preferences-0-c-5-b47"
+    "content": "content---v-1-administration-preferencesa-2-d-b43"
   },
-  "/docs/administration/systemusers-297": {
+  "/v1/administration/systemusers-24c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-administration-systemusersbc-8-85a"
+    "content": "content---v-1-administration-systemusers-4-dd-2a7"
   },
-  "/docs/authentication-938": {
+  "/v1/authentication-0cd": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-authentication-625-36c"
+    "content": "content---v-1-authenticationeb-5-7df"
   },
-  "/docs/category/administration-f43": {
+  "/v1/category/administration-a32": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---docs-category-administrationdcd-06f"
+    "__props": "__props---v-1-category-administrationa-4-b-613"
   },
-  "/docs/category/functionalities-11f": {
+  "/v1/category/functionalities-7f2": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---docs-category-functionalities-6-b-3-5fb"
+    "__props": "__props---v-1-category-functionalities-029-cf8"
   },
-  "/docs/category/tutorial---basics-20e": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---docs-category-tutorial-basicsc-8-a-e51"
-  },
-  "/docs/category/tutorial---extras-9ad": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---docs-category-tutorial-extras-6-bb-a82"
-  },
-  "/docs/functionalities/adduserstogroups-c86": {
+  "/v1/dashboard-932": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-functionalities-adduserstogroups-3-eb-9a4"
+    "content": "content---v-1-dashboard-9-fe-474"
   },
-  "/docs/functionalities/createusers-863": {
+  "/v1/functionalities/adduserstogroups-e3c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-functionalities-createusersaa-5-b54"
+    "content": "content---v-1-functionalities-adduserstogroups-1-dc-978"
   },
-  "/docs/functionalities/deleteusers-fe9": {
+  "/v1/functionalities/createusers-d7f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-functionalities-deleteusers-1-eb-549"
+    "content": "content---v-1-functionalities-createusers-91-b-329"
   },
-  "/docs/functionalities/inactivateusers-6bd": {
+  "/v1/functionalities/deleteusers-ae7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-functionalities-inactivateusersb-46-ae6"
+    "content": "content---v-1-functionalities-deleteusersa-34-74e"
   },
-  "/docs/functionalities/updateusers-abe": {
+  "/v1/functionalities/inactivateusers-fa9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-functionalities-updateusers-7-f-8-bd9"
+    "content": "content---v-1-functionalities-inactivateusers-292-7c7"
   },
-  "/docs/hosting-498": {
+  "/v1/functionalities/updateusers-a81": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-hosting-0-cc-d02"
+    "content": "content---v-1-functionalities-updateusers-4-ed-cae"
   },
-  "/docs/intro-61d": {
+  "/v1/hosting-f0b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-intro-0-e-3-be1"
+    "content": "content---v-1-hosting-53-f-363"
   },
-  "/docs/security-3ef": {
+  "/v1/security-109": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-securitydb-3-ce2"
+    "content": "content---v-1-securityc-1-b-677"
   },
-  "/docs/start-023": {
+  "/v1/start-4a5": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-start-98-c-3bd"
+    "content": "content---v-1-start-7-aa-f63"
   },
-  "/docs/tutorial-basics/congratulations-458": {
+  "/v1/workflows-975": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-basics-congratulations-822-958"
-  },
-  "/docs/tutorial-basics/create-a-blog-post-108": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-basics-create-a-blog-post-533-e85"
-  },
-  "/docs/tutorial-basics/create-a-document-8fc": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-basics-create-a-document-1-e-4-078"
-  },
-  "/docs/tutorial-basics/create-a-page-951": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-basics-create-a-page-5-c-8-e19"
-  },
-  "/docs/tutorial-basics/deploy-your-site-4f5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-basics-deploy-your-sitef-55-a3f"
-  },
-  "/docs/tutorial-basics/markdown-features-b05": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-basics-markdown-features-18-c-a79"
-  },
-  "/docs/tutorial-extras/manage-docs-versions-978": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-extras-manage-docs-versionsdff-6d4"
-  },
-  "/docs/tutorial-extras/translate-your-site-f9a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-tutorial-extras-translate-your-sitee-44-ddf"
-  },
-  "/docs/workflows-b54": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-workflowsdbe-0b4"
+    "content": "content---v-1-workflows-320-7da"
   },
   "/-e5f": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",

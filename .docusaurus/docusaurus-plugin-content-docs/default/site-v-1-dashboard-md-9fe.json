@@ -1,0 +1,28 @@
+{
+  "id": "dashboard",
+  "title": "Using Your Dashboard",
+  "description": "Welcome to your dashboard! This guide will help you understand how to use the main features for managing employees.",
+  "source": "@site/v1/dashboard.md",
+  "sourceDirName": ".",
+  "slug": "/dashboard",
+  "permalink": "/v1/dashboard",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/dashboard.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Using Your Dashboard"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Welcome",
+    "permalink": "/v1/start"
+  },
+  "next": {
+    "title": "Functionalities",
+    "permalink": "/v1/category/functionalities"
+  }
+}

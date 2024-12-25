@@ -1,0 +1,28 @@
+{
+  "id": "workflows",
+  "title": "Workflows",
+  "description": "Info here",
+  "source": "@site/v1/workflows.md",
+  "sourceDirName": ".",
+  "slug": "/workflows",
+  "permalink": "/v1/workflows",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/workflows.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Workflows"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Update Users",
+    "permalink": "/v1/functionalities/updateusers"
+  },
+  "next": {
+    "title": "Administration",
+    "permalink": "/v1/category/administration"
+  }
+}

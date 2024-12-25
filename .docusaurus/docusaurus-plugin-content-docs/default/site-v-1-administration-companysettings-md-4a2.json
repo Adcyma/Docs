@@ -1,0 +1,24 @@
+{
+  "id": "administration/companysettings",
+  "title": "Company Settings",
+  "description": "",
+  "source": "@site/v1/administration/companysettings.md",
+  "sourceDirName": "administration",
+  "slug": "/administration/companysettings",
+  "permalink": "/v1/administration/companysettings",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/companysettings.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Administration",
+    "permalink": "/v1/category/administration"
+  },
+  "next": {
+    "title": "Identity Provider",
+    "permalink": "/v1/administration/identityprovider"
+  }
+}

@@ -1,163 +1,113 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs",
+      "path": "/v1",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs",
+          "path": "/v1",
           "mainDocId": "start",
           "docs": [
             {
               "id": "administration/companysettings",
-              "path": "/docs/administration/companysettings",
+              "path": "/v1/administration/companysettings",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "administration/identityprovider",
-              "path": "/docs/administration/identityprovider",
+              "path": "/v1/administration/identityprovider",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "administration/jobtitles",
-              "path": "/docs/administration/jobtitles",
+              "path": "/v1/administration/jobtitles",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "administration/managedusers",
-              "path": "/docs/administration/managedusers",
+              "path": "/v1/administration/managedusers",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "administration/offices",
-              "path": "/docs/administration/offices",
+              "path": "/v1/administration/offices",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "administration/preferences",
-              "path": "/docs/administration/preferences",
+              "path": "/v1/administration/preferences",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "administration/systemusers",
-              "path": "/docs/administration/systemusers",
+              "path": "/v1/administration/systemusers",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "authentication",
-              "path": "/docs/authentication",
+              "path": "/v1/authentication",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dashboard",
+              "path": "/v1/dashboard",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "functionalities/adduserstogroups",
-              "path": "/docs/functionalities/adduserstogroups",
+              "path": "/v1/functionalities/adduserstogroups",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "functionalities/createusers",
-              "path": "/docs/functionalities/createusers",
+              "path": "/v1/functionalities/createusers",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "functionalities/deleteusers",
-              "path": "/docs/functionalities/deleteusers",
+              "path": "/v1/functionalities/deleteusers",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "functionalities/inactivateusers",
-              "path": "/docs/functionalities/inactivateusers",
+              "path": "/v1/functionalities/inactivateusers",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "functionalities/updateusers",
-              "path": "/docs/functionalities/updateusers",
+              "path": "/v1/functionalities/updateusers",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "hosting",
-              "path": "/docs/hosting",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "intro",
-              "path": "/docs/intro",
+              "path": "/v1/hosting",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "security",
-              "path": "/docs/security",
+              "path": "/v1/security",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "start",
-              "path": "/docs/start",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/congratulations",
-              "path": "/docs/tutorial-basics/congratulations",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/create-a-blog-post",
-              "path": "/docs/tutorial-basics/create-a-blog-post",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/create-a-document",
-              "path": "/docs/tutorial-basics/create-a-document",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/create-a-page",
-              "path": "/docs/tutorial-basics/create-a-page",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/deploy-your-site",
-              "path": "/docs/tutorial-basics/deploy-your-site",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/markdown-features",
-              "path": "/docs/tutorial-basics/markdown-features",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-extras/manage-docs-versions",
-              "path": "/docs/tutorial-extras/manage-docs-versions",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-extras/translate-your-site",
-              "path": "/docs/tutorial-extras/translate-your-site",
+              "path": "/v1/start",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "workflows",
-              "path": "/docs/workflows",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/administration",
-              "path": "/docs/category/administration",
+              "path": "/v1/workflows",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "/category/functionalities",
-              "path": "/docs/category/functionalities",
+              "path": "/v1/category/functionalities",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "/category/tutorial---basics",
-              "path": "/docs/category/tutorial---basics",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/tutorial---extras",
-              "path": "/docs/category/tutorial---extras",
+              "id": "/category/administration",
+              "path": "/v1/category/administration",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -165,7 +115,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/start",
+                "path": "/v1/start",
                 "label": "start"
               }
             }

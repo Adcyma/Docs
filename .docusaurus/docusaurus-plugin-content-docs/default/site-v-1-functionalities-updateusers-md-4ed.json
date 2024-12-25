@@ -1,0 +1,24 @@
+{
+  "id": "functionalities/updateusers",
+  "title": "Update Users",
+  "description": "",
+  "source": "@site/v1/functionalities/updateusers.md",
+  "sourceDirName": "functionalities",
+  "slug": "/functionalities/updateusers",
+  "permalink": "/v1/functionalities/updateusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/functionalities/updateusers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Inactivate Users",
+    "permalink": "/v1/functionalities/inactivateusers"
+  },
+  "next": {
+    "title": "Workflows",
+    "permalink": "/v1/workflows"
+  }
+}

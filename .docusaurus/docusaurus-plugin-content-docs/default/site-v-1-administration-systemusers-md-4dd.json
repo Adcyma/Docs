@@ -1,0 +1,24 @@
+{
+  "id": "administration/systemusers",
+  "title": "System Users",
+  "description": "",
+  "source": "@site/v1/administration/systemusers.md",
+  "sourceDirName": "administration",
+  "slug": "/administration/systemusers",
+  "permalink": "/v1/administration/systemusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/systemusers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Preferences",
+    "permalink": "/v1/administration/preferences"
+  },
+  "next": {
+    "title": "Authentication",
+    "permalink": "/v1/authentication"
+  }
+}

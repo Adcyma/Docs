@@ -7,12 +7,14 @@ export default {
   "title": "Adcyma",
   "tagline": "Lightweight IAM",
   "favicon": "img/faviconAdcyma.ico",
-  "url": "https://your-docusaurus-site.example.com",
+  "url": "https://docs.adcyma.com",
   "baseUrl": "/",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
-  "onBrokenLinks": "throw",
+  "organizationName": "adcyma",
+  "projectName": "Docs",
+  "trailingSlash": false,
+  "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
+  "deploymentBranch": "gh-pages",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -21,13 +23,25 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
+  "plugins": [
+    [
+      "@docusaurus/plugin-ideal-image",
+      {
+        "quality": 70,
+        "max": 1920,
+        "min": 720
+      }
+    ]
+  ],
   "presets": [
     [
       "classic",
       {
         "docs": {
           "sidebarPath": "./sidebars.ts",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/adcyma/docs/tree/main/",
+          "path": "v1",
+          "routeBasePath": "v1"
         },
         "blog": {
           "showReadingTime": true,
@@ -38,7 +52,7 @@ export default {
             ],
             "xslt": true
           },
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          "editUrl": "https://github.com/adcyma/docs/tree/main/",
           "onInlineTags": "warn",
           "onInlineAuthors": "warn",
           "onUntruncatedBlogPosts": "warn"
@@ -50,12 +64,13 @@ export default {
     ]
   ],
   "themeConfig": {
-    "image": "img/docusaurus-social-card.jpg",
+    "image": "img/AdcymaLogo__1_-removebg-preview.png",
     "navbar": {
-      "title": "My Site",
+      "title": "Adcyma",
       "logo": {
-        "alt": "My Site Logo",
-        "src": "img/AdcymaLogo__1_-removebg-preview.png"
+        "alt": "Adcyma Logo",
+        "src": "img/AdcymaLogo__1_-removebg-preview.png",
+        "href": "http://localhost:3000/v1/start"
       },
       "items": [
         {
@@ -65,7 +80,7 @@ export default {
           "label": "Documentation"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/adcyma/docs",
           "label": "GitHub",
           "position": "right"
         }
@@ -75,15 +90,6 @@ export default {
     "footer": {
       "style": "dark",
       "links": [
-        {
-          "title": "Docs",
-          "items": [
-            {
-              "label": "Documentation",
-              "to": "/docs/start"
-            }
-          ]
-        },
         {
           "title": "Links",
           "items": [
@@ -109,8 +115,8 @@ export default {
               "to": "https://adcyma.com/blog"
             },
             {
-              "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/adcyma/docs",
+              "label": "GitHub"
             }
           ]
         }
@@ -358,7 +364,6 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "themes": [],
   "scripts": [],
   "headTags": [],

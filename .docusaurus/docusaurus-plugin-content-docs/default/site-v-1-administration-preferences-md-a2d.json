@@ -1,0 +1,24 @@
+{
+  "id": "administration/preferences",
+  "title": "Preferences",
+  "description": "",
+  "source": "@site/v1/administration/preferences.md",
+  "sourceDirName": "administration",
+  "slug": "/administration/preferences",
+  "permalink": "/v1/administration/preferences",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/preferences.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Offices",
+    "permalink": "/v1/administration/offices"
+  },
+  "next": {
+    "title": "System Users",
+    "permalink": "/v1/administration/systemusers"
+  }
+}

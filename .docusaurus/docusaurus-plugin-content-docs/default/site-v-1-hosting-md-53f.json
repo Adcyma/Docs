@@ -1,0 +1,28 @@
+{
+  "id": "hosting",
+  "title": "How is it hosted?",
+  "description": "Info here",
+  "source": "@site/v1/hosting.md",
+  "sourceDirName": ".",
+  "slug": "/hosting",
+  "permalink": "/v1/hosting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/hosting.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "How is it hosted?"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/v1/authentication"
+  },
+  "next": {
+    "title": "How is our system secure?",
+    "permalink": "/v1/security"
+  }
+}

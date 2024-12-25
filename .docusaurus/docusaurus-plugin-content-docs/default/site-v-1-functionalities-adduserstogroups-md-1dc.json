@@ -1,0 +1,24 @@
+{
+  "id": "functionalities/adduserstogroups",
+  "title": "Group Management",
+  "description": "",
+  "source": "@site/v1/functionalities/adduserstogroups.md",
+  "sourceDirName": "functionalities",
+  "slug": "/functionalities/adduserstogroups",
+  "permalink": "/v1/functionalities/adduserstogroups",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/functionalities/adduserstogroups.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Functionalities",
+    "permalink": "/v1/category/functionalities"
+  },
+  "next": {
+    "title": "Create Users",
+    "permalink": "/v1/functionalities/createusers"
+  }
+}
