@@ -70,7 +70,7 @@ export default {
       "logo": {
         "alt": "Adcyma Logo",
         "src": "img/AdcymaLogo__1_-removebg-preview.png",
-        "href": "http://localhost:3000/v1/start"
+        "href": "https://docs.adcyma.com/v1/start"
       },
       "items": [
         {
