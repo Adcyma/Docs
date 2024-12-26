@@ -11,8 +11,8 @@
           "mainDocId": "start",
           "docs": [
             {
-              "id": "administration/companysettings",
-              "path": "/v1/administration/companysettings",
+              "id": "administration/companyprofile",
+              "path": "/v1/administration/companyprofile",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -96,8 +96,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "userguides/setupentraappregistration",
+              "path": "/v1/userguides/setupentraappregistration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "workflows",
               "path": "/v1/workflows",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/administration",
+              "path": "/v1/category/administration",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -106,8 +116,8 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "/category/administration",
-              "path": "/v1/category/administration",
+              "id": "/category/user-guides",
+              "path": "/v1/category/user-guides",
               "sidebar": "tutorialSidebar"
             }
           ],

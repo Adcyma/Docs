@@ -1,0 +1,20 @@
+{
+  "id": "userguides/setupentraappregistration",
+  "title": "Creating an App Registration in Entra ID",
+  "description": "",
+  "source": "@site/v1/userguides/setupentraappregistration.md",
+  "sourceDirName": "userguides",
+  "slug": "/userguides/setupentraappregistration",
+  "permalink": "/v1/userguides/setupentraappregistration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/userguides/setupentraappregistration.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "User Guides",
+    "permalink": "/v1/category/user-guides"
+  }
+}

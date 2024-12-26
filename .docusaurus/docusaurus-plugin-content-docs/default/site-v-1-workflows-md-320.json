@@ -18,8 +18,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Update Users",
-    "permalink": "/v1/functionalities/updateusers"
+    "title": "Using Your Dashboard",
+    "permalink": "/v1/dashboard"
   },
   "next": {
     "title": "Administration",

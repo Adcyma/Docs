@@ -49,19 +49,19 @@ export default [
   },
   {
     path: '/v1',
-    component: ComponentCreator('/v1', '347'),
+    component: ComponentCreator('/v1', '18e'),
     routes: [
       {
         path: '/v1',
-        component: ComponentCreator('/v1', 'a9a'),
+        component: ComponentCreator('/v1', 'eba'),
         routes: [
           {
             path: '/v1',
-            component: ComponentCreator('/v1', '14a'),
+            component: ComponentCreator('/v1', '708'),
             routes: [
               {
-                path: '/v1/administration/companysettings',
-                component: ComponentCreator('/v1/administration/companysettings', '077'),
+                path: '/v1/administration/companyprofile',
+                component: ComponentCreator('/v1/administration/companyprofile', '690'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -120,6 +120,12 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/v1/category/user-guides',
+                component: ComponentCreator('/v1/category/user-guides', '049'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/v1/dashboard',
                 component: ComponentCreator('/v1/dashboard', '932'),
                 exact: true,
@@ -170,6 +176,12 @@ export default [
               {
                 path: '/v1/start',
                 component: ComponentCreator('/v1/start', '4a5'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/userguides/setupentraappregistration',
+                component: ComponentCreator('/v1/userguides/setupentraappregistration', 'aa3'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

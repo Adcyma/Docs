@@ -1,7 +1,7 @@
 {
   "id": "administration/managedusers",
   "title": "Managed Users",
-  "description": "",
+  "description": "The Managed Users page displays all the users that are managed by Adcyma. Administrators can view details such as display names, usernames, job titles, and departments for each managed user.",
   "source": "@site/v1/administration/managedusers.md",
   "sourceDirName": "administration",
   "slug": "/administration/managedusers",

@@ -20,5 +20,9 @@
   "previous": {
     "title": "How is it hosted?",
     "permalink": "/v1/hosting"
+  },
+  "next": {
+    "title": "User Guides",
+    "permalink": "/v1/category/user-guides"
   }
 }

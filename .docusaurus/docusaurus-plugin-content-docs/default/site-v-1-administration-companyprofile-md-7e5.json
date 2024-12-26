@@ -1,0 +1,24 @@
+{
+  "id": "administration/companyprofile",
+  "title": "Company Profile",
+  "description": "",
+  "source": "@site/v1/administration/companyprofile.md",
+  "sourceDirName": "administration",
+  "slug": "/administration/companyprofile",
+  "permalink": "/v1/administration/companyprofile",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/companyprofile.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Administration",
+    "permalink": "/v1/category/administration"
+  },
+  "next": {
+    "title": "Identity Provider",
+    "permalink": "/v1/administration/identityprovider"
+  }
+}

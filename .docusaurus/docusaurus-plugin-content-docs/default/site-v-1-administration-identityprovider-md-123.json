@@ -1,7 +1,7 @@
 {
   "id": "administration/identityprovider",
   "title": "Identity Provider",
-  "description": "",
+  "description": "The Identity Provider Settings page is where you configure the connection between Adcyma and your external identity provider, such as Entra ID. This setup is essential for enabling Adcyma to communicate with your tenant.",
   "source": "@site/v1/administration/identityprovider.md",
   "sourceDirName": "administration",
   "slug": "/administration/identityprovider",
@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Company Settings",
-    "permalink": "/v1/administration/companysettings"
+    "title": "Company Profile",
+    "permalink": "/v1/administration/companyprofile"
   },
   "next": {
     "title": "Job Titles",
