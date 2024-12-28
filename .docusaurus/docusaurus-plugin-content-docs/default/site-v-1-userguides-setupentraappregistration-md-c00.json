@@ -1,7 +1,7 @@
 {
   "id": "userguides/setupentraappregistration",
   "title": "Creating an App Registration in Entra ID",
-  "description": "",
+  "description": "This guide explains how to create an App Registration in Entra ID, a necessary step for enabling Adcyma to communicate with Entra ID (and optionally Exchange).",
   "source": "@site/v1/userguides/setupentraappregistration.md",
   "sourceDirName": "userguides",
   "slug": "/userguides/setupentraappregistration",

@@ -18,8 +18,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Update Users",
-    "permalink": "/v1/functionalities/updateusers"
+    "title": "Authentication",
+    "permalink": "/v1/authentication"
   },
   "next": {
     "title": "How is our system secure?",

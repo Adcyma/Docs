@@ -5,12 +5,12 @@ title: Using Your Dashboard
 
 # Using Your Dashboard
 
-Welcome to your dashboard! This guide will help you understand how to use the main features for managing employees.  
+Welcome to your dashboard! This guide will help you understand how to use the main features for managing employees.
 <br/>
 <br/>
 <img src="/img/Dashboard.png" style={{maxWidth: '1400px', height: 'auto'}} />
 
-## Getting Started
+<h2>Getting Started</h2>
 
 When you log in, you'll see three main buttons at the top of your dashboard:
 - New employee
@@ -21,7 +21,7 @@ Below these buttons, you'll find two sections:
 - Queued Tasks: Shows what actions are waiting to be completed
 - History: Shows what actions have been completed
 
-## Adding a New Employee
+<h2>Adding a New Employee</h2>
 
 1. Click the "New employee" button
 <img src="/img/NewEmployee.png" style={{maxWidth: '1400px', height: 'auto'}} />
@@ -38,7 +38,7 @@ Below these buttons, you'll find two sections:
 
 The system will then process this information and you'll see the task appear in the "Queued Tasks" section.
 
-## Updating Employee Information
+<h2>Updating Employee Information</h2>
 
 1. Click the "Edit employee" button
 <img src="/img/EditEmployee.png" style={{maxWidth: '1400px', height: 'auto'}} />
@@ -53,7 +53,7 @@ The system will then process this information and you'll see the task appear in 
 
 4. Click "Update" to save changes
 
-## When an Employee is Leaving
+<h2>When an Employee is Leaving</h2>
 
 1. Click the "Employee leaving" button
 <img src="/img/EmployeeLeaving.png" style={{maxWidth: '1400px', height: 'auto'}} />
@@ -62,15 +62,15 @@ The system will then process this information and you'll see the task appear in 
 3. Set their last day in the "End Date" field
 4. Click "Offboard" to submit
 
-## Viewing Tasks and History
+<h2>Viewing Tasks and History</h2>
 
-### Current Tasks
+<h2>Current Tasks</h2>
 - The "Queued Tasks" section shows what's currently being processed
 - Click "View All" to see every pending task
 <img src="/img/QueuedTasks.png" style={{maxWidth: '1400px', height: 'auto'}} />
 - In the "View All" Dialog you can chose to edit when the current task should run or delete it.
 
-### Completed Tasks
+<h2>Completed Tasks</h2>
 - The "History" section shows what's been completed
 - Click "View All" to see all past tasks
 <img src="/img/TaskHistory.png" style={{maxWidth: '1400px', height: 'auto'}} />

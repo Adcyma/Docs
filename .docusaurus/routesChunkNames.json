@@ -56,17 +56,17 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/v1-18e": {
+  "/v1-02e": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---v-1-aba-e71"
     }
   },
-  "/v1-eba": {
+  "/v1-360": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---v-178-e-2f9"
   },
-  "/v1-708": {
+  "/v1-49e": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/v1/administration/companyprofile-690": {
@@ -105,10 +105,6 @@
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "__props": "__props---v-1-category-administrationa-4-b-613"
   },
-  "/v1/category/functionalities-7f2": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---v-1-category-functionalities-029-cf8"
-  },
   "/v1/category/user-guides-049": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "__props": "__props---v-1-category-user-guides-87-b-526"
@@ -116,26 +112,6 @@
   "/v1/dashboard-932": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---v-1-dashboard-9-fe-474"
-  },
-  "/v1/functionalities/adduserstogroups-e3c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-functionalities-adduserstogroups-1-dc-978"
-  },
-  "/v1/functionalities/createusers-d7f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-functionalities-createusers-91-b-329"
-  },
-  "/v1/functionalities/deleteusers-ae7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-functionalities-deleteusersa-34-74e"
-  },
-  "/v1/functionalities/inactivateusers-fa9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-functionalities-inactivateusers-292-7c7"
-  },
-  "/v1/functionalities/updateusers-a81": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-functionalities-updateusers-4-ed-cae"
   },
   "/v1/hosting-f0b": {
     "__comp": "__comp---theme-doc-item-178-a40",

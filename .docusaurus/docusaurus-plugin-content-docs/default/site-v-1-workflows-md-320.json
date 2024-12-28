@@ -11,18 +11,18 @@
   "editUrl": "https://github.com/adcyma/docs/tree/main/v1/workflows.md",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 2,
+  "sidebarPosition": 3,
   "frontMatter": {
-    "sidebar_position": 2,
+    "sidebar_position": 3,
     "title": "Workflows"
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Using Your Dashboard",
-    "permalink": "/v1/dashboard"
+    "title": "How is our system secure?",
+    "permalink": "/v1/security"
   },
   "next": {
-    "title": "Administration",
-    "permalink": "/v1/category/administration"
+    "title": "User Guides",
+    "permalink": "/v1/category/user-guides"
   }
 }

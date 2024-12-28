@@ -49,15 +49,15 @@ export default [
   },
   {
     path: '/v1',
-    component: ComponentCreator('/v1', '18e'),
+    component: ComponentCreator('/v1', '02e'),
     routes: [
       {
         path: '/v1',
-        component: ComponentCreator('/v1', 'eba'),
+        component: ComponentCreator('/v1', '360'),
         routes: [
           {
             path: '/v1',
-            component: ComponentCreator('/v1', '708'),
+            component: ComponentCreator('/v1', '49e'),
             routes: [
               {
                 path: '/v1/administration/companyprofile',
@@ -114,12 +114,6 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/category/functionalities',
-                component: ComponentCreator('/v1/category/functionalities', '7f2'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
                 path: '/v1/category/user-guides',
                 component: ComponentCreator('/v1/category/user-guides', '049'),
                 exact: true,
@@ -128,36 +122,6 @@ export default [
               {
                 path: '/v1/dashboard',
                 component: ComponentCreator('/v1/dashboard', '932'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/v1/functionalities/adduserstogroups',
-                component: ComponentCreator('/v1/functionalities/adduserstogroups', 'e3c'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/v1/functionalities/createusers',
-                component: ComponentCreator('/v1/functionalities/createusers', 'd7f'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/v1/functionalities/deleteusers',
-                component: ComponentCreator('/v1/functionalities/deleteusers', 'ae7'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/v1/functionalities/inactivateusers',
-                component: ComponentCreator('/v1/functionalities/inactivateusers', 'fa9'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/v1/functionalities/updateusers',
-                component: ComponentCreator('/v1/functionalities/updateusers', 'a81'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

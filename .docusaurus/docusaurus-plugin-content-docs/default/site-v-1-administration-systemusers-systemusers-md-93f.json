@@ -1,0 +1,24 @@
+{
+  "id": "administration/systemusers/systemusers",
+  "title": "System Users",
+  "description": "The Managed Users page displays all the users that are managed by Adcyma. Administrators can view details such as display names, usernames, job titles, and departments for each managed user.",
+  "source": "@site/v1/administration/systemusers/systemusers.md",
+  "sourceDirName": "administration/systemusers",
+  "slug": "/administration/systemusers/",
+  "permalink": "/v1/administration/systemusers/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/systemusers/systemusers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Preferences",
+    "permalink": "/v1/administration/preferences"
+  },
+  "next": {
+    "title": "Authentication",
+    "permalink": "/v1/authentication"
+  }
+}

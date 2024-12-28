@@ -1,7 +1,7 @@
 {
   "id": "administration/systemusers",
   "title": "System Users",
-  "description": "",
+  "description": "The System Users page is where administrators can manage the internal user accounts within Adcyma. This page provides the functionality to create, edit, and delete system users, as well as assign roles to define their permissions and access levels.",
   "source": "@site/v1/administration/systemusers.md",
   "sourceDirName": "administration",
   "slug": "/administration/systemusers",

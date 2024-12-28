@@ -56,31 +56,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "functionalities/adduserstogroups",
-              "path": "/v1/functionalities/adduserstogroups",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "functionalities/createusers",
-              "path": "/v1/functionalities/createusers",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "functionalities/deleteusers",
-              "path": "/v1/functionalities/deleteusers",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "functionalities/inactivateusers",
-              "path": "/v1/functionalities/inactivateusers",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "functionalities/updateusers",
-              "path": "/v1/functionalities/updateusers",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "hosting",
               "path": "/v1/hosting",
               "sidebar": "tutorialSidebar"
@@ -108,11 +83,6 @@
             {
               "id": "/category/administration",
               "path": "/v1/category/administration",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/functionalities",
-              "path": "/v1/category/functionalities",
               "sidebar": "tutorialSidebar"
             },
             {

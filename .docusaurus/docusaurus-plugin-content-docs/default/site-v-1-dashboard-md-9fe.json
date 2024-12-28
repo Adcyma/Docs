@@ -22,7 +22,7 @@
     "permalink": "/v1/start"
   },
   "next": {
-    "title": "Workflows",
-    "permalink": "/v1/workflows"
+    "title": "Administration",
+    "permalink": "/v1/category/administration"
   }
 }
