@@ -62,19 +62,14 @@ const config: Config = {
   themeConfig: {
     image: 'img/AdcymaLogo__1_-removebg-preview.png',  
     navbar: {
-      title: 'Adcyma',  
+      title: '',  
       logo: {
         alt: 'Adcyma Logo',
         src: 'img/AdcymaLogo__1_-removebg-preview.png',
         href: 'https://docs.adcyma.com/v1/start',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Documentation',
-        },
+        
         {
           href: 'https://github.com/adcyma/docs',  
           label: 'GitHub',
