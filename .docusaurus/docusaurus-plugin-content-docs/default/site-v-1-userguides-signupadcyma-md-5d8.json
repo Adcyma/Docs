@@ -1,0 +1,28 @@
+{
+  "id": "userguides/signupadcyma",
+  "title": "Adcyma Sign-Up Guide",
+  "description": "This guide will help you navigate the initial sign-up process, making sure you’re set up in no time.",
+  "source": "@site/v1/userguides/signupadcyma.md",
+  "sourceDirName": "userguides",
+  "slug": "/userguides/signupadcyma",
+  "permalink": "/v1/userguides/signupadcyma",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/userguides/signupadcyma.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Adcyma Sign-Up Guide"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "User Guides",
+    "permalink": "/v1/category/user-guides"
+  },
+  "next": {
+    "title": "Creating an App Registration in Entra ID",
+    "permalink": "/v1/userguides/setupentraappregistration"
+  }
+}

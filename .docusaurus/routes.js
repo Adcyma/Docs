@@ -49,15 +49,15 @@ export default [
   },
   {
     path: '/v1',
-    component: ComponentCreator('/v1', '02e'),
+    component: ComponentCreator('/v1', 'e13'),
     routes: [
       {
         path: '/v1',
-        component: ComponentCreator('/v1', '360'),
+        component: ComponentCreator('/v1', 'bbe'),
         routes: [
           {
             path: '/v1',
-            component: ComponentCreator('/v1', '49e'),
+            component: ComponentCreator('/v1', '638'),
             routes: [
               {
                 path: '/v1/administration/companyprofile',
@@ -146,6 +146,12 @@ export default [
               {
                 path: '/v1/userguides/setupentraappregistration',
                 component: ComponentCreator('/v1/userguides/setupentraappregistration', 'aa3'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/userguides/signupadcyma',
+                component: ComponentCreator('/v1/userguides/signupadcyma', '9d1'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

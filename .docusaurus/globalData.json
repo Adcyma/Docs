@@ -76,6 +76,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "userguides/signupadcyma",
+              "path": "/v1/userguides/signupadcyma",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "workflows",
               "path": "/v1/workflows",
               "sidebar": "tutorialSidebar"

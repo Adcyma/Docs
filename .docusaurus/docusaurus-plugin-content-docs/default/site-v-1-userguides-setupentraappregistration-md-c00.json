@@ -11,10 +11,14 @@
   "editUrl": "https://github.com/adcyma/docs/tree/main/v1/userguides/setupentraappregistration.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Creating an App Registration in Entra ID"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "User Guides",
-    "permalink": "/v1/category/user-guides"
+    "title": "Adcyma Sign-Up Guide",
+    "permalink": "/v1/userguides/signupadcyma"
   }
 }

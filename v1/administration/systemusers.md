@@ -4,7 +4,7 @@ The System Users page is where administrators can manage the internal user accou
 
 *These users does not get automatically provisioned to your tenant.*
 
-<img src="/img/SystemUsers.png" style={{maxWidth: '1400px', height: 'auto'}} />
+<img src="/img/SystemUsers.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 
 Administrators can:
 

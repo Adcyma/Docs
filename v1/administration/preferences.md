@@ -6,4 +6,4 @@ Administrators can use the dropdown menus to choose the desired format for each 
 
 *These settings only applies to future users and does not alter the format of existing users.*
 
-<img src="/img/Preferences.png" style={{maxWidth: '1400px', height: 'auto'}} />
+<img src="/img/Preferences.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />

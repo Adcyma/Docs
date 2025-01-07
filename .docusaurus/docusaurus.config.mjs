@@ -115,7 +115,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2024 Adcyma AB"
+      "copyright": "Copyright © 2025 Adcyma AB"
     },
     "prism": {
       "theme": {
