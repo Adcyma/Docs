@@ -23,10 +23,12 @@ Next, you'll need to configure the settings for your tenant, which is how Adcyma
 <img src="/img/SignUp6.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 The next step is to select your User Format Preferences, which includes choosing your Primary Domain, Username, Display Name, and Email format. These settings can easily be changed later in the Admin interface.
 <img src="/img/SignUp7.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-The final step is to choose the group from which Adcyma should fetch current users and use as the Adcyma-managed group. All future users will automatically be added to this group.
+The final step is to choose the static group from which Adcyma should fetch current users and use as the Adcyma-managed group. All future users will automatically be added to this group.
 This group will serve as the source for all users managed by Adcyma, enabling current users to be managed within the system. Any future users created by Adcyma will automatically be placed into this group.
 
-*It is recommended to create a new group and manually add the current users that Adcyma should manage. This ensures that only relevant users are included, excluding any unnecessary accounts, such as service accounts.*
+*It is recommended to create a new static group and manually add the current users that Adcyma should manage. This ensures that only relevant users are included, excluding any unnecessary accounts, such as service accounts.*
+
+**This group must be a static membership-managed group.**
 
 Changing this group later is possible, but the following will occur:
 
