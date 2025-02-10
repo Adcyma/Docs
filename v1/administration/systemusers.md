@@ -7,9 +7,9 @@ The System Users page is where administrators can manage the internal user accou
 *These users does not get automatically provisioned to your tenant.*
 
 :::
-
+<br/>
 <img src="/img/SystemUsers.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-
+<br/><br/>
 Administrators can:
 
 * Create System Users: Add new users by entering their details and selecting an appropriate role.
