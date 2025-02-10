@@ -4,6 +4,11 @@ The Preferences page allows administrators to configure settings that define in 
 
 Administrators can use the dropdown menus to choose the desired format for each field. Once the selections are made, click Save Preferences to apply the changes across the system.
 
+:::info
+
 *These settings only applies to future users and does not alter the format of existing users.*
+
+:::
+<br/>
 
 <img src="/img/Preferences.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />

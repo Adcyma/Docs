@@ -2,7 +2,11 @@
 
 The System Users page is where administrators can manage the internal user accounts within Adcyma. This page provides the functionality to create, edit, and delete system users, as well as assign roles to define their permissions and access levels.
 
+:::info
+
 *These users does not get automatically provisioned to your tenant.*
+
+:::
 
 <img src="/img/SystemUsers.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 

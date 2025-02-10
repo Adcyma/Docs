@@ -14,4 +14,8 @@ This wiki is your guide to everything related to the systems of Adcyma. Here, yo
 * Learn how our system operates and ensures security.
 * If you can’t find the documentation you're looking for, please contact us at support@adcyma.com.
 
+:::tip
+
 Use the navigation links on the left to explore topics.
+
+:::

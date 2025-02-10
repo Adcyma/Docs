@@ -36,7 +36,11 @@ Below these buttons, you'll find two sections:
 
 3. Click "Create" to submit
 
+:::info
+
 The system will then process this information and you'll see the task appear in the "Queued Tasks" section.
+
+:::
 
 <h2>Updating Employee Information</h2>
 
@@ -74,4 +78,10 @@ The system will then process this information and you'll see the task appear in 
 - The "History" section shows what's been completed
 - Click "View All" to see all past tasks
 <img src="/img/TaskHistory.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<br/>
+<br/>
+:::tip
+
 *Remember: After making any changes, you'll see a confirmation message to let you know it worked!*
+
+:::

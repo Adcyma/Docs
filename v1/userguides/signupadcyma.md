@@ -26,9 +26,13 @@ The next step is to select your User Format Preferences, which includes choosing
 The final step is to choose the static group from which Adcyma should fetch current users and use as the Adcyma-managed group. All future users will automatically be added to this group.
 This group will serve as the source for all users managed by Adcyma, enabling current users to be managed within the system. Any future users created by Adcyma will automatically be placed into this group.
 
-*It is recommended to create a new static group and manually add the current users that Adcyma should manage. This ensures that only relevant users are included, excluding any unnecessary accounts, such as service accounts.*
+:::info
+
+*It is recommended to create a new static group and manually add the existing users that Adcyma should manage. This ensures that only relevant users are included, excluding any unnecessary accounts, such as service accounts.*
 
 **This group must be a static membership-managed group.**
+
+:::
 
 Changing this group later is possible, but the following will occur:
 

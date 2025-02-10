@@ -7,7 +7,11 @@ title: Creating an App Registration in Entra ID
 
 This guide explains how to create an App Registration in Entra ID, a necessary step for enabling Adcyma to communicate with Entra ID (and optionally Exchange).
 
+:::warning[Please note]
+
 ***Application Administrator** role is required to complete this task.*
+
+:::
 
 Log in to your Entra ID tenant and navigate to **Microsoft Entra ID**.
 
@@ -20,7 +24,13 @@ Navigate to Certificates & secrets, choose Client secrets, and click New client 
 
 Give the Client secret a suiting description, and an expiration of your liking (remember to keep track of the expiration). Next click "Add".
 
-Afterward, make note of the Client secret (**this is the only time it will be visible**) and the Secret ID. Adcyma requires this information, along with the Tenant ID, to communicate with your Tenant.
+Afterward, make note of the Client secret and the Secret ID. Adcyma requires this information, along with the Tenant ID, to communicate with your Tenant.
+
+:::warning
+
+This is your only chance to see the Client Secret, so be sure to save it now.
+
+:::
 
 <img src="/img/CreateAppRegistration4.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 Next, we need to give the correct API permissions, this is done by navigating to API permissions, clicking on Add a permission and then choosing Microsoft Graph.
