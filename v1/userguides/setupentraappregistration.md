@@ -55,7 +55,15 @@ Another required permission is Group.ReadWrite.All for managing your groups. Be 
 <br/>
 <img src="/img/CreateAppRegistration8.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
-As an optional step, only needed if you want Adcyma to manage Exchange tasks such as converting user mailboxes to shared mailboxes, you can add permissions for Exchange management. To do this, go to APIs my organization uses and select Office 365 Exchange Online from the list.
+
+:::note[Optional Step]
+
+This is only needed if you want Adcyma to also manage Exchange tasks, such as converting user mailboxes to shared mailboxes.
+
+:::
+<br/>
+As an optional step, you can add permissions for Exchange management. To do this, go to APIs my organization uses and select Office 365 Exchange Online from the list.
+
 <br/>
 <img src="/img/CreateAppRegistration9.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
