@@ -32,5 +32,10 @@ img {
   width: auto;
   height: auto;
 }
-
-
+/* Hide the version number and title buttons completely */
+.swagger-ui .info__title button,
+.swagger-ui .info__version button,
+.swagger-ui .info__title span,
+.swagger-ui .info__version span {
+  display: none !important;
+}

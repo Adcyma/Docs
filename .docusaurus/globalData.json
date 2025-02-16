@@ -46,6 +46,26 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "api/createuser",
+              "path": "/v1/api/createuser",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "api/deleteuser",
+              "path": "/v1/api/deleteuser",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "api/getallusers",
+              "path": "/v1/api/getallusers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "api/updateuser",
+              "path": "/v1/api/updateuser",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "authentication",
               "path": "/v1/authentication",
               "sidebar": "tutorialSidebar"
@@ -93,6 +113,11 @@
             {
               "id": "/category/user-guides",
               "path": "/v1/category/user-guides",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/api",
+              "path": "/v1/category/api",
               "sidebar": "tutorialSidebar"
             }
           ],

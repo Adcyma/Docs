@@ -1,0 +1,28 @@
+{
+  "id": "api/createuser",
+  "title": "Create User",
+  "description": "Endpoint: /users",
+  "source": "@site/v1/api/createuser.md",
+  "sourceDirName": "api",
+  "slug": "/api/createuser",
+  "permalink": "/v1/api/createuser",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/api/createuser.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Create User"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Update User",
+    "permalink": "/v1/api/updateuser"
+  },
+  "next": {
+    "title": "Delete User",
+    "permalink": "/v1/api/deleteuser"
+  }
+}

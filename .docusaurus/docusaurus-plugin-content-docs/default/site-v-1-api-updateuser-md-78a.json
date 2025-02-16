@@ -1,0 +1,28 @@
+{
+  "id": "api/updateuser",
+  "title": "Update User",
+  "description": "Endpoint: /users/",
+  "source": "@site/v1/api/updateuser.md",
+  "sourceDirName": "api",
+  "slug": "/api/updateuser",
+  "permalink": "/v1/api/updateuser",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/api/updateuser.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Update User"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Get All Users",
+    "permalink": "/v1/api/getallusers"
+  },
+  "next": {
+    "title": "Create User",
+    "permalink": "/v1/api/createuser"
+  }
+}

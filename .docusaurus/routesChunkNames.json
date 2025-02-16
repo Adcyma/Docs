@@ -56,17 +56,17 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/v1-e13": {
+  "/v1-013": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---v-1-aba-e71"
     }
   },
-  "/v1-bbe": {
+  "/v1-24c": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---v-178-e-2f9"
   },
-  "/v1-638": {
+  "/v1-aba": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/v1/administration/companyprofile-690": {
@@ -97,6 +97,22 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---v-1-administration-systemusers-4-dd-2a7"
   },
+  "/v1/api/createuser-424": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-api-createuser-7-e-6-55c"
+  },
+  "/v1/api/deleteuser-886": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-api-deleteusera-3-b-315"
+  },
+  "/v1/api/getallusers-90b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-api-getallusersdbe-c64"
+  },
+  "/v1/api/updateuser-252": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-api-updateuser-78-a-ad3"
+  },
   "/v1/authentication-0cd": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---v-1-authenticationeb-5-7df"
@@ -104,6 +120,10 @@
   "/v1/category/administration-a32": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "__props": "__props---v-1-category-administrationa-4-b-613"
+  },
+  "/v1/category/api-a9f": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "__props": "__props---v-1-category-api-01-b-ea8"
   },
   "/v1/category/user-guides-049": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",

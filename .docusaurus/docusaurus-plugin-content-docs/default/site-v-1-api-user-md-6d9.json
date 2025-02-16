@@ -1,0 +1,24 @@
+{
+  "id": "api/user",
+  "title": "Get All Users",
+  "description": "<!--",
+  "source": "@site/v1/api/user.md",
+  "sourceDirName": "api",
+  "slug": "/api/user",
+  "permalink": "/v1/api/user",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/api/user.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Get All Users"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API",
+    "permalink": "/v1/category/api"
+  }
+}

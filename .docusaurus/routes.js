@@ -49,15 +49,15 @@ export default [
   },
   {
     path: '/v1',
-    component: ComponentCreator('/v1', 'e13'),
+    component: ComponentCreator('/v1', '013'),
     routes: [
       {
         path: '/v1',
-        component: ComponentCreator('/v1', 'bbe'),
+        component: ComponentCreator('/v1', '24c'),
         routes: [
           {
             path: '/v1',
-            component: ComponentCreator('/v1', '638'),
+            component: ComponentCreator('/v1', 'aba'),
             routes: [
               {
                 path: '/v1/administration/companyprofile',
@@ -102,6 +102,30 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/v1/api/createuser',
+                component: ComponentCreator('/v1/api/createuser', '424'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/api/deleteuser',
+                component: ComponentCreator('/v1/api/deleteuser', '886'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/api/getallusers',
+                component: ComponentCreator('/v1/api/getallusers', '90b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/api/updateuser',
+                component: ComponentCreator('/v1/api/updateuser', '252'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/v1/authentication',
                 component: ComponentCreator('/v1/authentication', '0cd'),
                 exact: true,
@@ -110,6 +134,12 @@ export default [
               {
                 path: '/v1/category/administration',
                 component: ComponentCreator('/v1/category/administration', 'a32'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/category/api',
+                component: ComponentCreator('/v1/category/api', 'a9f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
