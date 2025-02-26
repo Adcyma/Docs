@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Company Profile",
-    "permalink": "/v1/administration/companyprofile"
+    "title": "Email Templates",
+    "permalink": "/v1/administration/emailtemplates"
   },
   "next": {
     "title": "Job Titles",

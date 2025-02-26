@@ -16,6 +16,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "administration/emailtemplates",
+              "path": "/v1/administration/emailtemplates",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "administration/identityprovider",
               "path": "/v1/administration/identityprovider",
               "sidebar": "tutorialSidebar"
@@ -38,6 +43,11 @@
             {
               "id": "administration/preferences",
               "path": "/v1/administration/preferences",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/roletemplate",
+              "path": "/v1/administration/roletemplate",
               "sidebar": "tutorialSidebar"
             },
             {

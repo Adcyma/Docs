@@ -49,19 +49,25 @@ export default [
   },
   {
     path: '/v1',
-    component: ComponentCreator('/v1', '013'),
+    component: ComponentCreator('/v1', 'a9b'),
     routes: [
       {
         path: '/v1',
-        component: ComponentCreator('/v1', '24c'),
+        component: ComponentCreator('/v1', '285'),
         routes: [
           {
             path: '/v1',
-            component: ComponentCreator('/v1', 'aba'),
+            component: ComponentCreator('/v1', '5a9'),
             routes: [
               {
                 path: '/v1/administration/companyprofile',
                 component: ComponentCreator('/v1/administration/companyprofile', '690'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/emailtemplates',
+                component: ComponentCreator('/v1/administration/emailtemplates', '92b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -92,6 +98,12 @@ export default [
               {
                 path: '/v1/administration/preferences',
                 component: ComponentCreator('/v1/administration/preferences', '1a4'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/roletemplate',
+                component: ComponentCreator('/v1/administration/roletemplate', '67a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

@@ -18,7 +18,7 @@
     "permalink": "/v1/category/administration"
   },
   "next": {
-    "title": "Identity Provider",
-    "permalink": "/v1/administration/identityprovider"
+    "title": "Email Templates",
+    "permalink": "/v1/administration/emailtemplates"
   }
 }

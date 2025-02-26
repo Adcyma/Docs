@@ -18,7 +18,7 @@
     "permalink": "/v1/administration/offices"
   },
   "next": {
-    "title": "System Users",
-    "permalink": "/v1/administration/systemusers"
+    "title": "Role Templates",
+    "permalink": "/v1/administration/roletemplate"
   }
 }

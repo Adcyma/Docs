@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Preferences",
-    "permalink": "/v1/administration/preferences"
+    "title": "Role Templates",
+    "permalink": "/v1/administration/roletemplate"
   },
   "next": {
     "title": "Authentication",
