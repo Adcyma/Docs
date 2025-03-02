@@ -6,6 +6,7 @@ hide_title: true
 ## Welcome to Adcyma's System Wiki!
 
 
+
 This wiki is your guide to everything related to the systems of Adcyma. Here, you'll find detailed information on how to:
 
 * Install and set up your system.
