@@ -4,7 +4,7 @@ The Email Templates page lets administrators create email templates that can be 
 
 :::info
 
-*Email Templates ensure standardized messaging but are only sent when triggered within a Workflow.*
+*Email Templates ensure standardized messaging but are only sent when triggered within a [Workflow](/v1/workflows).*
 
 :::
 <br/>
@@ -39,5 +39,8 @@ The following variables can be used in email templates:
 * `{{email_address}}` – The user's email address  
 * `{{manager_name}}` – The name of the user's manager  
 * `{{manager_email}}` – The email address of the user's manager  
+* `{{company_name}}` – The user's Company  
+* `{{department}}` – The user's Department
+* `{{job_title}}` – The user's Job Title
 
-
+*Need additional attributes? Contact us at support@adcyma.com — we're happy to help!*

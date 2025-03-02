@@ -4,7 +4,8 @@ The Role Templates page lets administrators create Roles that can be assigned to
 
 :::info
 
-*Role Templates help automate access assignment but do not immediately provision access until applied within a workflow.*
+*Role Templates help automate access assignment but do not immediately provision access until applied within a [Workflow](/v1/workflows)
+.*
 
 :::
 <br/>

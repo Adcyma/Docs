@@ -1,7 +1,7 @@
 {
   "id": "administration/companyprofile",
   "title": "Company Profile",
-  "description": "",
+  "description": "The Company Profile page displays the registered details of your organization within Adcyma. It includes company identification and contact information, which is primarily used for communication and support purposes.",
   "source": "@site/v1/administration/companyprofile.md",
   "sourceDirName": "administration",
   "slug": "/administration/companyprofile",

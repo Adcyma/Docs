@@ -13,3 +13,17 @@ The Identity Provider Settings page is where you configure the connection betwee
 <img src="/img/IdentityProvider.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 After filling in the fields, click Save to apply the settings or enable SSO.
+
+
+<h2>Exchange Authentication</h2>
+
+This is also where you can download a certificate to upload to your Entra ID application, enabling Adcyma to communicate with your Exchange Online environment.
+
+
+:::info  
+This is optional and only required if you want Adcyma to perform Exchange Online-related tasks, such as converting a User mailbox to a Shared mailbox. 
+:::
+
+<br/>
+<img src="/img/IdentityProviderCertificateManagement.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<br/><br/>
