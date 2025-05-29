@@ -1,7 +1,7 @@
 {
   "id": "workflows",
   "title": "Workflows",
-  "description": "Info here",
+  "description": "A Workflow is a way to automate tasks by linking a trigger to one or more actions, optionally filtered by conditions.",
   "source": "@site/v1/workflows.md",
   "sourceDirName": ".",
   "slug": "/workflows",
