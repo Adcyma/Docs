@@ -5,6 +5,9 @@ title: Workflows
 
 # Workflows
 A Workflow is a way to automate tasks by linking a trigger to one or more actions, optionally filtered by conditions.
+
+<img src="/img/Workflows1.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<br/>
 * **Workflow Name:** The name of the Workflow - Does not need to be unique.
 * **Priority:** Each Workflow in Adcyma has a Priority setting that determines the order in which workflows are evaluated when multiple workflows match the same trigger and condition.
     - Lower numbers indicate higher priority — with 1 being the highest.

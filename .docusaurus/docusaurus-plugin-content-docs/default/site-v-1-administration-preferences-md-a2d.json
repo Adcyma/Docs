@@ -14,11 +14,11 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Offices",
-    "permalink": "/v1/administration/offices"
+    "title": "Managed Users",
+    "permalink": "/v1/administration/Settings/managedusers"
   },
   "next": {
-    "title": "Role Templates",
-    "permalink": "/v1/administration/roletemplate"
+    "title": "System Users",
+    "permalink": "/v1/administration/systemusers"
   }
 }

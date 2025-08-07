@@ -1,7 +1,7 @@
 {
   "id": "administration/jobtitles",
   "title": "Job Titles",
-  "description": "The Job Titles page allows you to manage the list of job titles used across the system. You can easily add new titles or remove existing ones. These titles can be assigned to users and utilized in Workflows.",
+  "description": "This page allows you to manage the list of job titles used across the system. You can easily add new titles or remove existing ones. These titles can be assigned to users and utilized in Workflows.",
   "source": "@site/v1/administration/jobtitles.md",
   "sourceDirName": "administration",
   "slug": "/administration/jobtitles",

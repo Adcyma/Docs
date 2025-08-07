@@ -8,9 +8,9 @@ The Identity Provider Settings page is where you configure the connection betwee
 * Client ID: This is the unique ID assigned to your application by the identity provider. It's used to identify your app.
 * Tenant ID: The unique ID for your organization in the identity provider's system.
 * Client Secret: A secure key provided by the identity provider to authenticate your application. Keep this private.
-* SSO (Single Sign-On): You can enable SSO by toggling the Enable SSO option. When enabled, all users will log in through the configured identity provider.
+
 <br/>
-<img src="/img/IdentityProvider.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/IdentityProvider1.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 After filling in the fields, click Save to apply the settings or enable SSO.
 
@@ -25,5 +25,12 @@ This is optional and only required if you want Adcyma to perform Exchange Online
 :::
 
 <br/>
-<img src="/img/IdentityProviderCertificateManagement.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/IdentityProvider2.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<br/><br/>
+
+<h2>SSO (Single Sign-On)</h2>
+You can enable SSO by toggling the Enable SSO option. When enabled, all users will log in through the configured identity provider.
+
+<br/>
+<img src="/img/IdentityProvider3.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>

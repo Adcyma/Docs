@@ -19,7 +19,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "System Users",
-    "permalink": "/v1/administration/systemusers"
+    "permalink": "/v1/administration/Settings/systemusers"
   },
   "next": {
     "title": "How is it hosted?",

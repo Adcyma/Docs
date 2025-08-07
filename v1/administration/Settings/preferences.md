@@ -11,4 +11,4 @@ Administrators can use the dropdown menus to choose the desired format for each 
 :::
 <br/>
 
-<img src="/img/Preferences.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/Preferences.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />

@@ -8,7 +8,7 @@ The Email Templates page lets administrators create email templates that can be 
 
 :::
 <br/>
-<img src="/img/EmailTemplates.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/EmailTemplates.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 
 Administrators can:

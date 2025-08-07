@@ -49,67 +49,97 @@ export default [
   },
   {
     path: '/v1',
-    component: ComponentCreator('/v1', 'a9b'),
+    component: ComponentCreator('/v1', '68d'),
     routes: [
       {
         path: '/v1',
-        component: ComponentCreator('/v1', '285'),
+        component: ComponentCreator('/v1', '942'),
         routes: [
           {
             path: '/v1',
-            component: ComponentCreator('/v1', '5a9'),
+            component: ComponentCreator('/v1', '636'),
             routes: [
               {
-                path: '/v1/administration/companyprofile',
-                component: ComponentCreator('/v1/administration/companyprofile', '690'),
+                path: '/v1/administration/Access Governance/servicesandresources',
+                component: ComponentCreator('/v1/administration/Access Governance/servicesandresources', 'f99'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/administration/emailtemplates',
-                component: ComponentCreator('/v1/administration/emailtemplates', '92b'),
+                path: '/v1/administration/Lifecycle Management/dynamicgroups',
+                component: ComponentCreator('/v1/administration/Lifecycle Management/dynamicgroups', '3f0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/administration/identityprovider',
-                component: ComponentCreator('/v1/administration/identityprovider', '295'),
+                path: '/v1/administration/Lifecycle Management/emailtemplates',
+                component: ComponentCreator('/v1/administration/Lifecycle Management/emailtemplates', 'f9a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/administration/jobtitles',
-                component: ComponentCreator('/v1/administration/jobtitles', '222'),
+                path: '/v1/administration/Lifecycle Management/roletemplate',
+                component: ComponentCreator('/v1/administration/Lifecycle Management/roletemplate', 'c4f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/administration/managedusers',
-                component: ComponentCreator('/v1/administration/managedusers', 'cd4'),
+                path: '/v1/administration/Lifecycle Management/workflows',
+                component: ComponentCreator('/v1/administration/Lifecycle Management/workflows', '17e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/administration/offices',
-                component: ComponentCreator('/v1/administration/offices', '45b'),
+                path: '/v1/administration/Organization/companies',
+                component: ComponentCreator('/v1/administration/Organization/companies', '209'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/administration/preferences',
-                component: ComponentCreator('/v1/administration/preferences', '1a4'),
+                path: '/v1/administration/Organization/departments',
+                component: ComponentCreator('/v1/administration/Organization/departments', 'cd9'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/administration/roletemplate',
-                component: ComponentCreator('/v1/administration/roletemplate', '67a'),
+                path: '/v1/administration/Organization/jobtitles',
+                component: ComponentCreator('/v1/administration/Organization/jobtitles', '4da'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/v1/administration/systemusers',
-                component: ComponentCreator('/v1/administration/systemusers', '24c'),
+                path: '/v1/administration/Organization/offices',
+                component: ComponentCreator('/v1/administration/Organization/offices', '8b1'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/Settings/companyprofile',
+                component: ComponentCreator('/v1/administration/Settings/companyprofile', '788'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/Settings/identityprovider',
+                component: ComponentCreator('/v1/administration/Settings/identityprovider', '108'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/Settings/managedusers',
+                component: ComponentCreator('/v1/administration/Settings/managedusers', 'fb8'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/Settings/preferences',
+                component: ComponentCreator('/v1/administration/Settings/preferences', '80c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/Settings/systemusers',
+                component: ComponentCreator('/v1/administration/Settings/systemusers', '12f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -194,12 +224,6 @@ export default [
               {
                 path: '/v1/userguides/signupadcyma',
                 component: ComponentCreator('/v1/userguides/signupadcyma', '9d1'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/v1/workflows',
-                component: ComponentCreator('/v1/workflows', '975'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

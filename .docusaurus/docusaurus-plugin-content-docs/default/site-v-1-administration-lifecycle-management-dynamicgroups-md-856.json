@@ -1,0 +1,24 @@
+{
+  "id": "administration/Lifecycle Management/dynamicgroups",
+  "title": "dynamicgroups",
+  "description": "",
+  "source": "@site/v1/administration/Lifecycle Management/dynamicgroups.md",
+  "sourceDirName": "administration/Lifecycle Management",
+  "slug": "/administration/Lifecycle Management/dynamicgroups",
+  "permalink": "/v1/administration/Lifecycle Management/dynamicgroups",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/Lifecycle Management/dynamicgroups.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Workflows",
+    "permalink": "/v1/administration/Lifecycle Management/workflows"
+  },
+  "next": {
+    "title": "Email Templates",
+    "permalink": "/v1/administration/Lifecycle Management/emailtemplates"
+  }
+}

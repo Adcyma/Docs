@@ -14,11 +14,11 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Email Templates",
-    "permalink": "/v1/administration/emailtemplates"
+    "title": "Company Profile",
+    "permalink": "/v1/administration/Settings/companyprofile"
   },
   "next": {
-    "title": "Job Titles",
-    "permalink": "/v1/administration/jobtitles"
+    "title": "Managed Users",
+    "permalink": "/v1/administration/managedusers"
   }
 }

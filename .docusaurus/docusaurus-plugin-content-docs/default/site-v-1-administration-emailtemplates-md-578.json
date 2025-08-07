@@ -15,7 +15,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Company Profile",
-    "permalink": "/v1/administration/companyprofile"
+    "permalink": "/v1/administration/Settings/companyprofile"
   },
   "next": {
     "title": "Identity Provider",

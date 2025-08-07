@@ -14,11 +14,11 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Job Titles",
-    "permalink": "/v1/administration/jobtitles"
+    "title": "Identity Provider",
+    "permalink": "/v1/administration/Settings/identityprovider"
   },
   "next": {
-    "title": "Offices",
-    "permalink": "/v1/administration/offices"
+    "title": "Preferences",
+    "permalink": "/v1/administration/preferences"
   }
 }

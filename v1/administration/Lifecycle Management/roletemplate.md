@@ -8,7 +8,7 @@ The Role Templates page lets administrators create Roles that can be assigned to
 
 :::
 <br/>
-<img src="/img/RoleTemplates.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/RoleTemplates.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 
 Administrators can:

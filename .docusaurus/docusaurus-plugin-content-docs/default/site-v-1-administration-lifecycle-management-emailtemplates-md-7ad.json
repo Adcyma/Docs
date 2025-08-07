@@ -1,0 +1,24 @@
+{
+  "id": "administration/Lifecycle Management/emailtemplates",
+  "title": "Email Templates",
+  "description": "The Email Templates page lets administrators create email templates that can be used in Workflows. These templates can be used in Workflows for key processes like user onboarding, role transitions, and department reassignments.",
+  "source": "@site/v1/administration/Lifecycle Management/emailtemplates.md",
+  "sourceDirName": "administration/Lifecycle Management",
+  "slug": "/administration/Lifecycle Management/emailtemplates",
+  "permalink": "/v1/administration/Lifecycle Management/emailtemplates",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/Lifecycle Management/emailtemplates.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "dynamicgroups",
+    "permalink": "/v1/administration/Lifecycle Management/dynamicgroups"
+  },
+  "next": {
+    "title": "Role Templates",
+    "permalink": "/v1/administration/Lifecycle Management/roletemplate"
+  }
+}

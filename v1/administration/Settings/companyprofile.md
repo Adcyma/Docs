@@ -20,7 +20,7 @@ Administrators can view and edit the following details:
 
 <br/>
 
-<img src="/img/CompanyProfile.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/CompanyProfile.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 
 
 This information is primarily used for administrative and support purposes, ensuring we can contact the appropriate person in your organization when needed.

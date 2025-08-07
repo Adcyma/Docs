@@ -11,48 +11,73 @@
           "mainDocId": "start",
           "docs": [
             {
-              "id": "administration/companyprofile",
-              "path": "/v1/administration/companyprofile",
+              "id": "administration/Access Governance/servicesandresources",
+              "path": "/v1/administration/Access Governance/servicesandresources",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "administration/emailtemplates",
-              "path": "/v1/administration/emailtemplates",
+              "id": "administration/Lifecycle Management/dynamicgroups",
+              "path": "/v1/administration/Lifecycle Management/dynamicgroups",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "administration/identityprovider",
-              "path": "/v1/administration/identityprovider",
+              "id": "administration/Lifecycle Management/emailtemplates",
+              "path": "/v1/administration/Lifecycle Management/emailtemplates",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "administration/jobtitles",
-              "path": "/v1/administration/jobtitles",
+              "id": "administration/Lifecycle Management/roletemplate",
+              "path": "/v1/administration/Lifecycle Management/roletemplate",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "administration/managedusers",
-              "path": "/v1/administration/managedusers",
+              "id": "administration/Lifecycle Management/workflows",
+              "path": "/v1/administration/Lifecycle Management/workflows",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "administration/offices",
-              "path": "/v1/administration/offices",
+              "id": "administration/Organization/companies",
+              "path": "/v1/administration/Organization/companies",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "administration/preferences",
-              "path": "/v1/administration/preferences",
+              "id": "administration/Organization/departments",
+              "path": "/v1/administration/Organization/departments",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "administration/roletemplate",
-              "path": "/v1/administration/roletemplate",
+              "id": "administration/Organization/jobtitles",
+              "path": "/v1/administration/Organization/jobtitles",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "administration/systemusers",
-              "path": "/v1/administration/systemusers",
+              "id": "administration/Organization/offices",
+              "path": "/v1/administration/Organization/offices",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/Settings/companyprofile",
+              "path": "/v1/administration/Settings/companyprofile",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/Settings/identityprovider",
+              "path": "/v1/administration/Settings/identityprovider",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/Settings/managedusers",
+              "path": "/v1/administration/Settings/managedusers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/Settings/preferences",
+              "path": "/v1/administration/Settings/preferences",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/Settings/systemusers",
+              "path": "/v1/administration/Settings/systemusers",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -108,11 +133,6 @@
             {
               "id": "userguides/signupadcyma",
               "path": "/v1/userguides/signupadcyma",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "workflows",
-              "path": "/v1/workflows",
               "sidebar": "tutorialSidebar"
             },
             {

@@ -56,54 +56,74 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/v1-a9b": {
+  "/v1-68d": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---v-1-aba-e71"
     }
   },
-  "/v1-285": {
+  "/v1-942": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---v-178-e-2f9"
   },
-  "/v1-5a9": {
+  "/v1-636": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/v1/administration/companyprofile-690": {
+  "/v1/administration/Access Governance/servicesandresources-f99": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-companyprofile-7-e-5-c31"
+    "content": "content---v-1-administration-access-governance-servicesandresources-76-c-4b7"
   },
-  "/v1/administration/emailtemplates-92b": {
+  "/v1/administration/Lifecycle Management/dynamicgroups-3f0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-emailtemplates-578-10f"
+    "content": "content---v-1-administration-lifecycle-management-dynamicgroups-856-4a1"
   },
-  "/v1/administration/identityprovider-295": {
+  "/v1/administration/Lifecycle Management/emailtemplates-f9a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-identityprovider-123-b7d"
+    "content": "content---v-1-administration-lifecycle-management-emailtemplates-7-ad-e61"
   },
-  "/v1/administration/jobtitles-222": {
+  "/v1/administration/Lifecycle Management/roletemplate-c4f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-jobtitles-67-c-be8"
+    "content": "content---v-1-administration-lifecycle-management-roletemplate-327-2f3"
   },
-  "/v1/administration/managedusers-cd4": {
+  "/v1/administration/Lifecycle Management/workflows-17e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-managedusers-380-574"
+    "content": "content---v-1-administration-lifecycle-management-workflows-046-94e"
   },
-  "/v1/administration/offices-45b": {
+  "/v1/administration/Organization/companies-209": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-offices-5-b-0-390"
+    "content": "content---v-1-administration-organization-companies-94-f-749"
   },
-  "/v1/administration/preferences-1a4": {
+  "/v1/administration/Organization/departments-cd9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-preferencesa-2-d-b43"
+    "content": "content---v-1-administration-organization-departmentsc-69-8fd"
   },
-  "/v1/administration/roletemplate-67a": {
+  "/v1/administration/Organization/jobtitles-4da": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-roletemplate-3-ec-fd6"
+    "content": "content---v-1-administration-organization-jobtitles-0-f-9-499"
   },
-  "/v1/administration/systemusers-24c": {
+  "/v1/administration/Organization/offices-8b1": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-administration-systemusers-4-dd-2a7"
+    "content": "content---v-1-administration-organization-officesace-20c"
+  },
+  "/v1/administration/Settings/companyprofile-788": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-administration-settings-companyprofile-939-529"
+  },
+  "/v1/administration/Settings/identityprovider-108": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-administration-settings-identityprovider-67-d-f92"
+  },
+  "/v1/administration/Settings/managedusers-fb8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-administration-settings-managedusers-25-f-974"
+  },
+  "/v1/administration/Settings/preferences-80c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-administration-settings-preferences-73-e-cfb"
+  },
+  "/v1/administration/Settings/systemusers-12f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-administration-settings-systemusers-5-de-a1c"
   },
   "/v1/api/createuser-424": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -160,10 +180,6 @@
   "/v1/userguides/signupadcyma-9d1": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---v-1-userguides-signupadcyma-5-d-8-599"
-  },
-  "/v1/workflows-975": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---v-1-workflows-320-7da"
   },
   "/-e5f": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
