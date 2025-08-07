@@ -7,7 +7,7 @@ title: Using Your Dashboard
 
 Welcome to your dashboard! This guide will help you understand how to use the main features for managing employees.
 <br/>
-<img src="/img/Dashboard.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/Dashboard2.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 
 <h2>Getting Started</h2>
 
@@ -24,12 +24,13 @@ Below these buttons, you'll find two sections:
 
 1. Click the "New employee" button
 <br/>
-<img src="/img/NewEmployee.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/NewEmployee.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 2. Fill in their information:
    - First and last name
    - Job title (choose from the dropdown list)
    - Department (choose from the dropdown list)
+   - Company (choose from the dropdown)
    - Office location (this will automatically fill in the address details)
    - Their preferred language (Microsoft Ecosystem - Not Adcyma)
    - Their manager
@@ -47,10 +48,10 @@ The system will then process this information and you'll see the task appear in 
 
 1. Click the "Edit employee" 
 <br/>
-<img src="/img/EditEmployee.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/EditEmployee.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 2. Search for and select the employee's name
-3. You can then update any of their details:
+3. You can update any of their details and specify when the changes should take effect:
    - Name
    - Job title
    - Department
@@ -64,7 +65,7 @@ The system will then process this information and you'll see the task appear in 
 
 1. Click the "Employee leaving" 
 <br/>
-<img src="/img/EmployeeLeaving.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/EmployeeLeaving.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 2. Search for and select the employee's name
    - Their current information will be shown automatically
