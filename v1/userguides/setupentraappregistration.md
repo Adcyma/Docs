@@ -71,4 +71,25 @@ Select Application permissions and choose Exchange.ManageAsApp in the list.
 <br/>
 <img src="/img/CreateAppRegistration10.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
+Navigate to Entra ID > Roles and administrators and make sure All roles is selected in the sidebar.
+Search for Exchange Recipient Administrator.
+<br/>
+<img src="/img/exchange1.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<br/><br/>
+
+Click the role in the search result to open its details page.
+<br/>
+<img src="/img/exchange2.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<br/><br/>
+
+Click + Add assignments at the top.
+<br/>
+<img src="/img/exchange3.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<br/><br/>
+
+In the assignment panel, switch to the Apps tab, search for your Adcyma app registration, select it, and click Add.
+<br/>
+<img src="/img/exchange4.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<br/><br/>
+
 The App Registration is now complete, with the necessary permissions and Client Secret configured.

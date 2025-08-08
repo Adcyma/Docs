@@ -11,6 +11,16 @@
           "mainDocId": "start",
           "docs": [
             {
+              "id": "administration/Access Governance/approvalflows",
+              "path": "/v1/administration/Access Governance/approvalflows",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/Access Governance/pendingrequests",
+              "path": "/v1/administration/Access Governance/pendingrequests",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "administration/Access Governance/servicesandresources",
               "path": "/v1/administration/Access Governance/servicesandresources",
               "sidebar": "tutorialSidebar"
@@ -63,6 +73,11 @@
             {
               "id": "administration/Settings/identityprovider",
               "path": "/v1/administration/Settings/identityprovider",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "administration/Settings/logs",
+              "path": "/v1/administration/Settings/logs",
               "sidebar": "tutorialSidebar"
             },
             {

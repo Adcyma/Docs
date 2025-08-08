@@ -1,6 +1,6 @@
 {
   "id": "administration/Access Governance/servicesandresources",
-  "title": "servicesandresources",
+  "title": "Services & Resources",
   "description": "",
   "source": "@site/v1/administration/Access Governance/servicesandresources.md",
   "sourceDirName": "administration/Access Governance",
@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Administration",
-    "permalink": "/v1/category/administration"
+    "title": "Pending Requests",
+    "permalink": "/v1/administration/Access Governance/pendingrequests"
   },
   "next": {
     "title": "Workflows",

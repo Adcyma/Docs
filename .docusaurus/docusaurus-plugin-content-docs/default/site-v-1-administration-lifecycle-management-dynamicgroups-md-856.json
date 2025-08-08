@@ -1,7 +1,7 @@
 {
   "id": "administration/Lifecycle Management/dynamicgroups",
-  "title": "dynamicgroups",
-  "description": "",
+  "title": "Dynamic Groups",
+  "description": "Dynamic Groups allow you to automatically manage group membership based on user attributes and rules. You can use them to populate Microsoft Entra Security Groups or Exchange Distribution Lists with users who match defined conditions — while also manually including or excluding specific users when needed.",
   "source": "@site/v1/administration/Lifecycle Management/dynamicgroups.md",
   "sourceDirName": "administration/Lifecycle Management",
   "slug": "/administration/Lifecycle Management/dynamicgroups",
@@ -11,7 +11,11 @@
   "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/Lifecycle Management/dynamicgroups.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Dynamic Groups"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Workflows",

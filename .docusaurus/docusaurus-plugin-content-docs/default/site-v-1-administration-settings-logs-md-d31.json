@@ -1,0 +1,24 @@
+{
+  "id": "administration/Settings/logs",
+  "title": "Logs",
+  "description": "The Logs page gives you a behind-the-scenes look at what’s happening across your identity setup in Adcyma. It's where you can keep track of key events, actions, and any issues that might pop up.",
+  "source": "@site/v1/administration/Settings/logs.md",
+  "sourceDirName": "administration/Settings",
+  "slug": "/administration/Settings/logs",
+  "permalink": "/v1/administration/Settings/logs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/Settings/logs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Identity Provider",
+    "permalink": "/v1/administration/Settings/identityprovider"
+  },
+  "next": {
+    "title": "Managed Users",
+    "permalink": "/v1/administration/Settings/managedusers"
+  }
+}

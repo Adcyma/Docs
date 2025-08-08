@@ -56,18 +56,26 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/v1-68d": {
+  "/v1-fbb": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---v-1-aba-e71"
     }
   },
-  "/v1-942": {
+  "/v1-bf4": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---v-178-e-2f9"
   },
-  "/v1-636": {
+  "/v1-aa0": {
     "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/v1/administration/Access Governance/approvalflows-b91": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-administration-access-governance-approvalflows-37-b-7e6"
+  },
+  "/v1/administration/Access Governance/pendingrequests-6f8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-administration-access-governance-pendingrequests-1-b-7-ebb"
   },
   "/v1/administration/Access Governance/servicesandresources-f99": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -112,6 +120,10 @@
   "/v1/administration/Settings/identityprovider-108": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---v-1-administration-settings-identityprovider-67-d-f92"
+  },
+  "/v1/administration/Settings/logs-93b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---v-1-administration-settings-logsd-31-5b3"
   },
   "/v1/administration/Settings/managedusers-fb8": {
     "__comp": "__comp---theme-doc-item-178-a40",

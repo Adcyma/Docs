@@ -1,0 +1,24 @@
+{
+  "id": "administration/Settings/settings",
+  "title": "settings",
+  "description": "",
+  "source": "@site/v1/administration/Settings/settings.md",
+  "sourceDirName": "administration/Settings",
+  "slug": "/administration/Settings/",
+  "permalink": "/v1/administration/Settings/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/Settings/settings.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Offices",
+    "permalink": "/v1/administration/Organization/offices"
+  },
+  "next": {
+    "title": "Company Profile",
+    "permalink": "/v1/administration/Settings/companyprofile"
+  }
+}

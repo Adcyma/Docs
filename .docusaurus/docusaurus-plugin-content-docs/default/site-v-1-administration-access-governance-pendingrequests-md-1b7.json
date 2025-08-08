@@ -1,0 +1,24 @@
+{
+  "id": "administration/Access Governance/pendingrequests",
+  "title": "Pending Requests",
+  "description": "",
+  "source": "@site/v1/administration/Access Governance/pendingrequests.md",
+  "sourceDirName": "administration/Access Governance",
+  "slug": "/administration/Access Governance/pendingrequests",
+  "permalink": "/v1/administration/Access Governance/pendingrequests",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/adcyma/docs/tree/main/v1/administration/Access Governance/pendingrequests.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Approval Flows",
+    "permalink": "/v1/administration/Access Governance/approvalflows"
+  },
+  "next": {
+    "title": "Services & Resources",
+    "permalink": "/v1/administration/Access Governance/servicesandresources"
+  }
+}

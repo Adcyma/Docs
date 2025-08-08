@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Identity Provider",
-    "permalink": "/v1/administration/Settings/identityprovider"
+    "title": "Logs",
+    "permalink": "/v1/administration/Settings/logs"
   },
   "next": {
     "title": "Preferences",

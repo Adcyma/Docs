@@ -14,5 +14,8 @@ A Workflow is a way to automate tasks by linking a trigger to one or more action
     - If two or more workflows are triggered under the same conditions and trigger, the one with the lowest priority number will run first. This allows admins to control which workflow takes precedence in overlapping scenarios.
 * **Description:** An optional field where you can add a meaningful description for the Workflow.
 * **Trigger:** – Defines when the workflow should start, such as when a user is created or modified.
+<img src="/img/WorkflowsTriggers.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 * **Condition:** – Optional checks based on user information. You can, for example, run the workflow only if a user has a certain department, is a manager, or reports to a specific manager.
+<img src="/img/WorkflowsConditions.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 * **Action:** – The task(s) to perform when the trigger fires and conditions are met — such as assigning an Access Profile, sending a notification, or enabling the user's account.
+<img src="/img/WorkflowsActions.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />

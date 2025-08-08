@@ -18,11 +18,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "servicesandresources",
+    "title": "Services & Resources",
     "permalink": "/v1/administration/Access Governance/servicesandresources"
   },
   "next": {
-    "title": "dynamicgroups",
+    "title": "Dynamic Groups",
     "permalink": "/v1/administration/Lifecycle Management/dynamicgroups"
   }
 }

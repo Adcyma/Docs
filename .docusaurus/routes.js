@@ -49,16 +49,28 @@ export default [
   },
   {
     path: '/v1',
-    component: ComponentCreator('/v1', '68d'),
+    component: ComponentCreator('/v1', 'fbb'),
     routes: [
       {
         path: '/v1',
-        component: ComponentCreator('/v1', '942'),
+        component: ComponentCreator('/v1', 'bf4'),
         routes: [
           {
             path: '/v1',
-            component: ComponentCreator('/v1', '636'),
+            component: ComponentCreator('/v1', 'aa0'),
             routes: [
+              {
+                path: '/v1/administration/Access Governance/approvalflows',
+                component: ComponentCreator('/v1/administration/Access Governance/approvalflows', 'b91'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/Access Governance/pendingrequests',
+                component: ComponentCreator('/v1/administration/Access Governance/pendingrequests', '6f8'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/v1/administration/Access Governance/servicesandresources',
                 component: ComponentCreator('/v1/administration/Access Governance/servicesandresources', 'f99'),
@@ -122,6 +134,12 @@ export default [
               {
                 path: '/v1/administration/Settings/identityprovider',
                 component: ComponentCreator('/v1/administration/Settings/identityprovider', '108'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/v1/administration/Settings/logs',
+                component: ComponentCreator('/v1/administration/Settings/logs', '93b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
