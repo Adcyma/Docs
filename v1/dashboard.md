@@ -7,7 +7,7 @@ title: Using Your Dashboard
 
 Welcome to your dashboard! This guide will help you understand how to use the main features for managing employees.
 <br/>
-<img src="/img/Dashboard2.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/Dashboardnew.webp" style={{ width: '110%', maxWidth: '2660px', height: 'auto', border: '2px solid black', borderRadius: '5px', display: 'block', margin: '0 auto' }} />
 
 <h2>Getting Started</h2>
 
@@ -78,7 +78,7 @@ The system will then process this information and you'll see the task appear in 
 - The "Queued Tasks" section shows what's currently being processed
 - Click "View All" to see every pending task
 <br/>
-<img src="/img/QueuedTasks.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/QueuedTasks.png" style={{ width: '105%', maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 - In the "View All" Dialog you can chose to edit when the current task should run or delete it.
 
@@ -86,7 +86,7 @@ The system will then process this information and you'll see the task appear in 
 - The "History" section shows what's been completed
 - Click "View All" to see all past tasks
 <br/>
-<img src="/img/TaskHistory.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<img src="/img/TaskHistory.png" style={{width: '105%', maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/>
 <br/>
 :::tip

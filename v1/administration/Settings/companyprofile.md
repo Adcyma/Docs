@@ -19,8 +19,18 @@ Administrators can view and edit the following details:
 - **Primary Contact Phone**  
 
 <br/>
-
-<img src="/img/CompanyProfile.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-
+<img
+  src="/img/CompanyProfile.webp"
+  style={{
+    width: '100%',
+    maxWidth: '800px', // or 100%, or whatever works best for your design
+    height: 'auto',
+    border: '2px solid black',
+    borderRadius: '5px',
+    display: 'block',
+    margin: '0 auto', // center the image
+  }}
+/>
+<br/>
 
 This information is primarily used for administrative and support purposes, ensuring we can contact the appropriate person in your organization when needed.
