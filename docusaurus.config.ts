@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Adcyma',
-  tagline: 'Lightweight IAM',
+  tagline: 'Lightweight IGA',
   favicon: 'img/faviconAdcyma.ico',
   url: 'https://docs.adcyma.com',
   baseUrl: '/',  
@@ -25,7 +25,7 @@ const config: Config = {
       '@docusaurus/plugin-ideal-image',
       {
         quality: 95,
-        max: 3840, // up to 4K width variants
+        max: 2160, // crisp Full HD at 2x DPR (1080 CSS px)
         min: 320,
         steps: 9,
         disableInDev: false,
@@ -67,7 +67,7 @@ const config: Config = {
       title: '',  
       logo: {
         alt: 'Adcyma Logo',
-        src: 'img/logo.svg',
+        src: 'img/AdcymaLogo.png',
         href: 'https://docs.adcyma.com/v1/start',
       },
       items: [
