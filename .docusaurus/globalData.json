@@ -11,21 +11,6 @@
           "mainDocId": "start",
           "docs": [
             {
-              "id": "administration/Access Governance/approvalflows",
-              "path": "/v1/administration/Access Governance/approvalflows",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "administration/Access Governance/pendingrequests",
-              "path": "/v1/administration/Access Governance/pendingrequests",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "administration/Access Governance/servicesandresources",
-              "path": "/v1/administration/Access Governance/servicesandresources",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "administration/Lifecycle Management/dynamicgroups",
               "path": "/v1/administration/Lifecycle Management/dynamicgroups",
               "sidebar": "tutorialSidebar"
@@ -96,38 +81,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "api/createuser",
-              "path": "/v1/api/createuser",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "api/deleteuser",
-              "path": "/v1/api/deleteuser",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "api/getallusers",
-              "path": "/v1/api/getallusers",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "api/updateuser",
-              "path": "/v1/api/updateuser",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "authentication",
               "path": "/v1/authentication",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "dashboard",
-              "path": "/v1/dashboard",
+              "id": "hosting",
+              "path": "/v1/hosting",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "hosting",
-              "path": "/v1/hosting",
+              "id": "peoplehub",
+              "path": "/v1/peoplehub",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -146,11 +111,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "userguides/signupadcyma",
-              "path": "/v1/userguides/signupadcyma",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "/category/administration",
               "path": "/v1/category/administration",
               "sidebar": "tutorialSidebar"
@@ -158,11 +118,6 @@
             {
               "id": "/category/user-guides",
               "path": "/v1/category/user-guides",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/api",
-              "path": "/v1/category/api",
               "sidebar": "tutorialSidebar"
             }
           ],

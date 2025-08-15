@@ -1,0 +1,24 @@
+{
+  "id": "administration/Organization/departments",
+  "title": "Departments",
+  "description": "The Departments page provides a centralized interface for managing your organization's department structure. This master list of departments serves as the foundation for user assignments and workflow configurations throughout the system.",
+  "source": "@site/v1/administration/Organization/departments.mdx",
+  "sourceDirName": "administration/Organization",
+  "slug": "/administration/Organization/departments",
+  "permalink": "/v1/administration/Organization/departments",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Organization/departments.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Companies",
+    "permalink": "/v1/administration/Organization/companies"
+  },
+  "next": {
+    "title": "Job Titles",
+    "permalink": "/v1/administration/Organization/jobtitles"
+  }
+}

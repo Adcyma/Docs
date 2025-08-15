@@ -1,0 +1,24 @@
+{
+  "id": "administration/Settings/companyprofile",
+  "title": "Company Profile",
+  "description": "The Company Profile page serves as the central hub for your organization's registered information within Adcyma. This section maintains essential company identification and contact details that facilitate seamless communication and support interactions.",
+  "source": "@site/v1/administration/Settings/companyprofile.mdx",
+  "sourceDirName": "administration/Settings",
+  "slug": "/administration/Settings/companyprofile",
+  "permalink": "/v1/administration/Settings/companyprofile",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Settings/companyprofile.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Offices",
+    "permalink": "/v1/administration/Organization/offices"
+  },
+  "next": {
+    "title": "Identity Provider Settings",
+    "permalink": "/v1/administration/Settings/identityprovider"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "administration/Settings/managedusers",
+  "title": "Managed Users",
+  "description": "The Managed Users page provides a comprehensive view of all users currently under Adcyma's management. This centralized interface allows administrators to monitor user information, control the scope of managed users, and ensure user data remains synchronized with your identity provider.",
+  "source": "@site/v1/administration/Settings/managedusers.mdx",
+  "sourceDirName": "administration/Settings",
+  "slug": "/administration/Settings/managedusers",
+  "permalink": "/v1/administration/Settings/managedusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Settings/managedusers.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Logs",
+    "permalink": "/v1/administration/Settings/logs"
+  },
+  "next": {
+    "title": "Preferences",
+    "permalink": "/v1/administration/Settings/preferences"
+  }
+}

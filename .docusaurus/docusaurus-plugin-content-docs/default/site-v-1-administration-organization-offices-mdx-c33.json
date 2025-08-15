@@ -1,0 +1,24 @@
+{
+  "id": "administration/Organization/offices",
+  "title": "Offices",
+  "description": "The Offices page provides a comprehensive interface for managing your organization's office locations. This centralized system allows administrators to maintain accurate office information including names, locations, and associated details that can be utilized throughout the platform.",
+  "source": "@site/v1/administration/Organization/offices.mdx",
+  "sourceDirName": "administration/Organization",
+  "slug": "/administration/Organization/offices",
+  "permalink": "/v1/administration/Organization/offices",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Organization/offices.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Job Titles",
+    "permalink": "/v1/administration/Organization/jobtitles"
+  },
+  "next": {
+    "title": "Company Profile",
+    "permalink": "/v1/administration/Settings/companyprofile"
+  }
+}

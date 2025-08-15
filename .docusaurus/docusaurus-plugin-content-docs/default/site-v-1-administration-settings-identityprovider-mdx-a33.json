@@ -1,0 +1,24 @@
+{
+  "id": "administration/Settings/identityprovider",
+  "title": "Identity Provider Settings",
+  "description": "The Identity Provider Settings page allows you to modify the existing connection between Adcyma and your organization's external identity provider, such as Microsoft Entra ID. Since these settings were configured during your initial Adcyma setup, this page is typically used when you need to update credentials, change configurations, or troubleshoot connectivity issues.",
+  "source": "@site/v1/administration/Settings/identityprovider.mdx",
+  "sourceDirName": "administration/Settings",
+  "slug": "/administration/Settings/identityprovider",
+  "permalink": "/v1/administration/Settings/identityprovider",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Settings/identityprovider.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Company Profile",
+    "permalink": "/v1/administration/Settings/companyprofile"
+  },
+  "next": {
+    "title": "Logs",
+    "permalink": "/v1/administration/Settings/logs"
+  }
+}

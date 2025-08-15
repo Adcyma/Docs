@@ -1,0 +1,24 @@
+{
+  "id": "administration/Settings/logs",
+  "title": "Logs",
+  "description": "The Logs page provides comprehensive visibility into all activities and events occurring within your Adcyma environment. This centralized audit trail enables administrators to monitor system operations, track user activities, troubleshoot issues, and maintain security oversight across your identity management infrastructure.",
+  "source": "@site/v1/administration/Settings/logs.mdx",
+  "sourceDirName": "administration/Settings",
+  "slug": "/administration/Settings/logs",
+  "permalink": "/v1/administration/Settings/logs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Settings/logs.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Identity Provider Settings",
+    "permalink": "/v1/administration/Settings/identityprovider"
+  },
+  "next": {
+    "title": "Managed Users",
+    "permalink": "/v1/administration/Settings/managedusers"
+  }
+}

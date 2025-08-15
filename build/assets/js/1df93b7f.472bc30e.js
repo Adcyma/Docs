@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkadcymadocs=self.webpackChunkadcymadocs||[]).push([[583],{3797:(a,c,e)=>{e.r(c),e.d(c,{default:()=>t});var s=e(6540);function t(){return(0,s.useEffect)((()=>{window.location.replace("/v1/start")}),[]),null}}}]);

@@ -1,0 +1,28 @@
+{
+  "id": "peoplehub",
+  "title": "Using Your People Hub",
+  "description": "The People Hub serves as your central command center for employee lifecycle management. This intuitive interface streamlines onboarding, role changes, and offboarding processes while providing real-time visibility into pending and completed tasks.",
+  "source": "@site/v1/peoplehub.mdx",
+  "sourceDirName": ".",
+  "slug": "/peoplehub",
+  "permalink": "/v1/peoplehub",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/peoplehub.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Using Your People Hub"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Welcome",
+    "permalink": "/v1/start"
+  },
+  "next": {
+    "title": "Administration",
+    "permalink": "/v1/category/administration"
+  }
+}

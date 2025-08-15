@@ -1,0 +1,28 @@
+{
+  "id": "authentication",
+  "title": "Authentication",
+  "description": "Adcyma provides enterprise-grade authentication through two secure methods: Magic Links (default) and Microsoft Entra ID Single Sign-On (recommended). Traditional password-based authentication is not supported to ensure maximum security and reduce attack vectors.",
+  "source": "@site/v1/authentication.mdx",
+  "sourceDirName": ".",
+  "slug": "/authentication",
+  "permalink": "/v1/authentication",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/authentication.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Authentication"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "System Users",
+    "permalink": "/v1/administration/Settings/systemusers"
+  },
+  "next": {
+    "title": "Hosting",
+    "permalink": "/v1/hosting"
+  }
+}

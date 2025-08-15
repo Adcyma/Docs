@@ -27,9 +27,11 @@ export default {
     [
       "@docusaurus/plugin-ideal-image",
       {
-        "quality": 70,
-        "max": 1920,
-        "min": 720
+        "quality": 95,
+        "max": 3840,
+        "min": 320,
+        "steps": 9,
+        "disableInDev": false
       }
     ]
   ],
@@ -39,7 +41,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.ts",
-          "editUrl": "https://github.com/adcyma/docs/tree/main/",
+          "editUrl": "https://github.com/Adcyma/Docs/tree/main/",
           "path": "v1",
           "routeBasePath": "v1"
         },
@@ -52,7 +54,7 @@ export default {
             ],
             "xslt": true
           },
-          "editUrl": "https://github.com/adcyma/docs/tree/main/",
+          "editUrl": "https://github.com/Adcyma/Docs/tree/main/",
           "onInlineTags": "warn",
           "onInlineAuthors": "warn",
           "onUntruncatedBlogPosts": "warn"
@@ -64,12 +66,12 @@ export default {
     ]
   ],
   "themeConfig": {
-    "image": "img/AdcymaLogo__1_-removebg-preview.png",
+    "image": "img/docusaurus-social-card.jpg",
     "navbar": {
       "title": "",
       "logo": {
         "alt": "Adcyma Logo",
-        "src": "img/AdcymaLogo__1_-removebg-preview.png",
+        "src": "img/logo.svg",
         "href": "https://docs.adcyma.com/v1/start"
       },
       "items": [

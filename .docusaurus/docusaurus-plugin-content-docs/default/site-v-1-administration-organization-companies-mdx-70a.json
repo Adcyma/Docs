@@ -1,0 +1,24 @@
+{
+  "id": "administration/Organization/companies",
+  "title": "Companies",
+  "description": "The Companies page provides a centralized interface for managing your organization's company directory. This page displays companies that are automatically synchronized from your Entra ID configuration, ensuring your company list stays current with your organizational structure.",
+  "source": "@site/v1/administration/Organization/companies.mdx",
+  "sourceDirName": "administration/Organization",
+  "slug": "/administration/Organization/companies",
+  "permalink": "/v1/administration/Organization/companies",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Organization/companies.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Workflows",
+    "permalink": "/v1/administration/Lifecycle Management/workflows"
+  },
+  "next": {
+    "title": "Departments",
+    "permalink": "/v1/administration/Organization/departments"
+  }
+}

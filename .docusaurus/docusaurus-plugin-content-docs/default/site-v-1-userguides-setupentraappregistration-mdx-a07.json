@@ -1,0 +1,20 @@
+{
+  "id": "userguides/setupentraappregistration",
+  "title": "Setting Up an App Registration in Microsoft Entra ID",
+  "description": "This comprehensive guide walks you through creating an App Registration in Microsoft Entra ID to enable Adcyma to integrate with your tenant for user and group management, with optional Exchange Online capabilities.",
+  "source": "@site/v1/userguides/setupentraappregistration.mdx",
+  "sourceDirName": "userguides",
+  "slug": "/userguides/setupentraappregistration",
+  "permalink": "/v1/userguides/setupentraappregistration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/userguides/setupentraappregistration.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "User Guides",
+    "permalink": "/v1/category/user-guides"
+  }
+}

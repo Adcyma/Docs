@@ -1,0 +1,24 @@
+{
+  "id": "administration/Settings/preferences",
+  "title": "Preferences",
+  "description": "The Preferences page enables administrators to establish standardized formatting rules for how Adcyma creates and displays user identity information within your tenant. These settings ensure consistency across all newly created users and align with your organization's naming conventions and email policies.",
+  "source": "@site/v1/administration/Settings/preferences.mdx",
+  "sourceDirName": "administration/Settings",
+  "slug": "/administration/Settings/preferences",
+  "permalink": "/v1/administration/Settings/preferences",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Settings/preferences.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Managed Users",
+    "permalink": "/v1/administration/Settings/managedusers"
+  },
+  "next": {
+    "title": "System Users",
+    "permalink": "/v1/administration/Settings/systemusers"
+  }
+}

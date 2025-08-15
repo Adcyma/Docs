@@ -1,0 +1,24 @@
+{
+  "id": "administration/Lifecycle Management/roletemplate",
+  "title": "Role Templates",
+  "description": "Role Templates enable administrators to create standardized access packages that integrate seamlessly with Workflows. These templates streamline access management by ensuring users receive the appropriate permissions and group memberships automatically based on their role requirements.",
+  "source": "@site/v1/administration/Lifecycle Management/roletemplate.mdx",
+  "sourceDirName": "administration/Lifecycle Management",
+  "slug": "/administration/Lifecycle Management/roletemplate",
+  "permalink": "/v1/administration/Lifecycle Management/roletemplate",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Lifecycle Management/roletemplate.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Email Templates",
+    "permalink": "/v1/administration/Lifecycle Management/emailtemplates"
+  },
+  "next": {
+    "title": "Workflows",
+    "permalink": "/v1/administration/Lifecycle Management/workflows"
+  }
+}

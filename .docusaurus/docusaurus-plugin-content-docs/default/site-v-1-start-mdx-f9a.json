@@ -1,0 +1,25 @@
+{
+  "id": "start",
+  "title": "Welcome",
+  "description": "Welcome to Adcyma's Documentation!",
+  "source": "@site/v1/start.mdx",
+  "sourceDirName": ".",
+  "slug": "/start",
+  "permalink": "/v1/start",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/start.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Welcome",
+    "hide_title": true
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Using Your People Hub",
+    "permalink": "/v1/peoplehub"
+  }
+}

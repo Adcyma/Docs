@@ -1,0 +1,28 @@
+{
+  "id": "security",
+  "title": "Security",
+  "description": "Security is fundamental to everything we build. Our comprehensive security approach protects your data through multiple layers of defense, industry best practices, and continuous monitoring.",
+  "source": "@site/v1/security.mdx",
+  "sourceDirName": ".",
+  "slug": "/security",
+  "permalink": "/v1/security",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/security.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Security"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Hosting",
+    "permalink": "/v1/hosting"
+  },
+  "next": {
+    "title": "User Guides",
+    "permalink": "/v1/category/user-guides"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "administration/Settings/systemusers",
+  "title": "System Users",
+  "description": "The System Users page provides comprehensive management of internal Adcyma user accounts. These are administrative accounts that grant access to the Adcyma platform itself, separate from the managed users in your tenant. This interface allows administrators to control who can access Adcyma and what level of permissions they have within the system.",
+  "source": "@site/v1/administration/Settings/systemusers.mdx",
+  "sourceDirName": "administration/Settings",
+  "slug": "/administration/Settings/systemusers",
+  "permalink": "/v1/administration/Settings/systemusers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Settings/systemusers.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Preferences",
+    "permalink": "/v1/administration/Settings/preferences"
+  },
+  "next": {
+    "title": "Authentication",
+    "permalink": "/v1/authentication"
+  }
+}

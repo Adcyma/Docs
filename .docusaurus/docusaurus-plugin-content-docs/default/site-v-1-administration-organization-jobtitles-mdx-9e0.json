@@ -1,0 +1,24 @@
+{
+  "id": "administration/Organization/jobtitles",
+  "title": "Job Titles",
+  "description": "The Job Titles page provides a centralized interface for managing your organization's job title structure. This master list of job titles serves as the foundation for user assignments and workflow configurations throughout the system.",
+  "source": "@site/v1/administration/Organization/jobtitles.mdx",
+  "sourceDirName": "administration/Organization",
+  "slug": "/administration/Organization/jobtitles",
+  "permalink": "/v1/administration/Organization/jobtitles",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Organization/jobtitles.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Departments",
+    "permalink": "/v1/administration/Organization/departments"
+  },
+  "next": {
+    "title": "Offices",
+    "permalink": "/v1/administration/Organization/offices"
+  }
+}

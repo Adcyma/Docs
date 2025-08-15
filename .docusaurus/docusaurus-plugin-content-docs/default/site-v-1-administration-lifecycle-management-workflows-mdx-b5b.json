@@ -1,0 +1,24 @@
+{
+  "id": "administration/Lifecycle Management/workflows",
+  "title": "Workflows",
+  "description": "Workflows automate critical tasks by connecting triggers to actions, with optional conditions to control when automation occurs. They form the backbone of Adcyma's automation capabilities, enabling seamless user lifecycle management from onboarding to offboarding.",
+  "source": "@site/v1/administration/Lifecycle Management/workflows.mdx",
+  "sourceDirName": "administration/Lifecycle Management",
+  "slug": "/administration/Lifecycle Management/workflows",
+  "permalink": "/v1/administration/Lifecycle Management/workflows",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/administration/Lifecycle Management/workflows.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Role Templates",
+    "permalink": "/v1/administration/Lifecycle Management/roletemplate"
+  },
+  "next": {
+    "title": "Companies",
+    "permalink": "/v1/administration/Organization/companies"
+  }
+}
