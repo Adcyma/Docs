@@ -1,50 +1,146 @@
----
-sidebar_position: 4
-title: Dynamic Groups
----
-
 # Dynamic Groups
 
-**Dynamic Groups** allow you to automatically manage group membership based on user attributes and rules. You can use them to populate **Microsoft Entra Security Groups** or **Exchange Distribution Lists** with users who match defined conditions — while also manually including or excluding specific users when needed.
+**Automatically manage group membership based on user attributes, keeping your teams organized without manual updates.**
 
-<img src="/img/DynamicGroups.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/>
+Dynamic Groups eliminate the need to manually add or remove users from Microsoft Entra Security Groups or Exchange Distribution Lists. Instead, you define rules based on user attributes (like department, job title, or location), and Adcyma automatically maintains the membership for you.
 
-### Group Settings
+![Dynamic Groups Interface](/img/DynamicGroups.webp)
 
-- **Name**  
-  The name of the dynamic group. This does not need to be unique but should be descriptive enough to identify its purpose.
+## When to Use Dynamic Groups
 
-- **Description**  
-  An optional field where you can provide additional context or notes about the group.
+**Perfect for:**
+- Department-based distribution lists that update as people change roles
+- Security groups for office locations that adjust as people move
+- Project teams that need specific tool access based on attributes
+- Compliance groups that must include all users meeting certain criteria
 
-- **Target Group Type**  
-  Choose whether this dynamic group manages a:
-  - **Microsoft Entra Security Group**, or
-  - **Exchange Distribution List**
+**Example:** Create a "Marketing Team" group that automatically includes anyone with `Department = Marketing`, while manually excluding interns and including the CMO (who might be in a different department).
 
-- **Target Group**  
-  Select the actual group (from Entra) that will be updated by this dynamic group configuration.
+## Setting Up Your Dynamic Group
+
+### Basic Configuration
+
+**Name**
+Choose a descriptive name that clearly indicates the group's purpose. While names don't need to be unique, specific names like "Marketing-FullTime-Seattle" are more helpful than generic ones like "Group1".
+
+**Description** *(Optional)*
+Document the group's purpose, any special rules, or important notes for future administrators. This is especially valuable for complex conditional logic.
+
+**Target Group Type**
+Select what type of group you're managing:
+- **Microsoft Entra Security Group** - For access permissions and security policies
+- **Exchange Distribution List** - For email distribution and communication
+
+**Target Group**
+Choose the existing group in Entra that will be updated. The dynamic group configuration will control the membership of this group.
+
+### Membership Rules
+
+#### Evaluation Mode
+**Choose your approach carefully:**
+
+**Relaxed Mode** *(Recommended for most cases)*
+- Keeps existing manual members in the group
+- Adds new users who match your conditions
+- Safe option that won't accidentally remove important users
+- Best for: Adding structure to existing groups
+
+**Strict Mode** *(Use with caution)*
+- Completely replaces group membership based on your rules
+- Removes users who don't match conditions (except those in "Always Include")
+- Can cause access issues if rules are incorrect
+- Best for: Groups that should be 100% rule-based
+
+> ⚠️ **Warning:** Strict Mode will remove existing members who don't match your new rules. Test your conditions carefully before applying.
+
+#### Manual Overrides
+
+**Always Include Users**
+Specific users who should be in the group regardless of whether they match the automated rules. Common uses:
+- Executives who need access but don't fit standard criteria
+- External consultants with special roles
+- Users with temporary elevated permissions
+
+**Always Exclude Users**
+Users who should never be added, even if they match all conditions. Useful for:
+- Suspended employees who still exist in the system
+- Test accounts that shouldn't receive group benefits
+- Users with conflicting access requirements
+
+#### Conditional Blocks
+Define the automatic membership rules using user attributes.
+
+**Common Conditions:**
+- `Department equals "Marketing"` - All marketing team members
+- `Title contains "Manager"` - All people with manager in their title
+- `Office equals "Seattle"` - All Seattle-based employees
+- `EmployeeType equals "FullTime"` - Exclude contractors and temps
+
+**Combining Conditions:**
+Use AND logic to create precise rules:
+- `Department = "Sales"` AND `Title contains "Director"` - Only sales directors
+- `Office = "NYC"` AND `Department = "Engineering"` - NYC engineering team
+
+## Best Practices
+
+**Start Simple**
+Begin with basic conditions and add complexity gradually. Test each rule before moving to production.
+
+**Use Descriptive Names**
+Name your groups clearly: "Finance-Managers-AllOffices" tells you exactly who should be included.
+
+**Document Complex Logic**
+Use the description field to explain complicated conditional rules for future reference.
+
+**Test Before Going Live**
+Preview membership results before saving, especially when using Strict Mode.
+
+**Regular Reviews**
+Periodically review your dynamic groups to ensure they still match your organizational needs.
+
+## Common Use Cases
+
+**Department Distribution Lists**
+```
+Condition: Department = "Human Resources"
+Mode: Relaxed
+Always Include: CEO, Legal Counsel
+Result: HR team + key stakeholders for HR communications
+```
+
+**Office Security Groups**
+```
+Condition: Office = "London" AND EmployeeType = "FullTime"
+Mode: Strict
+Always Exclude: Contractors, Visitors
+Result: Full-time London employees only
+```
+
+**Project Team Access**
+```
+Condition: Department = "Engineering" AND Title contains "Senior"
+Mode: Relaxed
+Always Include: Project Manager, Product Owner
+Result: Senior engineers + project leadership
+```
+
+## Troubleshooting
+
+**Users Not Being Added**
+- Verify user attributes match your conditions exactly
+- Check spelling and capitalization in your rules
+- Confirm the user exists in Entra with the expected attributes
+
+**Unexpected Removals**
+- Review if you're using Strict Mode unintentionally
+- Check if users are in the "Always Exclude" list
+- Verify user attributes haven't changed
+
+**Group Not Updating**
+- Dynamic group evaluations run on a schedule
+- Manual sync may be needed for immediate updates
+- Check that the target group is correctly selected
 
 ---
 
-### Membership Logic
-
-- **Evaluation Mode**  
-  Determines how group membership is handled when the dynamic rules are evaluated:
-  - **Relaxed Mode**: Keeps existing members and adds new ones who match the conditions.
-  - **Strict Mode**: Will replace the entire group membership based on the evaluated conditions.
-
-- **Always Include Users**  
-  A list of users who should always be included in the group — even if they don’t match any conditions.
-
-- **Always Exclude Users**  
-  A list of users who should never be part of the group — even if they match the defined conditions.
-
-- **Conditional Blocks**  
-  Define the logic for which users should be automatically included based on their attributes. For example:
-  - Include all users in the "Marketing" department
-  - Include users with a title of "Manager" or "Director"
-  - Combine multiple conditions using **AND** logic
-
-Once your group configuration is complete, click **Save Group** to apply your settings. Membership updates will be automatically synchronized with the target group in Entra based on your defined logic.
+**Ready to create your first dynamic group?** Click "New Dynamic Group" and start with a simple department-based rule to get familiar with the process.
