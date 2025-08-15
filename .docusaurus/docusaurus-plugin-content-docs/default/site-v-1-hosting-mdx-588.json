@@ -1,0 +1,28 @@
+{
+  "id": "hosting",
+  "title": "Hosting",
+  "description": "Our platform is built with reliability, security, and scalability in mind. Here's an overview of our hosting infrastructure:",
+  "source": "@site/v1/hosting.mdx",
+  "sourceDirName": ".",
+  "slug": "/hosting",
+  "permalink": "/v1/hosting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Adcyma/Docs/tree/main/v1/hosting.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Hosting"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/v1/authentication"
+  },
+  "next": {
+    "title": "Security",
+    "permalink": "/v1/security"
+  }
+}

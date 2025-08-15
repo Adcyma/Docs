@@ -24,11 +24,11 @@ const config: Config = {
     [
       '@docusaurus/plugin-ideal-image',
       {
-        quality: 80,
-        max: 2560, // allow larger hero/content images to stay crisp on 2x screens
+        quality: 95,
+        max: 3840, // up to 4K width variants
         min: 320,
-        steps: 6,  // generate a good spread of responsive sizes
-        disableInDev: false, // preview optimization locally
+        steps: 9,
+        disableInDev: false,
       },
     ],
   ],
