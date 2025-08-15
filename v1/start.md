@@ -3,32 +3,79 @@ sidebar_position: 1
 title: Welcome
 hide_title: true
 ---
-## Welcome to Adcyma's System Wiki!
 
+## Welcome to Adcyma's Documentation!
 
+Adcyma is a modern **Identity Governance and Administration (IGA)** solution designed specifically for **Microsoft Entra ID**. Our platform streamlines identity lifecycle management through intelligent automation, eliminating manual processes and reducing security risks while ensuring compliance.
 
-This wiki is your guide to everything related to the systems of Adcyma. Here, you'll find detailed information on how to:
+This documentation is your comprehensive guide to implementing and managing Adcyma in your organization. Here you'll find everything you need to:
 
-* Install and set up your system.
-* Configure workflows to meet your needs.
-* Guides to help you comfortably operate the Adcyma Portal.
-* Learn how our system operates and ensures security.
-* If you can’t find the documentation you're looking for, please contact us at support@adcyma.com.
+* **Get started** with initial setup and configuration
+* **Build and configure** automated workflows for your specific business needs  
+* **Manage users and access** through the Adcyma Management Portal
+* **Understand security** and compliance features
+* **Integrate** with your existing HR systems and processes
+* **Troubleshoot** common issues and optimize your implementation
 
-:::tip
-
-Use the navigation links on the left to explore topics.
-
+:::tip Quick Navigation
+Use the sidebar navigation to explore specific topics, or search for what you need using the search function.
 :::
-<br/>
-# Key Terminology
 
-The following terms are used throughout this document and the platform:
+## Why Choose Adcyma?
 
-* **Workflows:** A [Workflow](https://docs.adcyma.com/v1/workflows) in Adcyma is a configurable sequence of logic that automates processes. It consists of three key components: 
-   - Trigger
-   - Condition
-   - Action
-* **Access Profile:** An Access Profile in Adcyma defines a set of access items—currently limited to Entra ID groups—that are bundled together and treated as a single unit. It simplifies the assignment of multiple group memberships by grouping them under one profile.
-<br/>Access Profiles can be assigned through Workflows.<br/>
-For example, an Access Profile called “Finance Team Access” might include Entra ID groups for finance tools, reporting dashboards, and department-specific resources.
+**Transform Your Identity Management**
+- **Save Time**: Automate user onboarding, role changes, and offboarding with intelligent workflows
+- **Eliminate Errors**: Replace manual, error-prone processes with consistent automation
+- **Enhance Security**: Implement just-in-time access controls and role-based permissions
+- **Ensure Compliance**: Generate detailed audit trails and maintain governance requirements
+- **Reduce Costs**: Deploy enterprise-grade ILM 70% cheaper than traditional solutions
+
+**Built for Modern Organizations**
+- Lightweight SaaS solution requiring no on-premises infrastructure
+- User-friendly interface designed for non-technical administrators
+- Seamless integration with Microsoft Entra ID and HR systems
+- Deploy in days, not months, without consultant fees
+
+---
+
+## Key Terminology
+
+Understanding these core concepts will help you navigate Adcyma effectively:
+
+### **Workflows**
+The heart of Adcyma's automation capabilities. A [Workflow](https://docs.adcyma.com/v1/workflows) is a configurable sequence of logic that automates identity management processes. Every workflow consists of three essential components:
+
+- **Trigger**: The event that initiates the workflow (e.g., new hire in HR system, role change, termination)
+- **Condition**: The business logic that determines when actions should be taken (e.g., department = "Sales", location = "Stockholm") 
+- **Action**: The specific tasks performed when conditions are met (e.g., add to Entra ID groups, assign licenses, send notifications)
+
+*Example*: A new employee workflow might trigger when someone joins the Sales department, check their location and role, then automatically add them to the appropriate Entra ID groups for sales tools, regional resources, and company-wide access.
+
+### **Access Profiles**
+Access Profiles simplify complex permission management by bundling related **Entra ID groups** into logical units. Instead of manually assigning multiple individual group memberships, Access Profiles allow you to grant comprehensive access with a single assignment through Workflows.
+
+**Key Benefits:**
+- **Simplified Management**: Bundle related permissions under meaningful names
+- **Consistent Access**: Ensure users receive all necessary group memberships together
+- **Workflow Integration**: Automatically assign comprehensive access based on business rules
+- **Reduced Errors**: Eliminate forgotten permissions through standardized profiles
+
+*Example*: A "Finance Team Access" profile might include Entra ID groups for:
+- Financial reporting tools
+- Expense management systems
+- Department-specific SharePoint sites
+- Budget planning applications
+- Compliance and audit resources
+
+When a new finance employee is hired, a single workflow action assigns the entire Access Profile, ensuring they receive all necessary permissions without manual intervention.
+
+---
+
+## Getting Support
+
+Can't find what you're looking for? Our support team is here to help:
+
+**📧 Technical Support**: support@adcyma.com  
+**💼 General Inquiries**: hello@adcyma.com
+
+We're committed to your success with Adcyma and will help you optimize your identity management processes.

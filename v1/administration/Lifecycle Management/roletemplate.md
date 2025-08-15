@@ -1,28 +1,46 @@
 # Role Templates
 
-The Role Templates page lets administrators create Roles that can be assigned to users through Workflows. These Roles help automate access management by allowing Workflows to grant the right groups at the right time for the right users.
+Role Templates enable administrators to create standardized access packages that integrate seamlessly with Workflows. These templates streamline access management by ensuring users receive the appropriate permissions and group memberships automatically based on their role requirements.
+
+Role Templates are ideal for scenarios where [Dynamic Groups](https://docs.adcyma.com/v1/administration/Lifecycle%20Management/dynamicgroups) aren't sufficient—such as when you need to bundle complex access permissions that go beyond simple attribute-based rules, or when access requirements are based on specific role assignments rather than user attributes like department or job title.
 
 :::info
-
-*Role Templates help automate access assignment but do not immediately provision access until applied within a [Workflow](https://docs.adcyma.com/v1/workflows).*
-
+**Important:** Role Templates define access configurations but do not provision access immediately. Roles are only applied when activated through a [Workflow](https://docs.adcyma.com/v1/workflows).
 :::
+
 <br/>
 <img src="/img/RoleTemplates.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 
-Administrators can:
+## What You Can Do
 
-* **Create Roles:** Define roles and their associated access permissions, making them available for use in Workflows.
-* **Edit Roles:** Modify existing roles.
-* **Delete Roles:** Remove roles that are no longer needed.
+As an administrator, you have complete control over role templates:
 
-<h2>Example Use Case</h2>
+* **Create Roles** – Build comprehensive access packages with specific permissions and group memberships, ready for Workflow integration
+* **Edit Roles** – Update existing roles to reflect changing access requirements or organizational needs
+* **Delete Roles** – Remove outdated or unused roles to maintain a clean, organized template library
 
-A **"New Employee - IT Department"** role template might include:
+## Example: IT Department New Employee Role
 
-* Access to corporate email
-* Membership in the IT support group
-* Permissions for internal tools like the ticketing system
+Consider a **"New Employee - IT Department"** role template that automatically includes:
 
-By incorporating **Roles** into workflows, administrators can ensure consistent, efficient, and rule-based access provisioning without manual intervention.
+* **Email Access** – Corporate email account and distribution lists
+* **Group Membership** – IT support team, technical staff groups
+* **System Permissions** – Internal ticketing system, monitoring tools, and development environments
+* **Security Access** – VPN access and appropriate security clearance levels
+
+When this role is assigned through a Workflow during onboarding, new IT employees receive all necessary access instantly, ensuring they can be productive from day one while maintaining security standards.
+
+## Benefits of Role-Based Access
+
+By incorporating Role Templates into your Workflows, you can:
+
+* **Ensure Consistency** – Every user with the same role receives identical access
+* **Reduce Errors** – Eliminate manual permission assignment mistakes
+* **Save Time** – Automate complex access provisioning processes
+* **Maintain Security** – Apply principle of least privilege consistently
+* **Simplify Compliance** – Track and audit role-based access assignments
+
+---
+
+*Role Templates combined with Workflows create a powerful access management system that scales with your organization while maintaining security and operational efficiency.*

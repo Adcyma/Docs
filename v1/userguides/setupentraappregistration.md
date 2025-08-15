@@ -1,95 +1,111 @@
----
-sidebar_position: 2
-title: Creating an App Registration in Entra ID
----
+# Setting Up an App Registration in Microsoft Entra ID
 
-# Creating an App Registration in Entra ID
+This comprehensive guide walks you through creating an App Registration in Microsoft Entra ID to enable Adcyma to integrate with your tenant for user and group management, with optional Exchange Online capabilities.
 
-This guide explains how to create an App Registration in Entra ID, a necessary step for enabling Adcyma to communicate with Entra ID (and optionally Exchange).
+## Prerequisites
 
-:::warning[Please note]
+> **⚠️ Important Requirement**
+> 
+> You must have **Application Administrator** role permissions to complete this setup process.
 
-***Application Administrator** role is required to complete this task.*
+## Step 1: Access App Registrations
 
-:::
-<br/>
-Log in to your Entra ID tenant and navigate to **Microsoft Entra ID**.
-<br/>
-<img src="/img/CreateAppRegistration1.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Expand Manage in the left menu and click on "App Registration," followed by "New Registration," as shown in the image below.
-<br/>
-<img src="/img/CreateAppRegistration2.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Next, choose a suitable name for the App Registration, such as "Adcyma" and then click "Register".
-<br/>
-<img src="/img/CreateAppRegistration3.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Navigate to Certificates & secrets, choose Client secrets, and click New client secret.
+1. Sign in to your Microsoft Entra ID tenant
+2. Navigate to **Microsoft Entra ID** from the main dashboard
+3. In the left navigation panel, expand **Manage** 
+4. Select **App registrations**
+5. Click **New registration**
 
-Give the Client secret a suiting description, and an expiration of your liking (remember to keep track of the expiration). Next click "Add".
+## Step 2: Register the Application
 
-Afterward, make note of the Client secret and the Secret ID. Adcyma requires this information, along with the Tenant ID, to communicate with your Tenant.
+1. **Application Name**: Enter a descriptive name (e.g., "Adcyma")
+2. **Supported Account Types**: Keep the default selection
+3. **Redirect URI**: Leave this blank for now
+4. Click **Register** to create the app registration
 
-:::warning
+## Step 3: Generate Client Secret
 
-This is your only chance to see the Client Secret, so be sure to save it now.
+1. In your newly created app registration, navigate to **Certificates & secrets**
+2. Under the **Client secrets** tab, click **New client secret**
+3. **Description**: Enter a meaningful description for the secret
+4. **Expiration**: Choose an appropriate expiration period (remember to track this date)
+5. Click **Add**
 
-:::
-<br/>
-<img src="/img/CreateAppRegistration4.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Next, we need to give the correct API permissions, this is done by navigating to API permissions, clicking on Add a permission and then choosing Microsoft Graph.
-<br/>
-<img src="/img/CreateAppRegistration5.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Then, select Application Permission.
-<br/>
-<img src="/img/CreateAppRegistration6.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Now, locate User.ReadWrite.All (this permission is required for Adcyma to manage your Entra ID users).
-<br/>
-<img src="/img/CreateAppRegistration7.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Another required permission is Group.ReadWrite.All for managing your groups. Be sure to add this as well.
-<br/>
-<img src="/img/CreateAppRegistration8.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
+> **🔴 Critical: Save Your Credentials**
+> 
+> Immediately copy and securely store both the **Client Secret Value** and **Secret ID**. The secret value will never be displayed again after you leave this page.
+> 
+> You'll also need your **Tenant ID** (found in the app's Overview page) for Adcyma configuration.
 
-:::note[Optional Step]
+## Step 4: Configure Microsoft Graph Permissions
 
-This is only needed if you want Adcyma to also manage Exchange tasks, such as converting user mailboxes to shared mailboxes.
+### Add Required Permissions
 
-:::
-<br/>
-As an optional step, you can add permissions for Exchange management. To do this, go to APIs my organization uses and select Office 365 Exchange Online from the list.
+1. Navigate to **API permissions**
+2. Click **Add a permission**
+3. Select **Microsoft Graph**
+4. Choose **Application permissions**
 
-<br/>
-<img src="/img/CreateAppRegistration9.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Select Application permissions and choose Exchange.ManageAsApp in the list.
-<br/>
-<img src="/img/CreateAppRegistration10.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
-Navigate to Entra ID > Roles and administrators and make sure All roles is selected in the sidebar.
-Search for Exchange Recipient Administrator.
-<br/>
-<img src="/img/exchange1.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
+### Grant Essential Permissions
 
-Click the role in the search result to open its details page.
-<br/>
-<img src="/img/exchange2.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
+Add the following two critical permissions:
 
-Click + Add assignments at the top.
-<br/>
-<img src="/img/exchange3.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
+**For User Management:**
+- Search for and select **User.ReadWrite.All**
+- This allows Adcyma to manage Entra ID users
 
-In the assignment panel, switch to the Apps tab, search for your Adcyma app registration, select it, and click Add.
-<br/>
-<img src="/img/exchange4.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
-<br/><br/>
+**For Group Management:**
+- Search for and select **Group.ReadWrite.All**
+- This enables Adcyma to manage your groups
 
-The App Registration is now complete, with the necessary permissions and Client Secret configured.
+### Grant Admin Consent
+
+After adding both permissions, click **Grant admin consent** to activate them.
+
+## Step 5: Exchange Online Integration (Optional)
+
+> **💡 Optional Configuration**
+> 
+> Complete this section only if you want Adcyma to manage Exchange tasks like converting user mailboxes to shared mailboxes.
+
+### Add Exchange Permissions
+
+1. In **API permissions**, click **Add a permission**
+2. Go to **APIs my organization uses**
+3. Search for and select **Office 365 Exchange Online**
+4. Choose **Application permissions**
+5. Select **Exchange.ManageAsApp**
+6. Click **Add permissions**
+
+### Assign Exchange Administrator Role
+
+1. Navigate to **Microsoft Entra ID** > **Roles and administrators**
+2. Ensure **All roles** is selected in the sidebar
+3. Search for **Exchange Recipient Administrator**
+4. Click on the role to open its details page
+5. Click **+ Add assignments**
+6. Switch to the **Apps** tab
+7. Search for your Adcyma app registration
+8. Select the app and click **Add**
+
+## Configuration Complete
+
+Your App Registration is now properly configured with:
+
+✅ **Core Permissions**: User and Group management capabilities  
+✅ **Authentication**: Client secret for secure API access  
+✅ **Exchange Integration**: (If configured) Mailbox management capabilities  
+
+## Next Steps
+
+Provide the following information to your Adcyma administrator:
+
+- **Tenant ID**: Found in the app's Overview page
+- **Application (Client) ID**: Found in the app's Overview page  
+- **Client Secret**: The value you saved during Step 3
+
+## Security Reminders
+
+- Monitor your client secret expiration date and renew before it expires
+- Regularly review the permissions granted to ensure they align with your security policies
+- Consider implementing certificate-based authentication for enhanced security in production environments

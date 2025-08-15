@@ -1,46 +1,56 @@
 # Email Templates
 
-The Email Templates page lets administrators create email templates that can be used in Workflows. These templates can be used in Workflows for key processes like user onboarding, role transitions, and department reassignments.
+Email Templates enable administrators to create standardized email messages that integrate seamlessly with Workflows. These templates streamline communication for critical processes such as user onboarding, role changes, and department transfers.
 
 :::info
-
-*Email Templates ensure standardized messaging but are only sent when triggered within a [Workflow](/v1/workflows).*
-
+**Important:** Email Templates provide consistent messaging but are only delivered when activated through a [Workflow](/v1/workflows). Templates alone do not send emails.
 :::
+
 <br/>
 <img src="/img/EmailTemplates.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 
-Administrators can:
+## What You Can Do
 
-* **Create Email Templates:** Define email messages with customizable content and variables, making them available for use in Workflows.
-* **Edit Email Templates:** Modify existing templates to update content or adjust variables.
-* **Delete Email Templates:** Remove templates that are no longer needed.
+As an administrator, you have full control over email templates:
 
-<h2>Example Use Case</h2>
+* **Create Templates** – Build new email messages with dynamic content using variables, ready for Workflow integration
+* **Edit Templates** – Update existing templates to refine messaging or adjust variable usage  
+* **Delete Templates** – Remove outdated or unused templates to keep your library organized
 
-A **"New Employee Welcome Email"** template might include:
+## Example: New Employee Welcome Email
 
-* A personalized greeting using variables like `{{first_name}}`
-* Important first-day instructions
-* Contact information for IT or HR
+Consider a **"New Employee Welcome Email"** template that includes:
 
-By using **Email Templates** in Workflows, administrators can automate and standardize email communication, ensuring users receive the right information at the right time.
+* Personalized greeting: "Welcome, `{{first_name}}`!"
+* Essential first-day information and schedule
+* Key contact details for IT support and HR assistance
 
-<h2>Available Variables</h2>
+When this template is triggered through a Workflow, it automatically personalizes each email while ensuring consistent, professional communication for every new hire.
 
-The following variables can be used in email templates:
+## Template Variables
 
-* `{{first_name}}` – The user's first name  
-* `{{last_name}}` – The user's last name  
-* `{{username}}` – The user's username  
-* `{{display_name}}` – The user's display name  
-* `{{password}}` – The user's password (not recommended for use) 
-* `{{email_address}}` – The user's email address  
-* `{{manager_name}}` – The name of the user's manager  
-* `{{manager_email}}` – The email address of the user's manager  
-* `{{company_name}}` – The user's Company  
-* `{{department}}` – The user's Department
-* `{{job_title}}` – The user's Job Title
+Personalize your email templates using these dynamic variables:
 
-*Need additional attributes? Contact us at support@adcyma.com — we're happy to help!*
+**User Information**
+* `{{first_name}}` – User's first name
+* `{{last_name}}` – User's last name  
+* `{{username}}` – User's system username
+* `{{display_name}}` – User's display name
+* `{{email_address}}` – User's email address
+* `{{password}}` – User's password (*only available for users created via Adcyma; removed after use*)
+
+**Organizational Details**
+* `{{manager_name}}` – Direct manager's name
+* `{{manager_email}}` – Direct manager's email address
+* `{{company_name}}` – User's company
+* `{{department}}` – User's department
+* `{{job_title}}` – User's job title
+
+## Get More Variables
+
+Need additional user attributes for your templates? We're here to help! Contact our support team at **support@adcyma.com** and we'll work with you to add the variables you need.
+
+---
+
+*By combining Email Templates with Workflows, you can automate communications while maintaining consistent, professional messaging across your organization.*
