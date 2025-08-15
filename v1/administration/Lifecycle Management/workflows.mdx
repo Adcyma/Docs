@@ -1,12 +1,18 @@
 # Workflows
 
+import Image from '@theme/IdealImage';
+import workflows1 from '@site/static/img/Workflows1.webp';
+import workflowsTriggers from '@site/static/img/WorkflowsTriggers.webp';
+import workflowsConditions from '@site/static/img/WorkflowsConditions.webp';
+import workflowsActions from '@site/static/img/WorkflowsActions.webp';
+
 Workflows automate critical tasks by connecting triggers to actions, with optional conditions to control when automation occurs. They form the backbone of Adcyma's automation capabilities, enabling seamless user lifecycle management from onboarding to offboarding.
 
 :::info
 **Important:** Workflows are only triggered by Adcyma's user management actions: creating new users, editing existing users, or removing users (including via API). If no conditions are specified, the workflow will run for all users matching the trigger.
 :::
 
-<img src="/img/Workflows1.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={workflows1} alt="Workflow overview" className="doc-screenshot" />
 
 ## Workflow Components
 
@@ -45,21 +51,21 @@ Every workflow consists of several key elements that work together to automate y
 * Defines the specific user management event that starts the workflow
 * Examples: User created, user modified, user removed
 
-<img src="/img/WorkflowsTriggers.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={workflowsTriggers} alt="Workflow triggers" className="doc-screenshot" />
 
 **Condition** – Who the workflow affects (optional)
 * Optional filters based on user attributes
 * If no conditions are set, the workflow applies to **all users** matching the trigger
 * Examples: Users in specific departments, managers only, users reporting to certain supervisors
 
-<img src="/img/WorkflowsConditions.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={workflowsConditions} alt="Workflow conditions" className="doc-screenshot" />
 
 **Action** – What the workflow does
 * The automated tasks performed when trigger and conditions are met
 * Can include multiple actions in sequence
 * Examples: Assign access profiles, send emails, enable accounts, update user attributes
 
-<img src="/img/WorkflowsActions.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={workflowsActions} alt="Workflow actions" className="doc-screenshot" />
 
 ## Example Workflow Scenarios
 

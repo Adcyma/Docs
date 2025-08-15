@@ -5,36 +5,46 @@ title: Adcyma Sign-Up Guide
 
 # Adcyma Sign-Up Guide
 
+import Image from '@theme/IdealImage';
+import sign1 from '@site/static/img/SignUp1.png';
+import sign2 from '@site/static/img/SignUp2.png';
+import sign3 from '@site/static/img/SignUp3.png';
+import sign4 from '@site/static/img/SignUp4.png';
+import sign5 from '@site/static/img/SignUp5.png';
+import sign6 from '@site/static/img/SignUp6.png';
+import sign7 from '@site/static/img/SignUp7.png';
+import sign8 from '@site/static/img/SignUp8.png';
+
 This guide will help you navigate the initial sign-up process, making sure you’re set up in no time.
 
 
 Begin by navigating to the [Adcyma Portal](https://portal.adcyma.com) and clicking the Sign Up button, as shown in the image below.
 <br/>
-<img src="/img/SignUp1.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={sign1} alt="Sign up step 1" className="doc-screenshot" />
 <br/><br/>
 Next, enter your details.
 <br/>
-<img src="/img/SignUp2.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={sign2} alt="Sign up step 2" className="doc-screenshot" />
 <br/><br/>
 Once you've entered your details and clicked "Create your account," you will receive an email at the provided address to set your initial password.
 <br/>
-<img src="/img/SignUp3.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={sign3} alt="Sign up step 3" className="doc-screenshot" />
 <br/><br/>
 Open the email (if you don't see it in your inbox, please check your spam folder) and click "Set Up Your Password".
 <br/>
-<img src="/img/SignUp4.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={sign4} alt="Sign up step 4" className="doc-screenshot" />
 <br/><br/>
 Enter your password, which must be at least 12 characters long, include one special character, and contain one number.
 <br/>
-<img src="/img/SignUp5.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={sign5} alt="Sign up step 5" className="doc-screenshot" />
 <br/><br/>
 Next, you'll need to configure the settings for your tenant, which is how Adcyma authenticates with your environment. Please follow the guide [Creating an App Registration in Entra ID](https://docs.adcyma.com/v1/userguides/setupentraappregistration) to create a Client ID and Client Secret in Entra ID.
 <br/>
-<img src="/img/SignUp6.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={sign6} alt="Sign up step 6" className="doc-screenshot" />
 <br/><br/>
 The next step is to select your User Format Preferences, which includes choosing your Primary Domain, Username, Display Name, and Email format. These settings can easily be changed later in the Admin interface.
 <br/>
-<img src="/img/SignUp7.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={sign7} alt="Sign up step 7" className="doc-screenshot" />
 <br/><br/>
 The final step is to choose the static group from which Adcyma should fetch current users and use as the Adcyma-managed group. All future users will automatically be added to this group.
 This group will serve as the source for all users managed by Adcyma, enabling current users to be managed within the system. Any future users created by Adcyma will automatically be placed into this group.
@@ -53,6 +63,6 @@ Changing this group later is possible, but the following will occur:
 * **Users** who were in the **old group** but not in the **new one** will no longer be **available** in Adcyma. For example, you won't be able to **assign** them as **Managers** for other users
 * Any active workflows involving users who are no longer **managed** will continue to **execute** as planned
 <br/>
-<img src="/img/SignUp8.png" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+<Image img={sign8} alt="Sign up step 8" className="doc-screenshot" />
 <br/><br/>
 You're all set! You can now log into your Adcyma tenant.
