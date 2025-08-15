@@ -1,36 +1,53 @@
-# Identity Provider
+# Identity Provider Settings
 
+The Identity Provider Settings page allows you to modify the existing connection between Adcyma and your organization's external identity provider, such as Microsoft Entra ID. Since these settings were configured during your initial Adcyma setup, this page is typically used when you need to update credentials, change configurations, or troubleshoot connectivity issues.
 
-The Identity Provider Settings page is where you configure the connection between Adcyma and your external identity provider, such as Entra ID. This setup is essential for enabling Adcyma to communicate with your tenant.
+## Current Settings Overview
 
+You can review and update the following connection parameters as needed:
 
-* Identity Provider: Choose the identity provider you want to connect with. For example, Entra ID.
-* Client ID: This is the unique ID assigned to your application by the identity provider. It's used to identify your app.
-* Tenant ID: The unique ID for your organization in the identity provider's system.
-* Client Secret: A secure key provided by the identity provider to authenticate your application. Keep this private.
+**Identity Provider**  
+Select your organization's identity provider from the available options (e.g., Microsoft Entra ID).
+
+**Client ID**  
+The unique application identifier assigned by your identity provider. This ID allows the system to recognize and authenticate your specific application instance.
+
+**Tenant ID**  
+Your organization's unique identifier within the identity provider's directory system, ensuring connections are routed to the correct organizational tenant.
+
+**Client Secret**  
+A confidential authentication key provided by your identity provider. This secret must be kept secure and should never be shared or exposed publicly.
 
 <br/>
 <img src="/img/IdentityProvider1.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
-After filling in the fields, click Save to apply the settings or enable SSO.
 
+After making any necessary changes, click **Save** to update your configuration settings.
 
-<h2>Exchange Authentication</h2>
+## Exchange Authentication
 
-This is also where you can download a certificate to upload to your Entra ID application, enabling Adcyma to communicate with your Exchange Online environment.
+This section provides additional integration capabilities for Microsoft Exchange Online environments. Here you can download the necessary certificate to upload to your Entra ID application, establishing secure communication between Adcyma and your Exchange Online services.
 
-
-:::info  
-This is optional and only required if you want Adcyma to perform Exchange Online-related tasks, such as converting a User mailbox to a Shared mailbox. 
+:::info
+Exchange authentication is optional and only required if you want Adcyma to perform Exchange Online-related operations, such as converting User mailboxes to Shared mailboxes or other Exchange management tasks.
 :::
 
 <br/>
 <img src="/img/IdentityProvider2.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 
-<h2>SSO (Single Sign-On)</h2>
-You can enable SSO by toggling the Enable SSO option. When enabled, all users will log in through the configured identity provider.
+## Single Sign-On (SSO)
+
+Control user authentication by toggling the **Enable SSO** option. When enabled, this feature directs all user logins through your configured identity provider. When disabled, users will need to authenticate directly with Adcyma using their individual credentials.
 
 <br/>
 <img src="/img/IdentityProvider3.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
+
+## Managing Your Settings
+
+- Update your Client Secret when it expires or as part of regular security rotations
+- Coordinate SSO changes with your IT team to minimize user disruption  
+- Test configuration changes in a non-production environment when possible
+- Keep your identity provider application permissions aligned with current Adcyma requirements
+- Review and update authentication certificates before they expire

@@ -1,22 +1,41 @@
 # Logs
 
-The Logs page gives you a behind-the-scenes look at what’s happening across your identity setup in Adcyma. It's where you can keep track of key events, actions, and any issues that might pop up.
+The Logs page provides comprehensive visibility into all activities and events occurring within your Adcyma environment. This centralized audit trail enables administrators to monitor system operations, track user activities, troubleshoot issues, and maintain security oversight across your identity management infrastructure.
 
-Here’s a few of the things you’ll see in the logs:
+## What Gets Logged
 
-- New user created
+Adcyma automatically captures a wide range of system events and user activities, including:
 
-- User details updated
-
-- New workflow or dynamic group created
-
-- Successful logins and failed login attempts
-
-- Errors — if something didn’t go as planned
+- **User Management Events** - New user creation, profile updates, and account modifications
+- **Authentication Activities** - Successful logins, failed login attempts, and session management
+- **Configuration Changes** - New workflow creation, dynamic group setup, and system settings updates
+- **System Operations** - Automated processes, synchronization events, and background tasks
+- **Error Events** - Failed operations, system errors, and exception handling
 
 <img src="/img/Logs.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
 
-You can use filters to find specific type of events, users, or time periods — helpful when you're trying to figure out what happened, or just checking that everything’s working as expected.
+## Search and Filtering
 
-It helps you spot what changed, when it changed, and who did it.
+The logs interface provides powerful filtering capabilities to help you quickly locate specific information:
+
+- **Event Type Filtering** - Narrow results by activity category (authentication, user management, errors, etc.)
+- **User-Specific Searches** - Track activities for individual users or administrators
+- **Time Range Selection** - Focus on events within specific timeframes
+- **Keyword Search** - Locate entries containing specific terms or identifiers
+
+## Key Benefits
+
+The logging system serves multiple critical functions for your organization:
+
+**Audit and Compliance** - Maintain detailed records of all system activities for regulatory requirements and internal audits
+
+**Troubleshooting** - Quickly identify the source of issues by reviewing error logs and related events
+
+**Security Monitoring** - Track authentication patterns and detect potential security incidents
+
+**Change Tracking** - Monitor who made what changes and when, providing complete accountability for system modifications
+
+**Performance Insight** - Understand system usage patterns and identify potential optimization opportunities
+
+This comprehensive logging ensures you have full visibility into your Adcyma environment, enabling proactive management and rapid issue resolution.

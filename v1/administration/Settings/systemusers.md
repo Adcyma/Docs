@@ -1,26 +1,63 @@
 # System Users
 
-The System Users page is where administrators can manage the internal user accounts within Adcyma. This page provides the functionality to create, edit, and delete system users, as well as assign roles to define their permissions and access levels.
+The System Users page provides comprehensive management of internal Adcyma user accounts. These are administrative accounts that grant access to the Adcyma platform itself, separate from the managed users in your tenant. This interface allows administrators to control who can access Adcyma and what level of permissions they have within the system.
 
-:::info
-
-*These users does not get automatically provisioned to your tenant.*
-
+:::info Important Distinction
+System users are internal Adcyma accounts and **are not automatically provisioned to your tenant**. These accounts provide access to the Adcyma platform only and are separate from your organization's managed user population.
 :::
+
 <br/>
 <img src="/img/SystemUsers.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
 <br/><br/>
-Administrators can:
 
-* Create System Users: Add new users by entering their details and selecting an appropriate role.
-* Edit System Users: Update user details and assigned roles.
-* Delete System Users: Permanently remove users when they are no longer needed.
-* Assign Roles: Choose a role for each user to determine their permissions within the Adcyma Portal.
-  * User: This role provides the system user with basic privileges to use the Dashboard, which includes:
-    * New employee
-    * Edit employee
-    * Employee leaving
-    * View Queued Tasks
-    * View History
-  * API: This role includes all the privileges of the User role, with the added ability to collect and use the API key required for accessing Adcyma's API.
-  * Admin: This is the highest level user role, granting full permissions to view and manage all administrative tasks, including user and role management, and system configuration.
+## User Management Capabilities
+
+Administrators have full control over system user lifecycle management:
+
+**Create System Users**  
+Add new internal users by entering their account details and selecting an appropriate role that defines their access level within Adcyma.
+
+**Edit System Users**  
+Update existing user information, modify assigned roles, or adjust account settings as organizational needs change.
+
+**Delete System Users**  
+Permanently remove user accounts when team members no longer require access to the Adcyma platform.
+
+**Role Assignment**  
+Configure specific permission levels for each user through role-based access control, ensuring users have appropriate access to system functions.
+
+## System Roles and Permissions
+
+Adcyma provides three distinct role levels, each designed for different operational needs:
+
+### User Role
+Provides essential dashboard access with permissions to:
+- **New Employee Operations** - Create and onboard new employees
+- **Edit Employee Information** - Modify existing employee details and attributes
+- **Employee Departure Processing** - Handle offboarding and account deactivation workflows
+- **View Queued Tasks** - Monitor pending operations and system processes
+- **View History** - Access audit trails and historical activity records
+
+### API Role
+Includes all User role privileges with additional capabilities:
+- **Full Dashboard Access** - All standard user operations and viewing permissions
+- **API Key Management** - Generate and manage API keys for system integrations
+- **Programmatic Access** - Utilize Adcyma's API for automated operations and custom integrations
+
+### Admin Role
+The highest privilege level providing comprehensive system control:
+- **Complete System Access** - Full permissions across all Adcyma functions and features
+- **User and Role Management** - Create, modify, and delete system users and their role assignments
+- **System Configuration** - Modify platform settings, preferences, and administrative configurations
+- **Advanced Operations** - Access to all system management and troubleshooting capabilities
+
+## Access Management Best Practices
+
+**Role Assignment Strategy**  
+Assign the minimum role necessary for each user's responsibilities to maintain security while ensuring operational effectiveness.
+
+**Regular Access Reviews**  
+Periodically review system user accounts and role assignments to ensure they align with current organizational needs and security policies.
+
+**Account Lifecycle Management**  
+Promptly create accounts for new team members and remove access for departing personnel to maintain system security.

@@ -1,14 +1,46 @@
 # Preferences
 
-The Preferences page allows administrators to configure settings that define in what format Adcyma will create User Principal Name (UPN) and email addresses in your tenant.
+The Preferences page enables administrators to establish standardized formatting rules for how Adcyma creates and displays user identity information within your tenant. These settings ensure consistency across all newly created users and align with your organization's naming conventions and email policies.
 
-Administrators can use the dropdown menus to choose the desired format for each field. Once the selections are made, click Save Preferences to apply the changes across the system.
+## Configurable Format Options
 
-:::info
+Administrators can customize the format for the following user attributes:
 
-*These settings only applies to future users and does not alter the format of existing users.*
+**User Principal Name (UPN)**  
+Define how the primary login identifier will be structured for new users, ensuring it follows your organization's authentication standards.
 
+**Email Address Format**  
+Control the structure of email addresses assigned to new users, maintaining consistency with your email domain policies.
+
+**Display Name Format**  
+Configure how user names will appear throughout the system interface and in communications.
+
+**Email Nickname Format**  
+Set the format for email aliases and short identifiers used in email systems.
+
+## Configuration Process
+
+Use the dropdown menus to select your preferred format for each attribute. The available options provide flexibility to match your organization's existing standards or implement new conventions. After making your selections, click **Save Preferences** to implement the changes system-wide.
+
+:::info Important Note
+These formatting preferences **only apply to newly created users** and will not modify the format of existing user accounts. Current users will retain their existing UPN, email, display name, and nickname formats until manually updated.
 :::
-<br/>
 
+<br/>
 <img src="/img/Preferences.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+
+## Strategic Considerations
+
+**Consistency Planning**  
+Establish these preferences early in your Adcyma deployment to ensure all new users follow consistent naming patterns from the start.
+
+**Organizational Alignment**  
+Consider how these formats will integrate with existing systems, email policies, and user directory structures within your environment.
+
+**Future Scalability**  
+Choose formats that will remain practical and clear as your organization grows and adds more users to the managed population.
+
+**Domain Compatibility**  
+Ensure selected email formats are compatible with your organization's verified domains and email routing policies.
+
+These preference settings provide the foundation for maintaining organized, consistent user identity management as your Adcyma-managed user base expands.

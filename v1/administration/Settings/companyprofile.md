@@ -1,36 +1,49 @@
 # Company Profile
 
-The Company Profile page displays the registered details of your organization within Adcyma. It includes company identification and contact information, which is primarily used for communication and support purposes.
+The Company Profile page serves as the central hub for your organization's registered information within Adcyma. This section maintains essential company identification and contact details that facilitate seamless communication and support interactions.
 
-Administrators can view the following details:
+## What You Can View
 
-- **Company Name**  
-- **Adcyma Company ID**  
+As an administrator, you have access to key organizational identifiers:
 
+- **Company Name** - Your organization's registered name in the system
+- **Adcyma Company ID** - Your unique identifier within the platform
 
-Administrators can view and edit the following details:
-- **Street Address**  
-- **Zip Code**  
-- **City**  
-- **State**  
-- **Country**  
-- **Primary Contact Person**  
-- **Primary Contact Email**  
-- **Primary Contact Phone**  
+## What You Can Manage
+
+Administrators have full editing privileges for contact and location information:
+
+- **Street Address**
+- **Zip Code** 
+- **City**
+- **State**
+- **Country**
+- **Primary Contact Person**
+- **Primary Contact Email**
+- **Primary Contact Phone**
 
 <br/>
 <img
-  src="/img/CompanyProfile.webp"
-  style={{
-    width: '100%',
-    maxWidth: '800px', // or 100%, or whatever works best for your design
-    height: 'auto',
-    border: '2px solid black',
-    borderRadius: '5px',
-    display: 'block',
-    margin: '0 auto', // center the image
-  }}
+src="/img/CompanyProfile.webp"
+style={{
+width: '100%',
+maxWidth: '800px',
+height: 'auto',
+border: '2px solid black',
+borderRadius: '5px',
+display: 'block',
+margin: '0 auto',
+}}
 />
 <br/>
 
-This information is primarily used for administrative and support purposes, ensuring we can contact the appropriate person in your organization when needed.
+## Purpose and Usage
+
+Your company profile information serves critical administrative functions, enabling our support team to:
+
+- Identify and verify your organization quickly
+- Route communications to the appropriate contacts
+- Provide personalized assistance when needed
+- Maintain accurate records for compliance and reporting
+
+Keeping this information current ensures smooth operations and effective support delivery for your organization.
