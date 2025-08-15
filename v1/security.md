@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: How is our system secure?
+title: Security
 ---
 
-# How is our system secure?
+# Security
 
 Security is fundamental to everything we build. Our comprehensive security approach protects your data through multiple layers of defense, industry best practices, and continuous monitoring.
 
