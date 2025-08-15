@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: How is it hosted?
+title: Hosting
 ---
 
-# How is it hosted?
+# Hosting
 
 Our platform is built with reliability, security, and scalability in mind. Here's an overview of our hosting infrastructure:
 
