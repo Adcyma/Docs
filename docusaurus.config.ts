@@ -24,9 +24,11 @@ const config: Config = {
     [
       '@docusaurus/plugin-ideal-image',
       {
-        quality: 70,  // Image quality (1 to 100)
-        max: 1920,    // Maximum width (px)
-        min: 720,     // Minimum width (px)
+        quality: 80,
+        max: 2560, // allow larger hero/content images to stay crisp on 2x screens
+        min: 320,
+        steps: 6,  // generate a good spread of responsive sizes
+        disableInDev: false, // preview optimization locally
       },
     ],
   ],
@@ -37,7 +39,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/adcyma/docs/tree/main/',
+          editUrl: 'https://github.com/Adcyma/Docs/tree/main/',
           path: 'v1',
           routeBasePath: 'v1',
         },
@@ -47,7 +49,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: 'https://github.com/adcyma/docs/tree/main/',  
+          editUrl: 'https://github.com/Adcyma/Docs/tree/main/',  
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -60,12 +62,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/AdcymaLogo__1_-removebg-preview.png',  
+  image: 'img/docusaurus-social-card.jpg',  
     navbar: {
       title: '',  
       logo: {
         alt: 'Adcyma Logo',
-        src: 'img/AdcymaLogo__1_-removebg-preview.png',
+        src: 'img/logo.svg',
         href: 'https://docs.adcyma.com/v1/start',
       },
       items: [

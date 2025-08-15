@@ -1,25 +1,13 @@
-# Companies
+---
+id: organization-companies-legacy
+title: Companies (legacy)
+slug: /_legacy/companies-legacy
+sidebar_label: Companies (legacy)
+description: Legacy version retained for reference. Please use the updated Companies doc.
+---
 
-The Companies page provides a centralized interface for managing your organization's company directory. This page displays companies that are automatically synchronized from your Entra ID configuration, ensuring your company list stays current with your organizational structure.
+This page has been superseded by the updated documentation:
 
-<img src="/img/Companies.webp" style={{ maxWidth: '1400px', height: 'auto', border: '2px solid black', borderRadius: '5px' }} />
+- See the current page: [Companies](/v1/administration/Organization/companies)
 
-## Managing Your Company List
-
-From this page, you can:
-- View all companies currently associated with your organization
-- Add new companies to expand your directory
-- Remove companies that are no longer relevant
-- Review company details and organizational relationships
-
-## Saving Changes
-
-**Important:** After making any modifications to your company list—whether adding new entries or removing existing ones—you must click the **Save Changes** button to commit your updates. Changes are not automatically saved and will be lost if you navigate away without saving.
-
-## Initial Synchronization
-
-Your company data is initially imported from Entra ID during setup. Please note:
-- This is a one-time import, not an ongoing synchronization
-- Companies are fetched from Entra ID when first configured
-- After the initial import, you can manually add or remove companies as needed
-- Future changes in Entra ID will not automatically update this list
+We keep this legacy page only for historical reference.
