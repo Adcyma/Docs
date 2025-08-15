@@ -31,9 +31,9 @@ This comprehensive guide walks you through creating an App Registration in Micro
 4. **Expiration**: Choose an appropriate expiration period (remember to track this date)
 5. Click **Add**
 
-> **🔴 Critical: Save Your Credentials**
+> **Critical: Save Your Credentials**
 > 
-> Immediately copy and securely store both the **Client Secret Value** and **Secret ID**. The secret value will never be displayed again after you leave this page.
+> Immediately copy and securely store both the **Client Secret Value**. The secret value will never be displayed again after you leave this page.
 > 
 > You'll also need your **Tenant ID** (found in the app's Overview page) for Adcyma configuration.
 
