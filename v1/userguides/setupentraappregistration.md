@@ -98,7 +98,7 @@ Your App Registration is now properly configured with:
 
 ## Next Steps
 
-Provide the following information to your Adcyma administrator:
+Provide the following information during your Adcyma setup process:
 
 - **Tenant ID**: Found in the app's Overview page
 - **Application (Client) ID**: Found in the app's Overview page  
