@@ -73,8 +73,8 @@ const config: Config = {
       items: [
         
         {
-          href: 'https://github.com/adcyma/docs',  
-          label: 'GitHub',
+          href: 'https://portal.adcyma.com',  
+          label: 'Adcyma portal',
           position: 'right',
         },
       ],
