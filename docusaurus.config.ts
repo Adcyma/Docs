@@ -62,7 +62,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-  image: 'img/docusaurus-social-card.jpg',  
+  image: 'img/AdcymaLogo.png',  
     navbar: {
       title: '',  
       logo: {
@@ -91,7 +91,7 @@ const config: Config = {
             },
             {
               label: 'Adcyma Portal',
-              href: 'https://app.adcyma.com',
+              href: 'https://portal.adcyma.com',
             },
             {
               label: 'LinkedIn',
@@ -105,10 +105,6 @@ const config: Config = {
             {
               label: 'Blog',
               to: 'https://adcyma.com/blog',
-            },
-            {
-              href: 'https://github.com/adcyma/docs',  // Updated to your repo
-              label: 'GitHub',
             },
           ],
         },
