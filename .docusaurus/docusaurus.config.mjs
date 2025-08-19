@@ -5,7 +5,7 @@
  */
 export default {
   "title": "Adcyma",
-  "tagline": "Lightweight IAM",
+  "tagline": "Lightweight IGA",
   "favicon": "img/faviconAdcyma.ico",
   "url": "https://docs.adcyma.com",
   "baseUrl": "/",
@@ -28,7 +28,7 @@ export default {
       "@docusaurus/plugin-ideal-image",
       {
         "quality": 95,
-        "max": 3840,
+        "max": 2160,
         "min": 320,
         "steps": 9,
         "disableInDev": false
@@ -66,18 +66,18 @@ export default {
     ]
   ],
   "themeConfig": {
-    "image": "img/docusaurus-social-card.jpg",
+    "image": "img/AdcymaLogo.png",
     "navbar": {
       "title": "",
       "logo": {
         "alt": "Adcyma Logo",
-        "src": "img/logo.svg",
+        "src": "img/AdcymaLogo.png",
         "href": "https://docs.adcyma.com/v1/start"
       },
       "items": [
         {
-          "href": "https://github.com/adcyma/docs",
-          "label": "GitHub",
+          "href": "https://portal.adcyma.com",
+          "label": "Adcyma portal",
           "position": "right"
         }
       ],
@@ -95,7 +95,7 @@ export default {
             },
             {
               "label": "Adcyma Portal",
-              "href": "https://app.adcyma.com"
+              "href": "https://portal.adcyma.com"
             },
             {
               "label": "LinkedIn",
@@ -109,10 +109,6 @@ export default {
             {
               "label": "Blog",
               "to": "https://adcyma.com/blog"
-            },
-            {
-              "href": "https://github.com/adcyma/docs",
-              "label": "GitHub"
             }
           ]
         }
