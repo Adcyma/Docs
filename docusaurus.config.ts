@@ -12,7 +12,11 @@ const config: Config = {
   projectName: 'Docs',  
   trailingSlash: false,
   onBrokenLinks: 'warn',  // Changed from throw to warn temporarily
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   deploymentBranch: 'gh-pages',
 
   i18n: {
