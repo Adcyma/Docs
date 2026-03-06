@@ -3,30 +3,29 @@
 import Image from '@theme/IdealImage';
 import jobTitlesImg from '@site/static/img/JobTitles.webp';
 
-The Job Titles page provides a centralized interface for managing your organization's job title structure. This master list of job titles serves as the foundation for user assignments and workflow configurations throughout the system.
+This page is where you manage your organization's job title list. Job titles are used for user assignments, workflow rules, and reporting across the platform.
 
 <Image img={jobTitlesImg} alt="Job Titles" className="doc-screenshot" />
 
 ## Managing Your Job Title List
 
 From this page, you can:
-- View all job titles currently configured in your system
-- Add new job titles to reflect organizational changes or new roles
-- Remove job titles that are no longer needed
-- Maintain an accurate job title structure for your organization
+- View all configured job titles
+- Add new job titles
+- Remove job titles you no longer need
 
 ## How Job Titles Are Used
 
-Job titles play a key role throughout the platform:
-- **User Assignment:** Assign specific job titles to users for role identification
-- **Workflow Integration:** Utilize job titles in workflow rules and routing logic
-- **Reporting and Analytics:** Filter and organize data by job title
-- **Access Control:** Job title-based permissions and visibility settings
-- **Organizational Hierarchy:** Define role relationships and reporting structures
+Job titles are referenced in several areas of the platform:
+- You can assign job titles to users for role identification
+- Workflow rules and routing logic can reference job titles
+- Reports and analytics can be filtered by job title
+- Permissions and visibility settings can be scoped to specific job titles
+- Role relationships and reporting structures can be defined through job titles
 
 ## Saving Changes
 
-**Important:** After making any modifications to your job title list—whether adding new titles or removing existing ones—you must click the **Save Changes** button to commit your updates. Changes are not automatically saved and will be lost if you navigate away without saving.
+**Important:** After adding or removing job titles, click **Save Changes** to commit your updates. Changes are not automatically saved and will be lost if you navigate away without saving.
 
 ## Best Practices
 
@@ -39,8 +38,7 @@ When managing job titles:
 
 ## Initial Synchronization
 
-Your job title data is initially imported from Entra ID during setup. Please note:
-- This is a one-time import, not an ongoing synchronization
-- Job titles are fetched from Entra ID when first configured
-- After the initial import, you can manually add or remove job titles as needed
+Your job title data is imported from Entra ID during setup. Keep in mind:
+- This is a one-time import, not an ongoing sync
+- After the initial import, you manage the list manually
 - Future changes in Entra ID will not automatically update this list

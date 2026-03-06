@@ -4,61 +4,39 @@ title: Welcome
 hide_title: true
 ---
 
-## Welcome to Adcyma's Documentation!
+## Welcome to Adcyma's Documentation
 
-Adcyma is a modern **Identity Governance and Administration (IGA)** solution designed specifically for **Microsoft Entra ID**. Our platform streamlines identity lifecycle management through intelligent automation, eliminating manual processes and reducing security risks while ensuring compliance.
+Adcyma is an **Identity Governance and Administration (IGA)** platform built for **Microsoft Entra ID**. It automates identity lifecycle management, from onboarding to offboarding, so you can stop doing it by hand.
 
-This documentation is your comprehensive guide to implementing and managing Adcyma in your organization. Here you'll find everything you need to:
+This documentation covers setup, configuration, and day-to-day use. Use the sidebar to navigate, or the search bar to find what you need.
 
-* **Get started** with initial setup and configuration
-* **Build and configure** automated workflows for your specific business needs  
-* **Manage users and access** through the Adcyma Management Portal
-* **Understand security** and compliance features
-* **Integrate** with your existing HR systems and processes
-* **Troubleshoot** common issues and optimize your implementation
+## What Adcyma does
 
-:::tip Quick Navigation
-Use the sidebar navigation to explore specific topics, or search for what you need using the search function.
-:::
-
-## Why Choose Adcyma?
-
-**Transform Your Identity Management**
-- **Save Time**: Automate user onboarding, role changes, and offboarding with intelligent workflows
-- **Eliminate Errors**: Replace manual, error-prone processes with consistent automation
-- **Enhance Security**: Implement just-in-time access controls and role-based permissions
-- **Ensure Compliance**: Generate detailed audit trails and maintain governance requirements
-- **Reduce Costs**: Deploy enterprise-grade ILM 70% cheaper than traditional solutions
-
-**Built for Modern Organizations**
-- Lightweight SaaS solution requiring no on-premises infrastructure
-- User-friendly interface designed for non-technical administrators
-- Seamless integration with Microsoft Entra ID and HR systems
-- Deploy in days, not months, without consultant fees
+- Automates user onboarding, role changes, and offboarding through configurable workflows
+- Replaces manual, error-prone processes with consistent automation
+- Provides role-based access controls and detailed audit trails
+- Runs as a SaaS product with no on-premises infrastructure required
+- Works with non-technical administrators through a straightforward interface
+- Integrates with Microsoft Entra ID and HR systems
+- Costs roughly 70% less than traditional ILM solutions
 
 ---
 
 ## Key Terminology
 
-Understanding these core concepts will help you navigate Adcyma effectively:
+These core concepts come up throughout the docs.
 
-### **Workflows**
-The heart of Adcyma's automation capabilities. A [Workflow](https://docs.adcyma.com/v1/workflows) is a configurable sequence of logic that automates identity management processes. Every workflow consists of three essential components:
+### Workflows
+A [Workflow](https://docs.adcyma.com/v1/workflows) is a configurable sequence of logic that automates identity management processes. Every workflow has three parts:
 
-- **Trigger**: The event that initiates the workflow (e.g., new hire in HR system, role change, termination)
-- **Condition**: The business logic that determines when actions should be taken (e.g., department = "Sales", location = "Stockholm") 
-- **Action**: The specific tasks performed when conditions are met (e.g., add to Entra ID groups, assign licenses, send notifications)
+- A **trigger** is the event that starts the workflow (e.g., new hire, role change, termination)
+- A **condition** is business logic that determines when actions fire (e.g., department = "Sales", location = "Stockholm")
+- An **action** is what happens when conditions are met (e.g., add to Entra ID groups, assign licenses, send notifications)
 
-*Example*: A new employee workflow might trigger when someone joins the Sales department, check their location and role, then automatically add them to the appropriate Entra ID groups for sales tools, regional resources, and company-wide access.
+*Example*: A new employee workflow triggers when someone joins the Sales department, checks their location and role, then adds them to the right Entra ID groups for sales tools, regional resources, and company-wide access.
 
-### **Access Profiles**
-Access Profiles simplify complex permission management by bundling related **Entra ID groups** into logical units. Instead of manually assigning multiple individual group memberships, Access Profiles allow you to grant comprehensive access with a single assignment through Workflows.
-
-**Key Benefits:**
-- **Simplified Management**: Bundle related permissions under meaningful names
-- **Consistent Access**: Ensure users receive all necessary group memberships together
-- **Workflow Integration**: Automatically assign comprehensive access based on business rules
-- **Reduced Errors**: Eliminate forgotten permissions through standardized profiles
+### Access Profiles
+Access Profiles bundle related **Entra ID groups** into a single assignable unit. Instead of manually assigning a dozen group memberships one by one, you assign one Access Profile through a Workflow and the user gets everything they need.
 
 *Example*: A "Finance Team Access" profile might include Entra ID groups for:
 - Financial reporting tools
@@ -67,15 +45,13 @@ Access Profiles simplify complex permission management by bundling related **Ent
 - Budget planning applications
 - Compliance and audit resources
 
-When a new finance employee is hired, a single workflow action assigns the entire Access Profile, ensuring they receive all necessary permissions without manual intervention.
+When a new finance employee is hired, a single workflow action assigns the entire Access Profile. No manual steps, no forgotten permissions.
 
 ---
 
 ## Getting Support
 
-Can't find what you're looking for? Our support team is here to help:
+Can't find what you're looking for?
 
-**📧 Technical Support**: support@adcyma.com  
-**💼 General Inquiries**: hello@adcyma.com
-
-We're committed to your success with Adcyma and will help you optimize your identity management processes.
+- Technical Support: support@adcyma.com
+- General Inquiries: hello@adcyma.com

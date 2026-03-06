@@ -6,7 +6,7 @@ import workflowsTriggers from '@site/static/img/WorkflowsTriggers.webp';
 import workflowsConditions from '@site/static/img/WorkflowsConditions.webp';
 import workflowsActions from '@site/static/img/WorkflowsActions.webp';
 
-Workflows automate critical tasks by connecting triggers to actions, with optional conditions to control when automation occurs. They form the backbone of Adcyma's automation capabilities, enabling seamless user lifecycle management from onboarding to offboarding.
+Workflows connect triggers to actions, with optional conditions to control when automation runs. They handle the core of user lifecycle management, from onboarding to offboarding.
 
 :::info
 **Important:** Workflows are only triggered by Adcyma's user management actions: creating new users, editing existing users, or removing users (including via API). If no conditions are specified, the workflow will run for all users matching the trigger.
@@ -16,7 +16,7 @@ Workflows automate critical tasks by connecting triggers to actions, with option
 
 ## Workflow Components
 
-Every workflow consists of several key elements that work together to automate your processes:
+Every workflow has a few key parts:
 
 ### Basic Settings
 
@@ -36,34 +36,25 @@ Every workflow consists of several key elements that work together to automate y
 ## Workflow Management
 
 **Enable/Disable Workflows**
-* Workflows can be temporarily disabled without deletion
+* You can temporarily disable workflows without deleting them
 * Useful for testing, maintenance, or seasonal processes
-* Disabled workflows retain all configuration but won't execute
+* Disabled workflows keep all their configuration but won't execute
 
 **Copy Workflows**
-* Duplicate existing workflows to create similar automation with modifications
-* Saves time when building workflows with similar logic
-* Ideal for creating department-specific variations of common processes
+* Duplicate an existing workflow to create a similar one with modifications
+* Handy for creating department-specific variations of a common process
 
 ### Automation Logic
 
-**Trigger** – When the workflow activates
-* Defines the specific user management event that starts the workflow
-* Examples: User created, user modified, user removed
+The **trigger** defines which user management event starts the workflow (user created, modified, or removed).
 
 <Image img={workflowsTriggers} alt="Workflow triggers" className="doc-screenshot" />
 
-**Condition** – Who the workflow affects (optional)
-* Optional filters based on user attributes
-* If no conditions are set, the workflow applies to **all users** matching the trigger
-* Examples: Users in specific departments, managers only, users reporting to certain supervisors
+The **condition** is an optional filter based on user attributes. If no conditions are set, the workflow applies to **all users** matching the trigger. Examples: users in specific departments, managers only, users reporting to certain supervisors.
 
 <Image img={workflowsConditions} alt="Workflow conditions" className="doc-screenshot" />
 
-**Action** – What the workflow does
-* The automated tasks performed when trigger and conditions are met
-* Can include multiple actions in sequence
-* Examples: Assign access profiles, send emails, enable accounts, update user attributes
+The **action** is what the workflow actually does when trigger and conditions are met. You can chain multiple actions in sequence. Examples: assign access profiles, send emails, enable accounts, update user attributes.
 
 <Image img={workflowsActions} alt="Workflow actions" className="doc-screenshot" />
 
@@ -86,20 +77,17 @@ Every workflow consists of several key elements that work together to automate y
 
 ## How Workflows Execute
 
-1. **User Event Occurs** – Someone creates, edits, or removes a user in Adcyma (or via API)
-2. **Trigger Evaluation** – System checks which workflows match the event type
-3. **Condition Check** – If conditions exist, system verifies user meets criteria
-4. **Priority Ordering** – Multiple matching workflows execute in priority order (lowest number first)
-5. **Action Execution** – Workflow performs its defined actions automatically
+1. Someone creates, edits, or removes a user in Adcyma (or via API)
+2. The system checks which workflows match the event type
+3. If conditions exist, it verifies the user meets the criteria
+4. Multiple matching workflows run in priority order (lowest number first)
+5. Each workflow performs its defined actions
 
 ## Best Practices
 
-* **Use Clear Names** – Make workflow purposes obvious to your team
-* **Set Appropriate Priorities** – Ensure critical workflows run before optional ones
-* **Test Conditions Carefully** – Remember that no conditions means "all users"
-* **Document Complex Logic** – Use the description field for workflows with multiple conditions
-* **Monitor Execution** – Review workflow results to ensure they're working as expected
+* Make workflow names obvious so your team can tell what each one does at a glance.
+* Set priorities so that critical workflows run before optional ones.
+* Test conditions carefully. Remember that no conditions means "all users."
+* Use the description field for workflows with multiple conditions.
+* Review workflow results periodically to make sure they're working as expected.
 
----
-
-*Workflows transform manual processes into automated, consistent operations that scale with your organization while reducing errors and saving time.*

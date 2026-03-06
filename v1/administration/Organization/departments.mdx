@@ -3,29 +3,28 @@
 import Image from '@theme/IdealImage';
 import departmentsImg from '@site/static/img/Departments.webp';
 
-The Departments page provides a centralized interface for managing your organization's department structure. This master list of departments serves as the foundation for user assignments and workflow configurations throughout the system.
+This page is where you manage your organization's department list. Departments are used for user assignments, workflow rules, and reporting across the platform.
 
 <Image img={departmentsImg} alt="Departments" className="doc-screenshot" />
 
 ## Managing Your Department List
 
 From this page, you can:
-- View all departments currently configured in your system
-- Add new departments to reflect organizational changes or growth
-- Remove departments that are no longer needed
-- Maintain an accurate department structure for your organization
+- View all configured departments
+- Add new departments
+- Remove departments you no longer need
 
 ## How Departments Are Used
 
-Departments play a key role throughout the platform:
-- **User Assignment:** Assign users to specific departments for organizational tracking
-- **Workflow Integration:** Utilize departments in workflow rules and routing logic
-- **Reporting and Analytics:** Filter and organize data by department
-- **Access Control:** Department-based permissions and visibility settings
+Departments are referenced in several areas of the platform:
+- You can assign users to departments for organizational tracking
+- Workflow rules and routing logic can reference departments
+- Reports and analytics can be filtered by department
+- Permissions and visibility settings can be scoped to specific departments
 
 ## Saving Changes
 
-**Important:** After making any modifications to your department list—whether adding new departments or removing existing ones—you must click the **Save Changes** button to commit your updates. Changes are not automatically saved and will be lost if you navigate away without saving.
+**Important:** After adding or removing departments, click **Save Changes** to commit your updates. Changes are not automatically saved and will be lost if you navigate away without saving.
 
 ## Best Practices
 
@@ -37,8 +36,7 @@ When managing departments:
 
 ## Initial Synchronization
 
-Your department data is initially imported from Entra ID during setup. Please note:
-- This is a one-time import, not an ongoing synchronization
-- Departments are fetched from Entra ID when first configured
-- After the initial import, you can manually add or remove departments as needed
+Your department data is imported from Entra ID during setup. Keep in mind:
+- This is a one-time import, not an ongoing sync
+- After the initial import, you manage the list manually
 - Future changes in Entra ID will not automatically update this list

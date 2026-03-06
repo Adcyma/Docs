@@ -1,2 +1,19 @@
-docs/.DS_Store
-node_modules
+# Dependencies
+node_modules/
+
+# Build output
+build/
+
+# Docusaurus generated
+.docusaurus/
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/
+
+# Docker
+Dockerfile
+.dockerignore
+nginx.conf

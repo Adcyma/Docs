@@ -1,10 +1,10 @@
 # Setting Up an App Registration in Microsoft Entra ID
 
-This comprehensive guide walks you through creating an App Registration in Microsoft Entra ID to enable Adcyma to integrate with your tenant for user and group management, with optional Exchange Online capabilities.
+This guide walks you through creating an App Registration in Microsoft Entra ID so Adcyma can integrate with your tenant for user and group management, with optional Exchange Online capabilities.
 
 ## Prerequisites
 
-> **⚠️ Important Requirement**
+> **Important Requirement**
 > 
 > You must have **Application Administrator** role permissions to complete this setup process.
 
@@ -18,17 +18,17 @@ This comprehensive guide walks you through creating an App Registration in Micro
 
 ## Step 2: Register the Application
 
-1. **Application Name**: Enter a descriptive name (e.g., "Adcyma")
-2. **Supported Account Types**: Keep the default selection
-3. **Redirect URI**: Leave this blank for now
+1. Enter a descriptive name for the application (e.g., "Adcyma")
+2. Keep the default selection for supported account types
+3. Leave the redirect URI blank for now
 4. Click **Register** to create the app registration
 
 ## Step 3: Generate Client Secret
 
 1. In your newly created app registration, navigate to **Certificates & secrets**
 2. Under the **Client secrets** tab, click **New client secret**
-3. **Description**: Enter a meaningful description for the secret
-4. **Expiration**: Choose an appropriate expiration period (remember to track this date)
+3. Enter a meaningful description for the secret
+4. Choose an appropriate expiration period (remember to track this date)
 5. Click **Add**
 
 > **Critical: Save Your Credentials**
@@ -50,13 +50,9 @@ This comprehensive guide walks you through creating an App Registration in Micro
 
 Add the following two critical permissions:
 
-**For User Management:**
-- Search for and select **User.ReadWrite.All**
-- This allows Adcyma to manage Entra ID users
+For user management, search for and select **User.ReadWrite.All**. This allows Adcyma to manage Entra ID users.
 
-**For Group Management:**
-- Search for and select **Group.ReadWrite.All**
-- This enables Adcyma to manage your groups
+For group management, search for and select **Group.ReadWrite.All**. This allows Adcyma to manage your groups.
 
 ### Grant Admin Consent
 
@@ -64,7 +60,7 @@ After adding both permissions, click **Grant admin consent** to activate them.
 
 ## Step 5: Exchange Online Integration (Optional)
 
-> **💡 Optional Configuration**
+> **Optional Configuration**
 > 
 > Complete this section only if you want Adcyma to manage Exchange tasks like converting user mailboxes to shared mailboxes.
 
@@ -92,17 +88,17 @@ After adding both permissions, click **Grant admin consent** to activate them.
 
 Your App Registration is now properly configured with:
 
-✅ **Core Permissions**: User and Group management capabilities  
-✅ **Authentication**: Client secret for secure API access  
-✅ **Exchange Integration**: (If configured) Mailbox management capabilities  
+- User and Group management permissions
+- Client secret for secure API access
+- Exchange integration for mailbox management (if configured)
 
 ## Next Steps
 
 Provide the following information during your Adcyma setup process:
 
-- **Tenant ID**: Found in the app's Overview page
-- **Application (Client) ID**: Found in the app's Overview page  
-- **Client Secret**: The value you saved during Step 3
+- Tenant ID (found on the app's Overview page)
+- Application (Client) ID (found on the app's Overview page)
+- Client Secret (the value you saved during Step 3)
 
 ## Security Reminders
 
