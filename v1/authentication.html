@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
-<title data-rh="true">Authentication | Adcyma</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.adcyma.com/img/AdcymaLogo.png"><meta data-rh="true" name="twitter:image" content="https://docs.adcyma.com/img/AdcymaLogo.png"><meta data-rh="true" property="og:url" content="https://docs.adcyma.com/v1/authentication"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Authentication | Adcyma"><meta data-rh="true" name="description" content="Adcyma provides enterprise-grade authentication through two secure methods: Magic Links (default) and Microsoft Entra ID Single Sign-On (recommended). Traditional password-based authentication is not supported to ensure maximum security and reduce attack vectors."><meta data-rh="true" property="og:description" content="Adcyma provides enterprise-grade authentication through two secure methods: Magic Links (default) and Microsoft Entra ID Single Sign-On (recommended). Traditional password-based authentication is not supported to ensure maximum security and reduce attack vectors."><link data-rh="true" rel="icon" href="/img/faviconAdcyma.ico"><link data-rh="true" rel="canonical" href="https://docs.adcyma.com/v1/authentication"><link data-rh="true" rel="alternate" href="https://docs.adcyma.com/v1/authentication" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.adcyma.com/v1/authentication" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Authentication","item":"https://docs.adcyma.com/v1/authentication"}]}</script><link rel="stylesheet" href="/assets/css/styles.4784e6e0.css">
-<script src="/assets/js/runtime~main.2b9e60a7.js" defer="defer"></script>
+<title data-rh="true">Authentication | Adcyma</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.adcyma.com/img/AdcymaLogo.png"><meta data-rh="true" name="twitter:image" content="https://docs.adcyma.com/img/AdcymaLogo.png"><meta data-rh="true" property="og:url" content="https://docs.adcyma.com/v1/authentication"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Authentication | Adcyma"><meta data-rh="true" name="description" content="Adcyma supports two authentication methods: Magic Links (default) and Microsoft Entra ID Single Sign-On (recommended). There is no password-based authentication."><meta data-rh="true" property="og:description" content="Adcyma supports two authentication methods: Magic Links (default) and Microsoft Entra ID Single Sign-On (recommended). There is no password-based authentication."><link data-rh="true" rel="icon" href="/img/faviconAdcyma.ico"><link data-rh="true" rel="canonical" href="https://docs.adcyma.com/v1/authentication"><link data-rh="true" rel="alternate" href="https://docs.adcyma.com/v1/authentication" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.adcyma.com/v1/authentication" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Authentication","item":"https://docs.adcyma.com/v1/authentication"}]}</script><link rel="stylesheet" href="/assets/css/styles.4784e6e0.css">
+<script src="/assets/js/runtime~main.bd098658.js" defer="defer"></script>
 <script src="/assets/js/main.ea2232ed.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -12,285 +12,99 @@
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://docs.adcyma.com/v1/start" target="_blank" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/img/AdcymaLogo.png" alt="Adcyma Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/AdcymaLogo.png" alt="Adcyma Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://portal.adcyma.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Adcyma portal<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/v1/start"><span title="Welcome" class="linkLabel_WmDU">Welcome</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/v1/peoplehub"><span title="Using Your People Hub" class="linkLabel_WmDU">Using Your People Hub</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/v1/category/administration"><span title="Administration" class="categoryLinkLabel_W154">Administration</span></a><button aria-label="Expand sidebar category &#x27;Administration&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/v1/authentication"><span title="Authentication" class="linkLabel_WmDU">Authentication</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/v1/hosting"><span title="Hosting" class="linkLabel_WmDU">Hosting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/v1/security"><span title="Security" class="linkLabel_WmDU">Security</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/v1/category/user-guides"><span title="User Guides" class="categoryLinkLabel_W154">User Guides</span></a><button aria-label="Expand sidebar category &#x27;User Guides&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Authentication</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Authentication</h1></header>
-<p>Adcyma provides enterprise-grade authentication through two secure methods: Magic Links (default) and Microsoft Entra ID Single Sign-On (recommended). Traditional password-based authentication is not supported to ensure maximum security and reduce attack vectors.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
-<p>Our authentication system prioritizes security and user experience by eliminating password-related vulnerabilities:</p>
-<ul>
-<li class=""><strong>Magic Links</strong> - Default passwordless authentication via email verification</li>
-<li class=""><strong>Microsoft Entra ID SSO</strong> - Recommended authentication method for enhanced security</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-philosophy">Security Philosophy<a href="#security-philosophy" class="hash-link" aria-label="Direct link to Security Philosophy" title="Direct link to Security Philosophy" translate="no">​</a></h2>
+<p>Adcyma supports two authentication methods: Magic Links (default) and Microsoft Entra ID Single Sign-On (recommended). There is no password-based authentication.</p>
 <blockquote>
 <p><strong>Zero-Password Security</strong></p>
-<p>Adcyma does not store or manage user passwords. This eliminates risks associated with password breaches, weak passwords, and credential stuffing attacks.</p>
+<p>Adcyma does not store or manage user passwords. This eliminates risks from password breaches, weak passwords, and credential stuffing attacks.</p>
 </blockquote>
-<p><strong>Why we chose these methods:</strong></p>
-<ul>
-<li class=""><strong>Eliminates password vulnerabilities</strong> - No passwords to crack, steal, or compromise</li>
-<li class=""><strong>Reduces attack surface</strong> - Fewer authentication vectors to secure</li>
-<li class=""><strong>Improves user experience</strong> - No passwords to remember or reset</li>
-<li class=""><strong>Flexible deployment</strong> - Start simple, upgrade when ready</li>
-<li class=""><strong>Multi-factor capable</strong> - Both methods support additional security layers</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="magic-links-default-authentication">Magic Links (Default Authentication)<a href="#magic-links-default-authentication" class="hash-link" aria-label="Direct link to Magic Links (Default Authentication)" title="Direct link to Magic Links (Default Authentication)" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview-1">Overview<a href="#overview-1" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h3>
-<p>Magic Links are the default authentication method for Adcyma, providing secure, passwordless access by sending time-limited authentication links directly to verified email addresses.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-magic-links-work">How Magic Links Work<a href="#how-magic-links-work" class="hash-link" aria-label="Direct link to How Magic Links Work" title="Direct link to How Magic Links Work" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="magic-links-default">Magic Links (Default)<a href="#magic-links-default" class="hash-link" aria-label="Direct link to Magic Links (Default)" title="Direct link to Magic Links (Default)" translate="no">​</a></h2>
+<p>Magic Links provide passwordless access by sending a time-limited login link to a verified email address. They are the default method and are active whenever SSO is disabled.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-it-works">How it works<a href="#how-it-works" class="hash-link" aria-label="Direct link to How it works" title="Direct link to How it works" translate="no">​</a></h3>
 <ol>
-<li class=""><strong>User initiates login</strong> with their email address</li>
-<li class=""><strong>System generates secure token</strong> with expiration time</li>
-<li class=""><strong>Email sent</strong> containing unique authentication link</li>
-<li class=""><strong>User clicks link</strong> to complete authentication</li>
-<li class=""><strong>Automatic login</strong> with session establishment</li>
+<li class="">User enters their email address on the login page</li>
+<li class="">The system generates a cryptographically secure token and sends a link to that address</li>
+<li class="">User clicks the link and gets an active session in Adcyma</li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-features">Security Features<a href="#security-features" class="hash-link" aria-label="Direct link to Security Features" title="Direct link to Security Features" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-details">Security details<a href="#security-details" class="hash-link" aria-label="Direct link to Security details" title="Direct link to Security details" translate="no">​</a></h3>
 <ul>
-<li class=""><strong>Time-limited tokens</strong> - Links expire after 15 minutes</li>
-<li class=""><strong>Single-use authentication</strong> - Each link can only be used once</li>
-<li class=""><strong>Email verification</strong> - Confirms user controls the email address</li>
-<li class=""><strong>Rate limiting</strong> - Prevents abuse (5 requests per hour per email)</li>
-<li class=""><strong>Secure token generation</strong> - Cryptographically secure random tokens</li>
-<li class=""><strong>Session management</strong> - Configurable session duration with automatic extension</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-experience">User Experience<a href="#user-experience" class="hash-link" aria-label="Direct link to User Experience" title="Direct link to User Experience" translate="no">​</a></h3>
-<ol>
-<li class="">User enters email address on login page</li>
-<li class="">System sends magic link to verified email address</li>
-<li class="">User checks email and clicks authentication link</li>
-<li class="">Automatic redirect to Adcyma with active session</li>
-<li class="">Session persists based on configured duration</li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-magic-links-are-available">When Magic Links Are Available<a href="#when-magic-links-are-available" class="hash-link" aria-label="Direct link to When Magic Links Are Available" title="Direct link to When Magic Links Are Available" translate="no">​</a></h3>
-<p>Magic Links are available when:</p>
-<ul>
-<li class=""><strong>SSO is disabled</strong> (default state)</li>
-<li class=""><strong>Administrator has turned off SSO</strong></li>
-<li class=""><strong>Organization chooses to use email-based authentication</strong></li>
+<li class="">Links expire after 15 minutes and are single-use</li>
+<li class="">Rate limited to 5 requests per hour per email address</li>
+<li class="">Session duration is configurable with automatic extension</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="microsoft-entra-id-sso-recommended">Microsoft Entra ID SSO (Recommended)<a href="#microsoft-entra-id-sso-recommended" class="hash-link" aria-label="Direct link to Microsoft Entra ID SSO (Recommended)" title="Direct link to Microsoft Entra ID SSO (Recommended)" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview-2">Overview<a href="#overview-2" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h3>
-<p>Microsoft Entra ID SSO provides enhanced authentication by integrating with your Microsoft identity infrastructure. This is the recommended authentication method for all organizations seeking improved security and user experience.</p>
-<blockquote>
-<p><strong>Recommended for All Organizations</strong></p>
-<p>SSO with Microsoft Entra ID provides superior security, better user experience, and centralized access management compared to Magic Links.</p>
-</blockquote>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-sso-works">How SSO Works<a href="#how-sso-works" class="hash-link" aria-label="Direct link to How SSO Works" title="Direct link to How SSO Works" translate="no">​</a></h3>
+<p>SSO integrates with your Microsoft identity infrastructure. When enabled, users authenticate with their existing corporate Microsoft credentials, and Adcyma inherits your Entra ID security policies.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-it-works-1">How it works<a href="#how-it-works-1" class="hash-link" aria-label="Direct link to How it works" title="Direct link to How it works" translate="no">​</a></h3>
 <ol>
-<li class="">User accesses Adcyma application</li>
-<li class="">System redirects to your Microsoft Entra ID tenant</li>
-<li class="">User authenticates with corporate Microsoft credentials</li>
-<li class="">Entra ID redirects back to Adcyma with authentication token</li>
-<li class="">User gains access to Adcyma with appropriate permissions</li>
+<li class="">User accesses Adcyma</li>
+<li class="">Adcyma redirects to your Microsoft Entra ID tenant</li>
+<li class="">User authenticates with their Microsoft credentials</li>
+<li class="">Entra ID redirects back with an authentication token</li>
+<li class="">User has access to Adcyma with the appropriate permissions</li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="benefits-of-sso">Benefits of SSO<a href="#benefits-of-sso" class="hash-link" aria-label="Direct link to Benefits of SSO" title="Direct link to Benefits of SSO" translate="no">​</a></h3>
-<p><strong>Security Advantages:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-sso-is-recommended">Why SSO is recommended<a href="#why-sso-is-recommended" class="hash-link" aria-label="Direct link to Why SSO is recommended" title="Direct link to Why SSO is recommended" translate="no">​</a></h3>
 <ul>
-<li class="">Leverages Microsoft&#x27;s enterprise security infrastructure</li>
-<li class="">Inherits your existing multi-factor authentication policies</li>
-<li class="">Centralized user management and access control</li>
-<li class="">Comprehensive audit trails through Microsoft security logging</li>
-<li class="">Eliminates email-based authentication vectors</li>
-<li class="">Advanced conditional access policies</li>
+<li class="">Your existing MFA policies, conditional access rules, and audit logging carry over automatically</li>
+<li class="">Users get single sign-on across the Microsoft ecosystem with no extra credentials</li>
+<li class="">Admins manage provisioning, deprovisioning, and group-based access from Entra ID</li>
+<li class="">No email-based authentication step to worry about</li>
 </ul>
-<p><strong>User Experience:</strong></p>
-<ul>
-<li class="">Single sign-on across Microsoft ecosystem</li>
-<li class="">No additional credentials to manage</li>
-<li class="">Familiar Microsoft authentication interface</li>
-<li class="">Automatic session management</li>
-<li class="">Faster authentication process</li>
-<li class="">No need to check email for access</li>
-</ul>
-<p><strong>Administrative Benefits:</strong></p>
-<ul>
-<li class="">Centralized user provisioning and deprovisioning</li>
-<li class="">Group-based access control from Entra ID</li>
-<li class="">Integration with existing Microsoft security policies</li>
-<li class="">Simplified user lifecycle management</li>
-<li class="">Real-time access control changes</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sso-administration">SSO Administration<a href="#sso-administration" class="hash-link" aria-label="Direct link to SSO Administration" title="Direct link to SSO Administration" translate="no">​</a></h3>
-<p><strong>Enabling SSO:</strong></p>
-<ul>
-<li class="">Administrators can enable SSO through Adcyma settings</li>
-<li class="">Requires Microsoft Entra ID configuration</li>
-<li class="">Magic Links automatically disabled when SSO is active</li>
-</ul>
-<p><strong>Disabling SSO:</strong></p>
-<ul>
-<li class="">Administrators can turn off SSO at any time</li>
-<li class="">Magic Links become available again immediately</li>
-<li class="">Users can choose their preferred authentication method</li>
-</ul>
-<blockquote>
-<p><strong>Flexible Configuration</strong></p>
-<p>Administrators have full control over authentication methods and can switch between Magic Links and SSO as organizational needs change.</p>
-</blockquote>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="authentication-states">Authentication States<a href="#authentication-states" class="hash-link" aria-label="Direct link to Authentication States" title="Direct link to Authentication States" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sso-enabled-state">SSO Enabled State<a href="#sso-enabled-state" class="hash-link" aria-label="Direct link to SSO Enabled State" title="Direct link to SSO Enabled State" translate="no">​</a></h3>
-<p>When SSO is enabled by administrators:</p>
-<ul>
-<li class=""><strong>All users</strong> authenticate through Microsoft Entra ID</li>
-<li class=""><strong>Magic Links</strong> are not available</li>
-<li class=""><strong>Centralized access control</strong> through Entra ID groups and policies</li>
-<li class=""><strong>Enhanced security</strong> through Microsoft&#x27;s identity platform</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sso-disabled-state-default">SSO Disabled State (Default)<a href="#sso-disabled-state-default" class="hash-link" aria-label="Direct link to SSO Disabled State (Default)" title="Direct link to SSO Disabled State (Default)" translate="no">​</a></h3>
-<p>When SSO is disabled (default state):</p>
-<ul>
-<li class=""><strong>Magic Links</strong> are the active authentication method</li>
-<li class=""><strong>Email-based authentication</strong> for all users</li>
-<li class=""><strong>Flexible access</strong> without Microsoft infrastructure requirements</li>
-<li class=""><strong>Simple deployment</strong> and user management</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="choosing-your-authentication-method">Choosing Your Authentication Method<a href="#choosing-your-authentication-method" class="hash-link" aria-label="Direct link to Choosing Your Authentication Method" title="Direct link to Choosing Your Authentication Method" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="microsoft-entra-id-sso-recommended-1">Microsoft Entra ID SSO (Recommended)<a href="#microsoft-entra-id-sso-recommended-1" class="hash-link" aria-label="Direct link to Microsoft Entra ID SSO (Recommended)" title="Direct link to Microsoft Entra ID SSO (Recommended)" translate="no">​</a></h3>
-<p><strong>Benefits for any organization:</strong></p>
-<ul>
-<li class="">Enhanced security compared to email-based authentication</li>
-<li class="">Better user experience with single sign-on</li>
-<li class="">Centralized identity management</li>
-<li class="">Advanced security policies and monitoring</li>
-<li class="">Professional authentication experience</li>
-</ul>
-<p><strong>Requirements:</strong></p>
-<ul>
-<li class="">Microsoft Entra ID tenant (Office 365 or standalone)</li>
-<li class="">User accounts in Entra ID</li>
-<li class="">Administrator access to configure integration</li>
-</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="switching-authentication-methods">Switching authentication methods<a href="#switching-authentication-methods" class="hash-link" aria-label="Direct link to Switching authentication methods" title="Direct link to Switching authentication methods" translate="no">​</a></h3>
+<p>Administrators can enable or disable SSO at any time through Adcyma&#x27;s Identity provider settings. When SSO is active, Magic Links are automatically disabled. When SSO is turned off, Magic Links become available again immediately.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="choosing-a-method">Choosing a method<a href="#choosing-a-method" class="hash-link" aria-label="Direct link to Choosing a method" title="Direct link to Choosing a method" translate="no">​</a></h2>
+<p>Use SSO if you have a Microsoft Entra ID tenant (Office 365 or standalone) and want centralized identity management. You need user accounts in Entra ID and administrator access to configure the integration.</p>
+<p>Use Magic Links if you need quick deployment without Microsoft infrastructure, or for temporary and project-based access.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="account-recovery">Account recovery<a href="#account-recovery" class="hash-link" aria-label="Direct link to Account recovery" title="Direct link to Account recovery" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sso-access-issues">SSO access issues<a href="#sso-access-issues" class="hash-link" aria-label="Direct link to SSO access issues" title="Direct link to SSO access issues" translate="no">​</a></h3>
+<ol>
+<li class="">Contact your IT administrator first for Entra ID-related problems</li>
+<li class="">If that does not resolve it, contact Adcyma Support</li>
+<li class="">As a temporary workaround, an administrator can disable SSO to restore Magic Link access</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="magic-link-access-issues">Magic Link access issues<a href="#magic-link-access-issues" class="hash-link" aria-label="Direct link to Magic Link access issues" title="Direct link to Magic Link access issues" translate="no">​</a></h3>
+<ol>
+<li class="">Check spam/junk folders and verify your email address is correct</li>
+<li class="">If links still are not arriving, contact Adcyma Support with your setup information</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="verification-information">Verification information<a href="#verification-information" class="hash-link" aria-label="Direct link to Verification information" title="Direct link to Verification information" translate="no">​</a></h3>
+<p>When contacting support, have the following ready: organization details from initial registration, administrative contact information, original configuration details, and billing/subscription information.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-best-practices">Security best practices<a href="#security-best-practices" class="hash-link" aria-label="Direct link to Security best practices" title="Direct link to Security best practices" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="magic-links">Magic Links<a href="#magic-links" class="hash-link" aria-label="Direct link to Magic Links" title="Direct link to Magic Links" translate="no">​</a></h3>
-<p><strong>Suitable when:</strong></p>
-<ul>
-<li class="">Quick deployment needed without infrastructure setup</li>
-<li class="">Temporary or project-based access requirements</li>
-<li class="">Preference for email-based authentication</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="account-recovery-and-access-issues">Account Recovery and Access Issues<a href="#account-recovery-and-access-issues" class="hash-link" aria-label="Direct link to Account Recovery and Access Issues" title="Direct link to Account Recovery and Access Issues" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="if-sso-access-is-lost">If SSO Access Is Lost<a href="#if-sso-access-is-lost" class="hash-link" aria-label="Direct link to If SSO Access Is Lost" title="Direct link to If SSO Access Is Lost" translate="no">​</a></h3>
-<p>When SSO is enabled and access issues occur:</p>
-<ol>
-<li class=""><strong>Contact your IT Administrator</strong> first for Entra ID-related problems</li>
-<li class=""><strong>Contact Adcyma Support</strong> if administrator cannot resolve</li>
-<li class=""><strong>Provide setup information</strong> for company verification if needed</li>
-<li class=""><strong>Administrator can disable SSO</strong> to restore Magic Link access temporarily</li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="if-magic-links-access-is-lost">If Magic Links Access Is Lost<a href="#if-magic-links-access-is-lost" class="hash-link" aria-label="Direct link to If Magic Links Access Is Lost" title="Direct link to If Magic Links Access Is Lost" translate="no">​</a></h3>
-<p>When Magic Links are enabled and access issues occur:</p>
-<ol>
-<li class=""><strong>Check email delivery</strong> and spam folders</li>
-<li class=""><strong>Verify email address</strong> is correct and accessible</li>
-<li class=""><strong>Contact Adcyma Support</strong> with setup information for verification</li>
-<li class=""><strong>Company verification process</strong> using original registration details</li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup-information-for-verification">Setup Information for Verification<a href="#setup-information-for-verification" class="hash-link" aria-label="Direct link to Setup Information for Verification" title="Direct link to Setup Information for Verification" translate="no">​</a></h3>
-<ul>
-<li class="">Organization details from initial registration</li>
-<li class="">Administrative contact information</li>
-<li class="">Original configuration details</li>
-<li class="">Billing and subscription information</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-best-practices">Security Best Practices<a href="#security-best-practices" class="hash-link" aria-label="Direct link to Security Best Practices" title="Direct link to Security Best Practices" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-magic-links">For Magic Links<a href="#for-magic-links" class="hash-link" aria-label="Direct link to For Magic Links" title="Direct link to For Magic Links" translate="no">​</a></h3>
-<p><strong>Email Security:</strong></p>
 <ul>
 <li class="">Use corporate email addresses when possible</li>
-<li class="">Implement SPF, DKIM, and DMARC for your domain</li>
-<li class="">Monitor for suspicious authentication patterns</li>
-<li class="">Educate users about prompt email checking</li>
+<li class="">Set up SPF, DKIM, and DMARC for your domain</li>
+<li class="">Tell users to check email promptly, never share links, and use them from the same device they requested on</li>
+<li class="">Report suspicious authentication emails to your security team</li>
 </ul>
-<p><strong>User Guidelines:</strong></p>
-<ul>
-<li class="">Check email promptly after requesting authentication</li>
-<li class="">Don&#x27;t share authentication links</li>
-<li class="">Use links from the same device when possible</li>
-<li class="">Report suspicious authentication emails</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-sso-recommended">For SSO (Recommended)<a href="#for-sso-recommended" class="hash-link" aria-label="Direct link to For SSO (Recommended)" title="Direct link to For SSO (Recommended)" translate="no">​</a></h3>
-<p><strong>Entra ID Configuration:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sso">SSO<a href="#sso" class="hash-link" aria-label="Direct link to SSO" title="Direct link to SSO" translate="no">​</a></h3>
 <ul>
 <li class="">Enable multi-factor authentication for all users</li>
-<li class="">Configure appropriate conditional access policies</li>
-<li class="">Implement group-based access controls</li>
-<li class="">Regular review of user permissions and access</li>
-<li class="">Monitor Entra ID audit logs</li>
-</ul>
-<p><strong>Ongoing Security:</strong></p>
-<ul>
-<li class="">Regular access reviews and user audits</li>
-<li class="">Implement least privilege principles</li>
-<li class="">Monitor authentication patterns</li>
-<li class="">Keep security policies updated</li>
-<li class="">Plan for SSO availability and backup procedures</li>
+<li class="">Configure conditional access policies and group-based access controls</li>
+<li class="">Review user permissions regularly and monitor Entra ID audit logs</li>
+<li class="">Follow least-privilege principles and plan for SSO availability and backup procedures</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="magic-links-issues">Magic Links Issues<a href="#magic-links-issues" class="hash-link" aria-label="Direct link to Magic Links Issues" title="Direct link to Magic Links Issues" translate="no">​</a></h3>
-<p><strong>Email Not Received:</strong></p>
-<ul>
-<li class="">Check spam/junk folders</li>
-<li class="">Verify email address spelling</li>
-<li class="">Wait an hour and try again</li>
-<li class="">Ensure corporate email servers aren&#x27;t blocking emails sent from <a href="mailto:support@adcyma.com" target="_blank" rel="noopener noreferrer" class="">support@adcyma.com</a></li>
-</ul>
-<p><strong>Link Problems:</strong></p>
-<ul>
-<li class="">Links expire after 15 minutes</li>
-<li class="">Each link is single-use only</li>
-<li class="">Request new link if expired or used</li>
-<li class="">Use same device/browser when possible</li>
-</ul>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sso-issues">SSO Issues<a href="#sso-issues" class="hash-link" aria-label="Direct link to SSO Issues" title="Direct link to SSO Issues" translate="no">​</a></h3>
-<p><strong>Cannot Access Adcyma:</strong></p>
-<ul>
-<li class="">Verify Microsoft account has appropriate permissions</li>
-<li class="">Check Entra ID group memberships</li>
-<li class="">Ensure account is active in Entra ID</li>
-<li class="">Contact IT administrator for access issues</li>
-</ul>
-<p><strong>Redirect Problems:</strong></p>
-<ul>
-<li class="">Clear browser cache and cookies</li>
-<li class="">Try different browser or incognito mode</li>
-<li class="">Disable browser extensions temporarily</li>
-<li class="">Verify correct Adcyma organization URL</li>
-</ul>
-<p><strong>Administrator Recovery:</strong></p>
-<ul>
-<li class="">Administrators can disable SSO to restore Magic Link access</li>
-<li class="">Contact Adcyma Support with company verification if needed</li>
-<li class="">Use setup information for identity verification</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="administrative-controls">Administrative Controls<a href="#administrative-controls" class="hash-link" aria-label="Direct link to Administrative Controls" title="Direct link to Administrative Controls" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="switching-authentication-methods">Switching Authentication Methods<a href="#switching-authentication-methods" class="hash-link" aria-label="Direct link to Switching Authentication Methods" title="Direct link to Switching Authentication Methods" translate="no">​</a></h3>
-<p><strong>To Enable SSO:</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="magic-links-1">Magic Links<a href="#magic-links-1" class="hash-link" aria-label="Direct link to Magic Links" title="Direct link to Magic Links" translate="no">​</a></h3>
+<p>If you did not receive an email, check spam/junk folders, verify the email address spelling, and make sure your corporate email server is not blocking emails from <a href="mailto:support@adcyma.com" target="_blank" rel="noopener noreferrer" class="">support@adcyma.com</a>. If the problem persists, wait an hour (rate limiting) and try again.</p>
+<p>Links expire after 15 minutes and are single-use. If a link is expired or already used, request a new one. Use the same device and browser when possible.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sso-1">SSO<a href="#sso-1" class="hash-link" aria-label="Direct link to SSO" title="Direct link to SSO" translate="no">​</a></h3>
+<p>If you cannot access Adcyma, verify that your Microsoft account has appropriate permissions and is active in Entra ID, and check your group memberships. Contact your IT administrator for access issues.</p>
+<p>For redirect problems, clear your browser cache and cookies, try a different browser or incognito mode, disable browser extensions temporarily, and verify you are using the correct Adcyma organization URL.</p>
+<p>Administrators can disable SSO to restore Magic Link access as a fallback. Contact Adcyma Support with company verification details if needed.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="enabling-and-disabling-sso">Enabling and disabling SSO<a href="#enabling-and-disabling-sso" class="hash-link" aria-label="Direct link to Enabling and disabling SSO" title="Direct link to Enabling and disabling SSO" translate="no">​</a></h2>
+<p>To enable SSO:</p>
 <ol>
-<li class="">Configure Microsoft Entra ID integration in Adcyma Identity provider settings</li>
+<li class="">Configure Microsoft Entra ID integration in Adcyma&#x27;s Identity provider settings</li>
 <li class="">Notify users of the change</li>
-<li class="">Enable SSO (Magic Links automatically disabled)</li>
+<li class="">Enable SSO (Magic Links are automatically disabled)</li>
 </ol>
-<p><strong>To Disable SSO:</strong></p>
+<p>To disable SSO:</p>
 <ol>
-<li class="">Access Adcyma Identity provider settings</li>
+<li class="">Open Adcyma&#x27;s Identity provider settings</li>
 <li class="">Disable SSO authentication</li>
-<li class="">Magic Links immediately become available</li>
-<li class="">Notify users of authentication method change</li>
+<li class="">Magic Links become available immediately</li>
+<li class="">Notify users of the authentication method change</li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="planning-authentication-strategy">Planning Authentication Strategy<a href="#planning-authentication-strategy" class="hash-link" aria-label="Direct link to Planning Authentication Strategy" title="Direct link to Planning Authentication Strategy" translate="no">​</a></h3>
-<p><strong>Consider enabling SSO when:</strong></p>
-<ul>
-<li class="">Enhanced security is required</li>
-<li class="">Centralized user management is desired</li>
-<li class="">Professional authentication experience is needed</li>
-</ul>
-<p><strong>Consider using Magic Links when:</strong></p>
-<ul>
-<li class="">Rapid deployment is needed</li>
-<li class="">No Microsoft infrastructure available</li>
-<li class="">Temporary access requirements</li>
-<li class="">Email-based authentication is preferred</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started">Getting Started<a href="#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started" translate="no">​</a></h2>
-<p>Adcyma starts with Magic Links enabled by default. Administrators can enable Microsoft Entra ID SSO when ready for enhanced security and centralized authentication management. The choice between authentication methods can be changed at any time based on organizational needs.</p>
-<p>For guidance on choosing the right authentication method or configuring SSO, contact Adcyma support for assistance tailored to your organization.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Adcyma/Docs/tree/main/v1/authentication.mdx" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/v1/administration/Settings/systemusers"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">System Users</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/v1/hosting"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Hosting</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#security-philosophy" class="table-of-contents__link toc-highlight">Security Philosophy</a></li><li><a href="#magic-links-default-authentication" class="table-of-contents__link toc-highlight">Magic Links (Default Authentication)</a><ul><li><a href="#overview-1" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#how-magic-links-work" class="table-of-contents__link toc-highlight">How Magic Links Work</a></li><li><a href="#security-features" class="table-of-contents__link toc-highlight">Security Features</a></li><li><a href="#user-experience" class="table-of-contents__link toc-highlight">User Experience</a></li><li><a href="#when-magic-links-are-available" class="table-of-contents__link toc-highlight">When Magic Links Are Available</a></li></ul></li><li><a href="#microsoft-entra-id-sso-recommended" class="table-of-contents__link toc-highlight">Microsoft Entra ID SSO (Recommended)</a><ul><li><a href="#overview-2" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#how-sso-works" class="table-of-contents__link toc-highlight">How SSO Works</a></li><li><a href="#benefits-of-sso" class="table-of-contents__link toc-highlight">Benefits of SSO</a></li><li><a href="#sso-administration" class="table-of-contents__link toc-highlight">SSO Administration</a></li></ul></li><li><a href="#authentication-states" class="table-of-contents__link toc-highlight">Authentication States</a><ul><li><a href="#sso-enabled-state" class="table-of-contents__link toc-highlight">SSO Enabled State</a></li><li><a href="#sso-disabled-state-default" class="table-of-contents__link toc-highlight">SSO Disabled State (Default)</a></li></ul></li><li><a href="#choosing-your-authentication-method" class="table-of-contents__link toc-highlight">Choosing Your Authentication Method</a><ul><li><a href="#microsoft-entra-id-sso-recommended-1" class="table-of-contents__link toc-highlight">Microsoft Entra ID SSO (Recommended)</a></li><li><a href="#magic-links" class="table-of-contents__link toc-highlight">Magic Links</a></li></ul></li><li><a href="#account-recovery-and-access-issues" class="table-of-contents__link toc-highlight">Account Recovery and Access Issues</a><ul><li><a href="#if-sso-access-is-lost" class="table-of-contents__link toc-highlight">If SSO Access Is Lost</a></li><li><a href="#if-magic-links-access-is-lost" class="table-of-contents__link toc-highlight">If Magic Links Access Is Lost</a></li><li><a href="#setup-information-for-verification" class="table-of-contents__link toc-highlight">Setup Information for Verification</a></li></ul></li><li><a href="#security-best-practices" class="table-of-contents__link toc-highlight">Security Best Practices</a><ul><li><a href="#for-magic-links" class="table-of-contents__link toc-highlight">For Magic Links</a></li><li><a href="#for-sso-recommended" class="table-of-contents__link toc-highlight">For SSO (Recommended)</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#magic-links-issues" class="table-of-contents__link toc-highlight">Magic Links Issues</a></li><li><a href="#sso-issues" class="table-of-contents__link toc-highlight">SSO Issues</a></li></ul></li><li><a href="#administrative-controls" class="table-of-contents__link toc-highlight">Administrative Controls</a><ul><li><a href="#switching-authentication-methods" class="table-of-contents__link toc-highlight">Switching Authentication Methods</a></li><li><a href="#planning-authentication-strategy" class="table-of-contents__link toc-highlight">Planning Authentication Strategy</a></li></ul></li><li><a href="#getting-started" class="table-of-contents__link toc-highlight">Getting Started</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://adcyma.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Adcyma.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://portal.adcyma.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Adcyma Portal<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.linkedin.com/company/101592429" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://adcyma.com/blog" target="_blank" rel="noopener noreferrer" class="footer__link-item">Blog</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Adcyma AB</div></div></div></footer></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started">Getting started<a href="#getting-started" class="hash-link" aria-label="Direct link to Getting started" title="Direct link to Getting started" translate="no">​</a></h2>
+<p>Adcyma starts with Magic Links enabled by default. Administrators can enable Microsoft Entra ID SSO at any time and switch back if needed. For help configuring SSO, contact Adcyma support.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Adcyma/Docs/tree/main/v1/authentication.mdx" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/v1/administration/Settings/systemusers"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">System Users</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/v1/hosting"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Hosting</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#magic-links-default" class="table-of-contents__link toc-highlight">Magic Links (Default)</a><ul><li><a href="#how-it-works" class="table-of-contents__link toc-highlight">How it works</a></li><li><a href="#security-details" class="table-of-contents__link toc-highlight">Security details</a></li></ul></li><li><a href="#microsoft-entra-id-sso-recommended" class="table-of-contents__link toc-highlight">Microsoft Entra ID SSO (Recommended)</a><ul><li><a href="#how-it-works-1" class="table-of-contents__link toc-highlight">How it works</a></li><li><a href="#why-sso-is-recommended" class="table-of-contents__link toc-highlight">Why SSO is recommended</a></li><li><a href="#switching-authentication-methods" class="table-of-contents__link toc-highlight">Switching authentication methods</a></li></ul></li><li><a href="#choosing-a-method" class="table-of-contents__link toc-highlight">Choosing a method</a></li><li><a href="#account-recovery" class="table-of-contents__link toc-highlight">Account recovery</a><ul><li><a href="#sso-access-issues" class="table-of-contents__link toc-highlight">SSO access issues</a></li><li><a href="#magic-link-access-issues" class="table-of-contents__link toc-highlight">Magic Link access issues</a></li><li><a href="#verification-information" class="table-of-contents__link toc-highlight">Verification information</a></li></ul></li><li><a href="#security-best-practices" class="table-of-contents__link toc-highlight">Security best practices</a><ul><li><a href="#magic-links" class="table-of-contents__link toc-highlight">Magic Links</a></li><li><a href="#sso" class="table-of-contents__link toc-highlight">SSO</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#magic-links-1" class="table-of-contents__link toc-highlight">Magic Links</a></li><li><a href="#sso-1" class="table-of-contents__link toc-highlight">SSO</a></li></ul></li><li><a href="#enabling-and-disabling-sso" class="table-of-contents__link toc-highlight">Enabling and disabling SSO</a></li><li><a href="#getting-started" class="table-of-contents__link toc-highlight">Getting started</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://adcyma.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Adcyma.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://portal.adcyma.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Adcyma Portal<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.linkedin.com/company/101592429" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://adcyma.com/blog" target="_blank" rel="noopener noreferrer" class="footer__link-item">Blog</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Adcyma AB</div></div></div></footer></div>
 </body>
 </html>
