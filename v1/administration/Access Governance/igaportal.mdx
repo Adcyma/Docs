@@ -1,0 +1,72 @@
+# IGA Portal
+
+The IGA Portal is the end-user interface for identity governance and access management. It's where employees request access to services, managers approve or deny those requests, and service owners manage their resources. The portal is accessible to all managed users — not just administrators.
+
+## Access Requests
+
+This is where users go to request access to the services and resources your organization has made available through the service catalog.
+
+### Browsing the Catalog
+
+Users see a list of available services organized by category (Application, Infrastructure, Physical Access, Data & Files, etc.). Each service displays its name, description, and category so users can find what they need.
+
+### Submitting a Request
+
+To request access:
+
+1. Select the desired service from the catalog
+2. Provide a **justification** explaining why access is needed
+3. Choose a **duration** for the access (e.g., 7 days, 30 days, 3 months, or permanent if allowed by the service configuration)
+4. Submit the request
+
+The request is then routed to the approval workflow configured for that service. Users can track the status of their requests from the portal.
+
+## Approvals
+
+If you've been designated as an approver in any approval workflow, this section shows requests waiting for your action.
+
+### Reviewing Requests
+
+For each pending request, you can see:
+- Who is requesting access
+- Which service they're requesting
+- Their justification
+- The requested duration
+
+### Acting on Requests
+
+Click on a request to approve or deny it. When approving, you can adjust the access duration if the requested period isn't appropriate. When denying, you can provide a comment explaining the reason.
+
+The approval mode of the workflow determines how your action interacts with other approvers:
+- **One of these** — Your approval alone is sufficient
+- **All of these** — Every approver must approve
+- **All of these in order** — Approvers must approve in sequence
+
+## Owned Services
+
+If you're designated as a service owner, this section lets you manage the group memberships associated with your services directly. You can see who currently has access and make adjustments as needed.
+
+## Owned Dynamic Groups
+
+If you own any dynamic groups, this section shows them with options to manage the **Always Include** and **Always Exclude** override lists. This lets you handle exceptions without needing to modify the underlying rules — for example, adding a contractor who doesn't match the standard criteria, or excluding a user who shouldn't have access despite matching the conditions.
+
+## Best Practices
+
+- Write clear justifications when requesting access — this helps approvers make faster decisions.
+- Request only the access duration you actually need. Shorter durations reduce security risk and make audits simpler.
+- If you're an approver, review pending requests promptly to avoid blocking your colleagues.
+- As a service owner, periodically review who has access to your services and clean up any stale memberships.
+
+## Troubleshooting
+
+If you can't see the IGA Portal:
+- Verify you're part of the managed users scope
+- Check with your administrator that IGA features are enabled
+
+If a service you need isn't listed:
+- The service may not have been published to the catalog yet — contact your administrator
+- You may not meet the visibility criteria configured for that service
+
+If your request seems stuck:
+- Check if all required approvers have acted (especially for "all of these" workflows)
+- The approver may be out of office — contact them directly or ask your admin to reassign

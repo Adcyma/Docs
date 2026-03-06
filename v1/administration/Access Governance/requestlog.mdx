@@ -1,0 +1,57 @@
+# Request Log
+
+The Request Log is a complete audit trail of all access governance events in your organization. Every action taken through the IGA system — from initial access requests to final provisioning or denial — is recorded here.
+
+## When to Use the Request Log
+
+- Auditing who requested what and when, for compliance reporting
+- Investigating why a particular access request was approved or denied
+- Tracking the lifecycle of a specific request from creation to completion
+- Reviewing patterns in access requests to improve your approval workflows
+
+## Understanding Events
+
+Each entry in the log represents a single event in the lifecycle of an access request. Common event types include:
+
+| Event Type | Description |
+|---|---|
+| Created | A new access request was submitted |
+| Approved | An approver approved the request |
+| Denied | An approver denied the request |
+| Provisioned | Access was granted to the user (group membership added) |
+| Deprovisioned | Access was removed (group membership removed after expiration) |
+| Cancelled | The request was cancelled before completion |
+| Expired | A time-limited access grant reached its end date |
+
+## Filtering the Log
+
+Use the filter options to narrow down results:
+
+- **Request ID** — Find all events related to a specific request
+- **Event Type** — Show only approvals, denials, or other specific events
+- **Service** — Filter by the service or resource that was requested
+- **Workflow** — Filter by the approval workflow that processed the request
+- **Source** — Who initiated the request (end-user, admin, etc.)
+- **Date Range** — Limit results to a specific time period
+
+### Exporting Data
+
+Click **Export CSV** to download the filtered log for offline analysis or compliance reporting. The export respects all active filters.
+
+## Best Practices
+
+- Use the Request Log during periodic access reviews to verify that all granted access went through the proper approval process.
+- Filter by denied requests periodically to spot patterns — frequent denials for a specific service may indicate the service description or approval flow needs adjustment.
+- Export logs before and after major organizational changes (reorgs, new policies) to document the transition.
+- Combine Request Log data with Access Inventory data for a complete picture of who has access and how they got it.
+
+## Troubleshooting
+
+If an expected event is missing:
+- The request may still be in progress — check Pending Requests
+- Verify the time range filter includes the expected date
+- Some events (like deprovisioning) happen asynchronously and may appear with a slight delay
+
+If you can't find a specific request:
+- Use the Request ID filter if you have it
+- Try searching by the user who submitted the request or the service name

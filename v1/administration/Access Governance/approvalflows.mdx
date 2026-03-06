@@ -1,0 +1,82 @@
+# Approval Flows
+
+Approval Flows define how access requests are reviewed and approved in your organization. Each flow specifies who needs to approve, in what order, and under what conditions. When a user requests access to a service, the linked approval flow determines the path that request takes before access is granted.
+
+## When to Use Approval Flows
+
+- You want access requests to require manager sign-off before provisioning
+- Different services need different approval processes (e.g., sensitive data requires VP approval, standard tools only need team lead approval)
+- You need multi-stage approvals where requests pass through multiple reviewers in sequence
+- Compliance requirements dictate that specific roles must authorize access
+
+## Creating an Approval Flow
+
+### Basic Settings
+
+Give your flow a descriptive name that indicates what it's for (e.g., "Finance Apps - Manager + Director" or "Standard Tool Access - Team Lead Only").
+
+### Approval Mode
+
+Choose how multiple approvers interact:
+
+**One of these**
+Any single approver can approve the request. The request is approved as soon as one person acts. Use this for low-risk services where any team lead can authorize access.
+
+**All of these**
+Every listed approver must approve. The request isn't approved until all approvers have signed off. Use this when multiple stakeholders need to agree.
+
+**All of these in order**
+Approvers must act in a specific sequence. The request moves to the next approver only after the previous one has approved. Use this for escalation-style workflows (e.g., team lead first, then department head, then security).
+
+### Approver Types
+
+You can mix different approver types within a single flow:
+
+**Specific Users**
+Designate individual users as approvers. Best for: dedicated access managers, security team members, or specific department heads.
+
+**Job Title**
+Anyone with a matching job title can approve. Best for: distributing approval responsibility across people in the same role (e.g., all "Team Lead" users).
+
+**Manager / Boss**
+The requesting user's direct manager is automatically assigned as the approver. Best for: ensuring line-of-business accountability without hardcoding names.
+
+### Multi-Stage Workflows
+
+For sensitive resources, you can chain multiple approval stages together. A common pattern:
+
+```
+Stage 1: Requester's Manager (Manager type)
+Stage 2: Service Owner (Specific User type)
+Stage 3: Security Team (Job Title: "Security Analyst")
+```
+
+Each stage must be completed before the next one begins (when using "all of these in order" mode).
+
+## Linking Flows to Services
+
+Approval flows are connected to services in the **Services & Resources** configuration. Each service points to one approval flow. Multiple services can share the same flow if they have identical approval requirements.
+
+## Best Practices
+
+- Keep your approval flows as simple as the risk level warrants. Not every service needs a three-stage approval chain.
+- Use the Manager approver type when possible — it scales automatically as your organization changes without needing to update the flow.
+- Name your flows clearly so administrators can quickly understand what each one does when linking them to services.
+- Review your flows periodically. As your organization evolves, approval chains that made sense six months ago may need adjustment.
+- Test new flows with a low-risk service before applying them to critical resources.
+
+## Troubleshooting
+
+If requests are stuck waiting for approval:
+- Check that all designated approvers still exist and are active users
+- For "all of these" flows, verify every approver has acted
+- For "manager" type, confirm the requester has a manager assigned in Entra
+
+If the wrong person is being asked to approve:
+- Review the approver configuration in the flow
+- For manager-based approvers, check the user's manager attribute in Entra
+- For job title-based approvers, verify the title matches exactly (case-sensitive)
+
+If a flow isn't being used:
+- Confirm the flow is linked to at least one service in Services & Resources
+- Check that the service is published and visible in the IGA Portal

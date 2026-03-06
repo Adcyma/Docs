@@ -1,0 +1,77 @@
+# Pending Requests
+
+The Pending Requests page is where administrators review and act on access requests that are awaiting approval. It provides a centralized view of all outstanding requests across your organization, along with upcoming expirations and recently completed actions.
+
+## When to Use Pending Requests
+
+- Reviewing and acting on access requests assigned to you or your team
+- Monitoring the overall volume of outstanding requests
+- Tracking upcoming access expirations that may need renewal
+- Reviewing recently completed approvals and denials
+
+## Reviewing Requests
+
+Each pending request displays:
+- The user who submitted the request
+- The service or resource they're requesting access to
+- Their written justification
+- When the request was submitted
+- The approval workflow it's going through and its current stage
+
+## Acting on Requests
+
+### Approving a Request
+
+When you approve a request, you select an access duration. The following presets are available:
+
+| Duration | Description |
+|---|---|
+| 7 days | Short-term access for temporary needs |
+| 30 days | Standard monthly access |
+| 3 months | Quarterly access period |
+| 6 months | Half-year access |
+| 1 year | Annual access |
+| Permanent | No expiration (subject to service maximum duration) |
+| Custom | Specify an exact end date |
+
+You can also add a comment when approving, which is recorded in the Request Log.
+
+> The duration you select cannot exceed the maximum duration configured on the service. If the service allows a maximum of 30 days, you won't see options beyond that.
+
+### Denying a Request
+
+When denying a request, provide a comment explaining the reason. This helps the requester understand what went wrong and whether they should resubmit with different information.
+
+## Tracking Expirations
+
+The Pending Requests view also shows upcoming expirations — access grants that are approaching their end date. This gives you advance notice to:
+
+- Reach out to users who may need to renew their access
+- Prepare for access removals that could affect active projects
+- Identify patterns where access durations are consistently too short
+
+## Completed Actions
+
+Recently processed requests (approved, denied, or cancelled) are visible here for a limited time before moving exclusively to the Request Log.
+
+## Best Practices
+
+- Process pending requests promptly. Delays in approval can block users from doing their work.
+- Read justifications carefully — they're the primary input for making an informed approval decision.
+- Use the shortest appropriate duration when approving. It's easier for a user to request a renewal than to clean up overly broad access.
+- Add comments when denying requests. A clear explanation reduces back-and-forth and helps users submit better requests in the future.
+- Monitor upcoming expirations weekly to avoid surprises.
+
+## Troubleshooting
+
+If you don't see requests you expect:
+- Verify you're listed as an approver in the relevant approval flow
+- Check that the request hasn't already been acted on by another approver (for "one of these" flows)
+
+If approved access isn't being provisioned:
+- Check the Request Log for provisioning errors
+- Verify the target group in Entra is accessible to Adcyma
+
+If you can't approve or deny a request:
+- The request may be waiting for a previous approver in an ordered workflow
+- Check if the request has been cancelled by the requester

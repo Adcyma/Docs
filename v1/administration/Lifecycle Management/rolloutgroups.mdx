@@ -1,0 +1,69 @@
+# Rollout Groups
+
+Rollout Groups let you migrate users from one Entra group to another in controlled phases, rather than moving everyone at once. This is useful when rolling out new access policies, migrating between security groups, or gradually transitioning users to a new configuration.
+
+## When to Use Rollout Groups
+
+- Migrating users from a legacy security group to a new one without disrupting access all at once
+- Gradually rolling out a new policy or application license to batches of users
+- Testing changes with a small group before extending to the entire organization
+- Any scenario where a staged, controlled approach to group membership changes is preferred
+
+## Setting Up a Rollout
+
+### Source and Target Groups
+
+Start by selecting the **source group** (where users currently are) and the **target group** (where they should end up). Adcyma will move users from source to target across the stages you define.
+
+### Configuring Stages
+
+A rollout is divided into stages, each moving a portion of users. For each stage you configure:
+
+- **Number of users** or **percentage** to move in that stage
+- **Duration between stages** — the waiting period before the next stage begins, specified in hours or days
+
+This gives you natural checkpoints to verify everything is working before the next batch of users is moved.
+
+### Triggering the Rollout
+
+You can start a rollout in two ways:
+
+**Manual**
+Start each stage by hand when you're ready. This gives you full control and is ideal for high-stakes migrations.
+
+**Scheduled**
+Set a start time and let stages execute automatically based on the configured durations. Use this for lower-risk migrations where you're confident in the configuration.
+
+## Monitoring Progress
+
+Once a rollout is in progress, you can track:
+
+- Which stage is currently active
+- How many users have been moved so far
+- How many users remain
+- The scheduled time for the next stage (if using automatic triggering)
+
+If something goes wrong, you can pause the rollout before the next stage executes.
+
+## Best Practices
+
+- Start with a small first stage (e.g., 5–10% of users) to validate that the migration works as expected.
+- Allow enough time between stages to gather feedback from users and verify that access is working correctly.
+- Use manual triggering for the first rollout of a new type, then switch to scheduled mode once you're confident in the process.
+- Communicate the rollout schedule to affected users so they know when to expect changes.
+- Keep the source group intact until the rollout is fully complete and verified — this makes it easier to roll back if needed.
+
+## Troubleshooting
+
+If users aren't moving between stages:
+- Verify the rollout hasn't been paused
+- Check that the source group still contains the expected members
+- Confirm the target group exists and Adcyma has permissions to modify its membership
+
+If a stage completes with fewer users than expected:
+- Some users may have already been removed from the source group
+- Check for membership changes that occurred outside of Adcyma
+
+If you need to stop a rollout:
+- Pause the rollout from the monitoring view
+- Users already moved to the target group will stay there — you'll need to move them back manually if needed

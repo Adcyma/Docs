@@ -1,0 +1,70 @@
+# Services & Resources
+
+Services & Resources is where you build your organization's access catalog. Each service represents something users can request access to — an application, a shared drive, a physical location, or any other resource that's controlled through Entra group membership.
+
+## When to Use Services & Resources
+
+- Setting up a self-service access request system for your organization
+- Defining what resources are available for users to request
+- Connecting resources to approval workflows for governed access
+- Controlling how long users can retain access to specific resources
+
+## Understanding the Catalog
+
+The service catalog is what end users see when they visit the IGA Portal to request access. Each service you create here becomes an item users can browse and request.
+
+## Creating a Service
+
+### Basic Information
+
+**Name**
+A clear, user-friendly name that describes the resource (e.g., "Salesforce CRM", "London Office Badge Access", "Engineering Shared Drive").
+
+**Description**
+Explain what the service provides, who it's intended for, and any prerequisites. This is what users read before deciding to request access, so be specific.
+
+**Category**
+Organize your services into categories to make the catalog easier to browse:
+
+- **Application** — Software and SaaS tools
+- **Infrastructure** — Servers, VPNs, cloud environments
+- **Physical Access** — Building access, badge permissions
+- **Data & Files** — Shared drives, SharePoint sites, databases
+- **Other** — Anything that doesn't fit the above
+
+### Access Configuration
+
+**Owner**
+The user or group responsible for this service. Owners can manage group memberships directly from the IGA Portal and are typically notified about access changes.
+
+**Target Group(s)**
+The Entra group(s) that granting this service adds the user to. When a request is approved, Adcyma adds the user to these groups. When access expires or is revoked, they're removed.
+
+**Linked Approval Workflow**
+Select which approval flow governs requests for this service. See **Approval Flows** for details on creating workflows.
+
+**Maximum Duration**
+The longest period a user can request access for. Options typically include preset durations (7 days, 30 days, 3 months, 6 months, 1 year) or permanent access. Setting a maximum prevents users from requesting indefinite access to sensitive resources.
+
+## Best Practices
+
+- Write detailed descriptions for each service. Users who understand what they're requesting submit better justifications, which makes the approval process faster.
+- Choose categories consistently across your catalog. A well-organized catalog is easier for users to navigate.
+- Set maximum durations appropriate to the sensitivity of the resource. Highly sensitive data should have shorter maximum durations.
+- Assign service owners who are close to the resource — they'll make better access decisions than a centralized admin team.
+- Review your catalog periodically and archive services that are no longer needed.
+
+## Troubleshooting
+
+If a service doesn't appear in the IGA Portal:
+- Verify the service has been saved and is not in draft state
+- Check that the service has a linked approval workflow
+- Confirm the target group exists in Entra
+
+If users are getting access to the wrong group:
+- Review the target group configuration for the service
+- Verify you haven't accidentally linked the wrong Entra group
+
+If access isn't being provisioned after approval:
+- Check that Adcyma has permissions to modify the target group in Entra
+- Review the Request Log for any error events related to the request
