@@ -1,6 +1,6 @@
 # Hygiene Center
 
-The Hygiene Center helps you find unused or inactive Microsoft Entra groups that may be candidates for cleanup. Over time, organizations accumulate groups that are no longer actively used — the Hygiene Center surfaces these so you can make informed decisions about what to keep and what to remove.
+The Hygiene Center helps you find unused or inactive Microsoft Entra groups that may be candidates for cleanup. Over time, organizations accumulate groups that are no longer actively used. The Hygiene Center surfaces these so you can make informed decisions about what to keep and what to remove.
 
 ## When to Use the Hygiene Center
 
@@ -16,11 +16,8 @@ The Hygiene Center provides filters to control which groups appear in the result
 **Minimum Age (days)**
 Set a threshold so only groups older than a certain number of days are shown. This prevents flagging recently created groups that haven't had time to be used yet.
 
-**Include Teams Groups**
-Toggle whether groups associated with Microsoft Teams channels should appear in the results. You may want to exclude these if your organization manages Teams lifecycle separately.
-
-**Include Microsoft 365 Groups**
-Toggle whether Microsoft 365 groups (used for SharePoint, Planner, etc.) appear in the results.
+**Include Teams/M365**
+Toggle whether groups associated with Microsoft Teams channels and Microsoft 365 groups (used for SharePoint, Planner, etc.) appear in the results. You may want to exclude these if your organization manages their lifecycle separately.
 
 ## Understanding the Results
 
@@ -32,20 +29,22 @@ The results table includes the following columns:
 | Object ID | The unique Entra object identifier |
 | Category | Group type (Security, Distribution, etc.) |
 | Members | Current member count |
-| Age | How many days since the group was created |
+| Age (days) | How many days since the group was created |
 | Teams | Whether this group is linked to a Teams channel |
 | M365 | Whether this is a Microsoft 365 group |
 | Reason | Why the group was flagged (e.g., no members, no recent activity) |
 
+Note: Only user memberships are considered when evaluating groups. Device memberships are not included in the analysis.
+
 ### Exporting Results
 
-Click **Export CSV** to download the filtered results for offline review or to share with stakeholders who need to approve group deletions.
+Click **Download CSV** to download the filtered results for offline review or to share with stakeholders who need to approve group deletions.
 
 ## Best Practices
 
 - Schedule regular hygiene reviews (quarterly is a good starting point) to keep your Entra tenant clean.
-- Start with a high minimum age filter (e.g., 180 days) and work your way down — this surfaces the most obvious cleanup targets first.
-- Always verify with group owners before deleting a group. A group with zero members might still have a purpose (e.g., used as a target for Dynamic Groups or Approval Flows).
+- Start with a high minimum age filter (e.g., 180 days) and work your way down. This surfaces the most obvious cleanup targets first.
+- Always verify with group owners before deleting a group. A group with zero members might still have a purpose, for example if it's used as a target for Dynamic Groups or Approval Flows.
 - Use the CSV export to circulate a cleanup proposal with department leads before making changes.
 - Document your hygiene decisions so future reviews don't re-evaluate groups that were intentionally kept.
 
@@ -53,9 +52,9 @@ Click **Export CSV** to download the filtered results for offline review or to s
 
 If no groups appear in the results:
 - Lower the minimum age filter
-- Enable the Teams and M365 toggles to broaden the search
+- Enable the Teams/M365 toggle to broaden the search
 - Verify that your Entra connection is active and syncing
 
 If a group is flagged but shouldn't be:
-- The Hygiene Center uses heuristics based on membership and activity — a group may still be valid even if flagged
-- Use the Reason column to understand why it was surfaced and make your own judgment
+- The Hygiene Center uses heuristics based on membership and activity. A group may still be valid even if flagged.
+- Use the Reason column to understand why it was surfaced and make your own judgment.

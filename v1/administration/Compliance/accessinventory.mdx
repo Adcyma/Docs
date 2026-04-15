@@ -19,26 +19,26 @@ The main table displays one row per managed user with the following columns:
 | Email | Primary email address |
 | Department | Organizational department |
 | Job Title | Current job title |
-| Status | Account status (enabled/disabled) |
+| Status | Account status (Enabled/Disabled) |
 | Groups | Number of Entra groups the user belongs to |
 
 ### Viewing Group Memberships
 
 Click on any user row to expand it and see the full list of Entra groups that user belongs to. This makes it easy to spot unexpected memberships or confirm that a user has the right set of groups.
 
-### Searching and Filtering
+### Searching
 
-Use the search bar to quickly locate users by name, email, department, or job title. Filters help you narrow down the list when working with large user populations.
+Use the search bar to quickly locate users by name, email, department, or job title.
 
 ### Exporting Data
 
-Click the **Export CSV** button to download the current view as a CSV file. The export respects any active search or filter criteria, so you can export a targeted subset of users rather than the entire inventory.
+Click **Export CSV** to download the full user inventory as a CSV file. The export includes all managed users regardless of any active search. Clear your search first if you want a clean export, then filter the downloaded file as needed.
 
 ## Best Practices
 
 - Run periodic access reviews by exporting the inventory and comparing it against your expected group assignments.
-- Use the search and filter tools to focus on specific departments or teams during audits.
-- Check the Groups count column for outliers — users with unusually high or low group counts may warrant investigation.
+- Use the search to focus on specific departments or teams during audits.
+- Check the Groups count column for outliers. Users with unusually high or low group counts may warrant investigation.
 - Combine Access Inventory with the Hygiene Center to identify users in groups that may no longer be needed.
 
 ## Troubleshooting
@@ -50,7 +50,3 @@ If a user is missing from the inventory:
 If group counts seem incorrect:
 - Group membership data syncs from Entra on a regular schedule
 - Use the refresh option to pull the latest data
-
-If the CSV export is empty or incomplete:
-- Check that your search or filter criteria aren't too restrictive
-- Clear all filters and try the export again

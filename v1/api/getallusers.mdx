@@ -1,0 +1,67 @@
+---
+sidebar_position: 5
+title: Get User
+---
+
+# Get User
+
+Retrieves a single user by their user principal name (UPN).
+
+**Endpoint:** `GET /v1/api/user`
+
+## Query parameters
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `userPrincipalName` | string | Yes | The user's UPN (e.g., `anna.eriksson@contoso.com`) |
+
+### Example request
+
+```
+GET /v1/api/user?userPrincipalName=anna.eriksson@contoso.com
+```
+
+## Response
+
+### Success (`200 OK`)
+
+```json
+{
+  "data": {
+    "user": {
+      "userPrincipalName": "anna.eriksson@contoso.com",
+      "displayName": "Anna Eriksson",
+      "givenName": "Anna",
+      "surname": "Eriksson",
+      "department": "Engineering",
+      "jobTitle": "Software Engineer"
+    }
+  }
+}
+```
+
+The user object contains the fields synced from Entra ID. The exact set of fields depends on what's populated in your Entra directory.
+
+### Errors
+
+#### `400 Bad Request` - Missing query parameter
+
+```json
+{
+  "error": {
+    "code": "BAD_REQUEST",
+    "message": "Missing required query parameter: userPrincipalName"
+  }
+}
+```
+
+#### `404 Not Found` - User doesn't exist
+
+```json
+{
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "User not found"
+  }
+}
+```

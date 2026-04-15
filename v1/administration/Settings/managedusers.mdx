@@ -7,13 +7,14 @@ The Managed Users page shows all users currently managed by Adcyma. From here yo
 
 ## User Information Display
 
-For each managed user you can see:
+The table shows one row per managed user with sortable columns:
 
 - Display Name
-- Username
-- Job Title
+- Email
 - Department
-- Additional attributes from your identity provider
+- Job Title
+
+Use the search bar to filter users by name, email, department, or job title. A badge at the top shows the total count of managed users.
 
 ## Managing User Scope
 
@@ -27,7 +28,7 @@ The selected Entra ID group **must be a standard security group** and **cannot b
 
 Adcyma automatically syncs user information from your identity provider every hour, so user details, group memberships, and organizational changes stay up to date.
 
-If you need an immediate update, click the **Refresh** button to trigger a manual sync. This is handy when you've just added new users to the managed group, updated user info in your identity provider, or need to verify recent changes right away.
+If you need an immediate update, click **Refresh Users** to trigger a manual sync. This is handy when you've just added new users to the managed group, updated user info in your identity provider, or need to verify recent changes right away.
 
 <br/>
 <Image img={managedUsersImg} alt="Managed Users" className="doc-screenshot" />

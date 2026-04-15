@@ -38,8 +38,11 @@ Designate individual users as approvers. Best for: dedicated access managers, se
 **Job Title**
 Anyone with a matching job title can approve. Best for: distributing approval responsibility across people in the same role (e.g., all "Team Lead" users).
 
-**Manager / Boss**
+**Manager**
 The requesting user's direct manager is automatically assigned as the approver. Best for: ensuring line-of-business accountability without hardcoding names.
+
+**Resource Owner**
+The owner of the service being requested is automatically assigned as the approver. Best for: services where the owner is responsible for who gets access.
 
 ### Multi-Stage Workflows
 
@@ -47,7 +50,7 @@ For sensitive resources, you can chain multiple approval stages together. A comm
 
 ```
 Stage 1: Requester's Manager (Manager type)
-Stage 2: Service Owner (Specific User type)
+Stage 2: Service Owner (Resource Owner type)
 Stage 3: Security Team (Job Title: "Security Analyst")
 ```
 
@@ -60,7 +63,7 @@ Approval flows are connected to services in the **Services & Resources** configu
 ## Best Practices
 
 - Keep your approval flows as simple as the risk level warrants. Not every service needs a three-stage approval chain.
-- Use the Manager approver type when possible — it scales automatically as your organization changes without needing to update the flow.
+- Use the Manager approver type when possible. It scales automatically as your organization changes without needing to update the flow.
 - Name your flows clearly so administrators can quickly understand what each one does when linking them to services.
 - Review your flows periodically. As your organization evolves, approval chains that made sense six months ago may need adjustment.
 - Test new flows with a low-risk service before applying them to critical resources.
@@ -70,7 +73,7 @@ Approval flows are connected to services in the **Services & Resources** configu
 If requests are stuck waiting for approval:
 - Check that all designated approvers still exist and are active users
 - For "all of these" flows, verify every approver has acted
-- For "manager" type, confirm the requester has a manager assigned in Entra
+- For manager-based approvers, confirm the requester has a manager assigned in Entra
 
 If the wrong person is being asked to approve:
 - Review the approver configuration in the flow

@@ -27,13 +27,22 @@ Pick a descriptive name that indicates what the group is for. Names don't need t
 **Description** *(Optional)*
 Document the group's purpose, any special rules, or important notes for future administrators. This is especially valuable for complex conditional logic.
 
+**Active/Inactive**
+Toggle a dynamic group on or off without deleting it. Inactive groups keep their configuration but won't sync membership until you reactivate them.
+
 **Target Group Type**
 Select the type of group you're managing:
 - Microsoft Entra Security Group (for access permissions and security policies)
 - Exchange Distribution List (for email distribution)
 
 **Target Group**
-Choose the existing group in Entra that will be updated. The dynamic group configuration will control the membership of this group.
+Choose the existing Entra group that will be updated, or create a new Entra Security Group directly from this form. The dynamic group configuration will control the membership of this group.
+
+**Owner** *(Optional, requires Access Governance)*
+Assign an owner to this group. Owners can manage the Always Include and Always Exclude lists directly from the IGA Portal, which lets them handle exceptions without admin involvement.
+
+**Evaluation Frequency**
+Adcyma evaluates dynamic groups on a schedule. The next sync time is shown on the group card so you know when the next automatic update will run. You can trigger a manual sync if you need an immediate update.
 
 ### Membership Rules
 
@@ -81,6 +90,10 @@ You can combine conditions with AND logic to create precise rules:
 - `Department = "Sales"` AND `Title contains "Director"` - Only sales directors
 - `Office = "NYC"` AND `Department = "Engineering"` - NYC engineering team
 
+### Previewing Membership
+
+Before saving, use the membership preview to see which users match your current rules. This is especially useful when using Strict Mode, so you can verify the result before it affects the actual group.
+
 ## Best Practices
 
 Start with basic conditions and add complexity gradually. Test each rule before moving to production.
@@ -88,8 +101,6 @@ Start with basic conditions and add complexity gradually. Test each rule before 
 Name your groups clearly. Something like "Finance-Managers-AllOffices" tells you exactly who should be included.
 
 Use the description field to explain complicated conditional rules for future reference.
-
-Preview membership results before saving, especially when using Strict Mode.
 
 Periodically review your dynamic groups to make sure they still match your organizational needs.
 
@@ -132,7 +143,6 @@ If members are unexpectedly removed:
 - Verify user attributes haven't changed
 
 If the group isn't updating:
-- Dynamic group evaluations run on a schedule
-- Manual sync may be needed for immediate updates
+- Dynamic group evaluations run on a schedule. Check the "Next sync" time on the group card.
+- Trigger a manual sync for an immediate update
 - Check that the target group is correctly selected
-

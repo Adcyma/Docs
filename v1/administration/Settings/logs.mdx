@@ -1,9 +1,9 @@
-# Logs
+# System Logs
 
 import Image from '@theme/IdealImage';
 import logsImg from '@site/static/img/Logs.webp';
 
-The Logs page gives you visibility into activities and events in your Adcyma environment. You can use this audit trail to monitor operations, track user activity, troubleshoot issues, and keep tabs on security.
+The System Logs page gives you visibility into activities and events in your Adcyma environment. You can use this audit trail to monitor operations, track user activity, troubleshoot issues, and keep tabs on security.
 
 ## What Gets Logged
 
@@ -20,12 +20,24 @@ Adcyma automatically captures a wide range of system events and user activities,
 
 ## Search and Filtering
 
-The logs interface has filtering tools to help you find what you need quickly:
+Use the filter controls to find what you need:
 
-- Filter by event type (authentication, user management, errors, etc.)
-- Search for activities by specific users or administrators
-- Narrow results to a specific time range
-- Search by keyword to find entries with specific terms or identifiers
+- **Log level** - Filter by All, Error, Warning, or Info
+- **Source** - Filter by the system component or integration that generated the entry
+- **User** - Narrow to activity by a specific user or administrator
+- **Date range** - Limit results to a specific time period
+
+## Expanding Log Entries
+
+Click on any log entry to expand it and see the full details. For state change events, you'll see a before and after comparison showing exactly what changed, which field was modified, and who the action targeted.
+
+## Export
+
+Click **Export** to download the current log view as a JSON file. This is useful for sharing with support or feeding into external monitoring tools.
+
+## Pagination
+
+Use the Previous/Next buttons or change the items-per-page selector (10, 25, or 100) to navigate through large log volumes.
 
 ## Key Benefits
 

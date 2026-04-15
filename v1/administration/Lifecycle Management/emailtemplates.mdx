@@ -13,19 +13,24 @@ Email Templates let you create standardized email messages that plug into Workfl
 <Image img={emailTemplatesImg} alt="Email Templates interface" className="doc-screenshot" />
 <br/><br/>
 
-## What You Can Do
+## Creating a Template
 
-You can create new templates with dynamic content using variables, edit existing ones to adjust messaging, and delete templates you no longer need.
+Each template has the following fields:
 
-## Example: New Employee Welcome Email
+**Name**
+A label for this template so you can identify it when linking it to workflows.
 
-A "New Employee Welcome Email" template might include:
+**To / CC / BCC**
+The recipient fields. You can use `{{variable}}` placeholders here too, for example `{{manager_email}}` in the To field to send the email directly to the user's manager.
 
-* Personalized greeting: "Welcome, `{{first_name}}`!"
-* Essential first-day information and schedule
-* Key contact details for IT support and HR assistance
+**Subject**
+The email subject line. Supports variables.
 
-When a Workflow triggers this template, each email gets personalized automatically with the right user details.
+**Body**
+The email body. The editor supports bold, italic, underline, bullet lists, and numbered lists. Use the variable dropdown to insert placeholders at the cursor position.
+
+**Preview**
+Toggle Preview to see how the email will look with sample values filled in. This is useful for checking formatting before linking the template to a workflow.
 
 ## Template Variables
 
@@ -36,7 +41,7 @@ You can personalize templates using these dynamic variables:
 * `{{last_name}}` - User's last name
 * `{{username}}` - User's system username
 * `{{display_name}}` - User's display name
-* `{{email_address}}` - User's email address
+* `{{email}}` - User's email address
 * `{{password}}` - User's password (*only available for users created via Adcyma; removed after use*)
 
 **Organizational Details**
@@ -46,7 +51,16 @@ You can personalize templates using these dynamic variables:
 * `{{department}}` - User's department
 * `{{job_title}}` - User's job title
 
+## Example: New Employee Welcome Email
+
+A "New Employee Welcome Email" template might include:
+
+* **To:** `{{email}}`
+* **Subject:** Welcome to the team, `{{first_name}}`!
+* **Body:** Personalized greeting, essential first-day information, and key contacts for IT and HR
+
+When a Workflow triggers this template, each email gets personalized automatically with the right user details.
+
 ## Get More Variables
 
 If you need additional user attributes for your templates, contact our support team at **support@adcyma.com** and we'll add the variables you need.
-

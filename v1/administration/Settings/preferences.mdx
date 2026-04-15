@@ -7,30 +7,41 @@ The Preferences page lets you set formatting rules for how Adcyma creates and di
 
 ## Configurable Format Options
 
-You can customize the format for these user attributes:
+Use the dropdown menus to select your preferred format for each attribute:
 
 **User Principal Name (UPN)**
 How the primary login identifier is structured for new users.
 
-**Email Address Format**
-How email addresses are constructed for new users.
-
 **Display Name Format**
 How user names appear in the system and in communications.
 
-**Email Nickname Format**
-The format for email aliases and short identifiers.
+**Email Address Format**
+How email addresses are constructed for new users.
 
-## Configuration Process
+**Primary Domain**
+The domain used when generating email addresses and UPNs for new users. Select from the domains available in your Entra configuration.
 
-Use the dropdown menus to select your preferred format for each attribute. After making your selections, click **Save Preferences** to apply the changes.
+## Advanced Name Settings
+
+The Advanced Name Settings section gives you finer control over how Adcyma handles special cases in names:
+
+- **Whitespace in Names** - Whether spaces in names are kept, removed, or replaced
+- **Special Characters** - How accented and non-ASCII characters are handled
+- **Hyphens in Names** - Whether hyphens in hyphenated names are kept or removed
+- **Duplicate Names** - How Adcyma resolves conflicts when two users would generate the same UPN or email
+
+## Preview Settings
+
+Use the preview section to test how your format settings will look in practice. Enter a sample first name, last name, middle name, and ID to see the generated UPN, display name, and email in real time.
 
 :::info Important Note
-These formatting preferences **only apply to newly created users** and will not modify the format of existing user accounts. Current users will retain their existing UPN, email, display name, and nickname formats until manually updated.
+These formatting preferences **only apply to newly created users** and will not modify the format of existing user accounts. Current users will retain their existing UPN, email, and display name formats until manually updated.
 :::
 
 <br/>
 <Image img={preferencesImg} alt="Preferences" className="doc-screenshot" />
+
+After making your selections, click **Save Changes** to apply them.
 
 ## Tips
 

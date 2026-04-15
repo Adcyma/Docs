@@ -11,18 +11,21 @@ Rollout Groups let you migrate users from one Entra group to another in controll
 
 ## Setting Up a Rollout
 
+### Name and Description
+
+Give your rollout group a clear name so it's easy to identify in the list. The description field is optional but useful for explaining the purpose of the migration.
+
 ### Source and Target Groups
 
-Start by selecting the **source group** (where users currently are) and the **target group** (where they should end up). Adcyma will move users from source to target across the stages you define.
+Start by selecting the **source group** (where users currently are) and the **target group** (where they should end up). You can also create a new Entra Security Group directly from this form if you need a new target. Adcyma will move users from source to target across the stages you define.
 
 ### Configuring Stages
 
-A rollout is divided into stages, each moving a portion of users. For each stage you configure:
+Set the **number of stages** for the rollout. Adcyma divides the users evenly across all stages automatically. For example, with 100 users and 4 stages, each stage will move approximately 25 users.
 
-- **Number of users** or **percentage** to move in that stage
-- **Duration between stages** — the waiting period before the next stage begins, specified in hours or days
+Set the **total rollout duration** and choose a unit (hours or days). This is the full time span of the migration. The waiting period between stages is calculated automatically based on the total duration and number of stages.
 
-This gives you natural checkpoints to verify everything is working before the next batch of users is moved.
+These natural checkpoints give you time to verify everything is working before the next batch of users is moved.
 
 ### Triggering the Rollout
 
@@ -32,26 +35,30 @@ You can start a rollout in two ways:
 Start each stage by hand when you're ready. This gives you full control and is ideal for high-stakes migrations.
 
 **Scheduled**
-Set a start time and let stages execute automatically based on the configured durations. Use this for lower-risk migrations where you're confident in the configuration.
+Set a start date and time and let stages execute automatically based on the configured durations. Use this for lower-risk migrations where you're confident in the configuration.
+
+:::info
+Pause is only available in scheduled mode. Manual rollouts don't support pausing between stages.
+:::
 
 ## Monitoring Progress
 
-Once a rollout is in progress, you can track:
+Once a rollout is in progress, you can track it from the sidebar. Each saved rollout shows its current progress. Click into it to see:
 
 - Which stage is currently active
 - How many users have been moved so far
 - How many users remain
-- The scheduled time for the next stage (if using automatic triggering)
+- The scheduled time for the next stage (if using scheduled mode)
 
 If something goes wrong, you can pause the rollout before the next stage executes.
 
 ## Best Practices
 
-- Start with a small first stage (e.g., 5–10% of users) to validate that the migration works as expected.
+- Start with a small number of stages to validate that the migration works as expected before going broad.
 - Allow enough time between stages to gather feedback from users and verify that access is working correctly.
 - Use manual triggering for the first rollout of a new type, then switch to scheduled mode once you're confident in the process.
 - Communicate the rollout schedule to affected users so they know when to expect changes.
-- Keep the source group intact until the rollout is fully complete and verified — this makes it easier to roll back if needed.
+- Keep the source group intact until the rollout is fully complete and verified. This makes it easier to roll back if needed.
 
 ## Troubleshooting
 
@@ -66,4 +73,4 @@ If a stage completes with fewer users than expected:
 
 If you need to stop a rollout:
 - Pause the rollout from the monitoring view
-- Users already moved to the target group will stay there — you'll need to move them back manually if needed
+- Users already moved to the target group will stay there. You'll need to move them back manually if needed.

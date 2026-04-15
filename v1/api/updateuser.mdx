@@ -1,0 +1,76 @@
+---
+sidebar_position: 3
+title: Update User
+---
+
+# Update User
+
+Updates an existing user's attributes in Entra ID. The operation is queued and processed in the background.
+
+**Endpoint:** `PATCH /v1/api/user`
+
+## Request body
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `userPrincipalName` | string | Yes | The user's UPN (e.g., `anna.eriksson@contoso.com`) |
+| `firstname` | string | No | First name |
+| `surname` | string | No | Last name |
+| `jobTitle` | string | No | Job title |
+| `department` | string | No | Department |
+| `company` | string | No | Company name |
+| `office` | string | No | Office location |
+| `city` | string | No | City |
+| `country` | string | No | Country |
+| `postalCode` | string | No | Postal code |
+| `streetAddress` | string | No | Street address |
+| `preferredLanguage` | string | No | Preferred language |
+| `accountEnabled` | boolean | No | Whether the account is active |
+
+Only include the fields you want to change.
+
+### Example request
+
+```json
+{
+  "userPrincipalName": "anna.eriksson@contoso.com",
+  "department": "Product",
+  "jobTitle": "Senior Engineer"
+}
+```
+
+## Response
+
+### Success (`200 OK`)
+
+```json
+{
+  "data": {
+    "message": "User update queued successfully"
+  }
+}
+```
+
+### Errors
+
+#### `400 Bad Request` - Missing UPN
+
+```json
+{
+  "error": {
+    "code": "BAD_REQUEST",
+    "message": "Missing required field: userPrincipalName"
+  }
+}
+```
+
+#### `404 Not Found` - User doesn't exist
+
+```json
+{
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "User not found"
+  }
+}
+```

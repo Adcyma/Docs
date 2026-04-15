@@ -15,6 +15,8 @@ This documentation covers setup, configuration, and day-to-day use. Use the side
 - Automates user onboarding, role changes, and offboarding through configurable workflows
 - Replaces manual, error-prone processes with consistent automation
 - Provides role-based access controls and detailed audit trails
+- Lets employees request access to resources through a self-service portal, with configurable approval flows
+- Includes compliance tools: access inventory, group hygiene, and audit-ready reports for SOC 2, ISO 27001, and NIS2
 - Runs as a SaaS product with no on-premises infrastructure required
 - Works with non-technical administrators through a straightforward interface
 - Integrates with Microsoft Entra ID and HR systems
@@ -35,17 +37,20 @@ A [Workflow](https://docs.adcyma.com/v1/workflows) is a configurable sequence of
 
 *Example*: A new employee workflow triggers when someone joins the Sales department, checks their location and role, then adds them to the right Entra ID groups for sales tools, regional resources, and company-wide access.
 
-### Access Profiles
-Access Profiles bundle related **Entra ID groups** into a single assignable unit. Instead of manually assigning a dozen group memberships one by one, you assign one Access Profile through a Workflow and the user gets everything they need.
+### Role Templates
+[Role Templates](https://docs.adcyma.com/v1/administration/Lifecycle%20Management/roletemplate) bundle related **Entra ID groups** into a single assignable unit. Instead of manually assigning a dozen group memberships one by one, you assign one Role Template through a Workflow and the user gets everything they need.
 
-*Example*: A "Finance Team Access" profile might include Entra ID groups for:
+*Example*: A "Finance Team" role template might include Entra ID groups for:
 - Financial reporting tools
 - Expense management systems
 - Department-specific SharePoint sites
 - Budget planning applications
 - Compliance and audit resources
 
-When a new finance employee is hired, a single workflow action assigns the entire Access Profile. No manual steps, no forgotten permissions.
+When a new finance employee is hired, a single workflow action assigns the entire Role Template. No manual steps, no forgotten permissions.
+
+### IGA Portal
+The [IGA Portal](https://docs.adcyma.com/v1/administration/Access%20Governance/igaportal) is the self-service interface for access requests. Employees browse a catalog of services and request access. Approvers review and act on requests. Service owners manage their resources. It's accessible to all managed users, not just administrators.
 
 ---
 

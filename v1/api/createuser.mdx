@@ -1,0 +1,103 @@
+---
+sidebar_position: 2
+title: Create User
+---
+
+# Create User
+
+Creates a new user in Entra ID. The operation is queued and processed in the background.
+
+**Endpoint:** `POST /v1/api/user`
+
+## Request body
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `firstname` | string | Yes | User's first name |
+| `surname` | string | Yes | User's last name |
+| `middleName` | string | No | Middle name |
+| `jobTitle` | string | No | Job title |
+| `department` | string | No | Department |
+| `company` | string | No | Company name |
+| `office` | string | No | Office location |
+| `city` | string | No | City |
+| `country` | string | No | Country |
+| `postalCode` | string | No | Postal code |
+| `streetAddress` | string | No | Street address |
+| `preferredLanguage` | string | No | Preferred language |
+| `accountEnabled` | boolean | No | Whether the account is active (defaults to true) |
+| `manager` | string | No | Manager's user principal name |
+| `date` | string | No | Scheduled date for the operation |
+| `time` | string | No | Scheduled time for the operation |
+
+### Example request
+
+```json
+{
+  "firstname": "Anna",
+  "surname": "Eriksson",
+  "department": "Engineering",
+  "jobTitle": "Software Engineer",
+  "office": "Stockholm"
+}
+```
+
+## Response
+
+### Success (`200 OK`)
+
+```json
+{
+  "data": {
+    "message": "User creation queued successfully"
+  }
+}
+```
+
+The user will be created in Entra ID shortly after this response. Use the [Get User](./getallusers) endpoint to verify.
+
+### Errors
+
+#### `400 Bad Request` - Missing required fields
+
+```json
+{
+  "error": {
+    "code": "BAD_REQUEST",
+    "message": "Missing required fields: firstname, surname"
+  }
+}
+```
+
+#### `403 Forbidden` - Seat limit reached
+
+```json
+{
+  "error": {
+    "code": "FORBIDDEN",
+    "message": "User seat limit reached. Please increase your seat limit in billing settings."
+  }
+}
+```
+
+#### `401 Unauthorized` - Invalid credentials
+
+```json
+{
+  "error": {
+    "code": "UNAUTHORIZED",
+    "message": "Invalid or missing API credentials"
+  }
+}
+```
+
+#### `429 Too Many Requests`
+
+```json
+{
+  "error": {
+    "code": "RATE_LIMIT_EXCEEDED",
+    "message": "Too many requests"
+  }
+}
+```

@@ -35,13 +35,13 @@ Every workflow has a few key parts:
 
 ## Workflow Management
 
-**Enable/Disable Workflows**
-* You can temporarily disable workflows without deleting them
+**Active/Inactive**
+* You can deactivate workflows without deleting them
 * Useful for testing, maintenance, or seasonal processes
-* Disabled workflows keep all their configuration but won't execute
+* Inactive workflows keep all their configuration but won't execute
 
-**Copy Workflows**
-* Duplicate an existing workflow to create a similar one with modifications
+**Duplicate**
+* Copy an existing workflow to create a similar one with modifications
 * Handy for creating department-specific variations of a common process
 
 ### Automation Logic
@@ -54,9 +54,13 @@ The **condition** is an optional filter based on user attributes. If no conditio
 
 <Image img={workflowsConditions} alt="Workflow conditions" className="doc-screenshot" />
 
-The **action** is what the workflow actually does when trigger and conditions are met. You can chain multiple actions in sequence. Examples: assign access profiles, send emails, enable accounts, update user attributes.
+The **action** is what the workflow actually does when trigger and conditions are met. You can chain multiple actions in sequence. Examples: assign role templates, send emails, enable accounts, update user attributes.
+
+Each action can have an optional **delay**. Set a delay value and unit (hours, days, or weeks) to schedule the action to run after a waiting period instead of immediately.
 
 <Image img={workflowsActions} alt="Workflow actions" className="doc-screenshot" />
+
+You can also view a **flowchart** of your workflow to see the full logic visually, which is handy for reviewing complex workflows at a glance.
 
 ## Example Workflow Scenarios
 
@@ -90,4 +94,3 @@ The **action** is what the workflow actually does when trigger and conditions ar
 * Test conditions carefully. Remember that no conditions means "all users."
 * Use the description field for workflows with multiple conditions.
 * Review workflow results periodically to make sure they're working as expected.
-

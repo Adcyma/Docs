@@ -3,12 +3,12 @@
 import Image from '@theme/IdealImage';
 import roleTemplatesImg from '@site/static/img/RoleTemplates.webp';
 
-Role Templates let you define standardized access packages that get applied through Workflows. Each template bundles the permissions and group memberships a user needs for a given role.
+Role Templates let you define standardized access packages that get applied through Workflows. Each template bundles the Entra ID group memberships a user needs for a given role.
 
 They work well for scenarios where [Dynamic Groups](https://docs.adcyma.com/v1/administration/Lifecycle%20Management/dynamicgroups) aren't enough, like when you need to bundle complex access permissions that go beyond simple attribute-based rules, or when access depends on specific role assignments rather than user attributes like department or job title.
 
 :::info
-**Important:** Role Templates define access configurations but do not provision access immediately. Roles are only applied when activated through a [Workflow](https://docs.adcyma.com/v1/workflows).
+**Important:** Role Templates define access configurations but do not provision access immediately. Templates are only applied when activated through a [Workflow](https://docs.adcyma.com/v1/workflows).
 :::
 
 <br/>
@@ -17,7 +17,26 @@ They work well for scenarios where [Dynamic Groups](https://docs.adcyma.com/v1/a
 
 ## What You Can Do
 
-You can create new roles with specific permissions and group memberships, edit existing roles as access requirements change, and delete roles you no longer need.
+**Create and edit templates**
+Build new templates with specific group assignments, or update existing ones as access requirements change.
+
+**Enable/Disable**
+Toggle templates on or off without deleting them. Disabled templates won't be applied by workflows until re-enabled.
+
+**Duplicate**
+Copy an existing template as a starting point for a new one. Useful when you need variations of a similar access package.
+
+**Verify**
+Mark a template as reviewed and approved. Verified templates show a green badge with the verifier's name and date. This is useful for compliance workflows where templates need sign-off before being used.
+
+**Assigned Groups**
+Each template has an Assigned Groups section where you search for and add the Entra ID groups that should be granted when this template is applied.
+
+## Auto-Generated Templates
+
+Adcyma can mine your existing Entra configuration and suggest Role Templates based on common group assignment patterns. These auto-generated templates show an "Auto" badge and indicate which attribute they were derived from and how many users matched the pattern.
+
+You can **verify** auto-generated templates to mark them as reviewed, and **lock** them to prevent automatic syncs from changing their group assignments. Locked templates show a "Locked" badge. You can also edit and convert them into manually managed templates.
 
 ## Example: IT Department New Employee Role
 
@@ -28,7 +47,7 @@ A "New Employee - IT Department" role template might include:
 * Access to the internal ticketing system, monitoring tools, and development environments
 * VPN access and appropriate security clearance levels
 
-When a Workflow assigns this role during onboarding, the new IT employee gets all the access they need right away.
+When a Workflow assigns this template during onboarding, the new IT employee gets all the access they need right away.
 
 ## Benefits of Role-Based Access
 

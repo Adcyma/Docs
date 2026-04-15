@@ -17,14 +17,26 @@ From this page, you can:
 - Edit existing office details
 - Remove offices you no longer need
 
+When you have more than a few offices, use the search field to filter the list by name.
+
 ### Adding New Offices
 
-To create a new office, click **Add Office** and fill in:
-- Office name
-- Physical location/address
-- Any additional details
+Click **Add Office** to open the form. Fill in:
+
+- **Office name** (required)
+- **Street address**
+- **City**
+- **Zip/Postal code**
+- **Country** (dropdown)
+- **State/Province**
+
+Click **Save** in the dialog to create the office.
 
 <Image img={offices2} alt="Add office" className="doc-screenshot" />
+
+### Editing Offices
+
+Select an office from the list and update the fields as needed. Click **Save changes** in the dialog to confirm.
 
 ### Removing Offices
 
@@ -37,16 +49,7 @@ To delete an office:
 
 ## How Offices Are Used
 
-Offices are referenced in several areas of the platform:
-- You can associate users with specific office locations
-- Workflow rules and routing logic can reference office data
-- Reports and analytics can be filtered by office
-- Assets and resources can be tracked per office
-- Location-based notifications and updates can target specific offices
-
-## Saving Changes
-
-**Important:** After adding, editing, or removing offices, click **Save Changes** to commit your updates. Changes are not automatically saved and will be lost if you navigate away without saving.
+Offices are available as a user attribute when provisioning users in Entra ID. You can also reference office data in workflow conditions and routing logic.
 
 ## Best Practices
 

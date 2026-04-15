@@ -1,0 +1,82 @@
+---
+sidebar_position: 1
+title: Overview
+---
+
+# API Overview
+
+The Adcyma API lets you manage users programmatically. You can create, update, delete, and retrieve users without going through the Adcyma interface.
+
+## Base URL
+
+All endpoints are under:
+
+```
+/v1/api
+```
+
+## Authentication
+
+Every request requires three custom headers:
+
+| Header | Description |
+|---|---|
+| `X-Company-ID` | Your Adcyma company ID (3-64 alphanumeric characters, hyphens, and underscores) |
+| `X-Api-User` | Your API username (created under **Settings > System Users** with the API role) |
+| `X-Api-Key` | Your API key (shown once when the system user is created) |
+
+To set up API access, create a system user with the **API** role under **Settings > System Users**. Your API key is displayed when the user is created. Store it somewhere safe as it won't be shown again.
+
+## How operations work
+
+Create, update, and delete operations are **queued** and processed asynchronously. When you send a request, the API responds immediately with a confirmation message. The actual change in Entra ID happens shortly after in the background.
+
+This means you won't get the updated user object back in the response. Use the GET endpoint to check the current state of a user.
+
+## Response format
+
+All successful responses follow this structure:
+
+```json
+{ "data": { ... } }
+```
+
+All error responses follow this structure:
+
+```json
+{ "error": { "code": "ERROR_CODE", "message": "Description of the error" } }
+```
+
+Error codes are strings, not numbers. Common ones:
+
+| Code | HTTP Status | Meaning |
+|---|---|---|
+| `BAD_REQUEST` | 400 | Missing or invalid fields |
+| `UNAUTHORIZED` | 401 | Invalid or missing API credentials |
+| `FORBIDDEN` | 403 | Seat limit reached |
+| `NOT_FOUND` | 404 | User not found |
+| `RATE_LIMIT_EXCEEDED` | 429 | Too many requests |
+| `INTERNAL_ERROR` | 500 | Something went wrong on our end |
+
+## Rate limits
+
+The API uses a sliding window rate limiter:
+
+- **Per IP**: 200 requests per 60 seconds
+- **Per company**: 100 requests per 60 seconds
+
+If you exceed either limit, you'll get a `429` response with code `RATE_LIMIT_EXCEEDED`. Repeated failed authentication attempts also count toward the rate limit.
+
+## Health check
+
+There's an unauthenticated health check endpoint:
+
+```
+GET /v1/api/health
+```
+
+Response:
+
+```json
+{ "data": { "status": "ok" } }
+```

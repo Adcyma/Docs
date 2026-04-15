@@ -1,0 +1,46 @@
+# Compliance Reports
+
+The Compliance Reports page lets you generate audit-ready reports for common security and compliance frameworks. Select a framework, set a date range, and Adcyma compiles the relevant evidence from your Entra ID environment into a downloadable report.
+
+## Supported Frameworks
+
+**SOC 2**
+Covers Trust Services Criteria evidence including logical access controls, monitoring, change management, and user inventory.
+
+**ISO 27001**
+Covers Information Security Management evidence including user access records, logging, HR security controls, role assignments, and managed user data.
+
+**NIS2**
+Covers Network and Information Security Directive evidence including access control records, lifecycle management activity, monitoring logs, and configuration data.
+
+## Generating a Report
+
+1. Click the framework card you want to generate a report for
+2. Set the **start date** and **end date** for the reporting period
+3. Click **Generate Report**
+
+Report generation runs in the background. The page will show the report's status while it processes. When it's ready, a **Download** button appears.
+
+## Downloading Reports
+
+Click **Download** next to a completed report to save it. Reports are available in the history section below the framework cards even after the current session, so you can go back and re-download them later.
+
+## Report History
+
+The history table shows all previously generated reports with:
+
+| Column | Description |
+|---|---|
+| Framework | Which standard the report covers |
+| Date Range | The start and end date of the reporting period |
+| Generated | When the report was created |
+| Status | Whether it completed successfully or failed |
+
+Click **Download** on any completed report in history to retrieve it again.
+
+## Best Practices
+
+- Generate reports regularly as part of your compliance calendar, not just before audits.
+- Keep downloaded reports in your compliance documentation system alongside other evidence.
+- Use consistent date ranges (e.g., always generate monthly or quarterly) to make it easy to compare reports over time.
+- If a report fails, check that your Entra connection is active and try again.

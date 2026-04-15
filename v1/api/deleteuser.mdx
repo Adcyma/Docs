@@ -1,0 +1,66 @@
+---
+sidebar_position: 4
+title: Delete User
+---
+
+# Delete User
+
+Removes a user from Entra ID. The operation is queued and processed in the background.
+
+**Endpoint:** `DELETE /v1/api/user`
+
+## Request body
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `userPrincipalName` | string | Yes | The user's UPN (e.g., `anna.eriksson@contoso.com`) |
+| `firstname` | string | No | First name (used for logging) |
+| `surname` | string | No | Last name (used for logging) |
+| `jobTitle` | string | No | Job title (used for logging) |
+| `department` | string | No | Department (used for logging) |
+| `date` | string | No | Scheduled date for the operation |
+| `time` | string | No | Scheduled time for the operation |
+
+### Example request
+
+```json
+{
+  "userPrincipalName": "anna.eriksson@contoso.com"
+}
+```
+
+## Response
+
+### Success (`200 OK`)
+
+```json
+{
+  "data": {
+    "message": "User deletion queued successfully"
+  }
+}
+```
+
+### Errors
+
+#### `400 Bad Request` - Missing UPN
+
+```json
+{
+  "error": {
+    "code": "BAD_REQUEST",
+    "message": "Missing required field: userPrincipalName"
+  }
+}
+```
+
+#### `404 Not Found` - User doesn't exist
+
+```json
+{
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "User not found"
+  }
+}
+```
