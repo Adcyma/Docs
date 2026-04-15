@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkadcymadocs=globalThis.webpackChunkadcymadocs||[]).push([[583],{3797(a,c,e){e.r(c),e.d(c,{default:()=>s});var l=e(6540);function s(){return(0,l.useEffect)(()=>{window.location.replace("/v1/start")},[]),null}}}]);
