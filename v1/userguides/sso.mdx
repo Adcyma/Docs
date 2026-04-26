@@ -27,31 +27,19 @@ If you have not done this yet, follow the [App Registration setup guide](./setup
 
 ## Step 2: Configure API Permissions
 
-In your app registration, navigate to **API permissions** and ensure the following permissions are granted.
-
-### Required permissions
-
-These permissions are needed for Adcyma to manage your Entra ID users and groups.
+In your app registration, navigate to **API permissions** and add the following **Delegated** permissions under **Microsoft Graph**. These are used for the sign-in flow only.
 
 | Permission | Type | Purpose |
 |------------|------|---------|
-| `User.ReadWrite.All` | Application | Create, update, and deprovision users |
-| `Group.ReadWrite.All` | Application | Manage group memberships and dynamic groups |
-| `AuditLog.Read.All` | Application | Read sign-in activity (shown in People Hub) |
-| `User.EnableDisableAccount.All` | Application | Enable and disable user accounts |
+| `openid` | Delegated | Issue an ID token for the signed-in user |
+| `profile` | Delegated | Read the user's basic profile information |
+| `email` | Delegated | Read the user's email address |
+| `User.Read` | Delegated | Read the signed-in user's profile |
 
-### Optional permissions
-
-| Permission | Type | Purpose |
-|------------|------|---------|
-| `Exchange.ManageAsApp` | Application (Office 365 Exchange Online) | Mailbox operations — required only if you want Adcyma to handle Exchange tasks such as converting mailboxes or setting up forwarding |
-
-### Grant admin consent
-
-After adding all permissions, click **Grant admin consent for [your organization]** and confirm. Permissions show a green checkmark when consent is granted.
+After adding all four permissions, click **Grant admin consent for [your organization]** and confirm.
 
 :::info
-`AuditLog.Read.All` is used to display **last sign-in** data in the People Hub. If this permission is missing, Adcyma will detect it automatically and simply omit last sign-in timestamps — everything else continues to work.
+These permissions cover authentication only. The separate permissions Adcyma needs to manage your Entra ID users and groups (such as `User.ReadWrite.All`) are configured as part of the [App Registration setup](./setupentraappregistration).
 :::
 
 ---
@@ -67,19 +55,7 @@ Adcyma will use these credentials to connect to Microsoft Graph on behalf of you
 
 ---
 
-## Step 4: Exchange Certificate (Optional)
-
-If you added `Exchange.ManageAsApp`, download the certificate from the **Exchange Authentication** section on the same Identity Provider page and upload it to your Entra ID app registration under **Certificates & secrets**.
-
-You also need to assign the **Exchange Recipient Administrator** role to the app registration in Entra ID. See the [App Registration guide](./setupentraappregistration#step-5-exchange-online-integration-optional) for the full steps.
-
-:::info
-Skip this step if you do not need Exchange Online capabilities. All core user and group management works without it.
-:::
-
----
-
-## Step 5: Enable SSO
+## Step 4: Enable SSO
 
 1. On the **Identity Provider** settings page, scroll to the **Single Sign-On** section
 2. Toggle **Enable SSO** on
@@ -109,8 +85,3 @@ Check that the Tenant ID and Client ID are correct and that admin consent has be
 **Sign-in completes on Microsoft but fails to land in Adcyma**  
 The user's email address in Entra ID must match the address registered in Adcyma. If they differ, contact support.
 
-**Last sign-in data is missing in People Hub**  
-`AuditLog.Read.All` permission is either missing or admin consent was not granted. Adcyma suppresses the column automatically when the permission is absent — grant it and consent, then re-sync.
-
-**Exchange operations fail after enabling SSO**  
-Verify the certificate has been uploaded and the Exchange Recipient Administrator role is assigned to your app registration. See the [App Registration guide](./setupentraappregistration#step-5-exchange-online-integration-optional).
