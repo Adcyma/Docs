@@ -3,6 +3,9 @@ sidebar_position: 3
 title: Create User
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 **Endpoint**: `https://api.adcyma.com/v1/api/user`  
 **Method**: `POST`  
 **Description**: Queues a new user for creation in your Entra ID tenant. The user is provisioned asynchronously. You'll get a `200 OK` once the request is queued, and the actual Entra ID account is created shortly after.
@@ -34,7 +37,18 @@ title: Create User
 The `userPrincipalName` and `mail` for the new user are generated automatically using your tenant's configured username and email format. Domain comes from your tenant preferences.
 
 ### Example Request:
-```json
+
+<Tabs>
+  <TabItem value="http" label="HTTP" default>
+
+```http
+POST /v1/api/user HTTP/1.1
+Host: api.adcyma.com
+X-Company-ID: AcmeAB-1f2c8a90
+X-Api-User: integrations-bot
+X-Api-Key: your-secret-key
+Content-Type: application/json
+
 {
   "firstname": "John",
   "surname": "Doe",
@@ -42,13 +56,74 @@ The `userPrincipalName` and `mail` for the new user are generated automatically 
   "department": "Engineering",
   "office": "Stockholm",
   "country": "SE",
-  "preferredLanguage": "en-US",
-  "accountEnabled": true,
   "manager": "jane.smith@example.com",
   "date": "2026-05-01",
   "time": "08:00"
 }
 ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+import requests
+
+response = requests.post(
+    "https://api.adcyma.com/v1/api/user",
+    headers={
+        "X-Company-ID": "AcmeAB-1f2c8a90",
+        "X-Api-User": "integrations-bot",
+        "X-Api-Key": "your-secret-key",
+    },
+    json={
+        "firstname": "John",
+        "surname": "Doe",
+        "jobTitle": "Software Engineer",
+        "department": "Engineering",
+        "office": "Stockholm",
+        "country": "SE",
+        "manager": "jane.smith@example.com",
+        "date": "2026-05-01",
+        "time": "08:00",
+    },
+)
+print(response.json())
+```
+
+  </TabItem>
+  <TabItem value="powershell" label="PowerShell">
+
+```powershell
+$headers = @{
+    "X-Company-ID" = "AcmeAB-1f2c8a90"
+    "X-Api-User"   = "integrations-bot"
+    "X-Api-Key"    = "your-secret-key"
+    "Content-Type" = "application/json"
+}
+
+$body = @{
+    firstname  = "John"
+    surname    = "Doe"
+    jobTitle   = "Software Engineer"
+    department = "Engineering"
+    office     = "Stockholm"
+    country    = "SE"
+    manager    = "jane.smith@example.com"
+    date       = "2026-05-01"
+    time       = "08:00"
+} | ConvertTo-Json
+
+$response = Invoke-RestMethod `
+    -Uri "https://api.adcyma.com/v1/api/user" `
+    -Method POST `
+    -Headers $headers `
+    -Body $body
+
+$response
+```
+
+  </TabItem>
+</Tabs>
 
 ### Response:
 On success, the request is queued. The user will appear in Entra ID and the People Hub at the scheduled time.

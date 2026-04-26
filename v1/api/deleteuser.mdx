@@ -3,6 +3,9 @@ sidebar_position: 5
 title: Delete User
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 **Endpoint**: `https://api.adcyma.com/v1/api/user`  
 **Method**: `DELETE`  
 **Description**: Offboards a user from your Entra ID tenant. This triggers Adcyma's full deprovisioning workflow: disabling the account, revoking group memberships, and running any employee leaving tasks you have configured. The action is queued and runs at the scheduled time, or right away if you don't specify one.
@@ -29,8 +32,18 @@ Some HTTP clients drop the request body on `DELETE` by default. If you get a `40
 :::
 
 ### Example Request:
-Minimal — let Adcyma fill in the rest from the directory:
-```json
+
+<Tabs>
+  <TabItem value="http" label="HTTP" default>
+
+```http
+DELETE /v1/api/user HTTP/1.1
+Host: api.adcyma.com
+X-Company-ID: AcmeAB-1f2c8a90
+X-Api-User: integrations-bot
+X-Api-Key: your-secret-key
+Content-Type: application/json
+
 {
   "userPrincipalName": "john.doe@example.com",
   "date": "2026-05-15",
@@ -38,18 +51,56 @@ Minimal — let Adcyma fill in the rest from the directory:
 }
 ```
 
-With explicit overrides:
-```json
-{
-  "userPrincipalName": "john.doe@example.com",
-  "firstname": "John",
-  "surname": "Doe",
-  "jobTitle": "Software Engineer",
-  "department": "Engineering",
-  "date": "2026-05-15",
-  "time": "17:00"
-}
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+import requests
+
+response = requests.delete(
+    "https://api.adcyma.com/v1/api/user",
+    headers={
+        "X-Company-ID": "AcmeAB-1f2c8a90",
+        "X-Api-User": "integrations-bot",
+        "X-Api-Key": "your-secret-key",
+    },
+    json={
+        "userPrincipalName": "john.doe@example.com",
+        "date": "2026-05-15",
+        "time": "17:00",
+    },
+)
+print(response.json())
 ```
+
+  </TabItem>
+  <TabItem value="powershell" label="PowerShell">
+
+```powershell
+$headers = @{
+    "X-Company-ID" = "AcmeAB-1f2c8a90"
+    "X-Api-User"   = "integrations-bot"
+    "X-Api-Key"    = "your-secret-key"
+    "Content-Type" = "application/json"
+}
+
+$body = @{
+    userPrincipalName = "john.doe@example.com"
+    date              = "2026-05-15"
+    time              = "17:00"
+} | ConvertTo-Json
+
+$response = Invoke-RestMethod `
+    -Uri "https://api.adcyma.com/v1/api/user" `
+    -Method DELETE `
+    -Headers $headers `
+    -Body $body
+
+$response
+```
+
+  </TabItem>
+</Tabs>
 
 ### Response:
 On success, the deprovisioning task is queued. The account is disabled and the offboarding workflow runs at the scheduled time.

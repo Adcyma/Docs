@@ -3,6 +3,9 @@ sidebar_position: 2
 title: Get User
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 **Endpoint**: `https://api.adcyma.com/v1/api/user`  
 **Method**: `GET`  
 **Description**: Retrieves the cached details of a single user by `userPrincipalName` (UPN). Data comes from Adcyma's local cache of your Entra ID directory, so it's fast and doesn't consume Microsoft Graph quota.
@@ -16,13 +19,56 @@ title: Get User
 - **userPrincipalName**: The UPN of the user to look up. Required.
 
 ### Example Request:
+
+<Tabs>
+  <TabItem value="http" label="HTTP" default>
+
 ```http
 GET /v1/api/user?userPrincipalName=john.doe@example.com HTTP/1.1
 Host: api.adcyma.com
 X-Company-ID: AcmeAB-1f2c8a90
 X-Api-User: integrations-bot
-X-Api-Key: <your-secret-key>
+X-Api-Key: your-secret-key
 ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+import requests
+
+response = requests.get(
+    "https://api.adcyma.com/v1/api/user",
+    params={"userPrincipalName": "john.doe@example.com"},
+    headers={
+        "X-Company-ID": "AcmeAB-1f2c8a90",
+        "X-Api-User": "integrations-bot",
+        "X-Api-Key": "your-secret-key",
+    },
+)
+print(response.json())
+```
+
+  </TabItem>
+  <TabItem value="powershell" label="PowerShell">
+
+```powershell
+$headers = @{
+    "X-Company-ID" = "AcmeAB-1f2c8a90"
+    "X-Api-User"   = "integrations-bot"
+    "X-Api-Key"    = "your-secret-key"
+}
+
+$response = Invoke-RestMethod `
+    -Uri "https://api.adcyma.com/v1/api/user?userPrincipalName=john.doe@example.com" `
+    -Method GET `
+    -Headers $headers
+
+$response
+```
+
+  </TabItem>
+</Tabs>
 
 ### Response:
 On success, returns the cached user object inside `data.user`. The shape mirrors what Microsoft Graph stores. The example below shows the most common fields; additional Graph properties may also be present.

@@ -3,6 +3,9 @@ sidebar_position: 4
 title: Update User
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 **Endpoint**: `https://api.adcyma.com/v1/api/user`  
 **Method**: `PATCH`  
 **Description**: Updates one or more attributes of an existing Entra ID user, identified by `userPrincipalName`. Only the fields you include are changed. Everything else is left as-is. Updates are queued and applied asynchronously.
@@ -31,7 +34,18 @@ title: Update User
 Fields not in this list (like `manager`) can't be changed here. Use the portal instead.
 
 ### Example Request:
-```json
+
+<Tabs>
+  <TabItem value="http" label="HTTP" default>
+
+```http
+PATCH /v1/api/user HTTP/1.1
+Host: api.adcyma.com
+X-Company-ID: AcmeAB-1f2c8a90
+X-Api-User: integrations-bot
+X-Api-Key: your-secret-key
+Content-Type: application/json
+
 {
   "userPrincipalName": "john.doe@example.com",
   "jobTitle": "Senior Software Engineer",
@@ -40,6 +54,61 @@ Fields not in this list (like `manager`) can't be changed here. Use the portal i
   "accountEnabled": true
 }
 ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+import requests
+
+response = requests.patch(
+    "https://api.adcyma.com/v1/api/user",
+    headers={
+        "X-Company-ID": "AcmeAB-1f2c8a90",
+        "X-Api-User": "integrations-bot",
+        "X-Api-Key": "your-secret-key",
+    },
+    json={
+        "userPrincipalName": "john.doe@example.com",
+        "jobTitle": "Senior Software Engineer",
+        "department": "Platform",
+        "city": "Lund",
+        "accountEnabled": True,
+    },
+)
+print(response.json())
+```
+
+  </TabItem>
+  <TabItem value="powershell" label="PowerShell">
+
+```powershell
+$headers = @{
+    "X-Company-ID" = "AcmeAB-1f2c8a90"
+    "X-Api-User"   = "integrations-bot"
+    "X-Api-Key"    = "your-secret-key"
+    "Content-Type" = "application/json"
+}
+
+$body = @{
+    userPrincipalName = "john.doe@example.com"
+    jobTitle          = "Senior Software Engineer"
+    department        = "Platform"
+    city              = "Lund"
+    accountEnabled    = $true
+} | ConvertTo-Json
+
+$response = Invoke-RestMethod `
+    -Uri "https://api.adcyma.com/v1/api/user" `
+    -Method PATCH `
+    -Headers $headers `
+    -Body $body
+
+$response
+```
+
+  </TabItem>
+</Tabs>
 
 ### Response:
 On success, the update is queued. The change appears in Entra ID and in the People Hub shortly after.
