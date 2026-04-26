@@ -3,80 +3,94 @@ sidebar_position: 1
 title: Overview
 ---
 
-# API Overview
+The Adcyma API lets you manage Entra ID user lifecycles — create new users, update their attributes, look them up, and offboard them — directly from your own systems.
 
-The Adcyma API lets you manage users programmatically. You can create, update, delete, and retrieve users without going through the Adcyma interface.
+**Base URL**: `https://api.adcyma.com`  
+**Path prefix**: `/v1/api`  
+**Content type**: `application/json`
 
-## Base URL
+All endpoints described in this section are mounted under the path prefix above. For example, the create-user endpoint is reachable at `https://api.adcyma.com/v1/api/user`.
 
-All endpoints are under:
+### Authentication
 
+Every request (except the health check) must include three headers:
+
+- **X-Company-ID**: Your tenant identifier. 3–64 characters; letters, digits, hyphens and underscores only.
+- **X-Api-User**: The username of an active API user from your tenant.
+- **X-Api-Key**: The secret key paired with that API user.
+
+API users and keys are managed in the **System Users** section of your Adcyma portal. The key is shown to you once, at creation time — store it somewhere safe. If you lose it, generate a new one and revoke the old.
+
+#### Example headers
+
+```http
+X-Company-ID: AcmeAB-1f2c8a90
+X-Api-User: integrations-bot
+X-Api-Key: <your-secret-key>
+Content-Type: application/json
 ```
-/v1/api
-```
 
-## Authentication
+### Response envelope
 
-Every request requires three custom headers:
-
-| Header | Description |
-|---|---|
-| `X-Company-ID` | Your Adcyma company ID (3-64 alphanumeric characters, hyphens, and underscores) |
-| `X-Api-User` | Your API username (created under **Settings > System Users** with the API role) |
-| `X-Api-Key` | Your API key (shown once when the system user is created) |
-
-To set up API access, create a system user with the **API** role under **Settings > System Users**. Your API key is displayed when the user is created. Store it somewhere safe as it won't be shown again.
-
-## How operations work
-
-Create, update, and delete operations are **queued** and processed asynchronously. When you send a request, the API responds immediately with a confirmation message. The actual change in Entra ID happens shortly after in the background.
-
-This means you won't get the updated user object back in the response. Use the GET endpoint to check the current state of a user.
-
-## Response format
-
-All successful responses follow this structure:
+Successful responses always wrap the payload in a `data` object:
 
 ```json
-{ "data": { ... } }
+{
+  "data": {
+    "message": "User creation queued successfully"
+  }
+}
 ```
 
-All error responses follow this structure:
+Errors always come back in a single, predictable shape:
 
 ```json
-{ "error": { "code": "ERROR_CODE", "message": "Description of the error" } }
+{
+  "error": {
+    "code": "BAD_REQUEST",
+    "message": "Missing required field: userPrincipalName"
+  }
+}
 ```
 
-Error codes are strings, not numbers. Common ones:
+The HTTP status code matches the error code:
 
-| Code | HTTP Status | Meaning |
-|---|---|---|
-| `BAD_REQUEST` | 400 | Missing or invalid fields |
-| `UNAUTHORIZED` | 401 | Invalid or missing API credentials |
-| `FORBIDDEN` | 403 | Seat limit reached |
-| `NOT_FOUND` | 404 | User not found |
-| `RATE_LIMIT_EXCEEDED` | 429 | Too many requests |
-| `INTERNAL_ERROR` | 500 | Something went wrong on our end |
+| HTTP status | `code`                  | When it happens                                                              |
+|-------------|-------------------------|------------------------------------------------------------------------------|
+| `400`       | `BAD_REQUEST`           | A required field is missing, or a value fails validation.                    |
+| `401`       | `UNAUTHORIZED`          | API credentials are missing, mistyped, or belong to a disabled API user.     |
+| `404`       | `NOT_FOUND`             | The user you referenced does not exist in your tenant.                       |
+| `429`       | `RATE_LIMIT_EXCEEDED`   | You hit one of the rate limits described below.                              |
+| `500`       | `INTERNAL_ERROR`        | Unexpected server-side error. Safe to retry after a brief backoff.           |
 
-## Rate limits
+### Rate limits
 
-The API uses a sliding window rate limiter:
+Limits are evaluated on a 60-second sliding window. When you hit a limit, the response is `429 RATE_LIMIT_EXCEEDED` — wait for the window to clear and retry.
 
-- **Per IP**: 200 requests per 60 seconds
-- **Per company**: 100 requests per 60 seconds
+| Scope              | Default limit        | Notes                                                              |
+|--------------------|----------------------|--------------------------------------------------------------------|
+| Per IP             | 200 requests / min   | Counted across all tenants behind the same IP.                     |
+| Per tenant         | 100 requests / min   | Counted per `X-Company-ID`.                                        |
+| Failed auth        | 10 attempts / min    | Per tenant. Triggered by missing or wrong `X-Api-User` / `X-Api-Key`. |
 
-If you exceed either limit, you'll get a `429` response with code `RATE_LIMIT_EXCEEDED`. Repeated failed authentication attempts also count toward the rate limit.
+### Request body limits
 
-## Health check
+- The maximum JSON request body is **16 KB**. Larger payloads are rejected before they reach the route.
+- All authenticated endpoints expect a JSON body (or query string, on `GET`). Always send `Content-Type: application/json`.
 
-There's an unauthenticated health check endpoint:
+### Health check
 
-```
-GET /v1/api/health
-```
+A single unauthenticated endpoint is exposed for uptime monitoring.
 
-Response:
+**Endpoint**: `/v1/api/health`  
+**Method**: `GET`  
+**Description**: Returns `200 OK` when the API is running. Useful for liveness probes and external monitors.
 
+#### Success Response (`200 OK`):
 ```json
-{ "data": { "status": "ok" } }
+{
+  "data": {
+    "status": "ok"
+  }
+}
 ```

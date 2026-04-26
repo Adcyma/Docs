@@ -1,38 +1,60 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: Delete User
 ---
 
-# Delete User
+**Endpoint**: `/v1/api/user`  
+**Method**: `DELETE`  
+**Description**: Offboards a user from your Entra ID tenant. This triggers Adcyma's full deprovisioning workflow — disable the account, revoke group memberships, and run any "employee leaving" tasks you have configured. The action is queued and runs at the scheduled time (or immediately if you don't specify one).
 
-Removes a user from Entra ID. The operation is queued and processed in the background.
+In most cases the only field you need to supply is `userPrincipalName` — Adcyma will fill in the user's name, job title, and department from the cached directory data so any audit logs and email templates render correctly. You can override these by passing them explicitly.
 
-**Endpoint:** `DELETE /v1/api/user`
+### Request Headers:
+- **X-Company-ID**: Your tenant identifier.
+- **X-Api-User**: API username.
+- **X-Api-Key**: API secret key.
+- **Content-Type**: `application/json`.
 
-## Request body
+### Request Body:
+- **userPrincipalName** *(required)*: UPN of the user to deprovision.
+- **date**: Deprovisioning date in `YYYY-MM-DD` (Stockholm time). Defaults to today.
+- **time**: Deprovisioning time in `HH:mm` (Stockholm time). Defaults to `17:00`.
+- **firstname**: Override for the user's first name. Auto-filled from the directory cache when omitted.
+- **surname**: Override for the user's last name. Auto-filled from the directory cache when omitted.
+- **jobTitle**: Override for the user's job title. Auto-filled from the directory cache when omitted.
+- **department**: Override for the user's department. Auto-filled from the directory cache when omitted.
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `userPrincipalName` | string | Yes | The user's UPN (e.g., `anna.eriksson@contoso.com`) |
-| `firstname` | string | No | First name (used for logging) |
-| `surname` | string | No | Last name (used for logging) |
-| `jobTitle` | string | No | Job title (used for logging) |
-| `department` | string | No | Department (used for logging) |
-| `date` | string | No | Scheduled date for the operation |
-| `time` | string | No | Scheduled time for the operation |
+:::tip
+Some HTTP clients drop the request body on `DELETE` by default. If you get a `400 Bad Request` complaining about a missing `userPrincipalName`, check your client's settings and force it to send the body.
+:::
 
-### Example request
-
+### Example Request:
+Minimal — let Adcyma fill in the rest from the directory:
 ```json
 {
-  "userPrincipalName": "anna.eriksson@contoso.com"
+  "userPrincipalName": "john.doe@example.com",
+  "date": "2026-05-15",
+  "time": "17:00"
 }
 ```
 
-## Response
+With explicit overrides:
+```json
+{
+  "userPrincipalName": "john.doe@example.com",
+  "firstname": "John",
+  "surname": "Doe",
+  "jobTitle": "Software Engineer",
+  "department": "Engineering",
+  "date": "2026-05-15",
+  "time": "17:00"
+}
+```
 
-### Success (`200 OK`)
+### Response:
+On success, the deprovisioning task is queued. The account is disabled and the offboarding workflow runs at the scheduled time.
 
+#### Success Response (`200 OK`):
 ```json
 {
   "data": {
@@ -41,10 +63,7 @@ Removes a user from Entra ID. The operation is queued and processed in the backg
 }
 ```
 
-### Errors
-
-#### `400 Bad Request` - Missing UPN
-
+#### Error Response (`400 Bad Request`):
 ```json
 {
   "error": {
@@ -54,13 +73,32 @@ Removes a user from Entra ID. The operation is queued and processed in the backg
 }
 ```
 
-#### `404 Not Found` - User doesn't exist
+#### Error Response (`401 Unauthorized`):
+```json
+{
+  "error": {
+    "code": "UNAUTHORIZED",
+    "message": "Invalid or missing API credentials"
+  }
+}
+```
 
+#### Error Response (`404 Not Found`):
 ```json
 {
   "error": {
     "code": "NOT_FOUND",
     "message": "User not found"
+  }
+}
+```
+
+#### Error Response (`429 Too Many Requests`):
+```json
+{
+  "error": {
+    "code": "RATE_LIMIT_EXCEEDED",
+    "message": "Too many requests"
   }
 }
 ```

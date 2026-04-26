@@ -48,15 +48,19 @@ This guide walks you through creating an App Registration in Microsoft Entra ID 
 
 ### Grant Essential Permissions
 
-Add the following two critical permissions:
+Add the following permissions:
 
-For user management, search for and select **User.ReadWrite.All**. This allows Adcyma to manage Entra ID users.
+For user management, search for and select **User.ReadWrite.All**. This allows Adcyma to create, update, and deprovision Entra ID users.
 
 For group management, search for and select **Group.ReadWrite.All**. This allows Adcyma to manage your groups.
 
+For sign-in activity, search for and select **AuditLog.Read.All**. This allows Adcyma to read last sign-in timestamps shown in the People Hub.
+
+For account enable/disable, search for and select **User.EnableDisableAccount.All**. This allows Adcyma to enable and disable user accounts.
+
 ### Grant Admin Consent
 
-After adding both permissions, click **Grant admin consent** to activate them.
+After adding all permissions, click **Grant admin consent** to activate them.
 
 ## Step 5: Exchange Online Integration (Optional)
 

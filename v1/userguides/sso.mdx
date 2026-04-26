@@ -1,0 +1,116 @@
+---
+sidebar_position: 1
+title: Setting Up Single Sign-On
+---
+
+# Setting Up Single Sign-On
+
+This guide walks you through connecting Adcyma to your Microsoft Entra ID tenant for Single Sign-On (SSO). Once configured, your users log in with their existing Microsoft credentials and Adcyma inherits your Entra ID security policies — MFA, conditional access, and audit logging included.
+
+> **Recommended authentication method**
+>
+> SSO is the recommended way to authenticate with Adcyma. Magic Links remain available as a fallback but are disabled while SSO is active.
+
+## Prerequisites
+
+- An active Microsoft Entra ID tenant (Microsoft 365 or standalone)
+- **Application Administrator** role in Entra ID to create app registrations and grant admin consent
+- **Administrator** access in Adcyma to configure identity provider settings
+
+---
+
+## Step 1: Create an App Registration
+
+If you have not done this yet, follow the [App Registration setup guide](./setupentraappregistration) to create the application in Entra ID and generate a client secret. You will need the **Tenant ID**, **Application (Client) ID**, and **Client Secret** in Step 3 below.
+
+---
+
+## Step 2: Configure API Permissions
+
+In your app registration, navigate to **API permissions** and ensure the following permissions are granted.
+
+### Required permissions
+
+These permissions are needed for Adcyma to manage your Entra ID users and groups.
+
+| Permission | Type | Purpose |
+|------------|------|---------|
+| `User.ReadWrite.All` | Application | Create, update, and deprovision users |
+| `Group.ReadWrite.All` | Application | Manage group memberships and dynamic groups |
+| `AuditLog.Read.All` | Application | Read sign-in activity (shown in People Hub) |
+| `User.EnableDisableAccount.All` | Application | Enable and disable user accounts |
+
+### Optional permissions
+
+| Permission | Type | Purpose |
+|------------|------|---------|
+| `Exchange.ManageAsApp` | Application (Office 365 Exchange Online) | Mailbox operations — required only if you want Adcyma to handle Exchange tasks such as converting mailboxes or setting up forwarding |
+
+### Grant admin consent
+
+After adding all permissions, click **Grant admin consent for [your organization]** and confirm. Permissions show a green checkmark when consent is granted.
+
+:::info
+`AuditLog.Read.All` is used to display **last sign-in** data in the People Hub. If this permission is missing, Adcyma will detect it automatically and simply omit last sign-in timestamps — everything else continues to work.
+:::
+
+---
+
+## Step 3: Enter Credentials in Adcyma
+
+1. In Adcyma, open **Administration** → **Settings** → **Identity Provider**
+2. Set **Identity Provider** to **Microsoft Entra ID**
+3. Enter your **Client ID**, **Tenant ID**, and **Client Secret**
+4. Click **Save**
+
+Adcyma will use these credentials to connect to Microsoft Graph on behalf of your tenant.
+
+---
+
+## Step 4: Exchange Certificate (Optional)
+
+If you added `Exchange.ManageAsApp`, download the certificate from the **Exchange Authentication** section on the same Identity Provider page and upload it to your Entra ID app registration under **Certificates & secrets**.
+
+You also need to assign the **Exchange Recipient Administrator** role to the app registration in Entra ID. See the [App Registration guide](./setupentraappregistration#step-5-exchange-online-integration-optional) for the full steps.
+
+:::info
+Skip this step if you do not need Exchange Online capabilities. All core user and group management works without it.
+:::
+
+---
+
+## Step 5: Enable SSO
+
+1. On the **Identity Provider** settings page, scroll to the **Single Sign-On** section
+2. Toggle **Enable SSO** on
+3. Notify your users — from this point, all logins go through Entra ID and Magic Links are disabled
+
+To verify it is working, open a private browser window and navigate to your Adcyma login page. You should be redirected to the Microsoft login prompt instead of seeing the Magic Link form.
+
+---
+
+## Disabling SSO
+
+To revert to Magic Links:
+
+1. Open **Administration** → **Settings** → **Identity Provider**
+2. Toggle **Enable SSO** off
+3. Magic Links become available immediately
+
+Disabling SSO is useful as a temporary fallback if users lose Entra ID access. You can re-enable it at any time without re-entering credentials.
+
+---
+
+## Troubleshooting
+
+**Users are redirected to Microsoft but get an error**  
+Check that the Tenant ID and Client ID are correct and that admin consent has been granted for all required permissions.
+
+**Sign-in completes on Microsoft but fails to land in Adcyma**  
+The user's email address in Entra ID must match the address registered in Adcyma. If they differ, contact support.
+
+**Last sign-in data is missing in People Hub**  
+`AuditLog.Read.All` permission is either missing or admin consent was not granted. Adcyma suppresses the column automatically when the permission is absent — grant it and consent, then re-sync.
+
+**Exchange operations fail after enabling SSO**  
+Verify the certificate has been uploaded and the Exchange Recipient Administrator role is assigned to your app registration. See the [App Registration guide](./setupentraappregistration#step-5-exchange-online-integration-optional).

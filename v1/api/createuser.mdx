@@ -1,51 +1,59 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Create User
 ---
 
-# Create User
+**Endpoint**: `/v1/api/user`  
+**Method**: `POST`  
+**Description**: Queues a new user for creation in your Entra ID tenant. The user is provisioned asynchronously — you'll receive a `200 OK` once the request is queued, and the actual Entra ID account is created shortly after by Adcyma's worker.
 
-Creates a new user in Entra ID. The operation is queued and processed in the background.
+### Request Headers:
+- **X-Company-ID**: Your tenant identifier.
+- **X-Api-User**: API username.
+- **X-Api-Key**: API secret key.
+- **Content-Type**: `application/json`.
 
-**Endpoint:** `POST /v1/api/user`
+### Request Body:
+- **firstname** *(required)*: Given name of the new user.
+- **surname** *(required)*: Family name of the new user.
+- **middleName**: Middle name.
+- **jobTitle**: Job title.
+- **department**: Department name.
+- **company**: Company name.
+- **office**: Office location.
+- **city**: City.
+- **country**: Country (ISO 3166-1 alpha-2 code recommended, e.g. `SE`).
+- **streetAddress**: Street address.
+- **postalCode**: Postal/ZIP code.
+- **preferredLanguage**: BCP-47 language tag, e.g. `en-US`, `sv-SE`.
+- **accountEnabled**: `true` to enable the account on creation, `false` to create it disabled. Defaults to `true`.
+- **manager**: UPN of the user's manager. The manager must already exist in your tenant.
+- **date**: Provisioning date in `YYYY-MM-DD` (Stockholm time). Combined with `time` to schedule when the user is created. Defaults to "now" if omitted.
+- **time**: Provisioning time in `HH:mm` (Stockholm time). Defaults to `00:00` if `date` is provided without `time`.
 
-## Request body
+The `userPrincipalName` and `mail` for the new user are generated automatically using your tenant's configured username and email format. Domain comes from your tenant preferences.
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `firstname` | string | Yes | User's first name |
-| `surname` | string | Yes | User's last name |
-| `middleName` | string | No | Middle name |
-| `jobTitle` | string | No | Job title |
-| `department` | string | No | Department |
-| `company` | string | No | Company name |
-| `office` | string | No | Office location |
-| `city` | string | No | City |
-| `country` | string | No | Country |
-| `postalCode` | string | No | Postal code |
-| `streetAddress` | string | No | Street address |
-| `preferredLanguage` | string | No | Preferred language |
-| `accountEnabled` | boolean | No | Whether the account is active (defaults to true) |
-| `manager` | string | No | Manager's user principal name |
-| `date` | string | No | Scheduled date for the operation |
-| `time` | string | No | Scheduled time for the operation |
-
-### Example request
-
+### Example Request:
 ```json
 {
-  "firstname": "Anna",
-  "surname": "Eriksson",
-  "department": "Engineering",
+  "firstname": "John",
+  "surname": "Doe",
   "jobTitle": "Software Engineer",
-  "office": "Stockholm"
+  "department": "Engineering",
+  "office": "Stockholm",
+  "country": "SE",
+  "preferredLanguage": "en-US",
+  "accountEnabled": true,
+  "manager": "jane.smith@example.com",
+  "date": "2026-05-01",
+  "time": "08:00"
 }
 ```
 
-## Response
+### Response:
+On success, the request has been queued. Adcyma will create the user in Entra ID at the scheduled time and you will see them in the People Hub when provisioning completes.
 
-### Success (`200 OK`)
-
+#### Success Response (`200 OK`):
 ```json
 {
   "data": {
@@ -54,12 +62,7 @@ Creates a new user in Entra ID. The operation is queued and processed in the bac
 }
 ```
 
-The user will be created in Entra ID shortly after this response. Use the [Get User](./getallusers) endpoint to verify.
-
-### Errors
-
-#### `400 Bad Request` - Missing required fields
-
+#### Error Response (`400 Bad Request`):
 ```json
 {
   "error": {
@@ -69,19 +72,7 @@ The user will be created in Entra ID shortly after this response. Use the [Get U
 }
 ```
 
-#### `403 Forbidden` - Seat limit reached
-
-```json
-{
-  "error": {
-    "code": "FORBIDDEN",
-    "message": "User seat limit reached. Please increase your seat limit in billing settings."
-  }
-}
-```
-
-#### `401 Unauthorized` - Invalid credentials
-
+#### Error Response (`401 Unauthorized`):
 ```json
 {
   "error": {
@@ -91,8 +82,17 @@ The user will be created in Entra ID shortly after this response. Use the [Get U
 }
 ```
 
-#### `429 Too Many Requests`
+#### Error Response (`403 Forbidden`):
+```json
+{
+  "error": {
+    "code": "FORBIDDEN",
+    "message": "User seat limit reached. Please increase your seat limit in billing settings."
+  }
+}
+```
 
+#### Error Response (`429 Too Many Requests`):
 ```json
 {
   "error": {

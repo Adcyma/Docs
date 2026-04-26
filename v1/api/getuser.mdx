@@ -1,0 +1,93 @@
+---
+sidebar_position: 2
+title: Get User
+---
+
+**Endpoint**: `/v1/api/user`  
+**Method**: `GET`  
+**Description**: Retrieves the cached details of a single user, identified by their `userPrincipalName` (UPN). Data is read from Adcyma's local cache of your Entra ID directory, so the response is fast and does not consume Microsoft Graph quota.
+
+### Request Headers:
+- **X-Company-ID**: Your tenant identifier.
+- **X-Api-User**: API username.
+- **X-Api-Key**: API secret key.
+
+### Query Parameters:
+- **userPrincipalName**: The UPN of the user to look up. Required.
+
+### Example Request:
+```http
+GET /v1/api/user?userPrincipalName=john.doe@example.com HTTP/1.1
+Host: api.adcyma.com
+X-Company-ID: AcmeAB-1f2c8a90
+X-Api-User: integrations-bot
+X-Api-Key: <your-secret-key>
+```
+
+### Response:
+On success, returns the cached user object inside the `data.user` envelope. The shape mirrors what Microsoft Graph stores for the user — the example below shows the most common fields, but additional Graph properties may be included.
+
+#### Success Response (`200 OK`):
+```json
+{
+  "data": {
+    "user": {
+      "id": "8a1b9d2e-9b3a-4f0e-a8c1-7b9e9c2d4a11",
+      "userPrincipalName": "john.doe@example.com",
+      "givenName": "John",
+      "surname": "Doe",
+      "displayName": "John Doe",
+      "jobTitle": "Software Engineer",
+      "department": "Engineering",
+      "officeLocation": "Stockholm",
+      "city": "Stockholm",
+      "country": "SE",
+      "accountEnabled": true,
+      "manager": {
+        "id": "f2a1c4d8-1e7b-4d33-b0a1-2c8d5f9e6b22",
+        "displayName": "Jane Smith"
+      }
+    }
+  }
+}
+```
+
+#### Error Response (`400 Bad Request`):
+```json
+{
+  "error": {
+    "code": "BAD_REQUEST",
+    "message": "Missing required query parameter: userPrincipalName"
+  }
+}
+```
+
+#### Error Response (`401 Unauthorized`):
+```json
+{
+  "error": {
+    "code": "UNAUTHORIZED",
+    "message": "Invalid or missing API credentials"
+  }
+}
+```
+
+#### Error Response (`404 Not Found`):
+```json
+{
+  "error": {
+    "code": "NOT_FOUND",
+    "message": "User not found"
+  }
+}
+```
+
+#### Error Response (`429 Too Many Requests`):
+```json
+{
+  "error": {
+    "code": "RATE_LIMIT_EXCEEDED",
+    "message": "Too many requests"
+  }
+}
+```
