@@ -3,23 +3,23 @@ sidebar_position: 1
 title: Overview
 ---
 
-The Adcyma API lets you manage Entra ID user lifecycles — create new users, update their attributes, look them up, and offboard them — directly from your own systems.
+The Adcyma API lets you create, update, look up, and offboard Entra ID users from your own systems.
 
 **Base URL**: `https://api.adcyma.com`  
 **Path prefix**: `/v1/api`  
 **Content type**: `application/json`
 
-All endpoints described in this section are mounted under the path prefix above. For example, the create-user endpoint is reachable at `https://api.adcyma.com/v1/api/user`.
+All endpoints are mounted under the path prefix above. For example, the create-user endpoint is at `https://api.adcyma.com/v1/api/user`.
 
 ### Authentication
 
 Every request (except the health check) must include three headers:
 
-- **X-Company-ID**: Your tenant identifier. 3–64 characters; letters, digits, hyphens and underscores only.
+- **X-Company-ID**: Your tenant identifier. 3-64 characters; letters, digits, hyphens and underscores only.
 - **X-Api-User**: The username of an active API user from your tenant.
 - **X-Api-Key**: The secret key paired with that API user.
 
-API users and keys are managed in the **System Users** section of your Adcyma portal. The key is shown to you once, at creation time — store it somewhere safe. If you lose it, generate a new one and revoke the old.
+API users and keys are managed in the **System Users** section of your Adcyma portal. The key is only shown once when you create it. Store it somewhere safe. If you lose it, generate a new one and revoke the old.
 
 #### Example headers
 
@@ -32,7 +32,7 @@ Content-Type: application/json
 
 ### Response envelope
 
-Successful responses always wrap the payload in a `data` object:
+Successful responses wrap the payload in a `data` object:
 
 ```json
 {
@@ -42,7 +42,7 @@ Successful responses always wrap the payload in a `data` object:
 }
 ```
 
-Errors always come back in a single, predictable shape:
+Errors come back in a consistent shape:
 
 ```json
 {
@@ -61,11 +61,11 @@ The HTTP status code matches the error code:
 | `401`       | `UNAUTHORIZED`          | API credentials are missing, mistyped, or belong to a disabled API user.     |
 | `404`       | `NOT_FOUND`             | The user you referenced does not exist in your tenant.                       |
 | `429`       | `RATE_LIMIT_EXCEEDED`   | You hit one of the rate limits described below.                              |
-| `500`       | `INTERNAL_ERROR`        | Unexpected server-side error. Safe to retry after a brief backoff.           |
+| `500`       | `INTERNAL_ERROR`        | Unexpected server-side error. Safe to retry after a short wait.              |
 
 ### Rate limits
 
-Limits are evaluated on a 60-second sliding window. When you hit a limit, the response is `429 RATE_LIMIT_EXCEEDED` — wait for the window to clear and retry.
+Limits are evaluated on a 60-second sliding window. When you hit a limit, the response is `429 RATE_LIMIT_EXCEEDED`. Wait for the window to clear and retry.
 
 | Scope              | Default limit        | Notes                                                              |
 |--------------------|----------------------|--------------------------------------------------------------------|
@@ -76,11 +76,11 @@ Limits are evaluated on a 60-second sliding window. When you hit a limit, the re
 ### Request body limits
 
 - The maximum JSON request body is **16 KB**. Larger payloads are rejected before they reach the route.
-- All authenticated endpoints expect a JSON body (or query string, on `GET`). Always send `Content-Type: application/json`.
+- All authenticated endpoints expect a JSON body (or query string on `GET`). Always send `Content-Type: application/json`.
 
 ### Health check
 
-A single unauthenticated endpoint is exposed for uptime monitoring.
+One unauthenticated endpoint is available for uptime monitoring.
 
 **Endpoint**: `/v1/api/health`  
 **Method**: `GET`  

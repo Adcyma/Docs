@@ -1,12 +1,12 @@
 # Setting Up an App Registration in Microsoft Entra ID
 
-This guide walks you through creating an App Registration in Microsoft Entra ID so Adcyma can integrate with your tenant for user and group management, with optional Exchange Online capabilities.
+This guide walks you through creating an App Registration in Microsoft Entra ID so Adcyma can manage users and groups in your tenant, with optional Exchange Online support.
 
 ## Prerequisites
 
-> **Important Requirement**
+> **Important**
 > 
-> You must have **Application Administrator** role permissions to complete this setup process.
+> You need the **Application Administrator** role in Entra ID to complete this setup.
 
 ## Step 1: Access App Registrations
 
@@ -31,11 +31,11 @@ This guide walks you through creating an App Registration in Microsoft Entra ID 
 4. Choose an appropriate expiration period (remember to track this date)
 5. Click **Add**
 
-> **Critical: Save Your Credentials**
+> **Save your credentials now**
 > 
-> Immediately copy and securely store both the **Client Secret Value**. The secret value will never be displayed again after you leave this page.
+> Copy the **Client Secret Value** immediately. It won't be shown again after you leave this page.
 > 
-> You'll also need your **Tenant ID** (found in the app's Overview page) for Adcyma configuration.
+> You'll also need your **Tenant ID** from the app's Overview page.
 
 ## Step 4: Configure Microsoft Graph Permissions
 
@@ -50,13 +50,13 @@ This guide walks you through creating an App Registration in Microsoft Entra ID 
 
 Add the following permissions:
 
-For user management, search for and select **User.ReadWrite.All**. This allows Adcyma to create, update, and deprovision Entra ID users.
+Search for and select **User.ReadWrite.All**. This lets Adcyma create, update, and deprovision Entra ID users.
 
-For group management, search for and select **Group.ReadWrite.All**. This allows Adcyma to manage your groups.
+Search for and select **Group.ReadWrite.All**. This lets Adcyma manage your groups.
 
-For sign-in activity, search for and select **AuditLog.Read.All**. This allows Adcyma to read last sign-in timestamps shown in the People Hub.
+Search for and select **AuditLog.Read.All**. This lets Adcyma read last sign-in timestamps shown in the People Hub.
 
-For account enable/disable, search for and select **User.EnableDisableAccount.All**. This allows Adcyma to enable and disable user accounts.
+Search for and select **User.EnableDisableAccount.All**. This lets Adcyma enable and disable user accounts.
 
 ### Grant Admin Consent
 
@@ -64,9 +64,9 @@ After adding all permissions, click **Grant admin consent** to activate them.
 
 ## Step 5: Exchange Online Integration (Optional)
 
-> **Optional Configuration**
+> **Optional**
 > 
-> Complete this section only if you want Adcyma to manage Exchange tasks like converting user mailboxes to shared mailboxes.
+> Only needed if you want Adcyma to manage Exchange tasks like converting mailboxes.
 
 ### Add Exchange Permissions
 
@@ -88,24 +88,24 @@ After adding all permissions, click **Grant admin consent** to activate them.
 7. Search for your Adcyma app registration
 8. Select the app and click **Add**
 
-## Configuration Complete
+## Done
 
-Your App Registration is now properly configured with:
+Your App Registration is set up with:
 
-- User and Group management permissions
-- Client secret for secure API access
-- Exchange integration for mailbox management (if configured)
+- User and group management permissions
+- A client secret for API access
+- Exchange integration (if you completed Step 5)
 
 ## Next Steps
 
-Provide the following information during your Adcyma setup process:
+You'll need these three values when configuring Adcyma:
 
-- Tenant ID (found on the app's Overview page)
-- Application (Client) ID (found on the app's Overview page)
-- Client Secret (the value you saved during Step 3)
+- Tenant ID (from the app's Overview page)
+- Application (Client) ID (from the app's Overview page)
+- Client Secret (the value you saved in Step 3)
 
-## Security Reminders
+## Security reminders
 
-- Monitor your client secret expiration date and renew before it expires
-- Regularly review the permissions granted to ensure they align with your security policies
-- Consider implementing certificate-based authentication for enhanced security in production environments
+- Track your client secret expiration date and renew it before it expires
+- Review the granted permissions regularly
+- Consider certificate-based authentication for production

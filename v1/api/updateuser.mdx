@@ -5,7 +5,7 @@ title: Update User
 
 **Endpoint**: `/v1/api/user`  
 **Method**: `PATCH`  
-**Description**: Updates one or more attributes of an existing Entra ID user, identified by `userPrincipalName`. Only the fields you include in the body are changed — everything else is left as-is. Updates are queued and applied asynchronously.
+**Description**: Updates one or more attributes of an existing Entra ID user, identified by `userPrincipalName`. Only the fields you include are changed. Everything else is left as-is. Updates are queued and applied asynchronously.
 
 ### Request Headers:
 - **X-Company-ID**: Your tenant identifier.
@@ -28,7 +28,7 @@ title: Update User
 - **preferredLanguage**: New language tag (BCP-47, e.g. `sv-SE`).
 - **accountEnabled**: `true` to enable the account, `false` to disable it. Useful for temporarily blocking sign-in without removing the user.
 
-Any field not in this list (for example `manager` or `userPrincipalName` itself) cannot be changed via this endpoint — use the portal for those.
+Fields not in this list (like `manager`) can't be changed here. Use the portal instead.
 
 ### Example Request:
 ```json

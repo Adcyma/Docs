@@ -5,9 +5,9 @@ title: Delete User
 
 **Endpoint**: `/v1/api/user`  
 **Method**: `DELETE`  
-**Description**: Offboards a user from your Entra ID tenant. This triggers Adcyma's full deprovisioning workflow — disable the account, revoke group memberships, and run any "employee leaving" tasks you have configured. The action is queued and runs at the scheduled time (or immediately if you don't specify one).
+**Description**: Offboards a user from your Entra ID tenant. This triggers Adcyma's full deprovisioning workflow: disabling the account, revoking group memberships, and running any employee leaving tasks you have configured. The action is queued and runs at the scheduled time, or right away if you don't specify one.
 
-In most cases the only field you need to supply is `userPrincipalName` — Adcyma will fill in the user's name, job title, and department from the cached directory data so any audit logs and email templates render correctly. You can override these by passing them explicitly.
+In most cases you only need to supply `userPrincipalName`. Adcyma fills in the user's name, job title, and department from the directory cache so audit logs and email templates render correctly. You can override these by passing them explicitly.
 
 ### Request Headers:
 - **X-Company-ID**: Your tenant identifier.

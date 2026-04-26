@@ -5,7 +5,7 @@ title: Get User
 
 **Endpoint**: `/v1/api/user`  
 **Method**: `GET`  
-**Description**: Retrieves the cached details of a single user, identified by their `userPrincipalName` (UPN). Data is read from Adcyma's local cache of your Entra ID directory, so the response is fast and does not consume Microsoft Graph quota.
+**Description**: Retrieves the cached details of a single user by `userPrincipalName` (UPN). Data comes from Adcyma's local cache of your Entra ID directory, so it's fast and doesn't consume Microsoft Graph quota.
 
 ### Request Headers:
 - **X-Company-ID**: Your tenant identifier.
@@ -25,7 +25,7 @@ X-Api-Key: <your-secret-key>
 ```
 
 ### Response:
-On success, returns the cached user object inside the `data.user` envelope. The shape mirrors what Microsoft Graph stores for the user — the example below shows the most common fields, but additional Graph properties may be included.
+On success, returns the cached user object inside `data.user`. The shape mirrors what Microsoft Graph stores. The example below shows the most common fields; additional Graph properties may also be present.
 
 #### Success Response (`200 OK`):
 ```json

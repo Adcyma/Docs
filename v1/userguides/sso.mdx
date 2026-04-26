@@ -5,11 +5,11 @@ title: Setting Up Single Sign-On
 
 # Setting Up Single Sign-On
 
-This guide walks you through connecting Adcyma to your Microsoft Entra ID tenant for Single Sign-On (SSO). Once configured, your users log in with their existing Microsoft credentials and Adcyma inherits your Entra ID security policies — MFA, conditional access, and audit logging included.
+This guide walks you through connecting Adcyma to your Microsoft Entra ID tenant for Single Sign-On (SSO). Once set up, users log in with their Microsoft credentials and Adcyma picks up your Entra ID security policies like MFA and conditional access automatically.
 
-> **Recommended authentication method**
+> **Recommended**
 >
-> SSO is the recommended way to authenticate with Adcyma. Magic Links remain available as a fallback but are disabled while SSO is active.
+> SSO is the recommended way to sign in to Adcyma. Magic Links stay available as a fallback but are disabled while SSO is on.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ In your app registration, navigate to **API permissions** and add the following 
 After adding all four permissions, click **Grant admin consent for [your organization]** and confirm.
 
 :::info
-These permissions cover authentication only. The separate permissions Adcyma needs to manage your Entra ID users and groups (such as `User.ReadWrite.All`) are configured as part of the [App Registration setup](./setupentraappregistration).
+These cover the sign-in flow only. The permissions Adcyma needs to manage users and groups (like `User.ReadWrite.All`) are set up separately in the [App Registration guide](./setupentraappregistration).
 :::
 
 ---
@@ -51,7 +51,7 @@ These permissions cover authentication only. The separate permissions Adcyma nee
 3. Enter your **Client ID**, **Tenant ID**, and **Client Secret**
 4. Click **Save**
 
-Adcyma will use these credentials to connect to Microsoft Graph on behalf of your tenant.
+Adcyma uses these credentials to connect to Microsoft Graph for your tenant.
 
 ---
 
