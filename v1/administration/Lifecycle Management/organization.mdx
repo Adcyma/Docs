@@ -1,0 +1,56 @@
+---
+sidebar_position: 6
+title: Organization
+---
+
+# Organization
+
+import Image from '@theme/IdealImage';
+import organizationImg from '@site/static/img/Organization.jpg';
+
+The Organization page is a single hub for the reference data used when provisioning users and building automation: **Departments**, **Job Titles**, **Offices**, and **Companies**. Each is managed in its own tab. These values appear as dropdown options when creating or editing users in the People Hub, and you can reference them in workflow conditions and dynamic group rules.
+
+<Image img={organizationImg} alt="Organization page with tabs" className="doc-screenshot" />
+
+## Departments, Job Titles, and Companies
+
+These three tabs work the same way:
+
+- Add a value with the input field at the top (press Enter or click the plus button)
+- Remove a value with the X button on its row
+- A filter box appears once the list grows beyond ten items
+
+Changes are saved automatically. Exact duplicates are rejected, and if you add a value that only differs in capitalization from an existing one, Adcyma asks you to confirm before adding it.
+
+## Offices
+
+The Offices tab manages your physical office locations with full address details. Click **Add office** to create one, or use the pencil and trash icons on a row to edit or delete it.
+
+Each office has:
+
+- **Office name** (required)
+- **Street address**
+- **City** and **Zip / Postal code**
+- **Country** (dropdown)
+- **State / Province**
+
+When a user is assigned to an office during onboarding, the office address details can populate the user's address attributes automatically.
+
+:::warning
+Renaming an office may affect rules and references that point to its current name, such as workflow conditions or dynamic group rules. Review those before renaming.
+:::
+
+## Initial Synchronization
+
+Your organization data is imported from your identity provider during setup. Keep in mind:
+
+- This is a one-time import, not an ongoing sync
+- After the initial import, you manage the lists manually
+- Future changes in your directory will not automatically update these lists
+
+## Best Practices
+
+- Use clear, consistent naming conventions across all four lists
+- Consider how changes might affect existing user assignments and workflows that reference specific values
+- Coordinate department and job title changes with HR and management teams
+- Keep office details complete and up to date before making new assignments

@@ -1,9 +1,16 @@
+---
+sidebar_position: 2
+title: Managed Users
+---
+
 # Managed Users
 
 import Image from '@theme/IdealImage';
-import managedUsersImg from '@site/static/img/ManagedUsers.webp';
+import managedUsersImg from '@site/static/img/ManagedUsers2026.jpg';
 
-The Managed Users page shows all users currently managed by Adcyma. From here you can monitor user information, control which users are in scope, and keep user data synchronized with your identity provider.
+The Managed Users page shows all users currently managed by Adcyma and controls which users are in scope. The header shows which group defines the scope and how many users are managed.
+
+<Image img={managedUsersImg} alt="Managed Users" className="doc-screenshot" />
 
 ## User Information Display
 
@@ -14,28 +21,31 @@ The table shows one row per managed user with sortable columns:
 - Department
 - Job Title
 
-Use the search bar to filter users by name, email, department, or job title. A badge at the top shows the total count of managed users.
+Use the search bar to filter users, and the badge at the top right for the total count of managed users.
 
 ## Managing User Scope
 
-Select the Entra ID group that defines which users Adcyma manages from the dropdown menu. This group determines the full scope of managed users. After selecting your group, click **Save Group** to apply.
+Adcyma manages exactly the users who are members of one designated group in your directory. Click **Change Managed Group** (or **Configure Group** if none is set yet), select the group, and click **Save Group** to apply.
 
 :::warning Important Group Type Requirement
-The selected Entra ID group **must be a standard security group** and **cannot be a dynamic group**. Dynamic groups prevent Adcyma from updating group membership correctly. Always use manually managed or rule-based static groups.
+The selected group **must be a standard security group** and **cannot be a dynamic group**. Dynamic groups prevent Adcyma from updating group membership correctly. Always use manually managed static groups.
 :::
+
+Changing the managed group later has consequences:
+
+- Users in the old group but not in the new one are removed from Adcyma and no longer managed
+- Those users are no longer available in Adcyma, for example as managers for other users
+- Any active workflow tasks involving users who are no longer managed will still execute as planned
 
 ## User Data Synchronization
 
-Adcyma automatically syncs user information from your identity provider every hour, so user details, group memberships, and organizational changes stay up to date.
+Adcyma automatically syncs user information from your identity provider on a schedule, so user details, group memberships, and organizational changes stay up to date.
 
-If you need an immediate update, click **Refresh Users** to trigger a manual sync. This is handy when you've just added new users to the managed group, updated user info in your identity provider, or need to verify recent changes right away.
-
-<br/>
-<Image img={managedUsersImg} alt="Managed Users" className="doc-screenshot" />
+If you need an immediate update, click **Refresh Users** to fetch the latest users from your directory. This is handy when you've just added new users to the managed group, updated user info in your identity provider, or need to verify recent changes right away.
 
 ## Best Practices
 
-- Choose standard Entra ID security groups that reflect the users you want Adcyma to manage.
-- Avoid dynamic groups. Use only static security groups so Adcyma can update group membership properly.
-- Review group membership regularly to make sure it matches your actual needs.
-- Use manual refresh when you need immediate updates. For routine changes, the automatic hourly sync handles things on its own.
+- Use a dedicated static security group that reflects exactly the users you want Adcyma to manage, and exclude service accounts.
+- Review the group's membership regularly to make sure it matches your actual needs.
+- Use manual refresh when you need immediate updates. For routine changes, the automatic sync handles things on its own.
+- Keep an eye on your seat limit in [Billing](./billing); Adcyma won't manage users beyond it.

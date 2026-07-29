@@ -1,6 +1,16 @@
+---
+sidebar_position: 1
+title: Access Inventory
+---
+
 # Access Inventory
 
-The Access Inventory gives you a complete overview of all managed users and their Microsoft Entra group memberships. Use it to audit who has access to what across your organization, without digging through Entra directly.
+import Image from '@theme/IdealImage';
+import accessInventoryImg from '@site/static/img/AccessInventory.jpg';
+
+The Access Inventory gives you a complete overview of all managed users and their group memberships. Use it to audit who has access to what across your organization, without digging through your directory manually.
+
+<Image img={accessInventoryImg} alt="Access Inventory" className="doc-screenshot" />
 
 ## When to Use Access Inventory
 
@@ -11,42 +21,41 @@ The Access Inventory gives you a complete overview of all managed users and thei
 
 ## Navigating the Inventory
 
-The main table displays one row per managed user with the following columns:
+The main table displays one row per managed user with the following sortable columns:
 
 | Column | Description |
 |---|---|
-| Display Name | The user's full name from Entra |
+| Display Name | The user's full name |
 | Email | Primary email address |
 | Department | Organizational department |
 | Job Title | Current job title |
 | Status | Account status (Enabled/Disabled) |
-| Groups | Number of Entra groups the user belongs to |
+| Groups | Number of groups the user belongs to |
 
 ### Viewing Group Memberships
 
-Click on any user row to expand it and see the full list of Entra groups that user belongs to. This makes it easy to spot unexpected memberships or confirm that a user has the right set of groups.
+Click on any user row to expand it and see the full list of groups that user belongs to. This makes it easy to spot unexpected memberships or confirm that a user has the right set of groups.
 
 ### Searching
 
-Use the search bar to quickly locate users by name, email, department, or job title.
+Use the search bar to quickly locate users by name, email, department, job title, or even group name.
 
 ### Exporting Data
 
-Click **Export CSV** to download the full user inventory as a CSV file. The export includes all managed users regardless of any active search. Clear your search first if you want a clean export, then filter the downloaded file as needed.
+Click **Export CSV** to download the full user inventory as a CSV file. The export includes all managed users regardless of any active search.
 
 ## Best Practices
 
 - Run periodic access reviews by exporting the inventory and comparing it against your expected group assignments.
 - Use the search to focus on specific departments or teams during audits.
 - Check the Groups count column for outliers. Users with unusually high or low group counts may warrant investigation.
-- Combine Access Inventory with the Hygiene Center to identify users in groups that may no longer be needed.
+- Combine Access Inventory with the [Hygiene Center](../Access%20Governance/hygienecenter) to identify users in groups that may no longer be needed.
 
 ## Troubleshooting
 
 If a user is missing from the inventory:
-- Confirm the user is part of the managed users scope (see **Settings > Managed Users**)
-- Trigger a manual sync if the user was recently added
+- Confirm the user is part of the managed users scope (see [Managed Users](../Settings/managedusers))
+- User data appears after the sync completes; trigger a manual refresh from Managed Users if the user was recently added
 
 If group counts seem incorrect:
-- Group membership data syncs from Entra on a regular schedule
-- Use the refresh option to pull the latest data
+- Group membership data syncs from your directory on a regular schedule and may lag slightly behind recent changes

@@ -1,0 +1,25 @@
+---
+sidebar_position: 5
+title: Notifications
+---
+
+# Notifications
+
+import Image from '@theme/IdealImage';
+import notificationsImg from '@site/static/img/NotificationSettings.jpg';
+
+The Notification Settings page controls how Adcyma notifies users about events in the system.
+
+<Image img={notificationsImg} alt="Notification Settings" className="doc-screenshot" />
+
+## Access Governance
+
+**Approval email notifications**
+When enabled, Adcyma sends an email to approvers whenever a new approval stage requires their action. By default this is off, and approvers only see requests when they log in to the portal. Turn it on if your approvers don't check the portal regularly.
+
+## System Health
+
+**Task failure email alerts**
+When enabled (the default), Adcyma emails administrators when a background task fails permanently. To avoid flooding inboxes, at most one email is sent per hour; all failures always appear in the notification bell in the top navigation regardless of this setting.
+
+Click **Save settings** to apply changes.

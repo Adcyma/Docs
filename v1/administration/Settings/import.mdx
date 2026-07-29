@@ -1,0 +1,52 @@
+---
+sidebar_position: 9
+title: Import
+---
+
+# Import
+
+import Image from '@theme/IdealImage';
+import importImg from '@site/static/img/Import.jpg';
+
+The Import page bulk imports users or IGA resources from a CSV file through a guided six-step wizard: **Type → Upload → Map → Review → Confirm → Progress**.
+
+<Image img={importImg} alt="Import wizard" className="doc-screenshot" />
+
+## What You Can Import
+
+**Users**
+Bulk provision user accounts. Each imported user goes through the same pipeline as a single creation in the People Hub, including workflows, managed group assignment, and audit logging.
+
+**IGA Services**
+Bulk create resources in [Resource Management](../Access%20Governance/resourcemanagement). Include a folder name and the organizational unit is created automatically if it doesn't exist yet. (Available when the Identity Governance add-on is enabled.)
+
+Each type has a **Download template** button that gives you a CSV with the correct columns.
+
+## The Wizard
+
+1. **Type** - Choose Users or IGA Services
+2. **Upload** - Upload your CSV file; Adcyma parses the headers and rows
+3. **Map** - Confirm how CSV columns map to fields; obvious matches are mapped automatically
+4. **Review** - Each row is validated against the schema; fix problems in your file or deselect rows you don't want to import
+5. **Confirm** - Submit the batch
+6. **Progress** - Watch the import execute, then start a new one if needed
+
+## User Import Fields
+
+Required: **First name**, **Surname**.
+
+Optional: Middle name, Job title, Department, City, Country, Postal code, Street address, Company name, Office, Manager (UPN), Starting date, Preferred language, Account enabled.
+
+UPNs and email addresses are generated from your [Preferences](./preferences), same as for users created in the People Hub.
+
+## IGA Service Import Fields
+
+Required: **Service name**, **Description**.
+
+Optional: Folder (auto-created if missing), Approval flow name, Category, Icon key, Max duration (days), Auto approve (true/false).
+
+## Tips
+
+- Start with the downloaded template so your columns match from the beginning.
+- Import a small test batch first to confirm your workflows behave as expected, since imported users trigger workflows just like manually created ones.
+- Watch your seat limit: imported users count against it like any other managed user.

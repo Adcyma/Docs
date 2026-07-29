@@ -1,22 +1,26 @@
+---
+sidebar_position: 1
+title: Workflows
+---
+
 # Workflows
 
 import Image from '@theme/IdealImage';
-import workflows1 from '@site/static/img/Workflows1.webp';
-import workflowsTriggers from '@site/static/img/WorkflowsTriggers.webp';
-import workflowsConditions from '@site/static/img/WorkflowsConditions.webp';
-import workflowsActions from '@site/static/img/WorkflowsActions.webp';
+import workflowsImg from '@site/static/img/Workflows2026.jpg';
 
 Workflows connect triggers to actions, with optional conditions to control when automation runs. They handle the core of user lifecycle management, from onboarding to offboarding.
 
 :::info
-**Important:** Workflows are only triggered by Adcyma's user management actions: creating new users, editing existing users, or removing users (including via API). If no conditions are specified, the workflow will run for all users matching the trigger.
+**Important:** Workflows are only triggered by Adcyma's user management actions: creating new users, editing existing users, or removing users (including via API and CSV import). If no conditions are specified, the workflow will run for all users matching the trigger.
 :::
 
-<Image img={workflows1} alt="Workflow overview" className="doc-screenshot" />
+<Image img={workflowsImg} alt="Workflow overview" className="doc-screenshot" />
+
+## Page Layout
+
+The Workflows page has a sidebar listing all your workflows. Each entry shows the workflow's name, whether it is Active or Inactive, and its priority. A search box appears once you have more than a few workflows. Selecting a workflow shows its trigger and a visual flowchart of its steps: **WHEN** blocks for the trigger and conditions, and **DO** blocks for each action.
 
 ## Workflow Components
-
-Every workflow has a few key parts:
 
 ### Basic Settings
 
@@ -24,7 +28,7 @@ Every workflow has a few key parts:
 * Descriptive identifier for your workflow
 * Does not need to be unique, but should clearly indicate the workflow's purpose
 
-**Priority** 
+**Priority**
 * Determines execution order when multiple workflows match the same trigger and conditions
 * Lower numbers = higher priority (1 is highest priority)
 * Controls which workflow runs first in overlapping scenarios
@@ -33,34 +37,33 @@ Every workflow has a few key parts:
 * Optional field for detailed workflow documentation
 * Helps team members understand the workflow's purpose and logic
 
-## Workflow Management
-
-**Active/Inactive**
-* You can deactivate workflows without deleting them
-* Useful for testing, maintenance, or seasonal processes
-* Inactive workflows keep all their configuration but won't execute
-
-**Duplicate**
-* Copy an existing workflow to create a similar one with modifications
-* Handy for creating department-specific variations of a common process
-
 ### Automation Logic
 
 The **trigger** defines which user management event starts the workflow (user created, modified, or removed).
 
-<Image img={workflowsTriggers} alt="Workflow triggers" className="doc-screenshot" />
-
 The **condition** is an optional filter based on user attributes. If no conditions are set, the workflow applies to **all users** matching the trigger. Examples: users in specific departments, managers only, users reporting to certain supervisors.
-
-<Image img={workflowsConditions} alt="Workflow conditions" className="doc-screenshot" />
 
 The **action** is what the workflow actually does when trigger and conditions are met. You can chain multiple actions in sequence. Examples: assign role templates, send emails, enable accounts, update user attributes.
 
 Each action can have an optional **delay**. Set a delay value and unit (hours, days, or weeks) to schedule the action to run after a waiting period instead of immediately.
 
-<Image img={workflowsActions} alt="Workflow actions" className="doc-screenshot" />
+### Directory-Aware Actions
 
-You can also view a **flowchart** of your workflow to see the full logic visually, which is handy for reviewing complex workflows at a glance.
+If your tenant runs in Hybrid mode (Active Directory + Entra ID), the workflow editor lets you choose which directory user creation actions target: Active Directory, Entra ID, or your company default. See [Identity Provider](../Settings/identityprovider) for how directory modes are configured.
+
+## Workflow Management
+
+**Active/Inactive**
+* You can deactivate workflows without deleting them using the toggle in the workflow header
+* Useful for testing, maintenance, or seasonal processes
+* Inactive workflows keep all their configuration but won't execute
+
+**Duplicate**
+* Copy an existing workflow to create a similar one with modifications
+* Duplicates are saved as inactive so they never fire before you have reviewed them
+
+**Delete**
+* Permanently removes a workflow after a confirmation prompt
 
 ## Example Workflow Scenarios
 
@@ -70,7 +73,7 @@ You can also view a **flowchart** of your workflow to see the full logic visuall
 * **Actions:** Assign sales role template, send welcome email, enable account
 
 **Manager Promotion**
-* **Trigger:** User Modified  
+* **Trigger:** User Modified
 * **Condition:** Job Title contains "Manager"
 * **Actions:** Add to management groups, send notification to IT, update permissions
 
@@ -81,7 +84,7 @@ You can also view a **flowchart** of your workflow to see the full logic visuall
 
 ## How Workflows Execute
 
-1. Someone creates, edits, or removes a user in Adcyma (or via API)
+1. Someone creates, edits, or removes a user in Adcyma (or via API or CSV import)
 2. The system checks which workflows match the event type
 3. If conditions exist, it verifies the user meets the criteria
 4. Multiple matching workflows run in priority order (lowest number first)

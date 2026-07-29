@@ -6,7 +6,7 @@ hide_title: true
 
 ## Welcome to Adcyma's Documentation
 
-Adcyma is an **Identity Governance and Administration (IGA)** platform built for **Microsoft Entra ID**. It automates identity lifecycle management, from onboarding to offboarding, so you can stop doing it by hand.
+Adcyma is an **Identity Governance and Administration (IGA)** platform built for **Microsoft Entra ID** and **Active Directory**. It automates identity lifecycle management, from onboarding to offboarding, so you can stop doing it by hand.
 
 This documentation covers setup, configuration, and day-to-day use. Use the sidebar to navigate, or the search bar to find what you need.
 
@@ -15,12 +15,22 @@ This documentation covers setup, configuration, and day-to-day use. Use the side
 - Automates user onboarding, role changes, and offboarding through configurable workflows
 - Replaces manual, error-prone processes with consistent automation
 - Provides role-based access controls and detailed audit trails
-- Lets employees request access to resources through a self-service portal, with configurable approval flows
-- Includes compliance tools: access inventory, group hygiene, and audit-ready reports for SOC 2, ISO 27001, and NIS2
-- Runs as a SaaS product with no on-premises infrastructure required
+- Lets employees request access to resources through the self-service Access Center, with configurable approval flows
+- Includes compliance tools: access inventory, hygiene checks for stale groups and accounts, and audit-ready reports for SOC 2, ISO 27001, and NIS2
+- Works with cloud-only Entra ID, on-premises Active Directory (via a lightweight agent), or hybrid environments
+- Runs as a SaaS product with no on-premises infrastructure required beyond the optional AD agent
 - Works with non-technical administrators through a straightforward interface
-- Integrates with Microsoft Entra ID and HR systems
 - Costs roughly 70% less than traditional ILM solutions
+
+---
+
+## The Two Main Areas
+
+**People Hub** is where the employee lifecycle is managed: onboarding new hires, updating existing employees, and offboarding leavers, with a live view of queued automation tasks and history. See [Using Your People Hub](./peoplehub).
+
+**Access Center** is the self-service identity governance portal: employees request access to resources, approvers act on requests, and resource owners manage their resources. It's part of the Identity Governance add-on. See [Access Center](./administration/Access%20Governance/accesscenter).
+
+Administrators additionally get the **Administration** area, covered section by section in these docs.
 
 ---
 
@@ -29,18 +39,18 @@ This documentation covers setup, configuration, and day-to-day use. Use the side
 These core concepts come up throughout the docs.
 
 ### Workflows
-A [Workflow](https://docs.adcyma.com/v1/workflows) is a configurable sequence of logic that automates identity management processes. Every workflow has three parts:
+A [Workflow](./administration/Lifecycle%20Management/workflows) is a configurable sequence of logic that automates identity management processes. Every workflow has three parts:
 
 - A **trigger** is the event that starts the workflow (e.g., new hire, role change, termination)
 - A **condition** is business logic that determines when actions fire (e.g., department = "Sales", location = "Stockholm")
-- An **action** is what happens when conditions are met (e.g., add to Entra ID groups, assign licenses, send notifications)
+- An **action** is what happens when conditions are met (e.g., add to groups, assign role templates, send notifications)
 
-*Example*: A new employee workflow triggers when someone joins the Sales department, checks their location and role, then adds them to the right Entra ID groups for sales tools, regional resources, and company-wide access.
+*Example*: A new employee workflow triggers when someone joins the Sales department, checks their location and role, then adds them to the right groups for sales tools, regional resources, and company-wide access.
 
 ### Role Templates
-[Role Templates](https://docs.adcyma.com/v1/administration/Lifecycle%20Management/roletemplate) bundle related **Entra ID groups** into a single assignable unit. Instead of manually assigning a dozen group memberships one by one, you assign one Role Template through a Workflow and the user gets everything they need.
+[Role Templates](./administration/Lifecycle%20Management/roletemplate) bundle related directory groups into a single assignable unit. Instead of manually assigning a dozen group memberships one by one, you assign one Role Template through a Workflow and the user gets everything they need.
 
-*Example*: A "Finance Team" role template might include Entra ID groups for:
+*Example*: A "Finance Team" role template might include groups for:
 - Financial reporting tools
 - Expense management systems
 - Department-specific SharePoint sites
@@ -49,8 +59,8 @@ A [Workflow](https://docs.adcyma.com/v1/workflows) is a configurable sequence of
 
 When a new finance employee is hired, a single workflow action assigns the entire Role Template. No manual steps, no forgotten permissions.
 
-### IGA Portal
-The [IGA Portal](https://docs.adcyma.com/v1/administration/Access%20Governance/igaportal) is the self-service interface for access requests. Employees browse a catalog of services and request access. Approvers review and act on requests. Service owners manage their resources. It's accessible to all managed users, not just administrators.
+### Resources
+A [Resource](./administration/Access%20Governance/resourcemanagement) is something employees can request access to through the Access Center: an application, a shared drive, a physical location. Each resource maps to one or more directory groups and is governed by an [Approval Flow](./administration/Access%20Governance/approvalflows).
 
 ---
 

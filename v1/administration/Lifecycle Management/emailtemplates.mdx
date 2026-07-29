@@ -1,7 +1,12 @@
+---
+sidebar_position: 5
+title: Email Templates
+---
+
 # Email Templates
 
 import Image from '@theme/IdealImage';
-import emailTemplatesImg from '@site/static/img/EmailTemplates.webp';
+import emailTemplatesImg from '@site/static/img/EmailTemplates2026.jpg';
 
 Email Templates let you create standardized email messages that plug into Workflows. Use them for things like onboarding notifications, role change confirmations, and department transfer communications.
 
@@ -10,14 +15,14 @@ Email Templates let you create standardized email messages that plug into Workfl
 :::
 
 <br/>
-<Image img={emailTemplatesImg} alt="Email Templates interface" className="doc-screenshot" />
+<Image img={emailTemplatesImg} alt="Email Templates editor" className="doc-screenshot" />
 <br/><br/>
 
 ## Creating a Template
 
 Each template has the following fields:
 
-**Name**
+**Title**
 A label for this template so you can identify it when linking it to workflows.
 
 **To / CC / BCC**
@@ -27,7 +32,7 @@ The recipient fields. You can use `{{variable}}` placeholders here too, for exam
 The email subject line. Supports variables.
 
 **Body**
-The email body. The editor supports bold, italic, underline, bullet lists, and numbered lists. Use the variable dropdown to insert placeholders at the cursor position.
+The email body. The editor supports bold, italic, underline, bullet lists, and numbered lists. Use the **Variable** dropdown to insert placeholders at the cursor position, or type them directly as `{{variable_name}}`.
 
 **Preview**
 Toggle Preview to see how the email will look with sample values filled in. This is useful for checking formatting before linking the template to a workflow.

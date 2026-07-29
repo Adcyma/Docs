@@ -5,12 +5,10 @@ title: Using Your People Hub
 # Using Your People Hub
 
 import Image from '@theme/IdealImage';
-import dashboardImg from '@site/static/img/Dashboardnew.webp';
-import newEmployeeImg from '@site/static/img/NewEmployee.webp';
-import editEmployeeImg from '@site/static/img/EditEmployee.webp';
-import employeeLeavingImg from '@site/static/img/EmployeeLeaving.webp';
-import queuedTasksImg from '@site/static/img/QueuedTasks.png';
-import taskHistoryImg from '@site/static/img/TaskHistory.png';
+import dashboardImg from '@site/static/img/Dashboard2026.jpg';
+import newEmployeeImg from '@site/static/img/NewEmployee2026.jpg';
+import editEmployeeImg from '@site/static/img/EditEmployee2026.jpg';
+import employeeLeavingImg from '@site/static/img/EmployeeLeaving2026.jpg';
 
 The People Hub is where you manage the full employee lifecycle: onboarding, role changes, and offboarding. It also gives you a live view of pending and completed tasks.
 
@@ -21,11 +19,13 @@ The People Hub is where you manage the full employee lifecycle: onboarding, role
 
 The People Hub has three main action buttons:
 
-* **New Employee** for onboarding new hires
-* **Edit Employee** for updating existing employee information and roles
-* **Employee Leaving** for offboarding and access removal
+* **New employee** for onboarding new hires
+* **Edit employee** for updating existing employee information and roles
+* **Employee leaving** for offboarding and access removal
 
-Below those buttons you'll find two monitoring sections:
+To the right, the **People** button opens a browsable org chart of your organization.
+
+Below the buttons you'll find two monitoring sections:
 
 * **Queued Tasks** shows pending automation tasks
 * **History** shows a full log of completed actions
@@ -33,25 +33,25 @@ Below those buttons you'll find two monitoring sections:
 ## Employee Onboarding
 
 **Starting the Process**
-1. Click the **"New Employee"** button to begin onboarding
+1. Click the **"New employee"** button to open the onboarding form
 
 <br/>
 <Image img={newEmployeeImg} alt="New Employee form" className="doc-screenshot" />
 <br/><br/>
 
 **Required Information**
-Fill in the following details for the new employee:
+Fill in the details for the new employee:
 
-* First and last name
-* Job title and department (selected from dropdown menus)
-* Company entity
-* Office location (this automatically populates the address)
-* Language preference (used for Microsoft ecosystem integration, not the Adcyma interface)
-* Direct manager
-* Start date
+* Given name, last name, and optional middle name
+* Job title, department, and company (selected from dropdown menus managed on the [Organization](./administration/Lifecycle%20Management/organization) page)
+* Office (selecting an office can populate the address fields)
+* Country, street address, and city
+* Preferred language (used for Microsoft ecosystem integration, not the Adcyma interface)
+* Manager
+* Starting date
 
 **Completion**
-Click **"Create"** to submit the onboarding request.
+Click **"Create"** to submit the onboarding request. The username and email address are generated automatically from your [Preferences](./administration/Settings/preferences).
 
 :::info
 The system processes this information through your configured workflows. You can track the resulting tasks in the "Queued Tasks" section.
@@ -60,7 +60,7 @@ The system processes this information through your configured workflows. You can
 ## Employee Updates
 
 **Initiating Changes**
-1. Click the **"Edit Employee"** button to modify existing employee information
+1. Click the **"Edit employee"** button
 
 <br/>
 <Image img={editEmployeeImg} alt="Edit Employee form" className="doc-screenshot" />
@@ -68,21 +68,16 @@ The system processes this information through your configured workflows. You can
 
 **Making Updates**
 2. Search for and select the employee from the directory
-3. Modify any of the following attributes:
-   * Name changes
-   * Job title promotions or role changes
-   * Department transfers
-   * Office location moves
-   * Manager reassignments
-   * Effective date for when changes should take place
+3. Modify any of the attributes: name, job title, department, company, office, address, or manager
+4. Set the **Change Date** for when the changes should take effect
 
 **Saving Changes**
-4. Click **"Update"** to process the modifications
+5. Click **"Update"** to queue the modifications
 
 ## Employee Offboarding
 
 **Starting Offboarding**
-1. Click the **"Employee Leaving"** button to begin the departure process
+1. Click the **"Employee leaving"** button
 
 <br/>
 <Image img={employeeLeavingImg} alt="Employee Leaving form" className="doc-screenshot" />
@@ -98,14 +93,10 @@ The system processes this information through your configured workflows. You can
 
 ### Active Task Queue
 
-The **"Queued Tasks"** section shows what automation tasks are currently running:
+The **"Queued Tasks"** section shows what automation tasks are currently scheduled:
 
-* View tasks that are in progress
+* View tasks that are waiting to run
 * Click **"View All"** to open the full task management interface
-
-<br/>
-<Image img={queuedTasksImg} alt="Queued Tasks" className="doc-screenshot" />
-<br/><br/>
 
 **Task Management Options:**
 * You can reschedule tasks to change when they execute
@@ -113,15 +104,7 @@ The **"Queued Tasks"** section shows what automation tasks are currently running
 
 ### Historical Records
 
-The **"History"** section keeps a full audit trail:
-
-* Review all completed employee lifecycle actions
-* Click **"View All"** to see detailed historical records
-
-<br/>
-<Image img={taskHistoryImg} alt="Task History" className="doc-screenshot" />
-<br/>
-<br/>
+The **"History"** section keeps a full audit trail of completed lifecycle actions (Created User, Updated User, Deprovisioned User) with timestamps. Click **"View All"** to see detailed historical records.
 
 ### Success Confirmation
 

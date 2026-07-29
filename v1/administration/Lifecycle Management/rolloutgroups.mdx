@@ -1,6 +1,20 @@
+---
+sidebar_position: 4
+title: Rollout Groups
+---
+
 # Rollout Groups
 
-Rollout Groups let you migrate users from one Entra group to another in controlled phases, rather than moving everyone at once. This is useful when rolling out new access policies, migrating between security groups, or gradually transitioning users to a new configuration.
+import Image from '@theme/IdealImage';
+import rolloutGroupsImg from '@site/static/img/RolloutGroups.jpg';
+
+Rollout Groups let you introduce members of one group into another in controlled stages, rather than moving everyone at once. This is useful when rolling out new access policies, migrating between security groups, or gradually transitioning users to a new configuration.
+
+:::info
+Rollout Groups is currently a **beta** feature.
+:::
+
+<Image img={rolloutGroupsImg} alt="Rollout Groups configuration" className="doc-screenshot" />
 
 ## When to Use Rollout Groups
 
@@ -13,50 +27,42 @@ Rollout Groups let you migrate users from one Entra group to another in controll
 
 ### Name and Description
 
-Give your rollout group a clear name so it's easy to identify in the list. The description field is optional but useful for explaining the purpose of the migration.
+Give your rollout plan a clear name so it's easy to identify in the Saved Plans list. The description field is optional but useful for explaining the purpose of the migration.
 
 ### Source and Target Groups
 
-Start by selecting the **source group** (where users currently are) and the **target group** (where they should end up). You can also create a new Entra Security Group directly from this form if you need a new target. Adcyma will move users from source to target across the stages you define.
+Select the **Source Group** (the group containing the users to roll out) and the **Target Group** (the destination group receiving users in stages). Users who are in the source group but not yet in the target group are the rollout candidates. If you need a new target, you can create a new Entra Security Group directly from the picker.
 
-### Configuring Stages
+### Schedule and Stages
 
-Set the **number of stages** for the rollout. Adcyma divides the users evenly across all stages automatically. For example, with 100 users and 4 stages, each stage will move approximately 25 users.
+**Start At**
+The date and time the rollout begins.
 
-Set the **total rollout duration** and choose a unit (hours or days). This is the full time span of the migration. The waiting period between stages is calculated automatically based on the total duration and number of stages.
+**Rollout Duration**
+The full time span of the migration, in hours or days.
 
-These natural checkpoints give you time to verify everything is working before the next batch of users is moved.
+**Number of Stages**
+How many batches the candidates are divided into. Adcyma splits the users evenly across the stages, and the waiting period between stages is calculated from the total duration.
 
-### Triggering the Rollout
+**Transition Type**
+Choose how stages execute:
 
-You can start a rollout in two ways:
+- **Manual Rollout** - You run each stage by hand with a per-stage **Run** button when you're ready. This gives you full control and is ideal for high-stakes migrations.
+- **Scheduled Rollout** - Stages execute automatically based on the configured schedule. Use this for lower-risk migrations where you're confident in the configuration. Scheduled rollouts can be **paused** and **resumed**; manual rollouts don't need pausing since nothing happens until you run a stage.
 
-**Manual**
-Start each stage by hand when you're ready. This gives you full control and is ideal for high-stakes migrations.
+### Preview
 
-**Scheduled**
-Set a start date and time and let stages execute automatically based on the configured durations. Use this for lower-risk migrations where you're confident in the configuration.
-
-:::info
-Pause is only available in scheduled mode. Manual rollouts don't support pausing between stages.
-:::
+Before saving, the Preview table shows each stage with its start time or status, the members it will move, and its share of the rollout. You can expand a stage to see exactly which users it contains. Badges warn you if some stages would be empty.
 
 ## Monitoring Progress
 
-Once a rollout is in progress, you can track it from the sidebar. Each saved rollout shows its current progress. Click into it to see:
-
-- Which stage is currently active
-- How many users have been moved so far
-- How many users remain
-- The scheduled time for the next stage (if using scheduled mode)
-
-If something goes wrong, you can pause the rollout before the next stage executes.
+Saved plans appear in the sidebar with a progress bar, the transition mode, stage count, and time window. Click into a plan to see which stage is active, how many users have been moved, and what remains. If something goes wrong with a scheduled rollout, pause it before the next stage executes.
 
 ## Best Practices
 
 - Start with a small number of stages to validate that the migration works as expected before going broad.
 - Allow enough time between stages to gather feedback from users and verify that access is working correctly.
-- Use manual triggering for the first rollout of a new type, then switch to scheduled mode once you're confident in the process.
+- Use manual mode for the first rollout of a new type, then switch to scheduled mode once you're confident in the process.
 - Communicate the rollout schedule to affected users so they know when to expect changes.
 - Keep the source group intact until the rollout is fully complete and verified. This makes it easier to roll back if needed.
 
@@ -68,9 +74,9 @@ If users aren't moving between stages:
 - Confirm the target group exists and Adcyma has permissions to modify its membership
 
 If a stage completes with fewer users than expected:
-- Some users may have already been removed from the source group
+- Some users may have already been in the target group or removed from the source group
 - Check for membership changes that occurred outside of Adcyma
 
 If you need to stop a rollout:
-- Pause the rollout from the monitoring view
+- Pause the rollout (scheduled mode)
 - Users already moved to the target group will stay there. You'll need to move them back manually if needed.

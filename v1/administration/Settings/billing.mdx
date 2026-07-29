@@ -1,24 +1,38 @@
+---
+sidebar_position: 8
+title: Billing
+---
+
 # Billing
 
-The Billing page shows your current subscription details and lets you manage payment settings. Here you can view your plan, update payment methods, and control how user seats are allocated.
+The Billing page is where you manage your subscription, seats, and payment details. At the top, three cards summarize your **Current Plan**, **Seats** (used versus limit), and **Next Payment**.
 
-## Subscription Overview
+## Plans and Billing Interval
 
-The top of the page displays your current subscription tier and its status. This tells you which features are included in your plan and whether your subscription is active.
+New tenants start on the **free tier**. Upgrading to a paid plan is done from this page: choose a seat count (minimum 25) and a billing interval. You can switch between **Monthly** and **Annual** billing; annual saves roughly 17%. Interval changes take effect at your next renewal.
 
-## Billing Interval
-
-You can switch between monthly and yearly billing. Yearly billing typically offers a lower effective rate.
-
-## Payment and Invoices
-
-Manage your payment method and access past invoices. You can update your credit card or billing details and download invoices for your accounting records.
+Optional modules like Identity Governance are managed on the [Add-ons](./addons) page and appear as line items on your subscription.
 
 ## Seat Management
 
-Seats determine how many users Adcyma actively manages. You set a fixed seat limit manually. The minimum is 25 seats.
+Seats determine how many users Adcyma actively manages. You set a fixed seat limit, with a minimum of 25 seats.
 
-If the number of managed users is approaching your seat limit, increase it from this page before adding more users. Adcyma won't manage users beyond the seat limit.
+How seat changes apply depends on your billing interval:
+
+- **Annual plans** - Seat increases take effect immediately with a prorated charge; decreases apply at renewal
+- **Monthly plans** - All seat changes take effect at the next billing date
+
+If the number of managed users is approaching your seat limit, increase it here before adding more users. Adcyma won't manage users beyond the seat limit.
+
+## Payment and Invoices
+
+Payments are handled through Stripe. From this page you can update your payment method, open the Stripe billing portal to manage your plan, and view or download recent invoices as PDFs.
+
+If a payment fails, a banner appears prompting you to update your payment method. Update it promptly to keep your subscription active.
+
+## Manual Invoicing
+
+Some organizations are billed manually by Adcyma instead of through self-service payments. In that case the Billing page shows your plan, seats, and billing contact, and self-service payment management is disabled. Contact your account manager or hello@adcyma.com for billing questions or invoice copies. Seat limits are still enforced.
 
 ## Troubleshooting
 

@@ -19,7 +19,7 @@ Every request (except the health check) must include three headers:
 - **X-Api-User**: The username of an active API user from your tenant.
 - **X-Api-Key**: The secret key paired with that API user.
 
-API users and keys are managed in the **System Users** section of your Adcyma portal. The key is only shown once when you create it. Store it somewhere safe. If you lose it, generate a new one and revoke the old.
+API users and keys are managed in the **User Permissions** section of your Adcyma portal (create a user with the **API** role). The key is only shown once when you create it. Store it somewhere safe. If you lose it, create a new API user and delete the old one.
 
 #### Example headers
 
@@ -59,6 +59,7 @@ The HTTP status code matches the error code:
 |-------------|-------------------------|------------------------------------------------------------------------------|
 | `400`       | `BAD_REQUEST`           | A required field is missing, or a value fails validation.                    |
 | `401`       | `UNAUTHORIZED`          | API credentials are missing, mistyped, or belong to a disabled API user.     |
+| `403`       | `FORBIDDEN`             | The action is not allowed, for example when your seat limit is reached.      |
 | `404`       | `NOT_FOUND`             | The user you referenced does not exist in your tenant.                       |
 | `429`       | `RATE_LIMIT_EXCEEDED`   | You hit one of the rate limits described below.                              |
 | `500`       | `INTERNAL_ERROR`        | Unexpected server-side error. Safe to retry after a short wait.              |
@@ -75,7 +76,7 @@ Limits are evaluated on a 60-second sliding window. When you hit a limit, the re
 
 ### Request body limits
 
-- The maximum JSON request body is **16 KB**. Larger payloads are rejected before they reach the route.
+- The maximum JSON request body is **16 KB** for most endpoints. The `/v1/api/user` endpoint accepts up to **6 MB** to allow a base64-encoded profile photo.
 - All authenticated endpoints expect a JSON body (or query string on `GET`). Always send `Content-Type: application/json`.
 
 ### Health check

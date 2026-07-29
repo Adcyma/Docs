@@ -1,63 +1,75 @@
-# Identity Provider Settings
+---
+sidebar_position: 4
+title: Identity Provider
+---
+
+# Identity Provider
 
 import Image from '@theme/IdealImage';
-import idp1 from '@site/static/img/IdentityProvider1.webp';
-import idp2 from '@site/static/img/IdentityProvider2.webp';
-import idp3 from '@site/static/img/IdentityProvider3.webp';
+import idpImg from '@site/static/img/IdentityProvider2026.jpg';
+import idpSsoImg from '@site/static/img/IdentityProviderSSO.jpg';
 
-The Identity Provider Settings page lets you modify the connection between Adcyma and your external identity provider. These settings were configured during initial setup, so you'll mostly use this page to update credentials, change configurations, or troubleshoot connectivity.
+The Identity Provider page configures how Adcyma connects to your directory. It covers the core directory connection, the certificate used for Exchange Online, the on-premises Active Directory agent, and Single Sign-On.
 
-## Current Settings Overview
+<Image img={idpImg} alt="Identity Provider settings" className="doc-screenshot" />
 
-You can review and update the following connection parameters as needed:
+## Identity Provider Settings
 
-**Identity Provider**  
-Select your organization's identity provider. Microsoft Entra ID is currently supported. Google Workspace and Active Directory are coming soon.
+**Identity Provider**
+Select how your organization runs its directory:
 
-**Client ID**
-The application identifier assigned by your identity provider. Adcyma uses this to recognize and authenticate your application instance.
+- **Entra ID** - Cloud-only Microsoft Entra ID
+- **Active Directory** - On-premises Active Directory, connected through the Adcyma AD agent
+- **Hybrid (Active Directory + Entra ID)** - Both, synced through Entra Connect. Adcyma can create and manage users in either directory; see [Preferences](./preferences) for the default directory setting.
 
-**Tenant ID**
-Your organization's unique identifier in the identity provider's directory, which ensures connections go to the correct tenant.
+Google Workspace is coming soon.
 
-**Client Secret**
-A confidential authentication key from your identity provider. Keep this secure and never share or expose it publicly.
+**Client ID, Tenant ID, Client Secret**
+The credentials from your Entra ID app registration. Adcyma uses these to call Microsoft Graph for your tenant. These fields are not needed for a pure Active Directory setup. Follow the [App Registration guide](../../userguides/setupentraappregistration) to create them.
 
-<br/>
-<Image img={idp1} alt="Identity Provider connection" className="doc-screenshot" />
-<br/><br/>
+Use **Test Connection** to verify credentials before clicking **Save**.
 
-After making any necessary changes, click **Save** to update your configuration. Use the **Test Connection** button to verify your credentials are working before saving.
+## Exchange Authentication
 
-## Certificate Management
+Adcyma uses a certificate to authenticate with Exchange Online for mailbox-related operations (for example, converting user mailboxes to shared mailboxes during offboarding). This section manages the certificate lifecycle:
 
-Adcyma uses a certificate to authenticate with Exchange Online for mailbox-related operations (for example, converting user mailboxes to shared mailboxes). This section lets you manage that certificate's full lifecycle:
-
-- **Generate** a new certificate
-- **Download** the certificate to upload to your Entra ID application
-- **Test** the certificate connection to verify Exchange authentication is working
-- **Revoke** the certificate if it's been compromised or needs to be rotated
+1. **Generate Certificate** creates a new certificate
+2. **Download** the certificate file and upload it to your Entra ID application in the Azure Portal
+3. Verify the thumbprint matches in your application settings
+4. **Revoke** the certificate if it's been compromised or needs rotation
 
 :::info
 Exchange authentication is optional and only required if you want Adcyma to perform Exchange Online operations.
 :::
 
-<br/>
-<Image img={idp2} alt="Certificate management" className="doc-screenshot" />
-<br/><br/>
+## Active Directory Agent
 
-## Single Sign-On (SSO)
+Shown when your provider is Active Directory or Hybrid. The agent is a small service you install on a Windows server that can reach a domain controller; it connects Adcyma to your on-premises directory.
 
-Toggle **Enable SSO** to require all users to sign in through your configured identity provider. When disabled, users authenticate directly with Adcyma using their own credentials.
+1. Click **Register agent** and optionally note the server hostname and AD domain
+2. **Download installer** and run it on the target server
+3. The agent appears with a status badge: Waiting for first contact, Online, Offline, Suspended, or Revoked, along with its domain, version, and last-seen time
 
-<br/>
-<Image img={idp3} alt="Single Sign-On toggle" className="doc-screenshot" />
-<br/><br/>
+You can **Suspend** and **Reactivate** agents from here.
+
+## Single Sign-On
+
+The Single Sign-On section lets users sign in with Microsoft Entra ID instead of magic links.
+
+<Image img={idpSsoImg} alt="Single Sign-On settings" className="doc-screenshot" />
+
+Before enabling SSO, your Entra app registration needs:
+
+1. A **Redirect URI** under Authentication → Web, exactly as shown on this page (it ends with `/api/auth/callback/microsoft-entra-id`; a copy button is provided)
+2. The **delegated permissions** `openid`, `profile`, `email`, and `User.Read`, all consented. These are all required for SSO to work, regardless of what other permissions are already configured.
+
+Then click **Test connection**. The **Save** button is enabled only after a successful test, which prevents locking your organization out with a broken configuration. Toggle SSO on and save.
+
+See the [SSO setup guide](../../userguides/sso) for the full walkthrough.
 
 ## Managing Your Settings
 
 - Update your Client Secret when it expires or as part of regular security rotations
 - Coordinate SSO changes with your IT team to minimize user disruption
-- Test configuration changes in a non-production environment when possible
 - Keep your identity provider application permissions aligned with current Adcyma requirements
-- Rotate and re-download certificates before they expire
+- Rotate and re-upload certificates before they expire

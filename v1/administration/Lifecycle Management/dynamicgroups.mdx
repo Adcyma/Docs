@@ -1,11 +1,16 @@
+---
+sidebar_position: 3
+title: Dynamic Groups
+---
+
 # Dynamic Groups
 
 import Image from '@theme/IdealImage';
-import dynamicGroupsImg from '@site/static/img/DynamicGroups.png';
+import dynamicGroupsImg from '@site/static/img/DynamicGroups2026.jpg';
 
 Dynamic Groups let you define rules based on user attributes (like department, job title, or location) and have Adcyma automatically maintain the membership of Microsoft Entra Security Groups or Exchange Distribution Lists. No more manually adding or removing users.
 
-<Image img={dynamicGroupsImg} alt="Dynamic Groups Interface" className="doc-screenshot" />
+<Image img={dynamicGroupsImg} alt="Dynamic Groups editor" className="doc-screenshot" />
 
 ## When to Use Dynamic Groups
 
@@ -21,32 +26,30 @@ For example, you could create a "Marketing Team" group that automatically includ
 
 ### Basic Configuration
 
-**Name**
-Pick a descriptive name that indicates what the group is for. Names don't need to be unique, but something like "Marketing-FullTime-Seattle" is more helpful than "Group1".
+**Group name**
+Pick a descriptive name that indicates what the group is for. Something like "Marketing-FullTime-Stockholm" is more helpful than "Group1".
 
 **Description** *(Optional)*
 Document the group's purpose, any special rules, or important notes for future administrators. This is especially valuable for complex conditional logic.
 
-**Active/Inactive**
-Toggle a dynamic group on or off without deleting it. Inactive groups keep their configuration but won't sync membership until you reactivate them.
-
 **Target Group Type**
 Select the type of group you're managing:
-- Microsoft Entra Security Group (for access permissions and security policies)
-- Exchange Distribution List (for email distribution)
+- **Entra Security Group** (for access permissions and security policies)
+- **Exchange Distribution List** (for email distribution)
 
 **Target Group**
-Choose the existing Entra group that will be updated, or create a new Entra Security Group directly from this form. The dynamic group configuration will control the membership of this group.
+Choose the existing group that will be updated, or create a new Entra Security Group directly from this form. The dynamic group configuration controls the membership of this group.
 
-**Owner** *(Optional, requires Access Governance)*
-Assign an owner to this group. Owners can manage the Always Include and Always Exclude lists directly from the IGA Portal, which lets them handle exceptions without admin involvement.
+**Dynamic Group Owner** *(Optional, requires the Identity Governance add-on)*
+Assign an owner to this group. Owners can manage the Always Include and Always Exclude lists directly from the Access Center, which lets them handle exceptions without admin involvement.
 
-**Evaluation Frequency**
-Adcyma evaluates dynamic groups on a schedule. The next sync time is shown on the group card so you know when the next automatic update will run. You can trigger a manual sync if you need an immediate update.
+**Evaluation**
+Adcyma evaluates dynamic groups on a schedule (every 15 minutes by default). The next sync time is shown on the group card so you know when the next automatic update will run.
 
 ### Membership Rules
 
 #### Evaluation Mode
+
 Choose your approach carefully:
 
 **Relaxed Mode** *(Recommended for most cases)*
@@ -77,22 +80,25 @@ Users who should never be added, even if they match all conditions. Useful for:
 - Test accounts that shouldn't receive group benefits
 - Users with conflicting access requirements
 
-#### Conditional Blocks
-Define the automatic membership rules using user attributes.
+If a user is on both lists, exclusion wins.
 
-Common conditions:
+#### Membership Rules
+
+Define the automatic membership rules using user attributes. Rules are combined with AND logic, and each rule can be an "If" or an "If not" condition.
+
+Available attributes include: Account Enabled, Usage Type, Created Date, Preferred Language, Job Title, Company Name, Department, Employee Type, Employee Hire Date, Office Location, Manager, Is Manager, Street Address, City, State or Province, ZIP or Postal Code, Country or Region, and Usage Location.
+
+Operators include Equals, Not Equals, Starts With, Ends With, Contains, and comparison operators (Less Than, Greater Than, and so on) for date and numeric fields. Date fields also support age-based conditions, such as accounts created more than a given number of days ago.
+
+Common examples:
 - `Department equals "Marketing"` - All marketing team members
-- `Title contains "Manager"` - All people with manager in their title
-- `Office equals "Seattle"` - All Seattle-based employees
-- `EmployeeType equals "FullTime"` - Exclude contractors and temps
-
-You can combine conditions with AND logic to create precise rules:
-- `Department = "Sales"` AND `Title contains "Director"` - Only sales directors
-- `Office = "NYC"` AND `Department = "Engineering"` - NYC engineering team
+- `Job Title contains "Manager"` - All people with manager in their title
+- `Office Location equals "Stockholm"` - All Stockholm-based employees
+- `Department = "Sales"` AND `Job Title contains "Director"` - Only sales directors
 
 ### Previewing Membership
 
-Before saving, use the membership preview to see which users match your current rules. This is especially useful when using Strict Mode, so you can verify the result before it affects the actual group.
+The **Preview Members** panel shows which users match your current rules in real time, including why each user matched. This is especially useful when using Strict Mode, so you can verify the result before it affects the actual group.
 
 ## Best Practices
 
@@ -104,38 +110,12 @@ Use the description field to explain complicated conditional rules for future re
 
 Periodically review your dynamic groups to make sure they still match your organizational needs.
 
-## Common Use Cases
-
-**Department Distribution Lists**
-```
-Condition: Department = "Human Resources"
-Mode: Relaxed
-Always Include: CEO, Legal Counsel
-Result: HR team + key stakeholders for HR communications
-```
-
-**Office Security Groups**
-```
-Condition: Office = "London" AND EmployeeType = "FullTime"
-Mode: Strict
-Always Exclude: Contractors, Visitors
-Result: Full-time London employees only
-```
-
-**Project Team Access**
-```
-Condition: Department = "Engineering" AND Title contains "Senior"
-Mode: Relaxed
-Always Include: Project Manager, Product Owner
-Result: Senior engineers + project leadership
-```
-
 ## Troubleshooting
 
 If users aren't being added:
 - Verify user attributes match your conditions exactly
 - Check spelling and capitalization in your rules
-- Confirm the user exists in Entra with the expected attributes
+- Confirm the user exists in your directory with the expected attributes
 
 If members are unexpectedly removed:
 - Review if you're using Strict Mode unintentionally
@@ -144,5 +124,4 @@ If members are unexpectedly removed:
 
 If the group isn't updating:
 - Dynamic group evaluations run on a schedule. Check the "Next sync" time on the group card.
-- Trigger a manual sync for an immediate update
 - Check that the target group is correctly selected

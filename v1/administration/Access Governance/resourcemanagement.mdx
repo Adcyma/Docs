@@ -1,0 +1,101 @@
+---
+sidebar_position: 3
+title: Resource Management
+---
+
+# Resource Management
+
+import Image from '@theme/IdealImage';
+import resourceManagementImg from '@site/static/img/ResourceManagement.jpg';
+
+Resource Management is where you build your organization's access catalog. Each resource represents something users can request access to, like an application, a shared drive, or a physical location, controlled through group membership. What you configure here is what end users see in the [Access Center](./accesscenter) when they request access.
+
+<Image img={resourceManagementImg} alt="Resource Management" className="doc-screenshot" />
+
+## When to Use Resource Management
+
+- Setting up a self-service access request system for your organization
+- Defining what resources are available for users to request
+- Connecting resources to approval workflows for governed access
+- Controlling how long users can retain access to specific resources
+
+## Page Overview
+
+At the top, stat cards show your **Active Resources**, **Total Users** across resources, **Pending Approvals** (click through to Pending Requests), and this month's **Approval Rate**.
+
+Below, the **Configured Resources** list shows every resource, grouped by organizational unit. Each resource card shows its status, category, owner, user count, requests this month, maximum access duration, and whether it auto-approves or which approval workflow it uses. Click **Configure** to edit it.
+
+:::info
+At least one [Approval Flow](./approvalflows) must exist before you can add resources or units. The page guides you to create one first.
+:::
+
+## Organizational Units
+
+Organizational units are folders that group related resources, which keeps a large catalog easy to navigate. Use **Add Unit** to create one, and assign resources to it when creating or editing them. Resources without a unit appear under "Individual Resources". Deleting a unit doesn't delete its resources; they move to Individual Resources.
+
+## Categories
+
+Categories label resources so users can recognize what kind of thing they're requesting. New tenants start with default categories:
+
+- **Application** - Software and SaaS tools
+- **Infrastructure** - Servers, VPNs, cloud environments
+- **Physical Access** - Building access, badge permissions
+- **Data & Files** - Shared drives, SharePoint sites, databases
+- **Administrative Access** - Admin tools and elevated permissions
+- **Communication & Collaboration** - Messaging, meeting, and collaboration tools
+
+Use **Manage Categories** to add, edit, or delete categories, including their icon and badge color.
+
+## Creating a Resource
+
+### Basic Information
+
+**Resource Name**
+A clear, user-friendly name that describes the resource (e.g., "Salesforce CRM", "Stockholm Office Badge Access", "Engineering Shared Drive").
+
+**Description**
+Explain what the resource provides, who it's intended for, and any prerequisites. This is what users read before deciding to request access, so be specific.
+
+**Category** and **Organizational Unit**
+Where the resource appears in the catalog and how it's labeled.
+
+### Access Configuration
+
+**Resource Owner**
+The user responsible for this resource. Owners see their resources in the Access Center and can be used as approvers via the Resource Owner approver type.
+
+**Allow owner to manage members**
+When enabled, the resource owner can add and remove members directly from the Access Center without going through the approval process. Useful for resources where the owner is best positioned to make access decisions. When disabled, owners get view-only visibility.
+
+**Target Groups**
+One or more groups that granting this resource adds the user to. When a request is approved, Adcyma adds the user to these groups. When access expires or is revoked, they're removed. Groups from on-premises Active Directory are marked with an "AD" badge.
+
+**Max Access Duration**
+The longest period a user can request access for: 1, 3, 6, or 12 months, or Permanent. Setting a maximum prevents users from requesting indefinite access to sensitive resources.
+
+**Approval**
+Either select an **Approval Workflow** that governs requests for this resource, or enable **Auto Approve** to skip the approval workflow and provision access immediately. Use Auto Approve only for low-sensitivity resources where manual review isn't needed.
+
+## Best Practices
+
+- Write detailed descriptions for each resource. Users who understand what they're requesting submit better justifications, which makes the approval process faster.
+- Use organizational units and categories consistently. A well-organized catalog is easier for users to navigate.
+- Set maximum durations appropriate to the sensitivity of the resource. Highly sensitive data should have shorter maximum durations.
+- Assign resource owners who are close to the resource. They'll make better access decisions than a centralized admin team.
+- Use Auto Approve only for genuinely low-risk resources to avoid bypassing oversight where it matters.
+- Review your catalog periodically and remove resources that are no longer needed.
+
+## Troubleshooting
+
+If a resource doesn't appear in the Access Center:
+- Verify the resource has been saved and is active
+- Check that the resource has a linked approval workflow (or Auto Approve enabled)
+- Confirm the target group exists in your directory
+
+If users are getting access to the wrong group:
+- Review the target group configuration for the resource
+- Verify you haven't accidentally linked the wrong group
+
+If access isn't being provisioned after approval:
+- Check that Adcyma has permissions to modify the target group
+- Review the [Request Log](./requestlog) for any error events related to the request

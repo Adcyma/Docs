@@ -5,11 +5,11 @@ title: Authentication
 
 # Authentication
 
-Adcyma supports two authentication methods: Magic Links (default) and Microsoft Entra ID Single Sign-On (recommended). There is no password-based authentication.
+Signing in to Adcyma starts with your email address. Based on your organization's configuration, Adcyma then routes you to the right method: **Magic Links** (the default), **Microsoft Entra ID Single Sign-On** (recommended), or password sign-in where an organization has specifically enabled it.
 
-> **Zero-Password Security**
+> **Passwordless by default**
 >
-> Adcyma does not store or manage user passwords. This eliminates risks from password breaches, weak passwords, and credential stuffing attacks.
+> New Adcyma organizations use passwordless authentication. Magic links and SSO eliminate risks from password breaches, weak passwords, and credential stuffing attacks.
 
 ## Magic Links (Default)
 
@@ -17,14 +17,16 @@ Magic Links provide passwordless access by sending a time-limited login link to 
 
 ### How it works
 
-1. User enters their email address on the login page
+1. Enter your email address on the login page
 2. The system generates a cryptographically secure token and sends a link to that address
-3. User clicks the link and gets an active session in Adcyma
+3. Click the link to get an active session in Adcyma
+
+The email also contains a **one-time code**. If you're reading the email on a different device than the one you started signing in on, type the code into the login page instead of clicking the link.
 
 ### Security details
 
-- Links expire after 15 minutes and are single-use
-- Rate limited to 5 requests per hour per email address
+- Links and codes are time-limited and single-use
+- Requests are rate limited per email address
 - Session duration is configurable with automatic extension
 
 ## Microsoft Entra ID SSO (Recommended)
@@ -33,11 +35,10 @@ SSO integrates with your Microsoft identity infrastructure. When enabled, users 
 
 ### How it works
 
-1. User accesses Adcyma
-2. Adcyma redirects to your Microsoft Entra ID tenant
-3. User authenticates with their Microsoft credentials
-4. Entra ID redirects back with an authentication token
-5. User has access to Adcyma with the appropriate permissions
+1. Enter your email address on the Adcyma login page
+2. Adcyma recognizes your organization's domain and redirects to your Microsoft Entra ID tenant
+3. Authenticate with your Microsoft credentials
+4. Entra ID redirects back and you're signed in with the appropriate permissions
 
 ### Why SSO is recommended
 
@@ -48,13 +49,13 @@ SSO integrates with your Microsoft identity infrastructure. When enabled, users 
 
 ### Switching authentication methods
 
-Administrators can enable or disable SSO at any time through Adcyma's Identity provider settings. When SSO is active, Magic Links are automatically disabled. When SSO is turned off, Magic Links become available again immediately.
+Administrators can enable or disable SSO at any time through Adcyma's [Identity Provider settings](./administration/Settings/identityprovider). When SSO is active, magic links are automatically disabled. When SSO is turned off, magic links become available again immediately. If SSO is misbehaving, users can also reach the fallback sign-in from the SSO error page.
 
 ## Choosing a method
 
-Use SSO if you have a Microsoft Entra ID tenant (Office 365 or standalone) and want centralized identity management. You need user accounts in Entra ID and administrator access to configure the integration.
+Use SSO if you have a Microsoft Entra ID tenant (Microsoft 365 or standalone) and want centralized identity management. You need user accounts in Entra ID and administrator access to configure the integration; see the [SSO setup guide](./userguides/sso).
 
-Use Magic Links if you need quick deployment without Microsoft infrastructure, or for temporary and project-based access.
+Use Magic Links if you need quick deployment without extra Microsoft configuration, or for temporary and project-based access.
 
 ## Account recovery
 
@@ -79,8 +80,7 @@ When contacting support, have the following ready: organization details from ini
 
 - Use corporate email addresses when possible
 - Set up SPF, DKIM, and DMARC for your domain
-- Tell users to check email promptly, never share links, and use them from the same device they requested on
-- Report suspicious authentication emails to your security team
+- Tell users to check email promptly, never share links or codes, and report suspicious authentication emails to your security team
 
 ### SSO
 
@@ -93,33 +93,18 @@ When contacting support, have the following ready: organization details from ini
 
 ### Magic Links
 
-If you did not receive an email, check spam/junk folders, verify the email address spelling, and make sure your corporate email server is not blocking emails from support@adcyma.com. If the problem persists, wait an hour (rate limiting) and try again.
+If you did not receive an email, check spam/junk folders, verify the email address spelling, and make sure your corporate email server is not blocking emails from Adcyma. If the problem persists, wait a while (rate limiting) and try again.
 
-Links expire after 15 minutes and are single-use. If a link is expired or already used, request a new one. Use the same device and browser when possible.
+Links are time-limited and single-use. If a link is expired or already used, request a new one. If you're on a different device than the one you requested from, use the one-time code from the email instead.
 
 ### SSO
 
-If you cannot access Adcyma, verify that your Microsoft account has appropriate permissions and is active in Entra ID, and check your group memberships. Contact your IT administrator for access issues.
+If you cannot access Adcyma, verify that your Microsoft account has appropriate permissions and is active in Entra ID. Contact your IT administrator for access issues.
 
-For redirect problems, clear your browser cache and cookies, try a different browser or incognito mode, disable browser extensions temporarily, and verify you are using the correct Adcyma organization URL.
+For redirect problems, clear your browser cache and cookies, try a different browser or incognito mode, disable browser extensions temporarily, and verify you are using the correct Adcyma URL.
 
 Administrators can disable SSO to restore Magic Link access as a fallback. Contact Adcyma Support with company verification details if needed.
 
-## Enabling and disabling SSO
-
-To enable SSO:
-
-1. Configure Microsoft Entra ID integration in Adcyma's Identity provider settings
-2. Notify users of the change
-3. Enable SSO (Magic Links are automatically disabled)
-
-To disable SSO:
-
-1. Open Adcyma's Identity provider settings
-2. Disable SSO authentication
-3. Magic Links become available immediately
-4. Notify users of the authentication method change
-
 ## Getting started
 
-Adcyma starts with Magic Links enabled by default. Administrators can enable Microsoft Entra ID SSO at any time and switch back if needed. For help configuring SSO, contact Adcyma support.
+Adcyma starts with Magic Links enabled by default. Administrators can enable Microsoft Entra ID SSO at any time and switch back if needed. See [Setting Up Single Sign-On](./userguides/sso) for the walkthrough.

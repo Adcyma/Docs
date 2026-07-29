@@ -1,0 +1,54 @@
+---
+sidebar_position: 1
+title: User Permissions
+---
+
+# User Permissions
+
+import Image from '@theme/IdealImage';
+import userPermissionsImg from '@site/static/img/UserPermissions.jpg';
+
+The User Permissions page is where you manage who can access the Adcyma platform itself and what they're allowed to do: administrators, internal users, and API keys for your tenant. These accounts are separate from the managed users in your directory.
+
+<Image img={userPermissionsImg} alt="User Permissions" className="doc-screenshot" />
+
+:::info Important Distinction
+Accounts on this page grant access to the Adcyma platform only. They are **not provisioned to your directory** and are separate from your organization's managed user population.
+:::
+
+## Roles
+
+Adcyma has four role levels:
+
+### Admin
+The highest privilege level. Admins have full access to all Adcyma functions, including the Administration area, the People Hub, and the Access Center. They can create, edit, and delete platform users and modify all settings.
+
+### People Hub User
+Access to the People Hub dashboard: onboarding new employees, editing employee details, offboarding, and viewing queued tasks and history. No access to the Administration area.
+
+### Access Center User
+Access to the Access Center: requesting access, acting on approvals, and managing owned resources. This role is granted automatically to managed users synced from your identity provider; it can't be assigned manually.
+
+### API
+A machine account used for Adcyma's [REST API](../../api/overview). API users authenticate with an API key instead of signing in.
+
+## Managing Users
+
+The table lists every account with its username or email, name, role, status (Active/Inactive), and creation date. You can search, filter by role, sort by any column, and page through large lists.
+
+**Add User**
+Click **Add User** and choose a role. For Admin and People Hub users, enter their email and name; they'll sign in with their email address. For API users, enter a username instead.
+
+**Edit**
+Update a user's name or change their role. API users can't be edited; create a new API user if you need different settings.
+
+**Delete or Disable**
+Accounts created in Adcyma can be deleted. Accounts synced from your identity provider (marked "Synced from IDP") can't be deleted here; instead you can disable or re-enable them, which controls whether they can sign in.
+
+## API Keys
+
+When you create an API user, the API key is displayed **once** in a confirmation dialog with a copy button. Store it somewhere safe; it cannot be retrieved later. If you lose a key, create a new API user and delete the old one.
+
+## Best Practices
+
+Assign the minimum role necessary for each user's responsibilities. Review accounts and role assignments periodically to make sure they still match current needs. Create accounts promptly for new team members and remove access for departing personnel. Rotate API keys when team members with access to them leave.

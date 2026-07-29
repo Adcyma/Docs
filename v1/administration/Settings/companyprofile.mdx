@@ -1,23 +1,30 @@
+---
+sidebar_position: 6
+title: Company Profile
+---
+
 # Company Profile
 
 import Image from '@theme/IdealImage';
-import companyProfileImg from '@site/static/img/CompanyProfile.webp';
+import companyProfileImg from '@site/static/img/CompanyProfile2026.jpg';
 
 The Company Profile page shows your organization's registered information in Adcyma, including identification details and contact info used for communication and support.
 
+<Image img={companyProfileImg} alt="Company Profile" className="doc-screenshot" />
+
 ## What You Can View
 
-As an administrator, you can view these identifiers:
+These identifiers are read-only:
 
-- Company Name
-- Adcyma Company ID
+- **Company name**
+- **Adcyma Company ID** (this is the value you use as `X-Company-ID` when calling the [API](../../api/overview))
 
 ## What You Can Manage
 
 You can edit the following contact and location fields:
 
 - Street
-- Zip Code
+- Zip code
 - City
 - State
 - Country
@@ -25,9 +32,7 @@ You can edit the following contact and location fields:
 - First Contact Email
 - First Contact Phone
 
-<br/>
-<Image img={companyProfileImg} alt="Company Profile" className="doc-screenshot" />
-<br/>
+Click **Save** to store your changes.
 
 ## Purpose and Usage
 

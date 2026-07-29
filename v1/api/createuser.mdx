@@ -31,6 +31,7 @@ import TabItem from '@theme/TabItem';
 - **preferredLanguage**: BCP-47 language tag, e.g. `en-US`, `sv-SE`.
 - **accountEnabled**: `true` to enable the account on creation, `false` to create it disabled. Defaults to `true`.
 - **manager**: UPN of the user's manager. The manager must already exist in your tenant.
+- **profilePhoto**: Base64-encoded profile photo for the new user. The request body limit for this endpoint is 6 MB to accommodate the photo.
 - **date**: Provisioning date in `YYYY-MM-DD` (Stockholm time). Combined with `time` to schedule when the user is created. Defaults to "now" if omitted.
 - **time**: Provisioning time in `HH:mm` (Stockholm time). Defaults to `00:00` if `date` is provided without `time`.
 

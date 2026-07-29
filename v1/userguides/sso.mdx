@@ -21,11 +21,25 @@ This guide walks you through connecting Adcyma to your Microsoft Entra ID tenant
 
 ## Step 1: Create an App Registration
 
-If you have not done this yet, follow the [App Registration setup guide](./setupentraappregistration) to create the application in Entra ID and generate a client secret. You will need the **Tenant ID**, **Application (Client) ID**, and **Client Secret** in Step 3 below.
+If you have not done this yet, follow the [App Registration setup guide](./setupentraappregistration) to create the application in Entra ID and generate a client secret. You will need the **Tenant ID**, **Application (Client) ID**, and **Client Secret** entered in Adcyma's Identity Provider settings.
 
 ---
 
-## Step 2: Configure API Permissions
+## Step 2: Add the Redirect URI
+
+1. In the Azure Portal, open **Entra ID** → **App registrations** and select the app registration you use for Adcyma
+2. Go to **Authentication** → **Add a platform** → **Web** (or edit the existing Web platform)
+3. Add the redirect URI shown in Adcyma under **Administration** → **Settings** → **Identity Provider** → **Single Sign-On**. It has this shape and ends with `/api/auth/callback/microsoft-entra-id`:
+
+```
+https://portal.adcyma.com/api/auth/callback/microsoft-entra-id
+```
+
+Use the copy button on the Identity Provider page to get the exact value for your environment.
+
+---
+
+## Step 3: Configure API Permissions
 
 In your app registration, navigate to **API permissions** and add the following **Delegated** permissions under **Microsoft Graph**. These are used for the sign-in flow only.
 
@@ -39,29 +53,19 @@ In your app registration, navigate to **API permissions** and add the following 
 After adding all four permissions, click **Grant admin consent for [your organization]** and confirm.
 
 :::info
-These cover the sign-in flow only. The permissions Adcyma needs to manage users and groups (like `User.ReadWrite.All`) are set up separately in the [App Registration guide](./setupentraappregistration).
+All four are required for SSO to work, regardless of what other permissions are already configured. They cover the sign-in flow only. The application permissions Adcyma needs to manage users and groups (like `User.ReadWrite.All`) are set up separately in the [App Registration guide](./setupentraappregistration).
 :::
 
 ---
 
-## Step 3: Enter Credentials in Adcyma
+## Step 4: Test and Enable SSO
 
-1. In Adcyma, open **Administration** → **Settings** → **Identity Provider**
-2. Set **Identity Provider** to **Microsoft Entra ID**
-3. Enter your **Client ID**, **Tenant ID**, and **Client Secret**
-4. Click **Save**
+1. In Adcyma, open **Administration** → **Settings** → **Identity Provider** and scroll to the **Single Sign-On** section
+2. Click **Test connection**. The **Save** button stays disabled until a test succeeds, so a broken configuration can't lock your organization out.
+3. Toggle SSO on and click **Save**
+4. Notify your users. From this point, all logins go through Entra ID and Magic Links are disabled.
 
-Adcyma uses these credentials to connect to Microsoft Graph for your tenant.
-
----
-
-## Step 4: Enable SSO
-
-1. On the **Identity Provider** settings page, scroll to the **Single Sign-On** section
-2. Toggle **Enable SSO** on
-3. Notify your users — from this point, all logins go through Entra ID and Magic Links are disabled
-
-To verify it is working, open a private browser window and navigate to your Adcyma login page. You should be redirected to the Microsoft login prompt instead of seeing the Magic Link form.
+To verify it is working, open a private browser window and navigate to your Adcyma login page. After entering an email address on your domain, you should be redirected to the Microsoft login prompt instead of receiving a Magic Link.
 
 ---
 
@@ -70,7 +74,7 @@ To verify it is working, open a private browser window and navigate to your Adcy
 To revert to Magic Links:
 
 1. Open **Administration** → **Settings** → **Identity Provider**
-2. Toggle **Enable SSO** off
+2. Toggle SSO off and save
 3. Magic Links become available immediately
 
 Disabling SSO is useful as a temporary fallback if users lose Entra ID access. You can re-enable it at any time without re-entering credentials.
@@ -79,9 +83,8 @@ Disabling SSO is useful as a temporary fallback if users lose Entra ID access. Y
 
 ## Troubleshooting
 
-**Users are redirected to Microsoft but get an error**  
-Check that the Tenant ID and Client ID are correct and that admin consent has been granted for all required permissions.
+**Users are redirected to Microsoft but get an error**
+Check that the Tenant ID and Client ID are correct, the redirect URI matches exactly, and admin consent has been granted for all four delegated permissions.
 
-**Sign-in completes on Microsoft but fails to land in Adcyma**  
-The user's email address in Entra ID must match the address registered in Adcyma. If they differ, contact support.
-
+**Sign-in completes on Microsoft but fails to land in Adcyma**
+The user's email address in Entra ID must match an account in Adcyma. Managed users get Access Center accounts automatically through sync; platform accounts are managed under **Settings** → **User Permissions**. If the addresses differ, contact support.

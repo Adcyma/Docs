@@ -1,47 +1,61 @@
+---
+sidebar_position: 3
+title: Preferences
+---
+
 # Preferences
 
 import Image from '@theme/IdealImage';
-import preferencesImg from '@site/static/img/Preferences.webp';
+import preferencesImg from '@site/static/img/Preferences2026.jpg';
 
-The Preferences page lets you set formatting rules for how Adcyma creates and displays user identity information. These settings keep things consistent across all new users and align with your naming conventions and email policies.
+The Preferences page controls how Adcyma formats usernames, display names, and email addresses for new users, along with a few tenant-wide behavior settings. These settings keep identities consistent and aligned with your naming conventions and email policies.
 
-## Configurable Format Options
+<Image img={preferencesImg} alt="Name and Email Preferences" className="doc-screenshot" />
 
-Use the dropdown menus to select your preferred format for each attribute:
+:::info Important Note
+Formatting preferences **only apply to newly created users** and will not modify existing user accounts. Current users keep their existing UPN, email, and display name until manually updated.
+:::
 
-**User Principal Name (UPN)**
-How the primary login identifier is structured for new users.
+## Name Formats
 
-**Display Name Format**
-How user names appear in the system and in communications.
+**UserPrincipalName format**
+How the primary login identifier is structured. Options include `firstname.lastname`, `flastname`, `firstnamel`, `firlas`, `fila`, and ID-based formats.
 
-**Email Address Format**
-How email addresses are constructed for new users.
+**Display name format**
+How user names appear in the system: `Firstname Lastname`, `Lastname Firstname`, `Lastname, Firstname`, `F Lastname`, or `Firstname L`.
 
-**Primary Domain**
-The domain used when generating email addresses and UPNs for new users. Select from the domains available in your Entra configuration.
+## Email Settings
+
+**Primary domain**
+The domain used when generating email addresses and UPNs for new users, selected from the domains available in your directory configuration.
+
+**Email format**
+How email addresses are constructed, with the same format options as the UPN.
 
 ## Advanced Name Settings
 
-The Advanced Name Settings section gives you finer control over how Adcyma handles special cases in names:
+Fine-grained control over how names are processed before formats are applied:
 
-- **Whitespace in Names** - Whether spaces in names are kept, removed, or replaced
-- **Special Characters** - How accented and non-ASCII characters are handled
-- **Hyphens in Names** - Whether hyphens in hyphenated names are kept or removed
-- **Duplicate Names** - How Adcyma resolves conflicts when two users would generate the same UPN or email
+- **Whitespace in Names** - Remove spaces (maryjane), replace with hyphen (mary-jane), use first part only (mary), or use last part only (jane)
+- **Special Characters** - Standard transliteration (ö → o, ä → a, å → a) or extended (ö → oe, ä → ae, å → aa)
+- **Hyphens in Names** - Remove hyphens (annaliisa) or keep them (anna-liisa)
+- **Duplicate Names** - How conflicts are resolved when two users would generate the same UPN or email: append a number (john.smith2), append with a dot (john.smith.2), or use the middle initial (john.m.smith)
 
 ## Preview Settings
 
-Use the preview section to test how your format settings will look in practice. Enter a sample first name, last name, middle name, and ID to see the generated UPN, display name, and email in real time.
+Enter a sample first name, last name, middle name, and ID to see the generated UPN, display name, and email in real time, including what happens on a duplicate. Try names with spaces, hyphens, or accented characters to verify your advanced settings behave the way you expect.
 
-:::info Important Note
-These formatting preferences **only apply to newly created users** and will not modify the format of existing user accounts. Current users will retain their existing UPN, email, and display name formats until manually updated.
-:::
+Click **Save Changes** to apply. Changes affect new users only.
 
-<br/>
-<Image img={preferencesImg} alt="Preferences" className="doc-screenshot" />
+## New User Accounts (Hybrid Tenants)
 
-After making your selections, click **Save Changes** to apply them.
+If your tenant runs in Hybrid mode (Active Directory + Entra ID), an additional card lets you choose which directory new user accounts are created in by default: **Active Directory** or **Entra ID**. Accounts created in Active Directory sync to Entra ID through Entra Connect. See [Identity Provider](./identityprovider) for directory modes.
+
+## Protected Groups
+
+Protected Groups are groups that the "Remove from All Groups" workflow action will never remove a user from. Use this to safeguard memberships that must survive offboarding automation, such as the Adcyma managed group itself or litigation hold groups.
+
+Add groups from the picker or paste a raw object ID. Changes to this list are saved automatically.
 
 ## Tips
 

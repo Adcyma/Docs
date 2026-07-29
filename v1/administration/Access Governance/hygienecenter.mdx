@@ -1,0 +1,86 @@
+---
+sidebar_position: 1
+title: Hygiene Center
+---
+
+# Hygiene Center
+
+import Image from '@theme/IdealImage';
+import hygieneImg from '@site/static/img/HygieneCenter.jpg';
+
+The Hygiene Center helps you find unused groups and inactive user accounts that may be candidates for cleanup. Over time, organizations accumulate groups nobody uses and accounts nobody signs in to. The Hygiene Center surfaces both so you can make informed decisions about what to keep and what to remove.
+
+:::info
+The Hygiene Center is currently a **beta** feature. It is read-only: it reports findings and exports them, but it does not delete anything for you.
+:::
+
+<Image img={hygieneImg} alt="Hygiene Center" className="doc-screenshot" />
+
+## When to Use the Hygiene Center
+
+- Periodic tenant hygiene reviews to reduce group sprawl
+- Finding stale accounts that should be disabled or removed
+- Preparing for a migration or consolidation where you need a clean inventory
+- Compliance exercises that require justification for every active group and account
+
+## Unused Groups
+
+The **Unused Groups** tab lists groups that appear to be inactive.
+
+**Filters**
+
+- **Min age (days)** - Only show groups older than a certain number of days, so recently created groups that haven't had time to be used yet aren't flagged.
+
+The results table shows:
+
+| Column | Description |
+|---|---|
+| Display name | The group's name in your directory |
+| Object ID | The unique object identifier (with a copy button) |
+| Category | Group type (Security, Distribution, etc.) |
+| Members | Current member count |
+| Age (days) | How many days since the group was created |
+| Reason | Why the group was flagged (e.g., zero members, all members disabled) |
+
+Notes on how groups are evaluated:
+
+- Only user memberships are counted; device memberships are not included.
+- Microsoft 365 groups (including Teams) aren't checked, because their memberships can't be reliably read through the same path. The page tells you how many M365 groups were skipped.
+
+## Ghost Users
+
+The **Ghost Users** tab lists user accounts that look abandoned.
+
+**Filters**
+
+- **Inactive threshold (days)** - Flag users with no sign-in activity for this many days (default 90)
+- **Disabled older than (days)** - Flag disabled accounts older than this (default 180)
+- **Include never signed in** - Whether accounts that have never signed in are included (default on)
+
+The results table shows Display name, UPN, Status (Enabled/Disabled), Last sign-in, Days inactive, Department, and the Reasons the account was flagged. Results are capped at the top 500.
+
+### Sign-in Activity Permission
+
+Detecting inactive accounts requires reading sign-in activity from Entra ID. If that data is unavailable, a banner appears above the tabs explaining that you need to grant the **AuditLog.Read.All** application permission on your Entra app registration (your tenant also needs Microsoft Entra ID P1 or higher). The banner links directly to your Azure app registration and has an "I've granted it, re-check" button. Until the permission is granted, ghost user detection falls back to reporting stale disabled accounts only.
+
+## Exporting Results
+
+Each tab has a **Download CSV** button that exports the filtered results for offline review or to share with stakeholders who need to approve cleanup.
+
+## Best Practices
+
+- Schedule regular hygiene reviews (quarterly is a good starting point) to keep your tenant clean.
+- Start with a high minimum age filter (e.g., 180 days) and work your way down. This surfaces the most obvious cleanup targets first.
+- Always verify with group owners before deleting a group. A group with zero members might still have a purpose, for example if it's used as a target for Dynamic Groups or Approval Flows.
+- Use the CSV export to circulate a cleanup proposal with department leads before making changes.
+- Document your hygiene decisions so future reviews don't re-evaluate groups that were intentionally kept.
+
+## Troubleshooting
+
+If no groups appear in the results:
+- Lower the minimum age filter
+- Verify that your directory connection is active and syncing
+
+If a group is flagged but shouldn't be:
+- The Hygiene Center uses heuristics based on membership and activity. A group may still be valid even if flagged.
+- Use the Reason column to understand why it was surfaced and make your own judgment.
