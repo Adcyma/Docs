@@ -1,0 +1,59 @@
+---
+sidebar_position: 6
+title: API Quickstart
+---
+
+# API Quickstart
+
+This guide takes you from zero to your first Adcyma API call in about five minutes. The API lets you create, update, look up, and offboard users from your own systems, for example from an HR platform or an internal tool.
+
+## Step 1: Find your Company ID
+
+In Adcyma, open **Administration** → **Settings** → **Company Profile** and copy the **Adcyma Company ID**. You'll send it as the `X-Company-ID` header on every request.
+
+## Step 2: Create an API user
+
+1. Open **Administration** → **Settings** → **User Permissions**
+2. Click **Add User** and choose the **API** role
+3. Enter a username, for example `hr-sync-bot`
+4. Click create. The API key is shown **once** in a dialog with a copy button. Store it in your secrets manager now; it cannot be retrieved later.
+
+## Step 3: Make your first call
+
+Verify your credentials with a lookup of any existing user:
+
+```bash
+curl "https://api.adcyma.com/v1/api/user?userPrincipalName=anna.eriksson@yourdomain.com" \
+  -H "X-Company-ID: YourCompany-1a2b3c4d" \
+  -H "X-Api-User: hr-sync-bot" \
+  -H "X-Api-Key: <your-secret-key>"
+```
+
+A `200` response with a `data.user` object means everything is wired up. A `401` means one of the three headers is wrong or the API user is disabled.
+
+## Step 4: Create a user
+
+```bash
+curl -X POST "https://api.adcyma.com/v1/api/user" \
+  -H "X-Company-ID: YourCompany-1a2b3c4d" \
+  -H "X-Api-User: hr-sync-bot" \
+  -H "X-Api-Key: <your-secret-key>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "firstname": "John",
+    "surname": "Doe",
+    "jobTitle": "Software Engineer",
+    "department": "Engineering",
+    "manager": "jane.smith@yourdomain.com",
+    "date": "2026-09-01",
+    "time": "08:00"
+  }'
+```
+
+User creation is asynchronous: the request is queued, your workflows run, and the account appears in your directory at the scheduled time. The UPN and email address are generated from your [Preferences](../administration/Settings/preferences), so you don't pass them in.
+
+## Where to go next
+
+- The full endpoint reference lives in the [API section](../api/overview): [Create](../api/createuser), [Get](../api/getuser), [Update](../api/updateuser), and [Delete User](../api/deleteuser)
+- Rate limits, error codes, and the response envelope are described in the [API Overview](../api/overview)
+- Everything you do through the API shows up in the People Hub task queue and [System Logs](../administration/Compliance/logs), just like manual actions

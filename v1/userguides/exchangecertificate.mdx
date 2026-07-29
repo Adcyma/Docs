@@ -1,0 +1,57 @@
+---
+sidebar_position: 5
+title: Connecting Exchange Online
+---
+
+# Connecting Exchange Online
+
+Adcyma authenticates to Exchange Online with a certificate so your workflows can automate mailbox tasks. This guide walks through generating the certificate, uploading it to your Entra app registration, and testing the connection.
+
+## What Exchange automation enables
+
+With Exchange connected, workflow actions can:
+
+- Convert a leaver's mailbox to a **shared mailbox**
+- Set **mailbox forwarding** to a manager or colleague
+- Configure **out-of-office auto-replies**
+- Grant **send-on-behalf** permissions
+- Set **calendar permissions**
+- Manage **distribution list** membership
+
+Exchange authentication is optional; if you don't use these actions, you can skip this setup.
+
+## Prerequisites
+
+- The Adcyma Entra app registration set up per the [App Registration guide](./setupentraappregistration), including the optional **Exchange Online** section (the `Exchange.ManageAsApp` application permission and the Exchange role assignment described there)
+- Access to the Azure Portal with rights to upload certificates to the app registration
+- Administrator access in Adcyma
+
+## Step 1: Generate the certificate
+
+1. In Adcyma, open **Administration** → **Settings** → **Identity Provider**
+2. In the **Exchange Authentication** card, click **Generate Certificate**
+
+Adcyma creates a certificate that is **valid for one year**. The private key is generated and stored encrypted inside Adcyma; it never leaves the platform. What you download and upload is only the public certificate.
+
+## Step 2: Download and upload it to Entra ID
+
+1. Click **Download Certificate**. You get a `.cer` file named after the certificate's thumbprint.
+2. In the Azure Portal, open **Entra ID** → **App registrations** and select the app registration you use for Adcyma
+3. Go to **Certificates & secrets** → **Certificates** → **Upload certificate** and upload the `.cer` file
+4. Compare the **thumbprint** shown in Azure with the one displayed in Adcyma; they must match exactly
+
+## Step 3: Test the connection
+
+Back in Adcyma, use the **Test** action in the Exchange Authentication card. A successful test means Adcyma can open an Exchange Online session with the certificate, and mailbox workflow actions are ready to use.
+
+If the test fails:
+- Confirm the certificate was uploaded to the **same app registration** whose Client ID is configured in Adcyma
+- Verify the Exchange Online permissions and role assignment from the [App Registration guide](./setupentraappregistration) are in place and admin consent is granted
+- Give Azure a few minutes after uploading; propagation isn't always instant
+
+## Renewal and revocation
+
+The certificate's status, thumbprint, and expiry date are shown on the Identity Provider page.
+
+- **Renewal**: before the certificate expires, generate a new one, download it, and upload it to the app registration again. You can remove the old certificate from Azure once the new one tests successfully.
+- **Revoke**: if the certificate is compromised or you're decommissioning the integration, click **Revoke Certificate**. This invalidates it permanently; Exchange workflow actions stop working until a new certificate is set up.

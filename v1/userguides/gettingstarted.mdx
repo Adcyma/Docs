@@ -1,0 +1,68 @@
+---
+sidebar_position: 1
+title: Getting Started
+---
+
+# Getting Started with Adcyma
+
+This guide takes you from creating an account to a fully connected tenant: sign-up, connecting your directory, choosing which users Adcyma manages, and inviting your team.
+
+## Step 1: Create your account
+
+Go to [portal.adcyma.com](https://portal.adcyma.com) and start the sign-up. It has three short steps:
+
+1. **About You** - Your first name, last name, and work email. A business email address is required; personal addresses (Gmail, Outlook, and similar) are not accepted.
+2. **Your Company** - Company name and address, plus an optional VAT number (used for EU reverse charge invoicing).
+3. **Review** - Confirm your details and accept the terms of service.
+
+After you click **Create your account**, you'll receive a confirmation email with your sign-in link. Adcyma is passwordless: you sign in with a magic link (or the one-time code from the same email). See [Authentication](../authentication) for details.
+
+## Step 2: Connect your identity provider
+
+The first time you sign in, the setup wizard walks you through connecting Adcyma to your directory.
+
+Select **Microsoft Entra ID** and enter the **Client ID**, **Tenant ID**, and **Client Secret** from your Entra app registration. If you haven't created one yet, follow the [App Registration guide](./setupentraappregistration) first; it lists the exact Graph permissions Adcyma needs.
+
+Adcyma tests the connection, saves the settings, and then syncs your directory: groups, departments, and job titles are pulled in automatically so the rest of the setup has real data to work with.
+
+:::info
+Running on-premises Active Directory or a hybrid environment? Complete the wizard with your Entra ID connection first (or contact support), then switch the provider mode and install the [Active Directory agent](./installadagent) from the Identity Provider settings page.
+:::
+
+## Step 3: Choose which users Adcyma manages
+
+Adcyma only acts on users in one group you select; everyone else stays untouched. On its first scan Adcyma reads your whole organization to understand its structure, but it will only ever make changes to members of this group.
+
+- Pick an existing security group, or create a new one directly from the wizard (for example "Adcyma Managed Users")
+- The group **must be a static security group**, not a dynamic group
+- We recommend creating a dedicated group and adding exactly the users Adcyma should manage, leaving out service accounts
+
+Users created by Adcyma later are added to this group automatically. You can change the group afterwards under [Managed Users](../administration/Settings/managedusers), but read the notes there first; users leaving the scope stop being managed.
+
+## Step 4: Set your naming conventions
+
+Choose how Adcyma generates identities for new users: the **primary domain**, and the **username**, **display name**, and **email formats**, with a live preview. The advanced settings control how spaces, accented characters (ö → o or ö → oe), hyphens, and duplicate names are handled.
+
+Set these carefully now; they apply to every user Adcyma creates. You can adjust them later under [Preferences](../administration/Settings/preferences), but changes only affect new users.
+
+## Step 5: Invite your team
+
+Add colleagues who will use Adcyma with you. Each invitee receives a sign-in link by email. Two roles are offered here:
+
+- **Admin** - Full access to manage users, configure workflows, and settings
+- **User** - Standard access to the People Hub
+
+You can skip this and invite people later under [User Permissions](../administration/Settings/userpermissions).
+
+## You're connected
+
+The final step shows a snapshot of what Adcyma found: groups synced, domains, departments, job titles, plus any unused groups and inactive accounts spotted by the [Hygiene Center](../administration/Access%20Governance/hygienecenter). From there you land on the dashboard.
+
+A **Getting started** checklist on the dashboard tracks your remaining setup: enable a role template, create a workflow, create a dynamic group, connect Exchange Online, onboard your first user, and invite a team member.
+
+## Where to go next
+
+- Automate onboarding and offboarding with [Workflows](../administration/Lifecycle%20Management/workflows) and [Role Templates](../administration/Lifecycle%20Management/roletemplate)
+- Let users sign in with their Microsoft accounts: [Setting Up Single Sign-On](./sso)
+- Enable mailbox automation: [Connecting Exchange Online](./exchangecertificate)
+- Integrate your own systems: [API Quickstart](./apiquickstart)

@@ -1,0 +1,85 @@
+---
+sidebar_position: 4
+title: Installing the Active Directory Agent
+---
+
+# Installing the Active Directory Agent
+
+The Adcyma AD agent is a small Windows service that connects your on-premises Active Directory to Adcyma. It syncs users, groups, and OUs to the portal and executes lifecycle operations (create, update, disable, move) against your domain. It's required when your identity provider mode is **Active Directory** or **Hybrid (Active Directory + Entra ID)**.
+
+## How it works
+
+- The agent runs on a Windows server inside your network and makes **outbound HTTPS calls only** to `portal.adcyma.com`. No inbound ports need to be opened.
+- It checks in with a heartbeat and polls for work on a regular interval (every 5 minutes by default).
+- Each agent has its own API key, and commands sent to it are encrypted and signed. The credentials are baked into your personalized installer.
+- In Hybrid mode, AD users and groups are automatically matched with their Entra ID counterparts, so Adcyma sees one identity per person.
+
+## Prerequisites
+
+- Identity provider mode set to **Active Directory** or **Hybrid** under **Administration** → **Settings** → **Identity Provider**
+- A **Windows server that can reach a domain controller**, with local administrator rights to run the installer (a UAC prompt appears)
+- A **domain service account** for the agent to act as. It needs permissions to manage the users and groups Adcyma will handle: creating and updating users, enabling/disabling accounts, resetting passwords, moving users between OUs, and managing group membership in the OUs you scope Adcyma to.
+- Outbound HTTPS (port 443) from the server to `portal.adcyma.com`
+
+## Step 1: Register the agent
+
+1. Open **Administration** → **Settings** → **Identity Provider** and scroll to the **Active Directory Agent** card
+2. Click **Register agent**
+3. Optionally enter the **server hostname** and **AD domain**. Both are just labels to help you recognize the agent in the list; the agent reports its real details once it's running.
+4. The agent appears with the status **Waiting for first contact**
+
+## Step 2: Download the installer
+
+Click **Download installer**. You get a personalized executable named like `AdcymaADSync-AD-SRV-01-1.0.1.exe`.
+
+:::warning Treat the installer as a secret
+The installer embeds this agent's unique credentials. Don't share it or store it somewhere widely accessible. If you suspect the file leaked, contact support to rotate the agent's keys; rotation invalidates the running agent, which then needs a reinstall with a fresh installer.
+:::
+
+Re-downloading the installer for the same agent is safe; it reuses the same credentials.
+
+## Step 3: Run the installer on the server
+
+1. Copy the installer to the target Windows server and run it
+2. Accept the elevation (UAC) prompt
+3. When asked, enter the **service account credentials** (domain username and password) the agent should use for Active Directory operations
+
+The connection settings are preconfigured; you don't need to enter any URLs or API keys.
+
+## Step 4: Verify the agent is online
+
+Back on the Identity Provider page, the agent card shows its status:
+
+| Status | Meaning |
+|---|---|
+| Waiting for first contact | Registered, but the agent hasn't checked in yet |
+| Online | The agent is heartbeating normally |
+| Offline | The agent has checked in before but has gone quiet; check the service and network |
+| Suspended | Paused by an administrator; all requests are rejected |
+| Revoked | Permanently disabled |
+
+Within a few minutes of installation the status should flip to **Online**, and the card shows the reported domain, agent version, and last-seen time. If it stays on "Waiting for first contact", confirm the installer completed, the Windows service is started, and the server can reach `portal.adcyma.com` over HTTPS.
+
+The first sync brings your AD users, groups, and OUs into Adcyma. Which OUs the agent manages is controlled by the agent's target OU configuration; contact support if you need to adjust the scope.
+
+## Managing the agent
+
+**Suspend / Reactivate**
+Suspending an agent immediately rejects all of its requests and cancels any queued commands; nothing executes against your directory until you reactivate it. Use this during maintenance windows or if you want to freeze Adcyma's AD activity. Reactivating lets the agent resume on its next check-in.
+
+**Updates**
+The agent checks the portal for new versions and updates itself; you don't need to reinstall for upgrades.
+
+**Decommissioning**
+Delete the agent from the portal and uninstall the Windows service from the server. If an agent's credentials must be permanently invalidated (for example a compromised server), contact support to revoke it; revocation is terminal and cannot be undone.
+
+## Troubleshooting
+
+**The agent never comes online**
+Check that the Windows service is running, and that outbound HTTPS to `portal.adcyma.com` is allowed through your firewall and proxy. The "Test connection" action on the settings reports whether a recent heartbeat has been received.
+
+**AD operations fail even though the agent is online**
+Verify the service account's permissions cover the affected users and OUs. Password resets, moves, and disables all require corresponding rights on the target objects.
+
+**The agent shows Suspended**
+An administrator paused it. Reactivate it from the Identity Provider page.
