@@ -24,8 +24,9 @@ const config: Config = {
     locales: ['en'],
   },
 
+  clientModules: ['./src/clientModules/imageZoomHighRes.js'],
+
   plugins: [
-    'docusaurus-plugin-image-zoom',
     [
       '@docusaurus/plugin-ideal-image',
       {
@@ -119,16 +120,6 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-    },
-    zoom: {
-      selector: '.markdown img',
-      background: {
-        light: 'rgba(255, 255, 255, 0.95)',
-        dark: 'rgba(30, 30, 30, 0.95)',
-      },
-      config: {
-        margin: 24,
-      },
     },
   } satisfies Preset.ThemeConfig,
 };
